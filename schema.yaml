@@ -1,0 +1,174 @@
+# =============================================================================
+# schema.yaml
+#
+# Single source of truth for all controlled vocabulary used throughout this
+# repository (research/, wiki/) and the external sources folder (kept
+# outside this Git repository — see CLAUDE.md section 1). CLAUDE.md refers
+# to this file instead of repeating the lists. Do not invent new values outside this file
+# without updating it here first — that is what keeps status/type values from
+# drifting apart between R1, R2 and R3 over the course of the thesis.
+# =============================================================================
+
+scope_dimensions:
+  connection:
+    - COMMON
+    - R1
+    - R2
+    - R3
+  material:
+    - COMMON
+    - GL24h
+    - GL75
+  experiment_level:
+    - COMMON
+    - COMPONENT
+    - FULL_CONNECTION
+
+# -----------------------------------------------------------------------------
+# Source types (external sources folder — original, unaltered documents,
+# stored outside this Git repository)
+# -----------------------------------------------------------------------------
+source_type:
+  NORMATIVE:
+    description: "Standard / code / regulation (e.g. DIN, Eurocode)."
+    authority: normative
+  LITERATURE:
+    description: "Scientific paper, journal article, book, conference paper."
+    authority: peer_reviewed_or_secondary
+  PRIMARY_DATA:
+    description: "Original experimental data produced by this research."
+    authority: project_specific
+  PLAN:
+    description: "Drawing, test plan, technical/geometry plan."
+    authority: project_specific
+  MANUFACTURER_DATA:
+    description: "Technical datasheet or claim from a manufacturer."
+    authority: commercial_claim
+  REPORT:
+    description: "Expert report / Gutachten."
+    authority: expert_opinion
+
+# -----------------------------------------------------------------------------
+# Research types (research/ + wiki/ — derived, non-source content)
+# -----------------------------------------------------------------------------
+research_type:
+  CALCULATION:
+    description: "Own analytical or numerical calculation."
+  PROCESSED_DATA:
+    description: "Data derived from raw measurements (filtered, corrected, aggregated)."
+  EXPERIMENTAL_RESULT:
+    description: "Characteristic result derived from experimental/processed data."
+  RAW_MEASUREMENT:
+    description: "Directly recorded measurement value, unmodified."
+  OBSERVATION:
+    description: "Something directly observed during an experiment."
+  ASSUMPTION:
+    description: "A provisional assumption introduced by the researcher."
+  HYPOTHESIS:
+    description: "A statement currently being investigated."
+  INTERPRETATION:
+    description: "An explanation of an observation or result."
+  CONCLUSION:
+    description: "A higher-level conclusion based on evidence."
+  DECISION:
+    description: "A methodological or research decision."
+
+# -----------------------------------------------------------------------------
+# Status values (data provenance / lifecycle state)
+# Chain: MEASURED -> PROCESSED -> DERIVED -> INTERPRETED -> CONCLUDED
+# -----------------------------------------------------------------------------
+status:
+  - MEASURED          # raw measurement, directly recorded
+  - PROCESSED         # derived from raw measurement via a documented method
+  - DERIVED           # experimental result derived from measurement/processed data
+  - CALCULATED        # output of an analytical/numerical calculation
+  - PROVISIONAL       # assumption not yet confirmed
+  - INTERPRETATION    # interpretation of a result/observation
+  - CONCLUDED         # conclusion drawn from evidence
+  - PROVENANCE_UNKNOWN # provenance could not be established — never invent it
+
+# -----------------------------------------------------------------------------
+# Certainty / evidence classification (used in claims, wiki pages, conclusions)
+# -----------------------------------------------------------------------------
+certainty_level:
+  - ESTABLISHED   # normatively fixed or overwhelming consensus
+  - MEASURED      # directly measured value
+  - CALCULATED    # result of a calculation
+  - ASSUMED       # explicit working assumption
+  - HYPOTHESIZED  # under investigation, not yet supported
+  - INTERPRETED   # researcher's interpretation, not a raw fact
+  - UNKNOWN       # cannot currently be classified — do not guess
+
+confidence:
+  - LOW
+  - MEDIUM
+  - HIGH
+
+# -----------------------------------------------------------------------------
+# Claim status (wiki/ claims — see CLAUDE.md section on claims)
+# -----------------------------------------------------------------------------
+claim_status:
+  - NORMATIVE       # required/defined by a standard
+  - SOURCE_CLAIM     # reported by a source, not independently verified
+  - EVIDENCE        # supported by empirical/experimental data
+  - SYNTHESIS       # own synthesis across multiple sources/results
+
+# -----------------------------------------------------------------------------
+# Authorship / review status (see CLAUDE.md section on Authorship and
+# Review Status — applies to interpretations, conclusions and hypotheses)
+# -----------------------------------------------------------------------------
+authored_by:
+  - RESEARCHER      # entered/written by the researcher directly
+  - CLAUDE_DRAFT    # proposed by Claude, not yet reviewed/confirmed
+
+# reviewed: true | false
+#   Only meaningful for authored_by: CLAUDE_DRAFT. Always false on creation.
+#   Set to true only by the researcher's own action, never by Claude itself.
+
+# -----------------------------------------------------------------------------
+# Unit convention (see CLAUDE.md section on Units)
+#
+# Define ONE fixed unit per physical quantity here, once, before entering
+# real data — then apply it everywhere. Do not decide the unit per entry;
+# that is exactly what causes silent mismatches between sources, own
+# measurements and calculations.
+# -----------------------------------------------------------------------------
+unit_convention:
+  force:
+  length:
+  stress:
+  moment:
+  angle:
+  # extend with further quantities as needed, once for the whole thesis
+
+# -----------------------------------------------------------------------------
+# ID naming convention (mandatory — see CLAUDE.md section 14)
+#
+# There are TWO separate ID namespaces. Do not mix them.
+#
+# 1) INTERNAL / PROJECT-GENERATED entries — everything created by this
+#    research itself: experiments, raw measurements, processed data,
+#    experimental results, calculations, assumptions, hypotheses,
+#    interpretations, conclusions, decisions. These always have a
+#    connection/material scope, so they follow the strict pattern below.
+#
+#    Pattern: <CONNECTION>-<MATERIAL>-<CATEGORY>-<NUMBER>
+#    CONNECTION: R1 | R2 | R3 | COMMON
+#    MATERIAL:   GL24h | GL75 | COMMON
+#    CATEGORY:   FULL | CMP (component) | RAW | PROC | RES | CALC | ASS | HYP |
+#                INT | CON (conclusion) | DEC (decision)
+#    NUMBER:     zero-padded 3-digit running number, unique within its
+#                category and scope — never reused, never renumbered.
+#
+# 2) EXTERNAL SOURCES — norms, papers, books, manufacturer data, reports.
+#    These are NOT project-generated and do NOT get a connection/material
+#    code of their own (a norm is not "R1's norm"). They are identified by
+#    the free-form `id` used in bibliography/sources.yaml — the concrete
+#    naming convention for this namespace (e.g. author+year, or a norm's
+#    own designation) is defined there, once real sources are entered.
+#
+#    A calculation's or claim's `normative_sources` / `literature` /
+#    `source` field always references an id from namespace (2), never
+#    namespace (1) — see templates/calculation.md and templates/claim.md.
+# -----------------------------------------------------------------------------
+id_pattern: "<CONNECTION>-<MATERIAL>-<CATEGORY>-<NUMBER>"   # namespace (1) only

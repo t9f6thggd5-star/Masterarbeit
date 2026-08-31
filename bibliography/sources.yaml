@@ -1,0 +1,25 @@
+# =============================================================================
+# sources.yaml
+#
+# Zentrales Quellenverzeichnis. Jede Quelle aus dem externen Quellenordner
+# (außerhalb dieses Git-Repositories, z. B. in OneDrive — siehe CLAUDE.md
+# Abschnitt 1) bekommt hier einen Eintrag mit stabiler, frei wählbarer ID
+# (namespace 2 in schema.yaml -> id_pattern, z. B. Autor+Jahr für Literatur
+# oder die Bezeichnung der Norm). Diese ID wird in claims/ und anderen
+# Wiki-Einträgen referenziert.
+#
+# Dies ersetzt keine vollwertige Literaturverwaltung (z. B. Zotero) — es ist
+# der Link zwischen Wiki-Claims und den Originaldateien im externen
+# Quellenordner.
+#
+# Pflichtfelder pro Eintrag:
+#   id          eindeutige, stabile Kennung dieser Quelle
+#   type        siehe schema.yaml -> source_type
+#   authority   siehe schema.yaml -> source_type.<TYPE>.authority
+#   file        Pfad zur Originaldatei im externen Quellenordner (nicht in
+#               diesem Repository — z. B. der OneDrive-Pfad)
+#   scope       connection/material, falls die Quelle projektspezifisch ist,
+#               sonst COMMON/COMMON
+# =============================================================================
+
+sources: []

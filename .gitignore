@@ -1,0 +1,21 @@
+# --- OS / editor noise ---
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# --- Temporary / scratch files ---
+*.tmp
+*.bak
+~$*
+
+# =============================================================================
+# Große Rohdaten
+#
+# Rohdaten (Prüfstand-Exporte, Scans, Pläne, Normen, Literatur) gehören
+# grundsätzlich nicht in dieses Repository, sondern in den externen
+# Quellenordner (siehe EXTERNAL_SOURCES.md) — Git-Dateigrößenlimits und
+# Git LFS sind dadurch kein Thema für dieses Repository.
+# =============================================================================
