@@ -17,9 +17,344 @@
 #   type        siehe schema.yaml -> source_type
 #   authority   siehe schema.yaml -> source_type.<TYPE>.authority
 #   file        Pfad zur Originaldatei im externen Quellenordner (nicht in
-#               diesem Repository — z. B. der OneDrive-Pfad)
+#               diesem Repository — z. B. der OneDrive-Pfad), relativ zur
+#               Wurzel des externen Quellenordners (siehe EXTERNAL_SOURCES.md)
 #   scope       connection/material, falls die Quelle projektspezifisch ist,
 #               sonst COMMON/COMMON
+#
+# Zusatzfelder (nicht Pflicht, aber empfohlen fuer Nachvollziehbarkeit):
+#   title, authors/issuing_body, year/date, publisher/designation, pages,
+#   notes (z. B. Unstimmigkeiten zwischen Dateiname und Dokumentinhalt --
+#   niemals stillschweigend "glattziehen", siehe CLAUDE.md Abschnitt 19.9).
 # =============================================================================
 
-sources: []
+sources:
+- id: VDI-2230-1-2015
+  type: NORMATIVE
+  authority: normative
+  file: common/general/VDI 2230 Blatt 1_2015-11-00_ML_2360550.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Systematische Berechnung hochbeanspruchter Schraubenverbindungen – Zylindrische Einschraubenverbindungen
+  issuing_body: VDI e.V. (VDI-Gesellschaft Produkt- und Prozessgestaltung)
+  designation: VDI 2230 Blatt 1
+  date: 2015-11
+  pages: 182
+  notes: VDI-Richtlinie, kein formaler DIN/EN-Standard, aber normativ verwendet fuer Schraubenberechnung.
+- id: VDI-2230-3-2024
+  type: NORMATIVE
+  authority: normative
+  file: common/general/VDI 2230 Blatt 3_2024-07-00_DE_3538253.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Systematische Berechnung hochbeanspruchter Schraubenverbindungen – Hinweise zur sicheren Montage von Schraubenverbindungen
+  issuing_body: VDI e.V.
+  designation: VDI 2230 Blatt 3
+  date: 2024-07
+  pages: 69
+  notes: VDI-Richtlinie, kein formaler DIN/EN-Standard.
+- id: Scheibmair2012
+  type: LITERATURE
+  authority: peer_reviewed_or_secondary
+  file: common/literature/2012_Diss_Scheibmair.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Expedient Moment Connections for Timber Portal Frame Buildings
+  authors: Felix Scheibmair
+  year: 2012
+  publisher: PhD thesis, University of Auckland, Dept. of Civil and Environmental Engineering
+  pages: 306
+  notes: ''
+- id: Bruehl2020
+  type: LITERATURE
+  authority: peer_reviewed_or_secondary
+  file: common/literature/2020_Diss_Brühl_Uni Stuttgart (KE)_Ductility in timer structures - possibilities ans requirements with regard to dowel type fasteners.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Ductility in timber structures – possibilities and requirements with regard to dowel type fasteners
+  authors: Frank Brühl
+  year: 2020
+  publisher: Dissertation, Universitaet Stuttgart, Institut fuer Konstruktion und Entwurf (Mitteilungen Nr. 2020-1, ISSN 1439-3751)
+  pages: 323
+  notes: ''
+- id: Meyer2020
+  type: LITERATURE
+  authority: peer_reviewed_or_secondary
+  file: common/literature/2020_Diss_Nico Meyer_KIT_Tragfähigkeit mechanischer und geklebter Verbindungsmittel in Buchenfurnierschichtholz.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Tragfähigkeit mechanischer und geklebter Verbindungsmittel in Buchenfurnierschichtholz
+  authors: Nico Meyer
+  year: 2020
+  publisher: Dissertation, Karlsruher Institut fuer Technologie (KIT)
+  pages: 319
+  notes: ''
+- id: Schilling2022
+  type: LITERATURE
+  authority: peer_reviewed_or_secondary
+  file: common/literature/2022_Diss_Schilling_ETH Zürich_Structural behaviour an reliability of timber trusses with dowelled steel-to-timber connections.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Structural behaviour and reliability of timber trusses with dowelled steel-to-timber connections
+  authors: Stephan Georg Schilling
+  year: 2022
+  publisher: Diss. ETH No. 28128, ETH Zuerich, DOI 10.3929/ethz-b-000538109
+  pages: 225
+  notes: ''
+- id: Gauss2024
+  type: LITERATURE
+  authority: peer_reviewed_or_secondary
+  file: common/literature/2024_Diss_Gauß_Uni Stuttgart (KE)_Zum Trag- und Verformungsverhalten von Stahl-Holz-Stabdübelverbindungen.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Zum Trag- und Verformungsverhalten von Stahl-Holz-Stabdübelverbindungen
+  authors: Julius Gauß (geb. Postupka)
+  year: 2024
+  publisher: Dissertation, Universitaet Stuttgart, Institut fuer Konstruktion und Entwurf (Mitteilungen Nr. 2024-1, ISSN 1439-3751)
+  pages: 183
+  notes: ''
+- id: Buchholz2025
+  type: LITERATURE
+  authority: peer_reviewed_or_secondary
+  file: common/literature/WCTE2025_Proceedings_Paper_Buchholz.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Design of Timber Structures in View of Sustainability Based on the Component Method
+  authors: Lea Buchholz, Ulrike Kuhlmann, Markus Knobloch
+  year: 2025
+  publisher: World Conference on Timber Engineering (WCTE) 2025 Proceedings, DOI 10.52202/080513-0213
+  pages: 10
+  notes: Gleiche Erstautorin/Institut wie die Konstruktionszeichnungen (Uni Stuttgart, Institut fuer Konstruktion und Entwurf).
+- id: DIN-EN-636-2015
+  type: NORMATIVE
+  authority: normative
+  file: common/norms/DIN EN 636_2015-05-00_DE_2306106.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Sperrholz – Anforderungen (Plywood – Specifications); Deutsche Fassung EN 636:2012+A1:2015
+  issuing_body: DIN (Normenausschuss Holzwirtschaft und Moebel) / CEN/TC 112
+  designation: DIN EN 636:2015-05
+  date: 2015-05
+  pages: 23
+  notes: ''
+- id: ETA-11-0190-2026
+  type: NORMATIVE
+  authority: normative
+  file: common/norms/ETA-11!0190(8.06.03-11!25).pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Europaeische Technische Bewertung – Wuerth selbstbohrende Schrauben (ASSY, ASSY plus VG, ASSY VGN, ASSY Isotop, ASSY UHP, ASSY 3.0/plus MDF, Jamo, WG Fix)
+  issuing_body: Deutsches Institut fuer Bautechnik (DIBt)
+  designation: ETA-11/0190 (Ref. 8.06.03-11/25, EAD 130118-01-0603)
+  date: '2026-01-22'
+  pages: 88
+  notes: 'Hersteller: Adolf Wuerth GmbH & Co. KG. Ausgestellt 2026-01-22, ersetzt Fassung 2018-07-23.'
+- id: ETA-14-0354-2026
+  type: NORMATIVE
+  authority: normative
+  file: common/norms/ETA-14-0354_de_amend_EKOPIE.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Europaeische Technische Bewertung – Traeger BauBuche GL75 (Brettschichtholz aus Laubholz)
+  issuing_body: Oesterreichisches Institut fuer Bautechnik (OIB)
+  designation: ETA-14/0354 (EAD 130010-01-0304)
+  date: '2026-04-16'
+  pages: 18
+  notes: 'Hersteller: Pollmeier Furnierwerkstoffe GmbH. Ersetzt Fassung 2024-07-22. Direkt relevant fuer Material GL75.'
+- id: ETA-06-0138-2021
+  type: NORMATIVE
+  authority: normative
+  file: common/norms/ETA-06-0138_2021-01-18_DE_KLH-CLT.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Europaeische Technische Bewertung – KLH – CLT (massive plattenfoermige Holzbauelemente fuer tragende Bauteile)
+  issuing_body: Oesterreichisches Institut fuer Bautechnik (OIB)
+  designation: ETA-06/0138 (EAD 130005-00-0304)
+  date: '2021-01-18'
+  pages: 51
+  notes: Hersteller KLH Massivholz GmbH. Datei am 2026-08-31 von 'klh-eta-de.pdf' auf
+    'ETA-06-0138_2021-01-18_DE_KLH-CLT.pdf' umbenannt, damit der Dateiname der tatsaechlichen
+    Kennung (ETA-06/0138) entspricht (alter Dateiname passte nicht dazu).
+- id: FprEN-1995-1-1-2024
+  type: NORMATIVE
+  authority: normative
+  file: common/norms/NA005-04-01-01AK_N3527_CEN-TC_250-SC_5_N2196_FprEN_1995-1-1_v3f_2024-11-13_Clean.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: 'Eurocode 5 – Bemessung und Konstruktion von Holzbauten – Teil 1-1: Allgemeines – Allgemeine Regeln und Regeln fuer den Hochbau'
+  issuing_body: 'CEN/TC 250/SC 5 (Sekretariat: BSI)'
+  designation: FprEN 1995-1-1:2024 (CEN/TC 250/SC 5 N 2196)
+  date: '2024-11-13'
+  pages: 433
+  notes: Finaler Entwurf (Formal Enquiry / 'Version 3f'), noch nicht final als EN veroeffentlicht -- Status pruefen, bevor als endgueltige Norm zitiert.
+- id: Lippert2002
+  type: LITERATURE
+  authority: peer_reviewed_or_secondary
+  file: R2/COMMON/2002_Diss_Lippert_Uni Stuttgart (KE)_Rahmenecke aus Holz mit eingeklebten Gewindestangen.pdf
+  scope:
+    connection: R2
+    material: COMMON
+  title: Rahmenecken aus Holz mit eingeklebten Gewindestangen
+  authors: Peter Lippert
+  year: 2002
+  publisher: Dissertation, Universitaet Stuttgart, Institut fuer Konstruktion und Entwurf (Mitteilungen Nr. 2002-4, ISSN 1439-3751)
+  pages: 213
+  notes: Grundlegende deutschsprachige Quelle zu Rahmenecken mit eingeklebten Gewindestangen -- thematisch nahe an R2.
+- id: FragiacomoBatchelar2012a
+  type: LITERATURE
+  authority: peer_reviewed_or_secondary
+  file: R2/COMMON/Structural Engineering 138(6)_2012_Fragiacomo-Batchelar_timber-frame-moment-joints-with-glued-in-steel-rods-i-design.pdf
+  scope:
+    connection: R2
+    material: COMMON
+  title: 'Timber Frame Moment Joints with Glued-In Steel Rods. I: Design'
+  authors: Massimo Fragiacomo, Mark Batchelar
+  year: 2012
+  publisher: Journal of Structural Engineering (ASCE), Vol. 138, No. 6, pp. 789-801, DOI 10.1061/(ASCE)ST.1943-541X.0000419
+  pages: 13
+  notes: Teil I (Design) des zweiteiligen Papers; siehe FragiacomoBatchelar2012b fuer Teil II.
+- id: FragiacomoBatchelar2012b
+  type: LITERATURE
+  authority: peer_reviewed_or_secondary
+  file: R2/COMMON/Structural Engineering 138(6)_2012_Fragiacomo-Batchelar_timber-frame-moment-joints-with-glued-in-steel-rods-ii-experimental-investigation-of-long.pdf
+  scope:
+    connection: R2
+    material: COMMON
+  title: 'Timber Frame Moment Joints with Glued-In Steel Rods. II: Experimental Investigation of Long-Term Performance'
+  authors: Massimo Fragiacomo, Mark Batchelar
+  year: 2012
+  publisher: Journal of Structural Engineering (ASCE), Vol. 138, No. 6, pp. 802-811, DOI 10.1061/(ASCE)ST.1943-541X.0000517
+  pages: 10
+  notes: Teil II (Langzeitversuche) des zweiteiligen Papers; siehe FragiacomoBatchelar2012a fuer Teil I.
+- id: ScheibmairQuenneville2014
+  type: LITERATURE
+  authority: peer_reviewed_or_secondary
+  file: R3/COMMON/Structural Engineering 140(1)_2012_Scheibmair-Quenneville_moment-connection-for-quick-assembly-of-timber-portal-frame-buildings-theory-and-validation.pdf
+  scope:
+    connection: R3
+    material: COMMON
+  title: 'Moment Connection for Quick Assembly of Timber Portal Frame Buildings: Theory and Validation'
+  authors: Felix Scheibmair, Pierre Quenneville
+  year: 2014
+  publisher: Journal of Structural Engineering (ASCE), Vol. 140, No. 1, Art. 04013022, DOI 10.1061/(ASCE)ST.1943-541X.0000728
+  pages: 10
+  notes: Jahr noch offen -- siehe research/common/open_questions/COMMON-COMMON-OPQ-001.md
+    (Dateiname/Ordner nennt 2012, Zeitschriften-Zitation Vol. 140 No. 1 nennt 2014;
+    hier vorlaeufig als 2014 gefuehrt, bis geklaert).
+- id: PLAN-2685085-001-V1
+  type: PLAN
+  authority: project_specific
+  file: R1/GL24h/plans/2685085-001-V1.pdf
+  scope:
+    connection: R1
+    material: GL24h
+  title: Rahmeneckversuch -- Schlitzblech & Stabduebel (GL 24h)
+  issuing_body: Universitaet Stuttgart, Institut fuer Konstruktion und Entwurf (Projekt 'Optimierung innovativer Anschluesse im Holz')
+  designation: 2685085-001-V1
+  date: '2025-08-25'
+  pages: 1
+  notes: Bearb. J.MM, gepr. L.Buchholz, 25.08.25/26.08.25. Blatt 1/1, Rev.-Spalte im Schriftfeld leer -- V1/V2 bzw. 01-xx/02-xx bezeichnen hier den Materialstrang (GL24h/GL75), keine Revisionsnummer.
+- id: PLAN-2685085-001-V2
+  type: PLAN
+  authority: project_specific
+  file: R1/GL75/plans/2685085-001-V2.pdf
+  scope:
+    connection: R1
+    material: GL75
+  title: Rahmeneckversuch -- Schlitzblech & Stabduebel (GL 75)
+  issuing_body: Universitaet Stuttgart, Institut fuer Konstruktion und Entwurf (Projekt 'Optimierung innovativer Anschluesse im Holz')
+  designation: 2685085-001-V2
+  date: '2025-08-25'
+  pages: 1
+  notes: Bearb. J.MM, gepr. L.Buchholz, 25.08.25/26.08.25. Blatt 1/1, Rev.-Spalte im Schriftfeld leer -- V1/V2 bzw. 01-xx/02-xx bezeichnen hier den Materialstrang (GL24h/GL75), keine Revisionsnummer.
+- id: PLAN-2685085-002-V1
+  type: PLAN
+  authority: project_specific
+  file: R2/GL24h/plans/2685085-002-V1.pdf
+  scope:
+    connection: R2
+    material: GL24h
+  title: Rahmeneckversuch -- Eingeklebte Gewindestangen (GL 24h)
+  issuing_body: Universitaet Stuttgart, Institut fuer Konstruktion und Entwurf (Projekt 'Optimierung innovativer Anschluesse im Holz')
+  designation: 2685085-002-V1
+  date: '2025-08-25'
+  pages: 1
+  notes: Bearb. J.MM, gepr. L.Buchholz, 25.08.25/26.08.25. Blatt 1/1, Rev.-Spalte im Schriftfeld leer -- V1/V2 bzw. 01-xx/02-xx bezeichnen hier den Materialstrang (GL24h/GL75), keine Revisionsnummer.
+- id: PLAN-2685085-002-V2
+  type: PLAN
+  authority: project_specific
+  file: R2/GL75/plans/2685085-002-V2.pdf
+  scope:
+    connection: R2
+    material: GL75
+  title: Rahmeneckversuch -- Eingeklebte Gewindestangen (GL 75)
+  issuing_body: Universitaet Stuttgart, Institut fuer Konstruktion und Entwurf (Projekt 'Optimierung innovativer Anschluesse im Holz')
+  designation: 2685085-002-V2
+  date: '2025-08-25'
+  pages: 1
+  notes: Bearb. J.MM, gepr. L.Buchholz, 25.08.25/26.08.25. Blatt 1/1, Rev.-Spalte im Schriftfeld leer -- V1/V2 bzw. 01-xx/02-xx bezeichnen hier den Materialstrang (GL24h/GL75), keine Revisionsnummer.
+- id: PLAN-2685085-003-01-03
+  type: PLAN
+  authority: project_specific
+  file: R3/GL24h/plans/2685085-003-01-03.pdf
+  scope:
+    connection: R3
+    material: GL24h
+  title: Aussenlasche, Komponente 01 (GL 24h)
+  issuing_body: Universitaet Stuttgart, Institut fuer Konstruktion und Entwurf (Projekt 'Optimierung innovativer Anschluesse im Holz')
+  designation: 2685085-003-01-03
+  date: '2025-08-25'
+  pages: 1
+  notes: Bearb. J.MM, gepr. L.Buchholz, 25.08.25/26.08.25. Blatt 1/1, Rev.-Spalte im Schriftfeld leer -- V1/V2 bzw. 01-xx/02-xx bezeichnen hier den Materialstrang (GL24h/GL75), keine Revisionsnummer.
+- id: PLAN-2685085-003-V1
+  type: PLAN
+  authority: project_specific
+  file: R3/GL24h/plans/2685085-003-V1.pdf
+  scope:
+    connection: R3
+    material: GL24h
+  title: Rahmeneckversuch -- Seitliche Holzlaschen (GL 24h)
+  issuing_body: Universitaet Stuttgart, Institut fuer Konstruktion und Entwurf (Projekt 'Optimierung innovativer Anschluesse im Holz')
+  designation: 2685085-003-V1
+  date: '2025-08-25'
+  pages: 1
+  notes: Bearb. J.MM, gepr. L.Buchholz, 25.08.25/26.08.25. Blatt 1/1, Rev.-Spalte im Schriftfeld leer -- V1/V2 bzw. 01-xx/02-xx bezeichnen hier den Materialstrang (GL24h/GL75), keine Revisionsnummer.
+- id: PLAN-2685085-003-02-03
+  type: PLAN
+  authority: project_specific
+  file: R3/GL75/plans/2685085-003-02-03.pdf
+  scope:
+    connection: R3
+    material: GL75
+  title: Aussenlasche, Komponente 01 (GL 75)
+  issuing_body: Universitaet Stuttgart, Institut fuer Konstruktion und Entwurf (Projekt 'Optimierung innovativer Anschluesse im Holz')
+  designation: 2685085-003-02-03
+  date: '2025-08-25'
+  pages: 1
+  notes: Bearb. J.MM, gepr. L.Buchholz, 25.08.25/26.08.25. Blatt 1/1, Rev.-Spalte im Schriftfeld leer -- V1/V2 bzw. 01-xx/02-xx bezeichnen hier den Materialstrang (GL24h/GL75), keine Revisionsnummer.
+- id: PLAN-2685085-003-V2
+  type: PLAN
+  authority: project_specific
+  file: R3/GL75/plans/2685085-003-V2.pdf
+  scope:
+    connection: R3
+    material: GL75
+  title: Rahmeneckversuch -- Seitliche Holzlaschen (GL 75)
+  issuing_body: Universitaet Stuttgart, Institut fuer Konstruktion und Entwurf (Projekt 'Optimierung innovativer Anschluesse im Holz')
+  designation: 2685085-003-V2
+  date: '2025-08-25'
+  pages: 1
+  notes: Bearb. J.MM, gepr. L.Buchholz, 25.08.25/26.08.25. Blatt 1/1, Rev.-Spalte im Schriftfeld leer -- V1/V2 bzw. 01-xx/02-xx bezeichnen hier den Materialstrang (GL24h/GL75), keine Revisionsnummer.

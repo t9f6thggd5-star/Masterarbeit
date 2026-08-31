@@ -35,7 +35,15 @@ cloud-sync tool and Git. The external sources folder mirrors the same
 categorization used throughout this document — `common/norms/`,
 `common/literature/`, `common/books/`, `common/general/`, and per
 connection `R1/R2/R3` × `GL24h/GL75` × `experiments/components/`,
-`experiments/full_connection/`, `plans/`. All rules in this file about
+`experiments/full_connection/`, `plans/`. Each connection additionally has
+a `COMMON/` folder alongside `GL24h/` and `GL75/`, for source documents
+(plans, norms, literature, etc.) that apply to that connection regardless
+of material — mirroring the `COMMON` value of the material scope in
+`schema.yaml` (Section 2). This affects source documents only:
+experimental data, results and calculations are still collected and
+evaluated separately per material, and remain split under `GL24h/` and
+`GL75/` as before (Section 3 still applies to those). All rules in this
+file about
 "sources" (never modify them, cite them by ID, distinguish source types,
 etc.) apply identically regardless of where the files physically live —
 only the storage location changed, not the rules. Every source is still

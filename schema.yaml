@@ -156,7 +156,7 @@ unit_convention:
 #    CONNECTION: R1 | R2 | R3 | COMMON
 #    MATERIAL:   GL24h | GL75 | COMMON
 #    CATEGORY:   FULL | CMP (component) | RAW | PROC | RES | CALC | ASS | HYP |
-#                INT | CON (conclusion) | DEC (decision)
+#                INT | CON (conclusion) | DEC (decision) | OPQ (open question)
 #    NUMBER:     zero-padded 3-digit running number, unique within its
 #                category and scope — never reused, never renumbered.
 #
