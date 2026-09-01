@@ -6,10 +6,19 @@ Thumbs.db
 .vscode/
 .idea/
 
+# --- Python (scripts/build_index.py, scripts/lint.py) ---
+__pycache__/
+*.pyc
+
 # --- Temporary / scratch files ---
 *.tmp
 *.bak
 ~$*
+
+# --- Per-machine local settings (never shared/versioned) ---
+# Absolute path to the external sources folder on THIS machine, read by
+# scripts/lint.py to cross-check experiment IDs. See _index/README.md.
+.external_sources_path
 
 # =============================================================================
 # Große Rohdaten

@@ -1,2 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Shell scripts must always keep LF endings, even on Windows checkouts
+# with core.autocrlf=true — a CRLF shebang line ("#!/bin/sh\r") is not
+# recognized by Git Bash's sh and silently breaks the script.
+.githooks/* text eol=lf
+*.sh text eol=lf

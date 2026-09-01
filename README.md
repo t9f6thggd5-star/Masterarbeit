@@ -127,6 +127,14 @@ deiner Bestätigung (`reviewed: true`) als geprüft (CLAUDE.md Abschnitt 14).
 4. In GitHub Desktop committen ("Initial master thesis research wiki
    structure").
 5. Über „Publish repository“ **privat** veröffentlichen.
+6. Einmalig pro Klon/Rechner den mitgelieferten Pre-Commit-Hook aktivieren
+   (regeneriert `_index/` und lässt den Lint vor jedem Commit laufen,
+   siehe `_index/README.md`):
+   ```
+   git config core.hooksPath .githooks
+   ```
+   Das lässt sich z. B. über „Repository → Open in Command Prompt/Terminal“
+   in GitHub Desktop einmalig ausführen.
 
 Die Ordnervorlage für den externen Quellenordner separat an einen Ort
 außerhalb des Git-Repository-Ordners entpacken (z. B. in OneDrive).

@@ -1,0 +1,84 @@
+#!/bin/sh
+# .githooks/pre-commit
+#
+# Regenerates _index/ and runs the structural lint before every commit,
+# and blocks the commit if lint.py finds an ERROR-level issue. This is
+# what makes _index/catalog.yaml and _index/lint_report.md trustworthy —
+# without this hook, they only reflect reality when someone remembers to
+# run the two scripts by hand.
+#
+# ONE-TIME SETUP per clone/machine (hooks under .git/hooks/ are never
+# tracked by Git, so this has to be pointed at manually once):
+#
+#   git config core.hooksPath .githooks
+#
+# See _index/README.md for details, including how to bypass this once
+# in an emergency (git commit --no-verify — not recommended).
+
+set -e
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+cd "$REPO_ROOT"
+
+# Find a *real* Python interpreter. On Windows, `python`/`python3` often
+# resolve to a Microsoft Store "app execution alias" stub even when no
+# Python is installed at all — `command -v` finds it (it's a real file
+# on PATH), but running it just prints a Store nag message instead of
+# executing anything. So we don't trust command -v alone: we actually
+# run "--version" and check the output looks like real Python.
+PYTHON=""
+for candidate in python3 python py; do
+  if command -v "$candidate" >/dev/null 2>&1; then
+    version_output="$("$candidate" --version 2>&1 || true)"
+    case "$version_output" in
+      Python\ *)
+        PYTHON="$candidate"
+        break
+        ;;
+    esac
+  fi
+done
+
+if [ -z "$PYTHON" ]; then
+  echo "pre-commit: no working Python interpreter found — skipping index/lint check." >&2
+  echo "pre-commit: 'python'/'python3' on PATH may be a Windows Store alias stub" >&2
+  echo "pre-commit: (the 'install from Microsoft Store' popup) rather than a real" >&2
+  echo "pre-commit: Python install. Fix options:" >&2
+  echo "pre-commit:   1. Install Python from https://www.python.org/downloads/" >&2
+  echo "pre-commit:      (check 'Add python.exe to PATH' during setup), and/or" >&2
+  echo "pre-commit:   2. Windows Settings > Apps > Erweiterte App-Einstellungen >" >&2
+  echo "pre-commit:      App-Ausführungsaliase > disable the 'python'/'python3' aliases." >&2
+  echo "pre-commit: This commit proceeds unchecked in the meantime." >&2
+  exit 0
+fi
+
+# Make sure the one third-party dependency (PyYAML, for schema.yaml /
+# catalog.yaml) is actually importable before running anything — a
+# missing module otherwise surfaces as a raw Python traceback in the
+# commit-failed dialog, which looks scarier and is harder to act on
+# than a one-line fix.
+if ! "$PYTHON" -c "import yaml" >/dev/null 2>&1; then
+  echo "pre-commit: required Python package 'PyYAML' is not installed for" >&2
+  echo "pre-commit: '$PYTHON' — skipping index/lint check. To fix, run once:" >&2
+  echo "pre-commit:   $PYTHON -m pip install pyyaml" >&2
+  echo "pre-commit: This commit proceeds unchecked in the meantime." >&2
+  exit 0
+fi
+
+echo "pre-commit: regenerating _index/ ..."
+"$PYTHON" scripts/build_index.py
+
+echo "pre-commit: running lint ..."
+if ! "$PYTHON" scripts/lint.py; then
+  echo "" >&2
+  echo "pre-commit: lint.py found ERROR-level issue(s) — see above, or _index/lint_report.md." >&2
+  echo "pre-commit: fix them and try again, or 'git commit --no-verify' to bypass (not recommended)." >&2
+  exit 1
+fi
+
+# Keep the regenerated catalog/index/report in the same commit as
+# whatever content change triggered them, so they're never out of sync
+# with what's actually being committed.
+git add _index/catalog.yaml _index/INDEX.md _index/lint_report.md
+
+exit 0
