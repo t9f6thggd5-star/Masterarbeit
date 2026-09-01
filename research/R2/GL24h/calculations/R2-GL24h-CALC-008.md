@@ -26,7 +26,7 @@ source_file: >
   openpyxl mit data_only=True ausgelesen, Stand der abgelegten Datei am
   2026-09-01)
 certainty: CALCULATED
-superseded_by:
+superseded_by: R2-GL24h-CALC-012
 ---
 
 Eigenständig aus der R2-Excel-Datei erschlossen (nicht in chat-3
@@ -60,3 +60,11 @@ Nachgelagert im selben Excel-Block: "Zylinderkraft"-Abschnitt (Hebelarm
 — vermutlich eine Rückrechnung auf die erforderliche Prüfstands-
 Aktuatorkraft, aber ebenfalls nicht in chat-3 erläutert (siehe
 R2-COMMON-OPQ-008).
+
+**Korrektur (2026-09-01):** Der hier verwendete Wert `H109=248,846 kN`
+wurde in R2-GL24h-CALC-011 korrigiert (`k_mat`-Fehler, richtig:
+`384,124 kN`). Dadurch ändert sich auch, welcher der drei
+MIN-Kandidaten (`H40`, `H52`, `H109`) für `H123` maßgebend wird — siehe
+R2-GL24h-CALC-012 für die korrigierte Kette und den resultierenden
+Wechsel der maßgebenden Komponente (Querdruck verstärkt →
+Gewindestangen-Zugversuchsmittel).

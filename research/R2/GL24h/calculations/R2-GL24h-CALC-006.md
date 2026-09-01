@@ -28,11 +28,19 @@ source_file: >
   openpyxl mit data_only=True ausgelesen, Stand der abgelegten Datei am
   2026-09-01)
 certainty: CALCULATED
-superseded_by:
+superseded_by: R2-GL24h-CALC-011
 ---
 
 Übernommen aus chat-3 (FORMULAS.md Abschnitt 13, CURRENT_MODEL_PARAMETERS.md
 Abschnitt G) und unabhängig gegen die reale Excel-Datei verifiziert.
+
+**Überholt durch R2-GL24h-CALC-011** (2026-09-01): Das hier für den
+Holzanteil verwendete `k_mat=1,0` stammte fälschlich aus dem
+Ausziehwiderstands-Kontext (Tab. 11.2) und nicht aus der für Gl. 8.12
+einschlägigen Stelle (FprEN 1995-1-1:2024, 8.1.6.2(6): `k_mat=1,75` für
+verstärkte Softwood-GL-Bauteile mit `l90,c≤400mm`, Bedingung hier
+erfüllt). Dieser Eintrag bleibt als historischer Stand erhalten; für den
+aktuellen Wert siehe R2-GL24h-CALC-011.
 
 **Ergebniskette:** Holzanteil `143,236 kN` (H104), Schraubenanteil
 `9×11,734 kN = 105,610 kN` (H105, siehe R2-GL24h-CALC-007 für die

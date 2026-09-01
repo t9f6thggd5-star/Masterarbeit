@@ -29,7 +29,7 @@ source_file: >
   openpyxl mit data_only=True ausgelesen, Stand der abgelegten Datei am
   2026-09-01)
 certainty: CALCULATED
-superseded_by:
+superseded_by: R2-GL75-CALC-004
 ---
 
 Eigenständig aus der R2-Excel-Datei erschlossen und rechnerisch
@@ -58,3 +58,9 @@ demselben Excel-Blatt (R2-GL75-CALC-001) verwendet für GL75 explizit
 einen eigenen, GLVL-spezifischen Tabellenwert (`k_4`), während dieser
 Querdrucknachweis keine erkennbare materialspezifische Anpassung
 vornimmt.
+
+**Korrektur (2026-09-01):** Der Nutzer hat die hier verwendete
+einseitige Lastausbreitung (`k_c,90=1,2583`) auf beidseitig korrigiert —
+analog zur selben Korrektur für GL24h, siehe R2-GL24h-CALC-010. Der
+korrigierte Wert (`1.206,815 kN`) und seine (fehlende) Auswirkung auf
+`M_max` sind in R2-GL75-CALC-004 dokumentiert.

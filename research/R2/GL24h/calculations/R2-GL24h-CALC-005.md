@@ -28,11 +28,18 @@ source_file: >
   openpyxl mit data_only=True ausgelesen, Stand der abgelegten Datei am
   2026-09-01)
 certainty: CALCULATED
-superseded_by:
+superseded_by: R2-GL24h-CALC-010
 ---
 
 Übernommen aus chat-3 (FORMULAS.md Abschnitt 12, KNOWLEDGE.md Abschnitt
 8) und unabhängig gegen die reale Excel-Datei verifiziert.
+
+**Überholt durch R2-GL24h-CALC-010** (2026-09-01): Die hier angesetzte
+Lastausbreitung unter der Ankerplatte war nur einseitig (`l_ef =
+b_Stahlplatte + Δl`), obwohl FprEN 1995-1-1:2024 Fig. 8.2/8.3 im
+Regelfall beidseitige Ausbreitung vorsieht. Dieser Eintrag bleibt als
+historischer Stand erhalten; für den aktuellen Wert siehe
+R2-GL24h-CALC-010.
 
 **Eingangswerte** (Zelle → Wert, Spalte "Norm"): `A=38.400 mm²` (H65),
 `A_ef=60.800 mm²` (H66), `k_c,90=1,2583` (H67, Gl. 8.7), `k_mat=1,4`
