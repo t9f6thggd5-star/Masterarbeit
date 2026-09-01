@@ -146,6 +146,30 @@ sources:
   date: 2015-05
   pages: 23
   notes: ''
+- id: DIN-EN-12369-2-2011
+  type: NORMATIVE
+  authority: normative
+  file: common/norms/DIN EN 12369-2_2011-09 Holzwerkstoffe-Sperrholz.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Holzwerkstoffe – Charakteristische Werte für die Berechnung und Bemessung
+    von Holzbauwerken – Teil 2: Sperrholz; Deutsche Fassung EN 12369-2:2011
+  issuing_body: DIN (Normenausschuss Holzwirtschaft und Moebel (NHM) / Normenausschuss
+    Bauwesen (NABau)) / CEN/TC 112
+  designation: DIN EN 12369-2:2011-09
+  date: 2011-09
+  pages: 19
+  notes: >-
+    Ersetzt DIN EN 12369-2:2004-05. Verifiziert per Sichtung der Titelseite/des
+    nationalen Vorworts (nicht nur Dateiname). Wichtige Abweichung zu
+    beachten: chat-1 (SOURCES.md) zitiert diese Quelle unter dem Dateinamen
+    "DIN EN 12369-2_2025-11-00_DE_3641673.pdf" -- also eine offenbar neuere
+    Fassung (2025-11) als die hier vorliegende, vom Nutzer abgelegte Datei
+    (Fassung 2011-09). Es ist ungeklaert, ob die 2011er-Fassung fuer die in
+    chat-1 diskutierten BFU-BU-F50/25-Kennwerte ausreicht oder ob tatsaechlich
+    die 2025-11-Fassung benoetigt wird -- vor Verwendung von Zahlenwerten aus
+    dieser Norm pruefen, siehe R3-GL24h-OPQ-016.
 - id: ETA-11-0190-2026
   type: NORMATIVE
   authority: normative

@@ -31,3 +31,15 @@ Laschenlänge ohne ASSY-Abstützung).
 `OPEN_QUESTIONS.md` Punkt 6 hält ausdrücklich fest, dass die Genauigkeit
 dieser Annahme (gleicher Kraftanteil F/8 je Reihe) noch nicht abschließend
 geklärt ist — siehe den zugehörigen offenen-Frage-Eintrag.
+
+**Hinweis zur Materialabhängigkeit (2026-09-01):** In der zugrundeliegenden
+Exceltabelle (`R3-GL24h-CALC-001` bzw. deren `source_file`) ergibt sich
+`L_eff = 450 mm` für dieses konkrete Geometrie-Layout sowohl bei GL24h als
+auch bei GL75 identisch. Das ist jedoch **kein** Beleg dafür, dass diese
+Annahme generell materialunabhängig (COMMON) wäre: Anzahl der
+Verbindungsmittel, Laschengrößen und Anzahl der Querkraftdorne variieren
+zwischen den Materialvarianten der Rahmenecke teilweise, sodass Geometrie
+und damit `L_eff` bei anderen Konfigurationen durchaus abweichen können.
+Diese Annahme bleibt deshalb bewusst bei R3/GL24h geführt, nicht bei
+COMMON/COMMON — siehe CLAUDE.md Abschnitt 4 (Scope Isolation: GL24h ≠
+GL75 nie pauschal annehmen).
