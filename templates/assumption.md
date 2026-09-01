@@ -9,6 +9,6 @@ reason:
 basis:
 supported_by:
 contradicted_by:
-status: PROVISIONAL
+certainty: ASSUMED       # siehe schema.yaml -> certainty
 superseded_by:
 ---

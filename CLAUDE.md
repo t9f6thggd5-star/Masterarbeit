@@ -52,9 +52,9 @@ its location in the external folder; claims and templates reference that
 ID, never a raw file path.
 
 All controlled vocabulary referenced below (source types, research types,
-status values, certainty levels, ID pattern) is defined once in
-`schema.yaml`. Do not invent new values ad hoc — extend `schema.yaml`
-first, then use the new value consistently.
+the `certainty` values, ID pattern) is defined once in `schema.yaml`. Do
+not invent new values ad hoc — extend `schema.yaml` first, then use the
+new value consistently.
 
 Not all content in this repository is about a specific connection.
 `research/` and `wiki/` each have a `thesis/` category alongside `common/`
@@ -218,22 +218,36 @@ units. Never present an own calculation as a normative statement.
 ## 10. Uncertainty and Claims
 
 The wiki must preserve uncertainty rather than resolve it prematurely.
-Use the `certainty_level` values from `schema.yaml`: ESTABLISHED,
-MEASURED, CALCULATED, ASSUMED, HYPOTHESIZED, INTERPRETED, UNKNOWN. Never
-increase the certainty of a statement during synthesis.
+Every entry that makes a claim about reality — every `research/` entry
+and every wiki claim alike — carries a single `certainty` field (see
+`schema.yaml -> certainty`): ESTABLISHED, MEASURED, CALCULATED,
+SOURCE_CLAIM, ASSUMED, HYPOTHESIZED, CONFIRMED, REJECTED, INTERPRETED,
+SYNTHESIS, UNKNOWN, PROVENANCE_UNKNOWN. Never increase the certainty of a
+statement during synthesis.
+
+This one field replaces what used to be several separate, overlapping
+fields (a provenance `status`, a numeric `confidence`, and a claim-only
+`claim_status`) — there is only one place to record how well-grounded an
+entry is, regardless of entry type. The distinctions that used to live in
+`claim_status` still matter and are still expressed, just as values of
+the same field: ESTABLISHED (a standard requires it), SOURCE_CLAIM (a
+source reports it, not independently verified), MEASURED/CALCULATED
+(supported by empirical/experimental data or by an own calculation, with
+sample size/methodology noted where relevant), and SYNTHESIS (the
+researcher's own synthesis across sources — must never be mixed into the
+same block as an original source claim).
 
 Every factual claim recorded in the wiki should be expressed as a
 structured claim (see `templates/claim.md`), not as an unattributed
 sentence: text of the claim, the source it comes from (an id from
-`bibliography/sources.yaml`), page reference, source type, claim status
-and confidence — never a bare assertion without these fields filled in.
+`bibliography/sources.yaml`), page reference, source type, and
+`certainty` — never a bare assertion without these fields filled in.
 
-`claim_status` distinguishes four kinds of statement (schema.yaml):
-NORMATIVE (a standard requires it), SOURCE_CLAIM (a source reports it,
-not independently verified), EVIDENCE (supported by empirical/
-experimental data, with sample size/methodology noted where relevant),
-and SYNTHESIS (the researcher's own synthesis across sources — must never
-be mixed into the same block as an original source claim).
+Exception: `templates/open_question.md` does not use `certainty` at all —
+a question is not a claim about reality, so it has its own `status` field
+(OPEN | RESOLVED, `schema.yaml -> open_question_status`) instead. Do not
+read a question's OPEN/RESOLVED state as a certainty judgement, and do
+not add a `certainty` field to an open question.
 
 ---
 
@@ -275,8 +289,8 @@ contain provisional assumptions, hypotheses and decisions that later
 turn out to be wrong. Working assumptions must never be presented as
 established scientific facts, either in the wiki or in conversation.
 When an assumption in `research/.../assumptions/` is superseded, do not
-delete or silently overwrite it — mark its status and add the
-superseding entry, so the evolution remains traceable.
+delete or silently overwrite it — fill in its `superseded_by` field and
+add the superseding entry, so the evolution remains traceable.
 
 ---
 
@@ -347,8 +361,8 @@ wrong.
 Whenever possible, preserve: source ID, experiment ID, calculation ID,
 page number, figure number, table number, measurement file reference,
 and processing method. Never invent source information. If provenance is
-unavailable, explicitly set status to `PROVENANCE_UNKNOWN` rather than
-guessing.
+unavailable, explicitly set `certainty` to `PROVENANCE_UNKNOWN` rather
+than guessing.
 
 ---
 
@@ -365,7 +379,7 @@ Before answering a research question:
 6. Check for known contradictions in the relevant scope.
 7. Distinguish sources, measurements, calculations, interpretations and
    conclusions explicitly in the answer.
-8. State uncertainty/claim_status where relevant.
+8. State uncertainty/certainty where relevant.
 
 If the user asks about R1/GL24h, do not silently use R2/GL75 information,
 even as a plausibility check, without saying so explicitly.

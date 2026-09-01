@@ -8,8 +8,7 @@ based_on:
   experimental_results:    # ID(s) aus research/.../experimental_results/
   observations:            # ID(s) von Beobachtungen, falls vorhanden
 interpretation:
-confidence:                # LOW | MEDIUM | HIGH
-status: INTERPRETATION
+certainty: INTERPRETED     # siehe schema.yaml -> certainty
 authored_by:               # RESEARCHER | CLAUDE_DRAFT
 reviewed:                  # true | false — nur relevant bei CLAUDE_DRAFT, wird ausschließlich vom Forschenden gesetzt
 ---

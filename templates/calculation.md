@@ -17,7 +17,7 @@ result:
   unit:                    # gemäß schema.yaml -> unit_convention
   original_value:          # nur falls ein verwendeter Eingangswert in einer anderen Einheit vorlag
   original_unit:
-status: CALCULATED
+certainty: CALCULATED    # siehe schema.yaml -> certainty
 ---
 
 Herleitung / Nachvollziehbarkeit der Berechnung. Nicht als normative

@@ -72,7 +72,11 @@ master-thesis-research-wiki/
 │                          bzw. GL24h/GL75
 │
 ├── bibliography/          sources.yaml (Quellenverzeichnis) + references.bib
-└── templates/             Vorlagen für alle Eintragstypen (siehe dort)
+├── templates/             Vorlagen für alle Eintragstypen (siehe dort)
+├── scripts/               build_index.py, lint.py — siehe _index/README.md
+└── _index/                automatisch erzeugter Katalog + Lint-Report
+                           (catalog.yaml, INDEX.md, lint_report.md — nie
+                           von Hand bearbeiten, siehe _index/README.md)
 ```
 
 Der externe Quellenordner (nicht Teil dieses Repositories) ist separat in

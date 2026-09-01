@@ -5,7 +5,7 @@ scope:
   material:                # GL24h | GL75
   experiment_level:        # COMPONENT | FULL_CONNECTION
 type: PRIMARY_DATA
-status: MEASURED
+certainty: MEASURED      # siehe schema.yaml -> certainty
 specimen:
   id:
 date:

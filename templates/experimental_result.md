@@ -14,7 +14,7 @@ result:
   unit:                    # gemäß schema.yaml -> unit_convention
   original_value:          # nur falls die Eingangsdaten in einer anderen Einheit vorlagen
   original_unit:
-status: DERIVED
+certainty: MEASURED      # siehe schema.yaml -> certainty
 ---
 
 Bei n = 1 ist dieses Ergebnis ein Einzelbefund und wird nicht als

@@ -3,7 +3,7 @@ open_question_id:         # <CONNECTION>-<MATERIAL>-OPQ-<NUMMER> (oder COMMON-CO
 scope:
   connection:              # R1 | R2 | R3 | COMMON
   material:                # GL24h | GL75 | COMMON
-status:                    # OPEN | RESOLVED
+status:                    # siehe schema.yaml -> open_question_status
 question:
 context:
 related_sources:           # ID(s) aus bibliography/sources.yaml, falls zutreffend

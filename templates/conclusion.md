@@ -7,8 +7,8 @@ type: CONCLUSION
 based_on:                 # ID(s) der zugrundeliegenden Ergebnisse/Berechnungen/Interpretationen
 statement:
 limitations:
-confidence:                # LOW | MEDIUM | HIGH
-status: CONCLUDED
+certainty:                 # siehe schema.yaml -> certainty (z. B. ESTABLISHED | MEASURED | INTERPRETED | SYNTHESIS —
+                            # je nachdem, worauf die Schlussfolgerung tatsächlich beruht)
 authored_by:               # RESEARCHER | CLAUDE_DRAFT
 reviewed:                  # true | false — nur relevant bei CLAUDE_DRAFT, wird ausschließlich vom Forschenden gesetzt
 ---

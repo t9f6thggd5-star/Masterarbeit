@@ -23,6 +23,9 @@ hier im Repository.
 │   └── general/         sonstige allgemeine Unterlagen
 │
 └── R1/ R2/ R3/          (identisch aufgebaut, siehe CLAUDE.md Abschnitt 3)
+    ├── COMMON/          Quellen, die für diese Verbindung unabhängig vom
+    │                    Material gelten (Pläne, Normen, Literatur) —
+    │                    siehe CLAUDE.md Abschnitt 1
     ├── GL24h/
     │   ├── experiments/
     │   │   ├── components/

@@ -8,7 +8,6 @@ claim:
   source:                  # ID aus bibliography/sources.yaml
   pages:
   source_type:             # siehe schema.yaml -> source_type
-  claim_status:             # siehe schema.yaml -> claim_status
-  confidence:               # LOW | MEDIUM | HIGH
+  certainty:               # siehe schema.yaml -> certainty
 contradicted_by:           # ID(s) anderer claims, falls vorhanden
 ---

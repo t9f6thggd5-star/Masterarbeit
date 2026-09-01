@@ -16,5 +16,5 @@ output:
   unit:                    # gemäß schema.yaml -> unit_convention
   original_value:          # nur falls die Eingangsdaten in einer anderen Einheit vorlagen
   original_unit:
-status: PROCESSED
+certainty: MEASURED      # siehe schema.yaml -> certainty
 ---

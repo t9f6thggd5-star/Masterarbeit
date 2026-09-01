@@ -74,44 +74,50 @@ research_type:
     description: "A methodological or research decision."
 
 # -----------------------------------------------------------------------------
-# Status values (data provenance / lifecycle state)
-# Chain: MEASURED -> PROCESSED -> DERIVED -> INTERPRETED -> CONCLUDED
+# Certainty (ONE field, used on every entry that makes a claim about
+# reality — research/ entries and wiki/ claims alike — for "how
+# well-grounded is this".
+#
+# This single list replaces five previously separate, overlapping fields
+# (status, certainty_level, confidence, claim_status, hypothesis_status)
+# that all expressed some variant of the same question in slightly
+# different words depending on entry type. One field, one place to look,
+# regardless of whether the entry is a RAW_MEASUREMENT, a CONCLUSION or a
+# wiki CLAIM.
+#
+# Deliberate exception: templates/open_question.md keeps its own
+# `status: OPEN | RESOLVED` (schema.yaml -> open_question_status) instead
+# of using `certainty` — a question is not a claim about reality, so
+# "how certain is it" does not apply; it has a resolution state instead,
+# which is a different kind of thing. Folding it into `certainty` would
+# recreate exactly the kind of mixed-purpose field this change removes.
+# templates/decision.md needs no certainty field at all, for the same
+# reason (a decision is an action, not a claim).
 # -----------------------------------------------------------------------------
-status:
-  - MEASURED          # raw measurement, directly recorded
-  - PROCESSED         # derived from raw measurement via a documented method
-  - DERIVED           # experimental result derived from measurement/processed data
-  - CALCULATED        # output of an analytical/numerical calculation
-  - PROVISIONAL       # assumption not yet confirmed
-  - INTERPRETATION    # interpretation of a result/observation
-  - CONCLUDED         # conclusion drawn from evidence
-  - PROVENANCE_UNKNOWN # provenance could not be established — never invent it
+certainty:
+  - ESTABLISHED     # normatively fixed, or overwhelming consensus (was: claim_status NORMATIVE)
+  - MEASURED        # directly measured / empirically recorded or derived from measurement
+  - CALCULATED      # result of an own analytical/numerical calculation
+  - SOURCE_CLAIM    # reported by a source, not independently verified
+  - ASSUMED         # explicit working assumption, not yet confirmed
+  - HYPOTHESIZED    # under investigation, not yet supported or refuted
+  - CONFIRMED       # a hypothesis supported by subsequent evidence
+  - REJECTED        # a hypothesis refuted by subsequent evidence
+  - INTERPRETED     # researcher's interpretation, not a raw fact
+  - SYNTHESIS       # researcher's own synthesis across multiple sources/results
+  - UNKNOWN         # certainty cannot currently be classified — do not guess
+  - PROVENANCE_UNKNOWN # distinct from UNKNOWN: specifically that origin/lineage
+                        # (which source, which measurement, which method) could
+                        # not be established — never invent it (CLAUDE.md section 17)
 
 # -----------------------------------------------------------------------------
-# Certainty / evidence classification (used in claims, wiki pages, conclusions)
+# Open question status (templates/open_question.md -> status)
+#
+# Kept separate from `certainty` above — see the note there for why.
 # -----------------------------------------------------------------------------
-certainty_level:
-  - ESTABLISHED   # normatively fixed or overwhelming consensus
-  - MEASURED      # directly measured value
-  - CALCULATED    # result of a calculation
-  - ASSUMED       # explicit working assumption
-  - HYPOTHESIZED  # under investigation, not yet supported
-  - INTERPRETED   # researcher's interpretation, not a raw fact
-  - UNKNOWN       # cannot currently be classified — do not guess
-
-confidence:
-  - LOW
-  - MEDIUM
-  - HIGH
-
-# -----------------------------------------------------------------------------
-# Claim status (wiki/ claims — see CLAUDE.md section on claims)
-# -----------------------------------------------------------------------------
-claim_status:
-  - NORMATIVE       # required/defined by a standard
-  - SOURCE_CLAIM     # reported by a source, not independently verified
-  - EVIDENCE        # supported by empirical/experimental data
-  - SYNTHESIS       # own synthesis across multiple sources/results
+open_question_status:
+  - OPEN
+  - RESOLVED
 
 # -----------------------------------------------------------------------------
 # Authorship / review status (see CLAUDE.md section on Authorship and
@@ -149,16 +155,30 @@ unit_convention:
 # 1) INTERNAL / PROJECT-GENERATED entries — everything created by this
 #    research itself: experiments, raw measurements, processed data,
 #    experimental results, calculations, assumptions, hypotheses,
-#    interpretations, conclusions, decisions. These always have a
-#    connection/material scope, so they follow the strict pattern below.
+#    interpretations, conclusions, decisions, open questions — and wiki
+#    claims (templates/claim.md), which are likewise project-specific
+#    statements scoped to a connection/material, not external sources.
+#    These always have a connection/material scope, so they follow the
+#    strict pattern below.
 #
 #    Pattern: <CONNECTION>-<MATERIAL>-<CATEGORY>-<NUMBER>
 #    CONNECTION: R1 | R2 | R3 | COMMON
 #    MATERIAL:   GL24h | GL75 | COMMON
 #    CATEGORY:   FULL | CMP (component) | RAW | PROC | RES | CALC | ASS | HYP |
-#                INT | CON (conclusion) | DEC (decision) | OPQ (open question)
+#                INT | CON (conclusion) | DEC (decision) | OPQ (open question) |
+#                CLAIM (wiki claim, templates/claim.md)
 #    NUMBER:     zero-padded 3-digit running number, unique within its
 #                category and scope — never reused, never renumbered.
+#
+#    Note on RAW/PROC/RES specifically: templates/raw_measurement.md,
+#    processed_data.md and experimental_result.md document their ID as
+#    "<CONNECTION>-<MATERIAL>-<EXPERIMENT-ID>-RAW/PROC/RES-<NUMBER>",
+#    i.e. nesting the parent experiment's own ID inside the pattern above
+#    rather than following the flat 4-token pattern directly. This is a
+#    deliberate exception (a measurement belongs to one specific
+#    experiment run, not just to a connection/material), but it means
+#    scripts/lint.py can only check the CONNECTION-MATERIAL- prefix and
+#    the category token for these three types, not the full flat pattern.
 #
 # 2) EXTERNAL SOURCES — norms, papers, books, manufacturer data, reports.
 #    These are NOT project-generated and do NOT get a connection/material

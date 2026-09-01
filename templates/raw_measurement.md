@@ -14,5 +14,5 @@ original_unit:
 measurement_channel:
 timestamp:
 data_source:
-status: MEASURED
+certainty: MEASURED      # siehe schema.yaml -> certainty
 ---
