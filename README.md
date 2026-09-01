@@ -58,7 +58,8 @@ master-thesis-research-wiki/
 │   └── R1/ R2/ R3/        je GL24h/ und GL75/, je experiment_processing/,
 │                          experimental_results/, calculations/,
 │                          assumptions/, hypotheses/, interpretations/,
-│                          conclusions/, decisions/, current_state.md
+│                          conclusions/, decisions/, open_questions/,
+│                          current_state.md
 │
 ├── wiki/                  verlinkte Wissensbasis (Claude-Output)
 │   ├── common/            normative_basis/, concepts/, methods/, literature/
