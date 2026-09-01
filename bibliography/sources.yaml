@@ -260,7 +260,11 @@ sources:
   year: 2002
   publisher: Dissertation, Universitaet Stuttgart, Institut fuer Konstruktion und Entwurf (Mitteilungen Nr. 2002-4, ISSN 1439-3751)
   pages: 213
-  notes: Grundlegende deutschsprachige Quelle zu Rahmenecken mit eingeklebten Gewindestangen -- thematisch nahe an R2.
+  notes: >-
+    Grundlegende deutschsprachige Quelle zu Rahmenecken mit eingeklebten
+    Gewindestangen -- thematisch nahe an R2. Vollstaendig ausgewertet
+    (Kapitel 1 bis Anhang C, 2026-09-01) -- Ergebnisse dokumentiert als
+    wiki/R2/COMMON/literature/R2-COMMON-CLAIM-006.md bis -025.md.
 - id: FragiacomoBatchelar2012a
   type: LITERATURE
   authority: peer_reviewed_or_secondary
@@ -287,6 +291,30 @@ sources:
   publisher: Journal of Structural Engineering (ASCE), Vol. 138, No. 6, pp. 802-811, DOI 10.1061/(ASCE)ST.1943-541X.0000517
   pages: 10
   notes: Teil II (Langzeitversuche) des zweiteiligen Papers; siehe FragiacomoBatchelar2012a fuer Teil I.
+- id: YangLiuRen2016
+  type: LITERATURE
+  authority: peer_reviewed_or_secondary
+  file: R2/COMMON/relevant A component method for moment-resistant glulam beam–column.pdf
+  scope:
+    connection: R2
+    material: COMMON
+  title: A component method for moment-resistant glulam beam–column connections with glued-in steel rods
+  authors: Huifeng Yang, Weiqing Liu, Xiao Ren
+  year: 2016
+  publisher: Engineering Structures, Vol. 115, pp. 42-54, DOI 10.1016/j.engstruct.2016.02.024
+  pages: 13
+  notes: >-
+    Vom Nutzer ergaenzt (2026-09-01). Vollstaendig ausgewertet
+    (2026-09-01) -- Ergebnisse dokumentiert als
+    wiki/R2/COMMON/literature/R2-COMMON-CLAIM-026.md bis -030.md.
+    Besonders hohe thematische Relevanz: wendet die Komponentenmethode
+    (component method, EN 1993-1-8 / Jaspart) explizit auf
+    momententragfaehige Rahmenecken mit eingeklebten Gewindestangen in
+    Brettschichtholz an -- direkter Bezug zum Kernthema der Arbeit
+    ("Untersuchung der Komponentenmethode im Holzbau"). Verbindungstyp
+    weicht von R2 ab (zusaetzliche Stahlkasten-Profile/T-Stub-Modell,
+    Douglas-Fir GL36h statt GL24h/GL75, Nanjing Tech University) -- keine
+    1:1-Uebertragbarkeit, siehe wiki/R2/COMMON/literature/README.md.
 - id: ScheibmairQuenneville2014
   type: LITERATURE
   authority: peer_reviewed_or_secondary
