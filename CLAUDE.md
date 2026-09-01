@@ -35,21 +35,41 @@ cloud-sync tool and Git. The external sources folder mirrors the same
 categorization used throughout this document — `common/norms/`,
 `common/literature/`, `common/books/`, `common/general/`, and per
 connection `R1/R2/R3` × `GL24h/GL75` × `experiments/components/`,
-`experiments/full_connection/`, `plans/`. Each connection additionally has
-a `COMMON/` folder alongside `GL24h/` and `GL75/`, for source documents
-(plans, norms, literature, etc.) that apply to that connection regardless
-of material — mirroring the `COMMON` value of the material scope in
-`schema.yaml` (Section 2). This affects source documents only:
-experimental data, results and calculations are still collected and
-evaluated separately per material, and remain split under `GL24h/` and
-`GL75/` as before (Section 3 still applies to those). All rules in this
-file about
+`experiments/full_connection/`, `plans/`, `calculations/`. Each connection
+additionally has a `COMMON/` folder alongside `GL24h/` and `GL75/`, for
+source documents (plans, norms, literature, etc.) that apply to that
+connection regardless of material — mirroring the `COMMON` value of the
+material scope in `schema.yaml` (Section 2). This affects source
+documents only: experimental data, results and calculations are still
+collected and evaluated separately per material, and remain split under
+`GL24h/` and `GL75/` as before (Section 3 still applies to those).
+
+Exception: a calculation tool (e.g. an Excel workbook) that genuinely
+cannot be split by material — because it computes GL24h and GL75 results
+together in one document — may be stored once under the connection's
+`COMMON/calculations/` folder instead of being duplicated under both
+`GL24h/` and `GL75/`. This is a storage-location exception only, not an
+epistemic one: it does not make the calculation itself material-COMMON.
+Every `calculation.md` entry (in `research/`) derived from that file must
+still declare its own specific material (GL24h or GL75) as usual, and
+Section 4 (Scope Isolation) still applies in full to the results
+themselves — only the one physical file they were computed in is shared.
+Use this exception only when the file truly cannot be separated; prefer
+splitting by material under `GL24h/calculations/` and `GL75/calculations/`
+whenever that is possible.
+
+All rules in this file about
 "sources" (never modify them, cite them by ID, distinguish source types,
 etc.) apply identically regardless of where the files physically live —
 only the storage location changed, not the rules. Every source is still
 registered with a stable ID in `bibliography/sources.yaml`, which records
 its location in the external folder; claims and templates reference that
-ID, never a raw file path.
+ID, never a raw file path. Own calculation files (as opposed to external
+sources) are not registered in `sources.yaml` at all — they are not an
+unmodifiable "source" but the researcher's own, evolving work product
+(Section 6/9); the corresponding `calculation.md` entry's `source_file`
+field, not a `sources.yaml` ID, is what records where the underlying file
+lives and which version/date it reflects.
 
 All controlled vocabulary referenced below (source types, research types,
 the `certainty` values, ID pattern) is defined once in `schema.yaml`. Do
@@ -285,12 +305,26 @@ conclusion as if it were scoped to a single connection.
 ## 13. Research State vs. Established Knowledge
 
 Files under `research/` represent the current working state and may
-contain provisional assumptions, hypotheses and decisions that later
-turn out to be wrong. Working assumptions must never be presented as
-established scientific facts, either in the wiki or in conversation.
-When an assumption in `research/.../assumptions/` is superseded, do not
-delete or silently overwrite it — fill in its `superseded_by` field and
-add the superseding entry, so the evolution remains traceable.
+contain provisional assumptions, hypotheses, calculations, interpretations
+and conclusions that later turn out to be wrong, incomplete, or based on a
+calculation tool (e.g. a spreadsheet) that gets revised. Working
+assumptions must never be presented as established scientific facts,
+either in the wiki or in conversation. When an entry in
+`research/.../assumptions/`, `calculations/`, `interpretations/`,
+`conclusions/` or `hypotheses/` is superseded — including when a
+calculation is redone after its underlying spreadsheet or input data
+changed — do not delete or silently overwrite it — fill in its
+`superseded_by` field and add the superseding entry with a new ID, so the
+evolution remains traceable. This is the general rule; it is not specific
+to assumptions.
+
+A revised external calculation file (e.g. an Excel workbook you keep
+editing) is never itself treated as a versionless "source" to be
+overwritten in place — see Section 1 for where and how such files are
+stored, and note their content is not exempt from Section 4 (Scope
+Isolation): each individual `calculation.md` entry derived from it must
+still declare its own specific material, even if the underlying file
+covers more than one material at once.
 
 ---
 

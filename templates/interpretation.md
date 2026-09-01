@@ -9,6 +9,7 @@ based_on:
   observations:            # ID(s) von Beobachtungen, falls vorhanden
 interpretation:
 certainty: INTERPRETED     # siehe schema.yaml -> certainty
+superseded_by:             # ID der neueren Interpretation, falls diese hier überholt ist (Abschnitt 13)
 authored_by:               # RESEARCHER | CLAUDE_DRAFT
 reviewed:                  # true | false — nur relevant bei CLAUDE_DRAFT, wird ausschließlich vom Forschenden gesetzt
 ---

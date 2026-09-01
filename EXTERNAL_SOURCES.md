@@ -26,11 +26,21 @@ hier im Repository.
     ├── COMMON/          Quellen, die für diese Verbindung unabhängig vom
     │                    Material gelten (Pläne, Normen, Literatur) —
     │                    siehe CLAUDE.md Abschnitt 1
+    │   └── calculations/  NUR für eine eigene Berechnungsdatei (z. B.
+    │                    Excel), die GL24h und GL75 zusammen in einem
+    │                    Dokument berechnet und sich nicht sauber trennen
+    │                    lässt — Ausnahme, siehe CLAUDE.md Abschnitt 1.
+    │                    Ändert nichts daran, dass jeder daraus
+    │                    abgeleitete calculation.md-Eintrag sein eigenes
+    │                    Material (GL24h oder GL75) trägt.
     ├── GL24h/
     │   ├── experiments/
     │   │   ├── components/
     │   │   └── full_connection/
-    │   └── plans/
+    │   ├── plans/
+    │   └── calculations/  eigene Berechnungsdateien (z. B. Excel), sofern
+    │                    nach Material trennbar — sonst siehe
+    │                    COMMON/calculations/ oben
     └── GL75/            (gleiche Unterordner)
 ```
 
@@ -41,6 +51,15 @@ vom Speicherort: Originalquellen werden nie verändert (Abschnitt 19,
 Regel 1), jede Quelle bekommt einen Eintrag in `bibliography/sources.yaml`
 mit einer stabilen ID und dem Pfad im externen Ordner, und Claims/Templates
 referenzieren immer diese ID — nie einen rohen Dateipfad direkt.
+
+`calculations/` ist ein Sonderfall: eigene Berechnungsdateien (z. B.
+Excel-Arbeitsmappen) sind keine unveränderlichen Originalquellen, sondern
+werden laufend weiterbearbeitet (siehe CLAUDE.md Abschnitt 1/9/13). Sie
+bekommen deshalb **keinen** Eintrag in `bibliography/sources.yaml` — die
+Rückverfolgbarkeit läuft stattdessen über das `source_file`-Feld des
+jeweiligen `calculation.md`-Eintrags (Dateiname/-pfad plus Version oder
+Datum) und, bei einer überarbeiteten Version, über dessen
+`superseded_by`-Feld.
 
 `common/` ist zugleich die Quellenablage für die nicht-verbindungsspezifischen
 Kapitel der Arbeit (Einleitung, Grundlagen, Stand der Technik, Methodik
