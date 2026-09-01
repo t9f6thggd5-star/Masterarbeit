@@ -47,6 +47,13 @@ source_type:
   REPORT:
     description: "Expert report / Gutachten."
     authority: expert_opinion
+  PROJECT_BRIEF:
+    description: >
+      Project-internal directive / organisational document that defines
+      scope or tasks rather than making a technical claim — e.g. the
+      thesis task assignment (Aufgabenstellung), a project scope memo.
+      Not a technical/geometry plan (PLAN), not an expert opinion (REPORT).
+    authority: project_specific
 
 # -----------------------------------------------------------------------------
 # Research types (research/ + wiki/ — derived, non-source content)

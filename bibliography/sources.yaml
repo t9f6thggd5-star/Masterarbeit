@@ -55,6 +55,30 @@ sources:
   date: 2024-07
   pages: 69
   notes: VDI-Richtlinie, kein formaler DIN/EN-Standard.
+- id: MA-Aufgabenstellung-Maucher-2026
+  type: PLAN
+  authority: project_specific
+  file: common/general/MA_Aufgabenstellung_Maucher.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: >
+    Aufgabenstellung für die Masterarbeit "Untersuchung der
+    Komponentenmethode im Holzbau am Beispiel momententragfähiger
+    Rahmeneckanschlüsse"
+  issuing_body: Universität Stuttgart, Institut für Konstruktion und Entwurf (Prof. Dr. Markus Knobloch)
+  designation: Offizielle Aufgabenstellung, Bearbeiter Lukas Maucher (Matrikel-Nr. 3380882)
+  date: 2026-07-15
+  pages: 4
+  notes: >
+    Keine der schema.yaml-source_type-Kategorien passt exakt auf ein
+    offizielles Aufgabenstellungsdokument einer Hochschule; PLAN ("test
+    plan, technical/geometry plan") wird als nächstliegende Näherung
+    verwendet. Abgabetermin laut Dokument: 14.01.2027. Bezug auf
+    Forschungsprojekt "HIP_2685085" im Dokument, nicht näher
+    spezifiziert. Am 2026-09-01 gegen das Original geprüft (vorher nur
+    aus chat-2-Wiedergabe übernommen, siehe COMMON-COMMON-DEC-003 und
+    COMMON-COMMON-OPQ-002, dort als RESOLVED markiert).
 - id: Scheibmair2012
   type: LITERATURE
   authority: peer_reviewed_or_secondary
