@@ -55,11 +55,14 @@ master-thesis-research-wiki/
 │   ├── thesis/            Abstract, Einleitung, Grundlagen, Stand der
 │                          Technik, Methodik, Diskussion, Grenzen der
 │                          Arbeit, Schluss, Ausblick, general
-│   └── R1/ R2/ R3/        je GL24h/ und GL75/, je experiment_processing/,
-│                          experimental_results/, calculations/,
-│                          assumptions/, hypotheses/, interpretations/,
-│                          conclusions/, decisions/, open_questions/,
-│                          current_state.md
+│   └── R1/ R2/ R3/        je GL24h/, GL75/ und COMMON/ (letzteres nur für
+│                          Inhalte, die für diese Verbindung unabhängig
+│                          vom Material gelten, z. B. R1-COMMON-* — siehe
+│                          schema.yaml, Materialachse), je
+│                          experiment_processing/, experimental_results/,
+│                          calculations/, assumptions/, hypotheses/,
+│                          interpretations/, conclusions/, decisions/,
+│                          open_questions/, current_state.md
 │
 ├── wiki/                  verlinkte Wissensbasis (Claude-Output)
 │   ├── common/            normative_basis/, concepts/, methods/, literature/
