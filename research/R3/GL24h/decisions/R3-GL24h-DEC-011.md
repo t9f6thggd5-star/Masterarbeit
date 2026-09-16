@@ -1,0 +1,46 @@
+---
+decision_id: R3-GL24h-DEC-011
+scope:
+  connection: R3
+  material: GL24h
+type: DECISION
+question: >
+  Welcher Wert wird als "gewählte Last" (Bemessungsgrundlage im Zugpfad)
+  für die Tragfähigkeit der realen 4×8-ASSY-Schraubengruppe (eine
+  Laschenseite) angesetzt?
+decision: >
+  Die Extrapolation aus der gemessenen 4×4-Gruppe wird als gewählte Last
+  festgelegt: F = 329,054 kN (exakter Wert aus R3-GL24h-CALC-006; vom
+  Nutzer am 2026-09-16 als „329,06 kN" benannt, siehe Anmerkung unten zur
+  Rundungsdifferenz).
+reason: >
+  R3-GL24h-CALC-006 leitet diesen Wert direkt aus den eigenen 1×1-/4×4-
+  Push-Out-Komponentenversuchen ab (Governing-Basis: Lasche-an-Column/
+  44-C, da 44-B mit nur 1 von 3 Prüfkörpern nicht verwertbar ist,
+  R3-GL24h-OPQ-021) und ist damit die einzige verfügbare Methode, die
+  eine 4×8-Kapazität aus eigenen Messdaten (statt rein normativ) ableitet.
+alternatives_considered: >
+  Keine dokumentiert; eine rein normative n_ef-Extrapolation ohne
+  4×4-Kalibrierung oder die genauere A.8.2-Steifigkeitsmethode wurden in
+  der Diskussion erwähnt, aber nicht als gewählte Last verwendet.
+date: "2026-09-16"
+---
+
+**Wichtiger Hinweis zum Status dieses Werts:** R3-GL24h-CALC-006 bezeichnet
+sich selbst ausdrücklich als "grobe Vorhersage, keine Bemessungsgrundlage"
+mit mehreren offenen Einschränkungen (ungeklärt, ob die für n_ef
+maßgebende Faserrichtung die der Lasche oder die des Hauptbauteils ist;
+ungeprüfter Blockscher-/Netto-Querschnittsnachweis quer zur Faser;
+bewusst konservative 0,9n-Vereinfachung statt n_ef=n für n≤10). Mit dieser
+Entscheidung wird der Wert nun dennoch als gewählte Last für die weitere
+Bemessung verwendet — die genannten Einschränkungen gelten dafür
+unverändert fort und wurden im Rahmen dieser Entscheidung nicht
+zusätzlich abgesichert oder aufgelöst.
+
+**Rundungsdifferenz:** CALC-006 liefert exakt 329,054 kN; der Nutzer hat
+den Wert im Gespräch als 329,06 kN benannt (Differenz 0,006 kN,
+praktisch vernachlässigbar). Hier mit dem exakten Berechnungswert
+dokumentiert; bei Bedarf jederzeit auf 329,06 kN korrigierbar.
+
+Bezieht sich auf EINE Laschenseite (eine 4×8-Schraubengruppe), nicht auf
+den vollständigen, beidseitigen Zugpfad (siehe CALC-006 selbst).

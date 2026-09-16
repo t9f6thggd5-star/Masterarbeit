@@ -52,16 +52,35 @@ Schraube 4×4 (`III-PO-S-SC-44-C` vollständig, `III-PO-S-SC-44-B` nur 1
 von 3 Prüfkörpern, R3-GL24h-OPQ-021). Diese Push-Out-Ergebnisse sind
 noch nicht mit der obigen Zugpfad-Steifigkeitskette verknüpft.
 
+**Neu (2026-09-16):** grobe Tragfähigkeits-Vorhersage für die reale
+4×8-ASSY-Schraubengruppe (eine Laschenseite) aus den 1×1-/4×4-Push-Out-
+Versuchen abgeleitet, R3-GL24h-CALC-006, `≈329,1 kN` — Governing-Basis
+ist die Lasche-an-Column-Serie (44-B nicht verwertbar, s. o.). Explizit
+als grobe, nicht bemessungsreife Vorhersage gekennzeichnet (mehrere
+ungeklärte Annahmen, siehe CALC-006 selbst). Beruht auf denselben
+axial-45°-geneigten ASSY-Schrauben wie R3-GL24h-CALC-001–005, aber
+bewusst nicht mit der dortigen Steifigkeitskette verknüpft (reine
+Tragfähigkeits-, keine Steifigkeitsbetrachtung).
+
+**Neu (2026-09-16):** R3-GL24h-DEC-011 legt den CALC-006-Wert (329,054 kN)
+als "gewählte Last" für die weitere Bemessung des Zugpfads fest (Wert
+bezieht sich auf eine Laschenseite). Die in CALC-006 dokumentierten
+Einschränkungen (grobe, nicht bemessungsreife Vorhersage) gelten dafür
+unverändert fort.
+
 ## Wichtigste Einträge
 
 - Entscheidungen: R3-GL24h-DEC-002–010 (Vorspannung/Kriechen/
   No-Contact-Variante, Laschenlänge, Hebelarm, Prüfstandkonfiguration,
-  Status Vorbemessung, Modellvarianten); siehe auch R3-COMMON-DEC-001/002
-  und COMMON-COMMON-DEC-001–004 für projektweite/materialunabhängige
-  Punkte.
+  Status Vorbemessung, Modellvarianten); R3-GL24h-DEC-011 (gewählte Last
+  4×8-ASSY-Schraubengruppe = 329,054 kN, aus CALC-006 übernommen); siehe
+  auch R3-COMMON-DEC-001/002 und COMMON-COMMON-DEC-001–004 für
+  projektweite/materialunabhängige Punkte.
 - Berechnungen: R3-GL24h-CALC-001–005 (Zugpfad-Steifigkeitskette:
   Holzlasche mit/ohne ASSY-Abstützung, ASSY-Schraubengruppe,
-  Gewindestange, kombinierter Arbeitswert).
+  Gewindestange, kombinierter Arbeitswert); R3-GL24h-CALC-006 (grobe
+  4×8-Tragfähigkeits-Vorhersage ASSY-Schraubengruppe aus Push-Out-Daten,
+  `≈329,1 kN` je Laschenseite, CALCULATED, nicht bemessungsreif).
 - Annahmen: R3-GL24h-ASS-001–002 (starre Kopf-/Endplatten,
   Equal-row-load ASSY-Schrauben).
 - Versuchsergebnisse: R3-GL24h-III-PO-S-SD-36-RES-001/002,

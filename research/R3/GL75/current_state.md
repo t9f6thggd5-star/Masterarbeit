@@ -38,10 +38,28 @@ COMMON-Basisserie (kein `*-B-WD-*` in der gesamten Auswertungsdatei),
 spricht eher für eine bewusste Auslassung (Holzdübel nicht mit
 GL75/Buche getestet) als für einen Einzelfehler — nicht weiter geklärt.
 
+**Neu (2026-09-16):** grobe Tragfähigkeits-Vorhersage für die reale
+4×8-ASSY-Schraubengruppe (eine Laschenseite) aus den 1×1-/4×4-Push-Out-
+Versuchen abgeleitet, R3-GL75-CALC-001 (erster CALC-Eintrag für
+R3/GL75), `≈418,1 kN` — Governing-Basis ist die Lasche-an-Beam-Serie
+(kleinerer der beiden vollständigen 4×4-Mittelwerte). Explizit als
+grobe, nicht bemessungsreife Vorhersage gekennzeichnet (mehrere
+ungeklärte Annahmen, siehe CALC-001 selbst); dieselbe Methode wie
+R3-GL24h-CALC-006.
+
+**Neu (2026-09-16):** R3-GL75-DEC-001 (erste R3/GL75-spezifische
+Entscheidung) legt den CALC-001-Wert (418,086 kN) als "gewählte Last"
+für die weitere Bemessung des Zugpfads fest (Wert bezieht sich auf eine
+Laschenseite). Die in CALC-001 dokumentierten Einschränkungen (grobe,
+nicht bemessungsreife Vorhersage) gelten dafür unverändert fort.
+
 ## Wichtigste Einträge
 
-- Entscheidungen: — (noch keine R3/GL75-spezifischen).
-- Berechnungen: — (noch keine).
+- Entscheidungen: R3-GL75-DEC-001 (gewählte Last 4×8-ASSY-Schraubengruppe
+  = 418,086 kN, aus CALC-001 übernommen).
+- Berechnungen: R3-GL75-CALC-001 (grobe 4×8-Tragfähigkeits-Vorhersage
+  ASSY-Schraubengruppe aus Push-Out-Daten, `≈418,1 kN` je Laschenseite,
+  CALCULATED, nicht bemessungsreif).
 - Annahmen: — (noch keine).
 - Versuchsergebnisse: R3-GL75-III-PO-B-SD-25-RES-001/002,
   R3-GL75-III-PO-B-SC-11-B-RES-001/002,
