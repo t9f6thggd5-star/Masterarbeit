@@ -50,7 +50,10 @@ nicht weiter interpretiert.
 - Annahmen: — (materialunabhängige Annahmen siehe R2-COMMON-ASS-001–005,
   bisher jedoch nur für GL24h konkret angewendet).
 - Versuchsergebnisse: R2-GL75-II-PO-B-SD-23-RES-001,
-  R2-GL75-II-T-B-BR-22-RES-001, R2-GL75-II-T-B-BR-11-RES-001.
+  R2-GL75-II-T-B-BR-22-RES-001, R2-GL75-II-T-B-BR-11-RES-001,
+  R2-GL75-II-T-B-BR-11-RES-002 (Steifigkeiten K_ser/K_e),
+  R2-GL75-II-T-B-BR-22-RES-002 (Steifigkeiten, mit deutlichem Ausreißer
+  bei Prüfkörper 2 — Verhältnis oben/unten nur ~23 %).
 - Interpretationen/Schlussfolgerungen: — (Beobachtung zum materialabhängig
   verschobenen Versagensmodus bisher nur als Freitext in
   R2-GL75-CALC-003 vermerkt, `CLAUDE_DRAFT` — noch vom Forschenden zu

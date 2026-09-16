@@ -76,7 +76,9 @@ lineare Skalierung, nicht weiter interpretiert.
 - Annahmen: — (materialunabhängige Annahmen siehe R2-COMMON-ASS-001–005).
 - Versuchsergebnisse: R2-GL24h-II-PO-S-SD-34-RES-001,
   R2-GL24h-II-PO-S-WD-34-RES-001, R2-GL24h-II-T-S-BR-22-RES-001,
-  R2-GL24h-II-T-S-BR-11-RES-001.
+  R2-GL24h-II-T-S-BR-11-RES-001, R2-GL24h-II-T-S-BR-11-RES-002
+  (Steifigkeiten K_ser/K_e), R2-GL24h-II-T-S-BR-22-RES-002
+  (Steifigkeiten, deutlich größere Streuung als bei der 11er-Serie).
 - Interpretationen/Schlussfolgerungen: — (frühere Beobachtung zum
   materialabhängigen Versagensmodus in R2-GL24h-CALC-008 durch die
   Korrektur in R2-GL24h-CALC-012 überholt — GL24h und GL75 werden jetzt
