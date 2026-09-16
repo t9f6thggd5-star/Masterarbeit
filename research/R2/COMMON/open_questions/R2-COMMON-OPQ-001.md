@@ -3,7 +3,7 @@ open_question_id: R2-COMMON-OPQ-001
 scope:
   connection: R2
   material: COMMON
-status: OPEN
+status: RESOLVED
 question: >
   Wie ist die genaue Druckzonenlänge/-verteilung am Rahmeneck-Innenknoten
   anzusetzen (rechteckige vs. dreieckige Pressungsverteilung), und wo
@@ -26,13 +26,21 @@ options_considered: >
   oder ein gewähltes Dreiecks-/Rechtecks-Kontaktmodell mit eigener
   Herleitung ansetzen.
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-04"
+resolution: >
+  Festlegung durch die Betreuerin (Besprechung 2026-09-04): Druckzone
+  RECHTECKIG ansetzen, Hebelarm mittig in der Druckzone. Dokumentiert als
+  R2-COMMON-DEC-002. Damit ist die Form der Druckverteilung und die Lage
+  des Kraftangriffspunkts geklärt; die konkrete Höhe/Ausdehnung der
+  rechteckigen Druckzone (und damit `A_c`, `c_c,90`, `c_c,0` als Zahlenwerte)
+  ist ein nachfolgender Berechnungsschritt, kein weiterer offener Punkt
+  dieser Frage — siehe R2-COMMON-OPQ-006 für die Kombination zur
+  vollständigen Rotationssteifigkeit.
 ---
 
 Übernommen aus chat-3, OPEN_QUESTIONS.md Punkt 1, und TASKS.md
 ("Blocked / needs input — P1 — Compression-zone length"). Diese Frage
-blockiert laut TASKS.md direkt die Bearbeitung von `c_c,90`, `c_c,0` und
+blockierte laut TASKS.md direkt die Bearbeitung von `c_c,90`, `c_c,0` und
 der finalen Rotationssteifigkeit (siehe auch R2-COMMON-OPQ-006).
 Materialunabhängig geführt, da die Druckzonen-Geometrie primär von der
 Rahmeneck-Konstruktion, nicht vom Holzwerkstoff abhängt.
@@ -81,3 +89,14 @@ Ansatz ist NICHT direkt auf R2 übertragbar (siehe Einschränkungen in
 CLAIM-027/028 und wiki/R2/COMMON/literature/README.md) und löst die
 Frage nicht, liefert aber einen zweiten, unabhängigen methodischen
 Vergleichspunkt zu Lipperts dreiecksförmigem Ansatz. Status bleibt OPEN.
+
+**Update (2026-09-04, Betreuerin-Entscheidung, RESOLVED):** Die
+Betreuerin hat in der Besprechung vom 2026-09-04 festgelegt, die
+Druckzone (abweichend von beiden oben dokumentierten Literatur-Vorbildern)
+als RECHTECKIG anzusetzen, mit dem Hebelarm mittig in der Druckzone.
+Dokumentiert als R2-COMMON-DEC-002. Die beiden Literatur-Updates oben
+bleiben als dokumentierte, geprüfte und bewusst nicht übernommene
+Alternativen stehen (Nachvollziehbarkeit der Abwägung, siehe CLAUDE.md
+Abschnitt 11/13). Status damit RESOLVED; die konkrete Zahlenwert-
+Bestimmung der Druckzonenhöhe ist Folgearbeit unter R2-COMMON-OPQ-006,
+kein Teil dieser Frage mehr.

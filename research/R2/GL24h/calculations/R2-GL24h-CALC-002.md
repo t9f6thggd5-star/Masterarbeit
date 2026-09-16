@@ -31,7 +31,7 @@ source_file: >
   openpyxl mit data_only=True ausgelesen, Stand der abgelegten Datei am
   2026-09-01)
 certainty: CALCULATED
-superseded_by:
+superseded_by: R2-GL24h-CALC-014
 ---
 
 Übernommen aus chat-3 (STATE.md Abschnitt 3, KNOWLEDGE.md Abschnitt 4)
@@ -55,3 +55,11 @@ und unabhängig gegen die reale Excel-Datei verifiziert.
 
 Eingang in R2-GL24h-CALC-004 (Gesamt-Zugseitensteifigkeit `c_T`, in Serie
 mit dem Schubfeld R2-GL24h-CALC-003).
+
+**Update (2026-09-16):** Überholt durch R2-GL24h-CALC-014, das den
+rein rechnerischen "vier Stangen ohne Querdruckanteil"-Teil dieser
+Kette durch den gepoolten Messwert der BR-22-Zugversuche
+(R2-GL24h-II-T-S-BR-22-RES-003) ersetzt, bei unveränderter Behandlung
+des `c_c,90`-Anteils. Dieser Eintrag bleibt als rein rechnerischer
+Referenzwert (FprEN-Vorhersage ohne Versuchsdaten) gültig dokumentiert,
+ist aber nicht mehr der aktuelle Wert für die Zugseiten-Steifigkeitskette.

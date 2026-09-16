@@ -26,7 +26,7 @@ source_file: >
   openpyxl mit data_only=True ausgelesen, Stand der abgelegten Datei am
   2026-09-01)
 certainty: CALCULATED
-superseded_by:
+superseded_by: R2-GL24h-CALC-015
 ---
 
 Übernommen aus chat-3 (STATE.md Abschnitt 5, CURRENT_MODEL_PARAMETERS.md
@@ -40,3 +40,10 @@ Druckseitensteifigkeit `c_C` und die Kombination zu einer
 Rotationssteifigkeit der gesamten Rahmenecke stehen noch aus (siehe
 R2-COMMON-OPQ-001/006). Kein entsprechender Wert liegt bisher für GL75
 vor — siehe R2-GL75-OPQ-001.
+
+**Update (2026-09-16):** Überholt durch R2-GL24h-CALC-015, das auf dem
+durch Versuchsdaten gestützten R2-GL24h-CALC-014 aufbaut (BR-22-Messwert
+statt rein rechnerischer Stangengruppen-Steifigkeit). Dieser Eintrag
+bleibt als rein rechnerischer Referenzwert (FprEN-Vorhersage ohne
+Versuchsdaten) gültig dokumentiert, ist aber nicht mehr der aktuelle
+Wert für `c_T`.

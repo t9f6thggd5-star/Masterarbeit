@@ -37,13 +37,22 @@ Korrektur weder die maßgebende Komponente noch `M_max`
 R2-GL75-II-T-B-BR-11-RES-001) liegt, umgerechnet auf eine Einzelstange,
 nahe am 2×2-Wert (291,003/4 ≈ 72,75 kN) und nahezu identisch zum
 GL24h-Wert derselben 1×1-Serie (72,337 kN) — Plausibilitätshinweis,
-nicht weiter interpretiert.
+nicht weiter interpretiert. Ebenfalls neu (2026-09-04): der
+materialunabhängige Druckzonen-Blocker R2-COMMON-OPQ-001 wurde durch
+Betreuerin-Entscheidung aufgelöst (Druckzone RECHTECKIG, Hebelarm
+mittig, R2-COMMON-DEC-002) — für GL75 relevant, sobald eine
+Druckseiten-Steifigkeitskette aufgestellt wird, was aber erst nach
+Klärung von R2-GL75-OPQ-001 (fehlende Zugseiten-Steifigkeitskette)
+ansteht.
 
 ## Wichtigste Einträge
 
 - Entscheidungen: — (materialübergreifende Klassifikationsentscheidung
-  siehe COMMON-COMMON-DEC-004; GL24h-spezifische Entscheidungen unter
-  R2-GL24h-DEC-001–007, nicht ungeprüft auf GL75 übertragbar).
+  siehe COMMON-COMMON-DEC-004; materialunabhängige R2-Entscheidungen
+  siehe R2-COMMON-DEC-002 [Druckzonengeometrie] und R2-COMMON-DEC-003
+  [Anfangssteifigkeit je Gruppe aus Blatt "Überblick", Zellen B94:B97];
+  GL24h-spezifische Entscheidungen unter R2-GL24h-DEC-001–007, nicht
+  ungeprüft auf GL75 übertragbar).
 - Berechnungen: R2-GL75-CALC-001–004 (Stabdübel-Johansen-Nachweis,
   unverstärkte Querdruckfestigkeit, Momenten-Abschätzung; CALC-004
   korrigiert CALC-002, siehe dessen `superseded_by`-Feld).
@@ -53,7 +62,14 @@ nicht weiter interpretiert.
   R2-GL75-II-T-B-BR-22-RES-001, R2-GL75-II-T-B-BR-11-RES-001,
   R2-GL75-II-T-B-BR-11-RES-002 (Steifigkeiten K_ser/K_e),
   R2-GL75-II-T-B-BR-22-RES-002 (Steifigkeiten, mit deutlichem Ausreißer
-  bei Prüfkörper 2 — Verhältnis oben/unten nur ~23 %).
+  bei Prüfkörper 2 — Verhältnis oben/unten nur ~23 %),
+  R2-GL75-II-T-B-BR-11-RES-003 (gepoolter K_ser-Mittelwert, n=6,
+  226,596 kN/mm) und R2-GL75-II-T-B-BR-22-RES-003 (gepoolter
+  K_ser-Mittelwert, n=6, 1.119,496 kN/mm, aber mit Vorsicht zu
+  verwenden — siehe dortiger Vorbehalt zur Streuung) — beide gemäß
+  R2-COMMON-DEC-003 direkt aus Blatt "Überblick" übernommen, bisher
+  aber in keiner GL75-Steifigkeitskette verwendet, da eine solche noch
+  nicht existiert (R2-GL75-OPQ-001).
 - Interpretationen/Schlussfolgerungen: — (Beobachtung zum materialabhängig
   verschobenen Versagensmodus bisher nur als Freitext in
   R2-GL75-CALC-003 vermerkt, `CLAUDE_DRAFT` — noch vom Forschenden zu
@@ -64,11 +80,15 @@ nicht weiter interpretiert.
 R2-GL75-OPQ-001–003 (fehlende Steifigkeitskette, fehlender
 ASSY-Verstärkungsblock, Anwendbarkeit der SWB-Querdruckbeiwerte auf
 BauBuche); dazu die materialunabhängigen offenen Fragen unter
-`research/R2/COMMON/open_questions/`.
+`research/R2/COMMON/open_questions/`, von denen R2-COMMON-OPQ-001
+(Druckzonen-Geometrie) am 2026-09-04 RESOLVED wurde (rechteckige
+Druckzone, Hebelarm mittig, R2-COMMON-DEC-002).
 
 ## Nächste Schritte
 
 Klärung, ob/wie eine Zugseiten-Steifigkeitskette für GL75 aufgestellt
 werden soll (R2-GL75-OPQ-001); Klärung der korrekten
 FprEN-Querdruckbeiwerte für die LVL/GLVL-Klassifikation
-(R2-GL75-OPQ-003).
+(R2-GL75-OPQ-003). Für eine spätere Druckseiten-Steifigkeitskette steht
+die Modellierungsgrundlage bereits fest (rechteckige Druckzone,
+R2-COMMON-DEC-002).

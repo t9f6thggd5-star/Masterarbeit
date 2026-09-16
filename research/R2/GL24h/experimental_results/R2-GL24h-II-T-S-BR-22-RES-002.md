@@ -21,10 +21,12 @@ method: >
   (Wiederbelastungssteifigkeit, aus dem Wiederbelastungsast) werden je
   Prüfkörper zweimal unabhängig ausgewertet: einmal aus den
   Wegaufnehmern 03+04 ("oben"), einmal aus den Wegaufnehmern 01+02
-  ("unten") — zwei getrennte Messstellenpaare am selben Prüfkörper,
-  nicht zwei unterschiedliche Prüfkörper. Quelle: gleichnamiges
-  Einzelblatt je Prüfkörper derselben Excel-Datei, Spaltenbeschriftung
-  "Auswertung Steifigkeit nach DIN EN 26891".
+  ("unten"). Quelle: gleichnamiges Einzelblatt je Prüfkörper derselben
+  Excel-Datei, Spaltenbeschriftung "Auswertung Steifigkeit nach DIN EN
+  26891". **Korrektur (siehe Update unten, 2026-09-16): "oben"/"unten"
+  sind zwei separat eingeklebte, geometrisch identische 2×2-M16-
+  Stangengruppen an den beiden Enden desselben Prüfkörpers — nicht zwei
+  Messstellenpaare derselben Stangengruppe.**
 result:
   quantity: Anfangssteifigkeit K_ser, oben, Mittelwert aus 3 Prüfkörpern
   value: 840.871
@@ -61,3 +63,22 @@ Varianz, Messmethodik, Auswertungsfenster o. ä.) ist ungeklärt und wird
 hier bewusst nicht geraten (CLAUDE.md Abschnitt 4). Siehe
 R2-GL24h-II-T-S-BR-22-RES-001 für die zugehörige Höchstzugkraft F_max
 derselben Prüfkörperserie.
+
+**Update (2026-09-16, Korrektur des Versuchsaufbaus, vom Nutzer im Chat
+mitgeteilt):** "Oben" und "unten" sind entgegen der ursprünglichen
+Formulierung oben NICHT zwei Messstellenpaare an derselben Klebefuge/
+Stangengruppe, sondern zwei separate, geometrisch identische
+2×2-M16-Stangengruppen an den beiden Enden desselben Prüfkörpers (je 4
+Gewindestangen oben und 4 unten in denselben Holzquerschnitt
+160×240 mm eingeklebt), die durch gleichmäßiges Ziehen an beiden Enden
+gleichzeitig, aber unabhängig geprüft wurden. "Oben" (Wegaufnehmer
+03+04) und "unten" (Wegaufnehmer 01+02) sind damit zwei unabhängige
+Realisierungen derselben Verbindungsart (2×2-Gruppe), nicht zwei
+Messungen derselben physischen Stangengruppe. Da beide Positionen mit
+gleicher Prüfkörperzahl (n=3 je Position) vorliegen und dieselbe
+Verbindungsart abbilden, werden sie in R2-GL24h-II-T-S-BR-22-RES-003 zu
+einem gepoolten n=6-Mittelwert zusammengeführt (arithmetisches Mittel
+der beiden Teilmittelwerte ist bei gleicher Gruppengröße identisch zum
+Mittelwert aller 6 Einzelwerte). Die oben dokumentierte große Streuung
+zwischen den Prüfkörpern bleibt davon unberührt und wird in
+RES-003 nicht kleingerechnet.

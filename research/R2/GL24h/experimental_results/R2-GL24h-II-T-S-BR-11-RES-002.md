@@ -21,10 +21,12 @@ method: >
   (Wiederbelastungssteifigkeit, aus dem Wiederbelastungsast) werden je
   Prüfkörper zweimal unabhängig ausgewertet: einmal aus den
   Wegaufnehmern 03+04 ("oben"), einmal aus den Wegaufnehmern 01+02
-  ("unten") — zwei getrennte Messstellenpaare am selben Prüfkörper,
-  nicht zwei unterschiedliche Prüfkörper. Quelle: Einzelblatt
-  "II-T-S-BR-11-1" (u. a.) derselben Excel-Datei, Spaltenbeschriftung
-  "Auswertung Steifigkeit nach DIN EN 26891".
+  ("unten"). Quelle: Einzelblatt "II-T-S-BR-11-1" (u. a.) derselben
+  Excel-Datei, Spaltenbeschriftung "Auswertung Steifigkeit nach DIN EN
+  26891". **Korrektur (siehe Update unten, 2026-09-16): "oben"/"unten"
+  sind zwei separat eingeklebte, geometrisch identische Klebefugen an
+  den beiden Enden desselben Prüfkörpers — nicht zwei Messstellenpaare
+  derselben Klebefuge.**
 result:
   quantity: Anfangssteifigkeit K_ser, oben, Mittelwert aus 3 Prüfkörpern
   value: 205.360
@@ -51,3 +53,28 @@ diese Streuung deutlich größer ist.
 Nicht weiter interpretiert (kein eigener INTERPRETATION-Eintrag). Siehe
 R2-GL24h-II-T-S-BR-11-RES-001 für die zugehörige Höchstzugkraft F_max
 derselben Prüfkörperserie.
+
+**Update (2026-09-16, Korrektur des Versuchsaufbaus, vom Nutzer im Chat
+mitgeteilt):** "Oben" und "unten" sind entgegen der ursprünglichen
+Formulierung oben NICHT zwei Messstellenpaare an derselben Klebefuge,
+sondern zwei separate, geometrisch identische Klebefugen an den beiden
+Enden desselben Prüfkörpers (je 1 Gewindestange oben und 1 unten
+eingeklebt), die durch gleichmäßiges Ziehen an beiden Enden
+gleichzeitig, aber unabhängig geprüft wurden. "Oben" (Wegaufnehmer
+03+04) und "unten" (Wegaufnehmer 01+02) sind damit zwei unabhängige
+Realisierungen derselben Verbindungsart (Einzelstange), nicht zwei
+Messungen derselben physischen Klebefuge. Für BR-11 wird diese Poolung
+(anders als für BR-22, siehe R2-GL24h-II-T-S-BR-22-RES-003) aktuell
+nicht weiterverfolgt — der Nutzer hat entschieden, für die
+Zugseiten-Steifigkeitskette vorerst ausschließlich auf die
+BR-22-Ergebnisse zurückzugreifen, da diese bereits alle vier Stangen der
+Verbindung abdecken.
+
+**Korrektur (2026-09-16, vom Nutzer im Chat mitgeteilt):** Der obige
+Update-Absatz nannte fälschlich denselben Holzquerschnitt (160×240 mm)
+wie bei BR-22 (R2-GL24h-II-T-S-BR-22-RES-002). Tatsächlich ist die
+BR-11-Einzelstange mittig in einen deutlich kleineren Querschnitt
+80×80 mm eingeklebt — ein eigener, kleinerer Prüfkörperquerschnitt, nicht
+derselbe wie bei der 2×2-Gruppe BR-22 (160×240 mm). Diese Korrektur
+betrifft nur die Geometriebeschreibung, nicht die gemessenen
+Steifigkeitswerte selbst.
