@@ -25,8 +25,12 @@ ersetzt: der rein rechnerische Anteil "vier Stangen ohne Querdruck"
 BR-22-Zugversuche (K_ser, n=6, 862,531 kN/mm,
 R2-GL24h-II-T-S-BR-22-RES-003) ersetzt — der Messwert liegt um den
 Faktor ≈6,48 über der FprEN-Vorhersage für denselben Teilanteil
-(R2-GL24h-CALC-014, `CLAUDE_DRAFT`-Beobachtung, noch nicht als eigene
-Interpretation dokumentiert/geprüft). Der Querdruckanteil `c_c,90`
+(R2-GL24h-CALC-014, `CLAUDE_DRAFT`-Beobachtung — der Faktor selbst ist
+weiterhin nicht fachlich gedeutet). Warum sich dieser große Faktor bei
+einer Einzelkomponente nur moderat (+32,3 %) auf `c_T` auswirkt, ist
+jetzt in R2-GL24h-INT-001 (`CLAUDE_DRAFT`, noch zu prüfen) als eigene
+Interpretation dokumentiert: Serienfeder-Mechanik, `c_c,90`/`c_v,ges`
+bestimmen jetzt ca. 94 % der Gesamt-Nachgiebigkeit. Der Querdruckanteil `c_c,90`
 selbst bleibt rein rechnerisch (R2-GL24h-CALC-001, nicht Teil des
 Versuchsaufbaus). Damit ergibt sich `c_T≈50,78 kN/mm`
 (R2-GL24h-CALC-015, +32,3 % gegenüber dem bisherigen rein rechnerischen
@@ -104,15 +108,21 @@ Normzitat-Beschriftung wird vom Nutzer nicht weiterverfolgt
   n=6, 862,531 kN/mm — jetzt Eingangswert von R2-GL24h-CALC-014),
   R2-GL24h-II-T-S-BR-11-RES-003 (analog gepoolt, 203,303 kN/mm, bisher
   nicht in einer Kette verwendet, siehe R2-COMMON-DEC-003).
-- Interpretationen/Schlussfolgerungen: — (frühere Beobachtung zum
-  materialabhängigen Versagensmodus in R2-GL24h-CALC-008 durch die
-  Korrektur in R2-GL24h-CALC-012 überholt — GL24h und GL75 werden jetzt
-  rechnerisch durch denselben Mechanismus [Gewindestangenzug] begrenzt;
-  weiterhin nur als Freitext vermerkt, nicht als eigene INT-Einträge,
-  `CLAUDE_DRAFT` — noch vom Forschenden zu prüfen. Neu: der Faktor
-  ≈6,48 zwischen gemessener und FprEN-rechnerischer Stangengruppen-
-  Steifigkeit in R2-GL24h-CALC-014, ebenfalls nur als Freitext-
-  Beobachtung, `CLAUDE_DRAFT`, noch nicht gedeutet).
+- Interpretationen/Schlussfolgerungen: R2-GL24h-INT-001 (neu,
+  `CLAUDE_DRAFT`, noch vom Forschenden zu prüfen — ordnet ein, warum der
+  Anstieg von `c_T` durch den BR-22-Messwert trotz Faktor ≈6,48 bei der
+  Stangengruppe selbst nur +32,3 % beträgt: Serienfeder-Mechanik, die
+  Stangengruppe fällt als limitierender Faktor praktisch aus der Kette
+  heraus, `c_c,90`/`c_v,ges` bestimmen jetzt ca. 94 % der
+  Gesamt-Nachgiebigkeit — beide weiterhin rein rechnerisch, nicht
+  versuchsgestützt). Weiterhin nur als Freitext vermerkt: frühere
+  Beobachtung zum materialabhängigen Versagensmodus in R2-GL24h-CALC-008
+  durch die Korrektur in R2-GL24h-CALC-012 überholt (GL24h und GL75
+  werden jetzt rechnerisch durch denselben Mechanismus
+  [Gewindestangenzug] begrenzt), sowie der Faktor ≈6,48 zwischen
+  gemessener und FprEN-rechnerischer Stangengruppen-Steifigkeit selbst
+  (R2-GL24h-CALC-014) — dessen fachliche Deutung ist von
+  R2-GL24h-INT-001 bewusst ausgeklammert und bleibt weiterhin offen.
 
 ## Offene Fragen / bekannte Widersprüche
 
@@ -135,6 +145,9 @@ Stabdübel-Nachweises und der VSP-Excel-Blätter mit dem Nutzer
 Rechenschema als MIN-Kandidat für `M_max` sowie die bewusste
 Mittelwertbasis sind bestätigt, die genaue Normzuordnung der
 Zellbeschriftung "Gl. 11.14" wird vom Nutzer nicht weiterverfolgt).
-Perspektivisch: den auffälligen Faktor ≈6,48 zwischen BR-22-Messwert
-und FprEN-Vorhersage (R2-GL24h-CALC-014) fachlich einordnen (eigene
-INTERPRETATION, noch nicht angelegt).
+Die Sensitivität von `c_T` gegenüber dem BR-22-Messwert ist jetzt
+formal als R2-GL24h-INT-001 dokumentiert (`CLAUDE_DRAFT`, noch zu
+prüfen). Perspektivisch weiterhin offen: den auffälligen Faktor ≈6,48
+zwischen BR-22-Messwert und FprEN-Vorhersage selbst (R2-GL24h-CALC-014)
+fachlich einordnen (eigene INTERPRETATION, noch nicht angelegt — bewusst
+nicht Teil von INT-001).
