@@ -147,7 +147,9 @@ authored_by:
 # measurements and calculations.
 # -----------------------------------------------------------------------------
 unit_convention:
-  force:
+  force: kN   # set 2026-09-16, matching the unit already used consistently
+              # across existing EXPERIMENTAL_RESULT entries (e.g. R2-GL24h-
+              # II-T-S-BR-22-RES-001, R2-GL75-II-T-B-BR-22-RES-001)
   length:
   stress:
   moment:

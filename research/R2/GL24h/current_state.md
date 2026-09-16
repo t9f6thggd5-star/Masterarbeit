@@ -2,7 +2,7 @@
 scope:
   connection: R2
   material: GL24h
-last_updated: "2026-09-01"
+last_updated: "2026-09-16"
 ---
 
 # Bearbeitungsstand: R2 / GL24h
@@ -45,16 +45,20 @@ bewusst als Zwischenauflager, Gl. 8.14, `l_1,ef=300 mm` unverändert
 korrekt). Die Druckseiten-Steifigkeit (`c_c,90`, `c_c,0`) und damit das
 vollständige Rotationsmodell der Rahmenecke stehen noch aus — blockiert
 durch die ungeklärte Druckzonen-Geometrie (R2-COMMON-OPQ-001). Reale
-Komponentenversuche (Stabdübel-Push-Out, Gewindestangen-Zug) liegen als
-eigene Versuchsergebnis-Einträge vor, ihre genaue Rolle im
-R2-Gesamtkonzept ist größtenteils weiter ungeklärt (Stabdübel-Nachweis,
+Komponentenversuche (Stabdübel-Push-Out, Gewindestangen-Zug 2×2 und
+1×1) liegen als eigene Versuchsergebnis-Einträge vor, ihre genaue Rolle
+im R2-Gesamtkonzept ist größtenteils weiter ungeklärt (Stabdübel-Nachweis,
 VSP-Blätter, R2-COMMON-OPQ-008) — die Rolle des
 "Tragfähigkeit Stütze auf Zug"-Blocks ist dagegen inzwischen ausreichend
 geklärt: er liefert einen der drei Kandidatenwerte für die
 `M_max`-maßgebende Komponente (siehe R2-GL24h-CALC-012), verwendet
 bewusst Mittelwerte der Holzfestigkeit (wie alle Tragfähigkeiten dieser
 Tabelle), und seine unklare Normzitat-Beschriftung wird vom Nutzer nicht
-weiterverfolgt (R2-COMMON-OPQ-008).
+weiterverfolgt (R2-COMMON-OPQ-008). Neu (2026-09-16): die 1×1-Zugserie
+`II-T-S-BR-11` (Mittelwert 72,337 kN, R2-GL24h-II-T-S-BR-11-RES-001)
+liegt, umgerechnet auf eine Einzelstange, nahe am 2×2-Wert
+(285,77/4 ≈ 71,44 kN) — Plausibilitätshinweis auf näherungsweise
+lineare Skalierung, nicht weiter interpretiert.
 
 ## Wichtigste Einträge
 
@@ -71,7 +75,8 @@ weiterverfolgt (R2-COMMON-OPQ-008).
   Vorgänger, siehe jeweils `superseded_by`-Feld der alten Einträge).
 - Annahmen: — (materialunabhängige Annahmen siehe R2-COMMON-ASS-001–005).
 - Versuchsergebnisse: R2-GL24h-II-PO-S-SD-34-RES-001,
-  R2-GL24h-II-PO-S-WD-34-RES-001, R2-GL24h-II-T-S-BR-22-RES-001.
+  R2-GL24h-II-PO-S-WD-34-RES-001, R2-GL24h-II-T-S-BR-22-RES-001,
+  R2-GL24h-II-T-S-BR-11-RES-001.
 - Interpretationen/Schlussfolgerungen: — (frühere Beobachtung zum
   materialabhängigen Versagensmodus in R2-GL24h-CALC-008 durch die
   Korrektur in R2-GL24h-CALC-012 überholt — GL24h und GL75 werden jetzt

@@ -2,7 +2,7 @@
 scope:
   connection: R2
   material: GL75
-last_updated: 2026-09-01
+last_updated: "2026-09-16"
 ---
 
 # Bearbeitungsstand: R2 / GL75
@@ -32,7 +32,12 @@ R2-GL75-CALC-002 — dieselbe einseitig-statt-beidseitig-Lastausbreitungs-
 Korrektur wie bei GL24h, siehe R2-GL24h-CALC-010). Da bereits der alte
 Wert weit über der Gewindestangen-Zugtragfähigkeit lag, ändert diese
 Korrektur weder die maßgebende Komponente noch `M_max`
-(R2-GL75-CALC-003 bleibt unverändert gültig).
+(R2-GL75-CALC-003 bleibt unverändert gültig). Neu (2026-09-16): die
+1×1-Zugserie `II-T-B-BR-11` (Mittelwert 73,367 kN,
+R2-GL75-II-T-B-BR-11-RES-001) liegt, umgerechnet auf eine Einzelstange,
+nahe am 2×2-Wert (291,003/4 ≈ 72,75 kN) und nahezu identisch zum
+GL24h-Wert derselben 1×1-Serie (72,337 kN) — Plausibilitätshinweis,
+nicht weiter interpretiert.
 
 ## Wichtigste Einträge
 
@@ -45,7 +50,7 @@ Korrektur weder die maßgebende Komponente noch `M_max`
 - Annahmen: — (materialunabhängige Annahmen siehe R2-COMMON-ASS-001–005,
   bisher jedoch nur für GL24h konkret angewendet).
 - Versuchsergebnisse: R2-GL75-II-PO-B-SD-23-RES-001,
-  R2-GL75-II-T-B-BR-22-RES-001.
+  R2-GL75-II-T-B-BR-22-RES-001, R2-GL75-II-T-B-BR-11-RES-001.
 - Interpretationen/Schlussfolgerungen: — (Beobachtung zum materialabhängig
   verschobenen Versagensmodus bisher nur als Freitext in
   R2-GL75-CALC-003 vermerkt, `CLAUDE_DRAFT` — noch vom Forschenden zu

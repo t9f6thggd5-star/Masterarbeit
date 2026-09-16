@@ -31,12 +31,16 @@ CONTENT_ROOTS = ["research", "wiki"]
 # rolling narrative summary (one per connection/material, always named the
 # same) rather than a uniquely-ID'd registry entry, so it is structural
 # like README.md, not something build_index/lint should expect an *_id in.
-# FprEN-1995-1-1-2024_Normstellen-Index.md is the same kind of exception:
-# a self-maintained clause/page navigation aid for one specific norm
-# (wiki/common/normative_basis/), not a uniquely-ID'd registry entry.
+# FprEN-1995-1-1-2024_Normstellen-Index.md and
+# Versuchskoerper-Bezeichnungssystematik.md are the same kind of exception:
+# self-maintained definition/navigation aids (wiki/common/normative_basis/
+# and wiki/common/concepts/ respectively) — they carry no fact/claim about
+# reality and therefore, deliberately, no *_id or certainty field of their
+# own, so they are not uniquely-ID'd registry entries.
 SKIP_NAMES = {
     "README.md", ".gitkeep", "current_state.md",
     "FprEN-1995-1-1-2024_Normstellen-Index.md",
+    "Versuchskoerper-Bezeichnungssystematik.md",
 }
 
 FRONTMATTER_RE = re.compile(r"^---\s*\n(.*?\n)---\s*\n?(.*)$", re.DOTALL)
