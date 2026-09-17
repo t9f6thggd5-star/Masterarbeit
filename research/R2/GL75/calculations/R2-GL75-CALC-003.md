@@ -58,3 +58,12 @@ Nachgelagert im selben Block: "Zylinderkraft"-Abschnitt (Hebelarm 3,03 m,
 `V_ed je Seite=38,03 kN`, `Z_ed,ges=53,78 kN`, Zellen I94-I96) — wie bei
 GL24h vermutlich eine Rückrechnung auf die Prüfstands-Aktuatorkraft,
 nicht in chat-3 erläutert (siehe R2-COMMON-OPQ-008).
+
+**Bestätigung (2026-09-17):** Nach der `k_mat`-Korrektur und der
+Zug-/Druckseiten-Trennung der unverstärkten Querdrucktragfähigkeit
+(R2-GL75-CALC-005: `862,011 kN` Druckseite, `736,890 kN` Zugseite,
+beide deutlich niedriger als der hier verwendete alte Wert
+`1.031,65 kN`) bleibt dieser Eintrag unverändert gültig: das
+Gewindestangen-Zugversuchsmittel (`291,003 kN`) liegt weiterhin weit
+unter beiden neuen Querdruckwerten, sodass es weiterhin die maßgebende
+Komponente für `M_max` ist.

@@ -2,7 +2,7 @@
 scope:
   connection: R2
   material: GL24h
-last_updated: "2026-09-16"
+last_updated: "2026-09-17"
 ---
 
 # Bearbeitungsstand: R2 / GL24h
@@ -59,7 +59,21 @@ verstärkten Querdruck auf das Gewindestangen-Zugversuchsmittel
 denselben Mechanismus begrenzt. Die Frage, ob `l_1,ef` nach Gl. 8.13
 oder 8.14 anzusetzen ist, wurde geklärt (R2-GL24h-OPQ-003, RESOLVED —
 bewusst als Zwischenauflager, Gl. 8.14, `l_1,ef=300 mm` unverändert
-korrekt). Die Druckseiten-Steifigkeit (`c_c,90`, `c_c,0`) und damit das
+korrekt). **Update (2026-09-17):** Der Nutzer hat die R2-Excel-Datei so
+erweitert, dass sowohl die unverstärkte als auch die verstärkte
+Querdrucktragfähigkeit jetzt durchgängig getrennt nach Zug- und
+Druckseite berechnet werden (bisher je ein gemeinsamer Wert). Die
+bisher dokumentierten Werte (`262,38`/`384,12 kN`, CALC-010/011) gelten
+damit explizit nur für die Druckseite; die neuen, niedrigeren
+Zugseiten-Werte sind `224,292 kN` unverstärkt (R2-GL24h-CALC-018) und
+`356,273 kN` verstärkt (R2-GL24h-CALC-017, Gl. 8.13 mit `l_e=0` statt
+Gl. 8.14, da Stahlplatte am Trägerrand). Beide liegen weiterhin über dem
+Gewindestangen-Zugversuchsmittel (`285,77 kN`), sodass sich an der
+maßgebenden Komponente für `M_max` (R2-GL24h-CALC-012) nichts ändert —
+dabei fiel aber auf, dass die Excel-Formel für die maßgebende Komponente
+den neuen Zugseiten-Wert noch nicht als dritten MIN-Kandidaten enthält
+(aktuell folgenlos, R2-GL24h-OPQ-004). Die Druckseiten-Steifigkeit
+(`c_c,90`, `c_c,0`) und damit das
 vollständige Rotationsmodell der Rahmenecke stehen noch aus. Der
 bisherige Blocker dafür ist inzwischen aufgelöst: die Betreuerin hat am
 2026-09-04 festgelegt, die Druckzone als RECHTECKIG anzusetzen, mit dem
@@ -90,14 +104,16 @@ Normzitat-Beschriftung wird vom Nutzer nicht weiterverfolgt
   "Überblick", Zellen B94:B97 der Steifigkeiten-Auswertungsdatei
   angesetzt) und COMMON-COMMON-DEC-001–004 für projektweite/
   materialunabhängige Punkte.
-- Berechnungen: R2-GL24h-CALC-001–015 (Zugseiten-Steifigkeitskette,
+- Berechnungen: R2-GL24h-CALC-001–018 (Zugseiten-Steifigkeitskette,
   unverstärkte/verstärkte Querdruckfestigkeit, Schrauben-Knick-
   tragfähigkeit, Momenten-Abschätzung, Stabdübel-Johansen-Nachweis mit
   ungeklärter Rolle; CALC-010/011 korrigieren CALC-005/006, CALC-012
   korrigiert CALC-008, CALC-013 ist ein Cross-Check-Eintrag ohne
   Vorgänger, CALC-014 korrigiert/ersetzt CALC-002 durch den BR-22-
-  Messwert, CALC-015 korrigiert/ersetzt CALC-004 entsprechend — siehe
-  jeweils `superseded_by`-Feld der alten Einträge).
+  Messwert, CALC-015 korrigiert/ersetzt CALC-004 entsprechend, CALC-017/
+  018 ergänzen CALC-011/010 um die jeweiligen Zugseiten-Werte
+  [2026-09-17] — siehe jeweils `superseded_by`-Feld bzw. die
+  Geltungsbereich-Ergänzung der betroffenen alten Einträge).
 - Annahmen: — (materialunabhängige Annahmen siehe R2-COMMON-ASS-001–005).
 - Versuchsergebnisse: R2-GL24h-II-PO-S-SD-34-RES-001,
   R2-GL24h-II-PO-S-WD-34-RES-001, R2-GL24h-II-T-S-BR-22-RES-001,
@@ -127,7 +143,11 @@ Normzitat-Beschriftung wird vom Nutzer nicht weiterverfolgt
 ## Offene Fragen / bekannte Widersprüche
 
 R2-GL24h-OPQ-001–002 offen; R2-GL24h-OPQ-003 (Gl. 8.13 vs. 8.14 bei
-`l_1,ef`) am 2026-09-01 RESOLVED (Zwischenauflager, Gl. 8.14). Dazu 10
+`l_1,ef`) am 2026-09-01 RESOLVED (Zwischenauflager, Gl. 8.14).
+R2-GL24h-OPQ-004 (neu, 2026-09-17, OPEN, aber folgenlos): Excel-Formel
+für die `M_max`-maßgebende Komponente berücksichtigt den neuen
+Zugseiten-Wert der verstärkten Querdrucktragfähigkeit noch nicht als
+MIN-Kandidaten. Dazu 10
 materialunabhängige offene Fragen unter
 `research/R2/COMMON/open_questions/` (R2-COMMON-OPQ-001–010), davon
 OPQ-001 (Druckzonen-Geometrie) am 2026-09-04 RESOLVED durch

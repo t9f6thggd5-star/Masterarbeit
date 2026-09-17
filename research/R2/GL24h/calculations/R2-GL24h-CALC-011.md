@@ -91,3 +91,22 @@ dieser Korrektur):**
   (`≈356,3 kN`, mit `k_c,90=1,75` statt `k_mat=1,75`) liegt näher am
   jetzt korrigierten FprEN-Wert als zuvor, ist aber weiterhin ein
   anderer Rechenweg — nicht ohne Weiteres gleichzusetzen.
+
+**Ergänzung (2026-09-17) — Geltungsbereich präzisiert:** Der Nutzer hat
+die R2-Excel-Datei so erweitert, dass auch die verstärkte
+Querdrucktragfähigkeit jetzt getrennt nach Zug- und Druckseite berechnet
+wird (`l_1,ef` nach Gl. 8.14/Zwischenauflager auf der Druckseite,
+`l_1,ef` nach Gl. 8.13/Endauflager mit `l_e=0` auf der Zugseite — der
+Unterschied entspricht in der Formelstruktur genau der bereits in
+R2-GL24h-DEC-008 für die Steifigkeit getroffenen Unterscheidung). Der
+hier dokumentierte Wert (`384,124 kN`) ist damit ab sofort explizit als
+**Druckseiten-Wert** (Ankerplatte, Zwischenauflager) zu verstehen. Der
+zugehörige, niedrigere Zugseiten-Wert (`356,273 kN`, Endauflager) ist als
+eigener Eintrag dokumentiert: siehe R2-GL24h-CALC-017. An den unten unter
+"Konsequenzen" beschriebenen Folgeeffekten (Wechsel der maßgebenden
+`M_max`-Komponente auf das Gewindestangen-Zugversuchsmittel) ändert
+diese Präzisierung nichts, da auch der niedrigere Zugseiten-Wert
+(`356,273 kN`) weiterhin oberhalb von `285,77 kN` liegt — siehe
+R2-GL24h-CALC-012 (unverändert gültig) und R2-GL24h-OPQ-004 (kleine,
+numerisch folgenlose Lücke in der Excel-Formel für die maßgebende
+Komponente, die dabei auffiel).

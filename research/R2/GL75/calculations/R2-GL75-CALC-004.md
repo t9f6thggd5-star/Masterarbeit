@@ -27,7 +27,7 @@ source_file: >
   openpyxl mit data_only=True ausgelesen, Stand der abgelegten Datei am
   2026-09-01, Datei-mtime 1788273961000)
 certainty: CALCULATED
-superseded_by:
+superseded_by: R2-GL75-CALC-005
 ---
 
 Korrektur von R2-GL75-CALC-002. Der Nutzer hat mitgeteilt, dieselbe
@@ -60,3 +60,10 @@ Die in R2-GL75-CALC-002 offen gelassene Frage, ob dieselben `k_mat`/
 `k_c,90`-Werte (hergeleitet für die SWB-Klassifikation) ohne Anpassung
 auf GL75/BauBuche übertragen werden dürfen, bleibt von dieser Korrektur
 unberührt — siehe weiterhin R2-GL75-OPQ-003.
+
+**Überholt durch R2-GL75-CALC-005 (2026-09-17):** Die hier offen
+gelassene Frage ist inzwischen geklärt (R2-GL75-DEC-001, RESOLVED
+R2-GL75-OPQ-003) — GL75/BauBuche ist als Hardwood GLVL einzuordnen,
+`k_mat=1,0` statt `1,4`. Der hier dokumentierte Wert (`1.206,815 kN`,
+`k_mat=1,4`) ist damit überholt; für den aktuellen, zusätzlich nach
+Zug-/Druckseite getrennten Wert siehe R2-GL75-CALC-005.

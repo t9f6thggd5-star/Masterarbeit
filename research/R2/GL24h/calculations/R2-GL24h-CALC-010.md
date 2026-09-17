@@ -68,3 +68,14 @@ unterhalb des gemessenen Gewindestangen-Zugversuchsmittels (`285,77 kN`,
 R2-GL24h-II-T-S-BR-22-RES-001). Die Rangfolge unverstärkt < verstärkt
 ist damit wieder konsistent mit der physikalischen Erwartung, dass eine
 Verstärkung die Tragfähigkeit nicht verringern darf.
+
+**Ergänzung (2026-09-17) — Geltungsbereich präzisiert:** Der Nutzer hat
+die R2-Excel-Datei so erweitert, dass die unverstärkte
+Querdrucktragfähigkeit jetzt getrennt nach Zug- und Druckseite berechnet
+wird. Der hier dokumentierte Wert (`262,376 kN`, beidseitige
+Lastausbreitung) ist damit ab sofort explizit als **Druckseiten-Wert**
+(Ankerplatte, ausreichender Randabstand) zu verstehen — nicht mehr als
+allgemeingültiger Wert für beide Seiten. Der zugehörige, deutlich
+niedrigere Zugseiten-Wert (einseitige Lastausbreitung, Stahlplatte direkt
+am Trägerrand, R2-GL24h-DEC-008) ist als eigener Eintrag dokumentiert:
+`F_v,R=224,292 kN`, siehe R2-GL24h-CALC-018.

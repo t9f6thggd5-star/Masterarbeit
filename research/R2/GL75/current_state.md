@@ -2,7 +2,7 @@
 scope:
   connection: R2
   material: GL75
-last_updated: "2026-09-16"
+last_updated: "2026-09-17"
 ---
 
 # Bearbeitungsstand: R2 / GL75
@@ -32,7 +32,23 @@ R2-GL75-CALC-002 — dieselbe einseitig-statt-beidseitig-Lastausbreitungs-
 Korrektur wie bei GL24h, siehe R2-GL24h-CALC-010). Da bereits der alte
 Wert weit über der Gewindestangen-Zugtragfähigkeit lag, ändert diese
 Korrektur weder die maßgebende Komponente noch `M_max`
-(R2-GL75-CALC-003 bleibt unverändert gültig). Neu (2026-09-16): die
+(R2-GL75-CALC-003 bleibt unverändert gültig). **Update (2026-09-17):**
+Die zuvor offene Frage nach der richtigen `k_mat`-Tabellenzeile für
+GL75/BauBuche (R2-GL75-OPQ-003) ist geklärt: BauBuche GL75 ist laut
+eigener EAD/ETA-Klassifikation (ETA-14/0354, EAD 130010) als Hardwood
+GLVL einzuordnen, nicht als SWB — `k_mat=1,0` statt bisher `1,4`
+(R2-GL75-DEC-001). Zugleich hat der Nutzer die Querdrucktragfähigkeit
+auch für GL75 nach Zug-/Druckseite getrennt berechnet (analog zu
+GL24h). Ergebnis: unverstärkte Querdrucktragfähigkeit jetzt
+`862,011 kN` (Druckseite) bzw. `736,890 kN` (Zugseite), beide deutlich
+unter dem alten, undifferenzierten Wert `1.206,82 kN`
+(R2-GL75-CALC-005, ersetzt R2-GL75-CALC-004). An der maßgebenden
+Komponente ändert sich dadurch nichts: das Gewindestangen-
+Zugversuchsmittel (`291,00 kN`) bleibt weit unter beiden neuen Werten
+maßgebend, `M_max` bleibt bei `≈162,96 kNm` (R2-GL75-CALC-003,
+bestätigt). Für GL75 ist weiterhin keine ASSY-Verstärkung im Excel
+modelliert, daher existiert kein verstärkter Querdruckwert. Neu
+(2026-09-16): die
 1×1-Zugserie `II-T-B-BR-11` (Mittelwert 73,367 kN,
 R2-GL75-II-T-B-BR-11-RES-001) liegt, umgerechnet auf eine Einzelstange,
 nahe am 2×2-Wert (291,003/4 ≈ 72,75 kN) und nahezu identisch zum
@@ -47,15 +63,19 @@ ansteht.
 
 ## Wichtigste Einträge
 
-- Entscheidungen: — (materialübergreifende Klassifikationsentscheidung
-  siehe COMMON-COMMON-DEC-004; materialunabhängige R2-Entscheidungen
-  siehe R2-COMMON-DEC-002 [Druckzonengeometrie] und R2-COMMON-DEC-003
+- Entscheidungen: R2-GL75-DEC-001 (neu, 2026-09-17: `k_mat=1,0` für
+  GL75/BauBuche als Hardwood GLVL, löst R2-GL75-OPQ-003); dazu
+  materialübergreifende Klassifikationsentscheidung siehe
+  COMMON-COMMON-DEC-004; materialunabhängige R2-Entscheidungen siehe
+  R2-COMMON-DEC-002 [Druckzonengeometrie] und R2-COMMON-DEC-003
   [Anfangssteifigkeit je Gruppe aus Blatt "Überblick", Zellen B94:B97];
-  GL24h-spezifische Entscheidungen unter R2-GL24h-DEC-001–007, nicht
-  ungeprüft auf GL75 übertragbar).
-- Berechnungen: R2-GL75-CALC-001–004 (Stabdübel-Johansen-Nachweis,
+  GL24h-spezifische Entscheidungen unter R2-GL24h-DEC-001–008, nicht
+  ungeprüft auf GL75 übertragbar.
+- Berechnungen: R2-GL75-CALC-001–005 (Stabdübel-Johansen-Nachweis,
   unverstärkte Querdruckfestigkeit, Momenten-Abschätzung; CALC-004
-  korrigiert CALC-002, siehe dessen `superseded_by`-Feld).
+  korrigiert CALC-002, CALC-005 korrigiert/erweitert CALC-004 um die
+  `k_mat`-Korrektur und die Zug-/Druckseiten-Trennung [2026-09-17] —
+  siehe jeweils `superseded_by`-Feld).
 - Annahmen: — (materialunabhängige Annahmen siehe R2-COMMON-ASS-001–005,
   bisher jedoch nur für GL24h konkret angewendet).
 - Versuchsergebnisse: R2-GL75-II-PO-B-SD-23-RES-001,
@@ -77,9 +97,11 @@ ansteht.
 
 ## Offene Fragen / bekannte Widersprüche
 
-R2-GL75-OPQ-001–003 (fehlende Steifigkeitskette, fehlender
-ASSY-Verstärkungsblock, Anwendbarkeit der SWB-Querdruckbeiwerte auf
-BauBuche); dazu die materialunabhängigen offenen Fragen unter
+R2-GL75-OPQ-001–002 offen (fehlende Steifigkeitskette, fehlender
+ASSY-Verstärkungsblock); R2-GL75-OPQ-003 (Anwendbarkeit der
+SWB-Querdruckbeiwerte auf BauBuche) am 2026-09-17 RESOLVED
+(R2-GL75-DEC-001: Hardwood GLVL, `k_mat=1,0`). Dazu die
+materialunabhängigen offenen Fragen unter
 `research/R2/COMMON/open_questions/`, von denen R2-COMMON-OPQ-001
 (Druckzonen-Geometrie) am 2026-09-04 RESOLVED wurde (rechteckige
 Druckzone, Hebelarm mittig, R2-COMMON-DEC-002).
@@ -87,8 +109,9 @@ Druckzone, Hebelarm mittig, R2-COMMON-DEC-002).
 ## Nächste Schritte
 
 Klärung, ob/wie eine Zugseiten-Steifigkeitskette für GL75 aufgestellt
-werden soll (R2-GL75-OPQ-001); Klärung der korrekten
-FprEN-Querdruckbeiwerte für die LVL/GLVL-Klassifikation
-(R2-GL75-OPQ-003). Für eine spätere Druckseiten-Steifigkeitskette steht
-die Modellierungsgrundlage bereits fest (rechteckige Druckzone,
-R2-COMMON-DEC-002).
+werden soll (R2-GL75-OPQ-001). Die "edgewise"-Annahme hinter
+`k_mat=1,0` (R2-GL75-DEC-001) ist noch nicht anhand der konkreten
+BauBuche-Einbaugeometrie in R2 verifiziert — falls "flatwise" zutrifft,
+wäre `k_mat=1,3` (Case A) statt `1,0` anzusetzen. Für eine spätere
+Druckseiten-Steifigkeitskette steht die Modellierungsgrundlage bereits
+fest (rechteckige Druckzone, R2-COMMON-DEC-002).
