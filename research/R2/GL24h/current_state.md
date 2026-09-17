@@ -121,6 +121,25 @@ noch nicht mit der Betreuerin abgestimmt) gilt aber unverändert
 weiter. R2-GL24h-INT-001 basiert noch auf dem alten `c_T`-Wert und
 wurde entsprechend markiert, aber noch nicht neu gerechnet.
 
+**Update (2026-09-17, Fortsetzung 2): Erste vollständige
+Rotationssteifigkeit, als laufende These dokumentiert.** Mit `c_T` und
+`c_C` vollständig vorliegend wurde erstmals eine Kombinationsmethodik
+für die Anfangsrotationssteifigkeit `S_j,ini` der gesamten Rahmenecke
+hergeleitet: `S_j,ini = z²/(1/c_T+1/c_C)`, aus Starrkörperkinematik und
+Kräftegleichgewicht der T/C/z/φ-Topologie (Fig. 7,
+R2-COMMON-CLAIM-031) — dokumentiert als eigene Hypothese
+R2-COMMON-HYP-001 (`CLAUDE_DRAFT`, `reviewed: false`, materialunabhängig
+geführt, da rein geometrisch-mechanisch begründet). Angewendet mit dem
+bereits im Excel für die Tragfähigkeitskette verwendeten Hebelarm
+`z=560mm` (dort ein reiner Zahlen-Input ohne Formelherleitung, Herkunft
+weiterhin ungeklärt, siehe R2-COMMON-OPQ-008) ergibt sich
+`S_j,ini≈12.540,8 kNm/rad` (R2-GL24h-CALC-022). Weder die
+Kombinationsformel selbst noch die Wiederverwendung von `z=560mm` für
+die Steifigkeits- statt nur die Tragfähigkeitskette sind bisher mit der
+Betreuerin abgestimmt — R2-COMMON-OPQ-006 bleibt daher bewusst `OPEN`,
+auch wenn damit erstmals ein vollständiger, wenn auch vorläufiger,
+Zahlenwert für die Gesamtsteifigkeit der Rahmenecke R2/GL24h vorliegt.
+
 ## Wichtigste Einträge
 
 - Entscheidungen: R2-GL24h-DEC-001–008 (u. a. freie Stangenlänge,
@@ -134,20 +153,25 @@ wurde entsprechend markiert, aber noch nicht neu gerechnet.
   `c_c,90`+`c_c,0` in Serie, `c_v` nur Zugpfad, nach
   FragiacomoBatchelar2012a Fig. 7) und COMMON-COMMON-DEC-001–004 für
   projektweite/materialunabhängige Punkte.
-- Berechnungen: R2-GL24h-CALC-001–021 (Zugseiten-Steifigkeitskette,
+- Berechnungen: R2-GL24h-CALC-001–022 (Zugseiten-Steifigkeitskette,
   unverstärkte/verstärkte Querdruckfestigkeit, Schrauben-Knick-
   tragfähigkeit, Momenten-Abschätzung, Stabdübel-Johansen-Nachweis mit
-  ungeklärter Rolle, jetzt auch vollständige Druckseiten-
-  Steifigkeitskette; CALC-010/011 korrigieren CALC-005/006, CALC-012
-  korrigiert CALC-008, CALC-013 ist ein Cross-Check-Eintrag ohne
-  Vorgänger, CALC-014 korrigiert/ersetzt CALC-002 durch den BR-22-
-  Messwert, CALC-015 korrigiert/ersetzt CALC-004 entsprechend, CALC-017/
-  018 ergänzen CALC-011/010 um die jeweiligen Zugseiten-Werte
-  [2026-09-17]; CALC-019 (`c_c,0`, neu), CALC-020 (`c_C`, neu,
-  gegen Excel verifiziert), CALC-021 (`c_T` mit ASSY-verstärktem
-  `c_c,90`, ersetzt CALC-015) [2026-09-17] — siehe jeweils
-  `superseded_by`-Feld bzw. die Geltungsbereich-Ergänzung der
-  betroffenen alten Einträge).
+  ungeklärter Rolle, vollständige Druckseiten-Steifigkeitskette, jetzt
+  auch die daraus kombinierte Anfangsrotationssteifigkeit; CALC-010/011
+  korrigieren CALC-005/006, CALC-012 korrigiert CALC-008, CALC-013 ist
+  ein Cross-Check-Eintrag ohne Vorgänger, CALC-014 korrigiert/ersetzt
+  CALC-002 durch den BR-22-Messwert, CALC-015 korrigiert/ersetzt
+  CALC-004 entsprechend, CALC-017/018 ergänzen CALC-011/010 um die
+  jeweiligen Zugseiten-Werte [2026-09-17]; CALC-019 (`c_c,0`, neu),
+  CALC-020 (`c_C`, neu, gegen Excel verifiziert), CALC-021 (`c_T` mit
+  ASSY-verstärktem `c_c,90`, ersetzt CALC-015), CALC-022 (neu,
+  `S_j,ini` aus `c_T`/`c_C`/`z`, beruht auf R2-COMMON-HYP-001)
+  [2026-09-17] — siehe jeweils `superseded_by`-Feld bzw. die
+  Geltungsbereich-Ergänzung der betroffenen alten Einträge).
+- Hypothesen: R2-COMMON-HYP-001 (neu, `CLAUDE_DRAFT`, noch nicht
+  geprüft — Kombinationsformel `S_j,ini=z²/(1/c_T+1/c_C)` für die
+  Rotationssteifigkeit aus Zug-/Druckseitensteifigkeit und Hebelarm,
+  materialunabhängig).
 - Annahmen: — (materialunabhängige Annahmen siehe R2-COMMON-ASS-001–005).
 - Versuchsergebnisse: R2-GL24h-II-PO-S-SD-34-RES-001,
   R2-GL24h-II-PO-S-WD-34-RES-001, R2-GL24h-II-T-S-BR-22-RES-001,
@@ -181,26 +205,31 @@ R2-GL24h-OPQ-001–002 offen; R2-GL24h-OPQ-003 (Gl. 8.13 vs. 8.14 bei
 R2-GL24h-OPQ-004 (neu, 2026-09-17, OPEN, aber folgenlos): Excel-Formel
 für die `M_max`-maßgebende Komponente berücksichtigt den neuen
 Zugseiten-Wert der verstärkten Querdrucktragfähigkeit noch nicht als
-MIN-Kandidaten. Dazu 10
-materialunabhängige offene Fragen unter
+MIN-Kandidaten. Dazu 11 materialunabhängige offene Fragen unter
 `research/R2/COMMON/open_questions/` (R2-COMMON-OPQ-001–011), davon
 OPQ-001 (Druckzonen-Geometrie) am 2026-09-04 RESOLVED durch
 Betreuerin-Entscheidung (rechteckige Druckzone, Hebelarm mittig,
 R2-COMMON-DEC-002) und OPQ-009 bereits gelöst durch COMMON-COMMON-DEC-004.
 OPQ-011 (neu, 2026-09-17, OPEN): Modellierungsannahme zu `c_c,0`
 (`l=240mm`, Saint-Venant-Analogie) noch nicht mit der Betreuerin
-abgestimmt — für nächste Besprechung vorgesehen.
+abgestimmt — für nächste Besprechung vorgesehen. OPQ-006 bleibt
+ebenfalls bewusst `OPEN`, obwohl inzwischen eine erste
+Kombinationsmethodik und ein erstes Zahlenergebnis vorliegen (siehe
+R2-COMMON-HYP-001, R2-GL24h-CALC-022) — Bestätigung durch die
+Betreuerin steht aus.
 
 ## Nächste Schritte
 
-`c_T` (53,300 kN/mm) und `c_C` (160,137 kN/mm) liegen jetzt beide vor
-— nächster Schritt ist deren Kombination über den Hebelarm `z` zu einer
-vollständigen Rotationssteifigkeit der Rahmenecke (R2-COMMON-OPQ-006).
-Davor/parallel: die `c_c,0`-Modellierungsannahme (`l=240mm`,
-R2-COMMON-OPQ-011) sowie die generelle Bejtka-Übernahme in `c_T`/`c_C`
-mit der Betreuerin absichern. R2-GL24h-INT-001 mit den aktualisierten
-`c_T`-Zahlen (CALC-021) neu fassen. Klärung der Rolle des
-Stabdübel-Nachweises und der VSP-Excel-Blätter mit dem Nutzer
+Ein erster vollständiger, aber ausdrücklich vorläufiger Wert für die
+Anfangsrotationssteifigkeit liegt jetzt vor
+(`S_j,ini≈12.540,8 kNm/rad`, R2-GL24h-CALC-022, auf Basis von
+R2-COMMON-HYP-001). Nächster Schritt: fachliche Absicherung mit der
+Betreuerin — sowohl der Kombinationsformel selbst als auch der
+Wiederverwendung von `z=560mm` für die Steifigkeitskette — sowie die
+`c_c,0`-Modellierungsannahme (`l=240mm`, R2-COMMON-OPQ-011) und die
+generelle Bejtka-Übernahme in `c_T`/`c_C`. R2-GL24h-INT-001 mit den
+aktualisierten `c_T`-Zahlen (CALC-021) neu fassen. Klärung der Rolle
+des Stabdübel-Nachweises und der VSP-Excel-Blätter mit dem Nutzer
 (R2-COMMON-OPQ-008, Punkte 1/3/4 weiterhin offen — Punkt 2,
 "Stütze auf Zug"-Block, ist inzwischen ausreichend geklärt: Rolle im
 Rechenschema als MIN-Kandidat für `M_max` sowie die bewusste
