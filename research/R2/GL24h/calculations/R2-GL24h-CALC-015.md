@@ -24,7 +24,7 @@ source_file: >
   Keine Excel-Datei zugrunde liegend — eigene Nachrechnung auf Basis von
   R2-GL24h-CALC-014 und R2-GL24h-CALC-003.
 certainty: CALCULATED
-superseded_by:
+superseded_by: R2-GL24h-CALC-021
 ---
 
 Ersetzt R2-GL24h-CALC-004 als aktuellen Wert für dieselbe Größe
@@ -50,3 +50,10 @@ freigegeben, aber noch nicht bearbeitet). Kein entsprechender Wert liegt
 bisher für GL75 vor (R2-GL75-OPQ-001 — dort existiert noch keine
 Zugseiten-Steifigkeitskette, die man mit den analogen GL75-Versuchen
 `II-T-B-BR-11/22` speisen könnte).
+
+**Update (2026-09-17):** Durch R2-GL24h-CALC-021 überholt, das denselben
+`c_T` mit dem inzwischen verfügbaren ASSY-verstärkten `c_c,90`
+(R2-COMMON-CALC-001) statt des hier verwendeten unverstärkten Werts
+neu berechnet (`53,300 kN/mm`, `+5,0%` gegenüber diesem Eintrag).
+Dieser Eintrag bleibt als der zuletzt gültige Wert MIT unverstärktem
+`c_c,90` dokumentiert.

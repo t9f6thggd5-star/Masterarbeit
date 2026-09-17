@@ -124,3 +124,14 @@ prüfen und ggf. auf `reviewed: true` zu setzen (CLAUDE.md Abschnitt 14).
 Der in R2-GL24h-CALC-014 offen gelassene, unabhängige Punkt — warum die
 Stangengruppe selbst um Faktor ≈6,48 über der FprEN-Vorhersage liegt —
 wird hier nicht behandelt und bleibt eine gesonderte, noch offene Frage.
+
+**Update (2026-09-17):** R2-GL24h-CALC-015 (Grundlage der Zahlen oben,
+`c_T=50,776 kN/mm` mit unverstärktem `c_c,90`) ist inzwischen durch
+R2-GL24h-CALC-021 überholt (`c_T=53,300 kN/mm`, ASSY-verstärktes
+`c_c,90`). Die Zahlen in dieser Interpretation (94%-Anteil,
+Sättigungsgrad 94,1% etc.) sind damit nicht mehr exakt aktuell — die
+qualitative Kernaussage (Serienfeder-Dominanz durch `c_c,90`/`c_v,ges`,
+Stangengruppe fällt praktisch heraus) bleibt aber gültig, tendenziell
+sogar verstärkt, da `c_v` (116,0 kN/mm, unverändert) jetzt die
+alleinig weichste Einzelkomponente ist. Eine vollständige Neufassung
+mit den aktualisierten Zahlen steht noch aus.

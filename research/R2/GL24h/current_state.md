@@ -93,27 +93,61 @@ R2-GL24h-CALC-012), verwendet bewusst Mittelwerte der Holzfestigkeit
 Normzitat-Beschriftung wird vom Nutzer nicht weiterverfolgt
 (R2-COMMON-OPQ-008).
 
+**Update (2026-09-17, Fortsetzung): Druckseiten-Steifigkeitskette
+erstmals vollständig, Bejtka-Werte in c_T übernommen.** Ausgehend von
+der Bejtka-Herleitung (R2-COMMON-CALC-001) wurde die verstärkte
+Querdrucksteifigkeit auch für die Druckseite durchgerechnet
+(`c_c,90=175,402 kN/mm`, `A=2`). Zusätzlich wurde erstmals `c_c,0`
+(Druck parallel zur Faser) hergeleitet: mangels Normvorgabe (FprEN
+Kap. 9 kennt nur Querdruck, kein Pendant parallel zur Faser, geprüft
+2026-09-17) als `c_c,0=E_0,mean·A/l` mit `A`=Ankerplattenfläche und
+`l=240mm` (Saint-Venant-Analogie zu `h_ef`, vom Nutzer akzeptiert,
+aber als offene Frage für die Betreuerin-Besprechung vermerkt,
+R2-COMMON-OPQ-011) — ergibt `c_c,0=1.840 kN/mm`
+(R2-GL24h-CALC-019). Ein vom Nutzer geteiltes Federmodell-Diagramm
+(Fig. 7, FragiacomoBatchelar2012a) klärte die bis dahin offene Frage,
+ob die Schubfeld-Komponente `c_v` auch am Druckpfad wirkt: NEIN, `c_v`
+sitzt ausschließlich im Zugpfad; der Druckpfad besteht nur aus
+`c_c,90`+`c_c,0` in Serie (R2-COMMON-DEC-004, R2-COMMON-CLAIM-031).
+Damit ergibt sich erstmals eine vollständige Druckseiten-
+Gesamtsteifigkeit `c_C=160,137 kN/mm` (R2-GL24h-CALC-020, gegen die
+Excel-Datei verifiziert). Der Nutzer hat daraufhin auch die
+Zugseiten-Gesamtsteifigkeit `c_T` mit dem ASSY-verstärkten (statt
+unverstärkten) `c_c,90` neu berechnet: `c_T=53,300 kN/mm`
+(R2-GL24h-CALC-021, ersetzt R2-GL24h-CALC-015, `+5,0%`). Damit ist die
+Bejtka-Verstärkung erstmals produktiv in die Haupt-Steifigkeitskette
+übernommen — der in R2-COMMON-CALC-001 vermerkte Vorbehalt (fachlich
+noch nicht mit der Betreuerin abgestimmt) gilt aber unverändert
+weiter. R2-GL24h-INT-001 basiert noch auf dem alten `c_T`-Wert und
+wurde entsprechend markiert, aber noch nicht neu gerechnet.
+
 ## Wichtigste Einträge
 
 - Entscheidungen: R2-GL24h-DEC-001–008 (u. a. freie Stangenlänge,
   Federmodell-Topologie, SWB-Klassifikation, ASSY-Geometrie,
   Schrauben-Knicken maßgebend, DEC-008: einseitige Lastausbreitung bei
-  `c_c,90` bleibt bestehen); siehe auch R2-COMMON-DEC-001–003 (DEC-002:
+  `c_c,90` bleibt bestehen); siehe auch R2-COMMON-DEC-001–004 (DEC-002:
   rechteckige Druckzone, Hebelarm mittig, löst R2-COMMON-OPQ-001;
   DEC-003: Anfangssteifigkeit je Gruppe wird durchgängig aus Blatt
   "Überblick", Zellen B94:B97 der Steifigkeiten-Auswertungsdatei
-  angesetzt) und COMMON-COMMON-DEC-001–004 für projektweite/
-  materialunabhängige Punkte.
-- Berechnungen: R2-GL24h-CALC-001–018 (Zugseiten-Steifigkeitskette,
+  angesetzt; DEC-004, neu: Federmodell-Topologie Druckpfad =
+  `c_c,90`+`c_c,0` in Serie, `c_v` nur Zugpfad, nach
+  FragiacomoBatchelar2012a Fig. 7) und COMMON-COMMON-DEC-001–004 für
+  projektweite/materialunabhängige Punkte.
+- Berechnungen: R2-GL24h-CALC-001–021 (Zugseiten-Steifigkeitskette,
   unverstärkte/verstärkte Querdruckfestigkeit, Schrauben-Knick-
   tragfähigkeit, Momenten-Abschätzung, Stabdübel-Johansen-Nachweis mit
-  ungeklärter Rolle; CALC-010/011 korrigieren CALC-005/006, CALC-012
+  ungeklärter Rolle, jetzt auch vollständige Druckseiten-
+  Steifigkeitskette; CALC-010/011 korrigieren CALC-005/006, CALC-012
   korrigiert CALC-008, CALC-013 ist ein Cross-Check-Eintrag ohne
   Vorgänger, CALC-014 korrigiert/ersetzt CALC-002 durch den BR-22-
   Messwert, CALC-015 korrigiert/ersetzt CALC-004 entsprechend, CALC-017/
   018 ergänzen CALC-011/010 um die jeweiligen Zugseiten-Werte
-  [2026-09-17] — siehe jeweils `superseded_by`-Feld bzw. die
-  Geltungsbereich-Ergänzung der betroffenen alten Einträge).
+  [2026-09-17]; CALC-019 (`c_c,0`, neu), CALC-020 (`c_C`, neu,
+  gegen Excel verifiziert), CALC-021 (`c_T` mit ASSY-verstärktem
+  `c_c,90`, ersetzt CALC-015) [2026-09-17] — siehe jeweils
+  `superseded_by`-Feld bzw. die Geltungsbereich-Ergänzung der
+  betroffenen alten Einträge).
 - Annahmen: — (materialunabhängige Annahmen siehe R2-COMMON-ASS-001–005).
 - Versuchsergebnisse: R2-GL24h-II-PO-S-SD-34-RES-001,
   R2-GL24h-II-PO-S-WD-34-RES-001, R2-GL24h-II-T-S-BR-22-RES-001,
@@ -149,16 +183,23 @@ für die `M_max`-maßgebende Komponente berücksichtigt den neuen
 Zugseiten-Wert der verstärkten Querdrucktragfähigkeit noch nicht als
 MIN-Kandidaten. Dazu 10
 materialunabhängige offene Fragen unter
-`research/R2/COMMON/open_questions/` (R2-COMMON-OPQ-001–010), davon
+`research/R2/COMMON/open_questions/` (R2-COMMON-OPQ-001–011), davon
 OPQ-001 (Druckzonen-Geometrie) am 2026-09-04 RESOLVED durch
 Betreuerin-Entscheidung (rechteckige Druckzone, Hebelarm mittig,
 R2-COMMON-DEC-002) und OPQ-009 bereits gelöst durch COMMON-COMMON-DEC-004.
+OPQ-011 (neu, 2026-09-17, OPEN): Modellierungsannahme zu `c_c,0`
+(`l=240mm`, Saint-Venant-Analogie) noch nicht mit der Betreuerin
+abgestimmt — für nächste Besprechung vorgesehen.
 
 ## Nächste Schritte
 
-Konkrete Druckzonenhöhe bestimmen und darauf aufbauend `c_c,90`/`c_c,0`
-sowie vollständiges Rotationsmodell aufstellen (R2-COMMON-OPQ-006, jetzt
-durch R2-COMMON-DEC-002 freigegeben); Klärung der Rolle des
+`c_T` (53,300 kN/mm) und `c_C` (160,137 kN/mm) liegen jetzt beide vor
+— nächster Schritt ist deren Kombination über den Hebelarm `z` zu einer
+vollständigen Rotationssteifigkeit der Rahmenecke (R2-COMMON-OPQ-006).
+Davor/parallel: die `c_c,0`-Modellierungsannahme (`l=240mm`,
+R2-COMMON-OPQ-011) sowie die generelle Bejtka-Übernahme in `c_T`/`c_C`
+mit der Betreuerin absichern. R2-GL24h-INT-001 mit den aktualisierten
+`c_T`-Zahlen (CALC-021) neu fassen. Klärung der Rolle des
 Stabdübel-Nachweises und der VSP-Excel-Blätter mit dem Nutzer
 (R2-COMMON-OPQ-008, Punkte 1/3/4 weiterhin offen — Punkt 2,
 "Stütze auf Zug"-Block, ist inzwischen ausreichend geklärt: Rolle im
