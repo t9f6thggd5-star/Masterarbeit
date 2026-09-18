@@ -132,3 +132,19 @@ Frage ausreichend geklärt (Rolle im Rechenschema: MIN-Kandidat für
 beabsichtigt; genaue Normzuordnung der Zellbeschriftung: vom Nutzer
 bewusst nicht weiterverfolgt). Die übergeordnete Frage (1), (3) und (4)
 bleiben unverändert offen — die Frage bleibt daher insgesamt OPEN.
+
+**Teilweise Klärung von Punkt (3), 2026-09-18:** Der Nutzer hat die
+geometrische Herkunft des Hebelarms `z=560mm` (Abschnitt "innerer
+Hebelarm Rahmeneck") erklärt: Stützenbreite 800 mm abzüglich je 120 mm
+(= halbe Stahlplattenhöhe 240 mm) auf Zug- und Druckseite, unter der
+Annahme mittigen Kraftangriffs in der jeweiligen Stahlplatte —
+dokumentiert als R2-COMMON-ASS-006. Damit ist die reine Zahlenherkunft
+von `z` geklärt. Dieser Kraftangriffspunkt wird direkt aus der
+Plattengeometrie angesetzt, als pragmatischer Ersatz für die eigentlich
+in R2-COMMON-DEC-002 gemeinte (aber laut R2-COMMON-OPQ-006 weiterhin
+unbestimmte) Druckzonenhöhe `h_d` — dieselbe Vereinfachung, die auch
+`c_c,0` zugrunde liegt (R2-GL24h-CALC-019, R2-COMMON-OPQ-011), dort
+bewusst gewählt, um die Berechnung nicht von der offenen
+`h_d`-Bestimmung abhängig zu machen. Kein Widerspruch zu DEC-002, aber
+dieselbe noch nicht mit der Betreuerin abgestimmte Annahme wie in
+OPQ-011. Punkt (3) daher nur teilweise geklärt, nicht RESOLVED.

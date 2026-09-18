@@ -48,3 +48,10 @@ der belasteten Plattenabmessung, hier 240mm) für die axiale Richtung
 methodisch vertretbar ist, oder ob stattdessen die Druckzonenhöhe
 `h_d` (sobald über R2-COMMON-OPQ-006 bestimmt) oder ein anderer Ansatz
 verwendet werden sollte.
+
+**Ergänzung (2026-09-18):** Dieselbe Plattentiefen-Annahme (halbe
+Plattentiefe = 120mm als Kraftangriffspunkt) liegt auch dem Hebelarm
+`z=560mm` zugrunde, der in der Momenten-/Steifigkeitskette verwendet
+wird (siehe R2-COMMON-ASS-006, R2-GL24h-CALC-022). Eine Revision dieser
+Annahme hier würde also nicht nur `c_c,0`, sondern auch `z` und damit
+`S_j,ini` (R2-GL24h-CALC-022) betreffen.
