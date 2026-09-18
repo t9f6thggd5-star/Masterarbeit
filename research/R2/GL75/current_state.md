@@ -75,7 +75,12 @@ ansteht.
   unverstärkte Querdruckfestigkeit, Momenten-Abschätzung; CALC-004
   korrigiert CALC-002, CALC-005 korrigiert/erweitert CALC-004 um die
   `k_mat`-Korrektur und die Zug-/Druckseiten-Trennung [2026-09-17] —
-  siehe jeweils `superseded_by`-Feld).
+  siehe jeweils `superseded_by`-Feld). Neu [2026-09-18]:
+  R2-GL75-CALC-006 (`c_c,90`, unverstärkt, Druckseite, 176,409 kN/mm),
+  R2-GL75-CALC-007 (`c_c,0`, 2.688 kN/mm, `certainty: ASSUMED` wie das
+  GL24h-Pendant), R2-GL75-CALC-008 (`c_C`, Serienschaltung,
+  165,545 kN/mm) — erste vollständige Druckseiten-Gesamtsteifigkeit für
+  GL75, analog zu R2-GL24h-CALC-001/019/020.
 - Annahmen: — (materialunabhängige Annahmen siehe R2-COMMON-ASS-001–005,
   bisher jedoch nur für GL24h konkret angewendet).
 - Versuchsergebnisse: R2-GL75-II-PO-B-SD-23-RES-001,
@@ -117,15 +122,20 @@ wäre `k_mat=1,3` (Case A) statt `1,0` anzusetzen. Für eine spätere
 Druckseiten-Steifigkeitskette steht die Modellierungsgrundlage bereits
 fest (rechteckige Druckzone, R2-COMMON-DEC-002).
 
-**Update (2026-09-18):** Die Druckseiten-Steifigkeitskette für GL75
-wurde begonnen (Chat, noch nicht als CALC-Einträge festgehalten). Da
-R2-GL75-OPQ-002 jetzt RESOLVED ist (keine ASSY-Verstärkung bei GL75),
-kommt durchgängig der unverstärkte FprEN-Ansatz (Gl. 9.31) zum Einsatz,
-mit der bereits für GL75 im Excel hinterlegten Druckseiten-Geometrie
-(`A_ef=83.200mm²`, beidseitige Lastausbreitung, aus R2-GL75-CALC-005)
-und `E_90,mean=470 N/mm²`: `c_c,90≈176,41 kN/mm`. Mit `c_c,0` (gleiche
+**Update (2026-09-18): Druckseiten-Steifigkeitskette für GL75 erstmals
+vollständig.** Da R2-GL75-OPQ-002 jetzt RESOLVED ist (keine
+ASSY-Verstärkung bei GL75), kommt durchgängig der unverstärkte
+FprEN-Ansatz (Gl. 9.31) zum Einsatz, mit der bereits für GL75 im Excel
+hinterlegten Druckseiten-Geometrie (`A_ef=83.200mm²`, beidseitige
+Lastausbreitung, aus R2-GL75-CALC-005) und `E_90,mean=470 N/mm²`:
+`c_c,90=176,409 kN/mm` (R2-GL75-CALC-006). Mit `c_c,0` (gleiche
 `l=240mm`-Annahme wie GL24h, R2-COMMON-OPQ-011, `E_0,mean=16.800 N/mm²`)
-`≈2.688 kN/mm` ergibt die Serienschaltung `c_C≈165,55 kN/mm` — bemerkenswert
-über dem ASSY-verstärkten GL24h-Wert (`160,137 kN/mm`, R2-GL24h-CALC-020),
-da BauBuche auch unverstärkt ein deutlich höheres `E_90,mean` hat. Noch
-nicht als formale CALC-Einträge im Wiki angelegt.
+`=2.688 kN/mm` (R2-GL75-CALC-007) ergibt die Serienschaltung
+`c_C=165,545 kN/mm` (R2-GL75-CALC-008) — direkt aus dem R2-Excel
+verifiziert (Sheet "Rahmenecke GL75 SD", Zellen I55/I66/I70) und vom
+Nutzer unabhängig nachgerechnet. Bemerkenswert: liegt über dem
+ASSY-verstärkten GL24h-Wert (`160,137 kN/mm`, R2-GL24h-CALC-020), da
+BauBuche auch unverstärkt ein deutlich höheres `E_90,mean` hat. Fehlt für
+ein vollständiges `S_j,ini(GL75)` weiterhin: die Zugseitensteifigkeit
+`c_T` (R2-GL75-OPQ-001) und die Kombination über den Hebelarm `z`
+(R2-COMMON-OPQ-006).
