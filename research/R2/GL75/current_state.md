@@ -2,7 +2,7 @@
 scope:
   connection: R2
   material: GL75
-last_updated: "2026-09-17"
+last_updated: "2026-09-18"
 ---
 
 # Bearbeitungsstand: R2 / GL75
@@ -18,11 +18,14 @@ Abschnitt "ID naming convention") und wird nicht von
 
 R2 = Rahmenecke mit eingeklebten Gewindestangen, Materialvariante
 GL75 (= BauBuche/Pollmeier-Furnierschichtholz, siehe
-COMMON-COMMON-DEC-004). Für GL75 liegt im R2-Excel nur der
+COMMON-COMMON-DEC-004). Im R2-Excel liegt für GL75 bisher nur der
 Festigkeitsnachweis vor (Stabdübel-Johansen mit ungeklärter Rolle,
-Momenten-Abschätzung `M_max≈162,96 kNm`); eine Zugseiten-
-Steifigkeitskette und ein ASSY-Verstärkungsblock existieren für GL75 —
-anders als für GL24h — bisher gar nicht im Excel (R2-GL75-OPQ-001/002).
+Momenten-Abschätzung `M_max≈162,96 kNm`); die vollständige
+Druck- und Zugseiten-Steifigkeitskette sowie `S_j,ini(GL75)` wurden
+seit 2026-09-18 im Chat mit dem Nutzer aufgestellt und im Wiki
+dokumentiert (R2-GL75-CALC-006–012), bisher aber noch nicht als
+eigener Block im R2-Excel nachgebildet (ein ASSY-Verstärkungsblock
+entfällt für GL75 ohnehin, R2-GL75-OPQ-002 RESOLVED).
 Anders als bei GL24h ist für GL75 rechnerisch die Gewindestangen-
 Zugtragfähigkeit (`291,00 kN`), nicht die Querdruckfestigkeit, der
 maßgebende Widerstandsmechanismus. Die unverstärkte
@@ -75,14 +78,25 @@ ansteht.
   unverstärkte Querdruckfestigkeit, Momenten-Abschätzung; CALC-004
   korrigiert CALC-002, CALC-005 korrigiert/erweitert CALC-004 um die
   `k_mat`-Korrektur und die Zug-/Druckseiten-Trennung [2026-09-17] —
-  siehe jeweils `superseded_by`-Feld). Neu [2026-09-18]:
-  R2-GL75-CALC-006 (`c_c,90`, unverstärkt, Druckseite, 176,409 kN/mm),
-  R2-GL75-CALC-007 (`c_c,0`, 2.688 kN/mm, `certainty: ASSUMED` wie das
-  GL24h-Pendant), R2-GL75-CALC-008 (`c_C`, Serienschaltung,
-  165,545 kN/mm) — erste vollständige Druckseiten-Gesamtsteifigkeit für
-  GL75, analog zu R2-GL24h-CALC-001/019/020.
-- Annahmen: — (materialunabhängige Annahmen siehe R2-COMMON-ASS-001–005,
-  bisher jedoch nur für GL24h konkret angewendet).
+  siehe jeweils `superseded_by`-Feld). Neu [2026-09-18]: vollständige
+  Druckseiten-Kette R2-GL75-CALC-006 (`c_c,90`, unverstärkt,
+  176,409 kN/mm), R2-GL75-CALC-007 (`c_c,0`, 2.688 kN/mm, `certainty:
+  ASSUMED` wie das GL24h-Pendant), R2-GL75-CALC-008 (`c_C`,
+  Serienschaltung, 165,545 kN/mm); vollständige Zugseiten-Kette
+  R2-GL75-CALC-009 (`c_c,90`, unverstärkt, 158,021 kN/mm),
+  R2-GL75-CALC-010 (`c_v,ges`, Schubfeld Holz + 2×BFU-BU 9mm,
+  145 kN/mm), R2-GL75-CALC-011 (`c_T`, Serienschaltung mit gepooltem
+  Stangenmesswert, 70,831 kN/mm, löst R2-GL75-OPQ-001); und —
+  aufbauend auf beiden Ketten — R2-GL75-CALC-012 (`S_j,ini`,
+  Kombination über `z=560mm` nach R2-COMMON-HYP-001, 15.556,5 kNm/rad,
+  vom Nutzer unabhängig bestätigt: 15.556,61) — erste vollständige
+  Anfangsrotationssteifigkeit für GL75, analog zu
+  R2-GL24h-CALC-020/021/022.
+- Annahmen: R2-COMMON-ASS-003 [Schubfeldverstärkung, Sperrholzplatten
+  links/rechts auf den Seitenflächen des Trägers flankierend um die
+  Gewindestangen, `G_r,mean=500 N/mm²`] und R2-COMMON-ASS-006 [Herkunft
+  `z=560mm`] neu für GL75 angewendet (2026-09-18); übrige
+  materialunabhängige Annahmen siehe R2-COMMON-ASS-001–005.
 - Versuchsergebnisse: R2-GL75-II-PO-B-SD-23-RES-001,
   R2-GL75-II-T-B-BR-22-RES-001, R2-GL75-II-T-B-BR-11-RES-001,
   R2-GL75-II-T-B-BR-11-RES-002 (Steifigkeiten K_ser/K_e),
@@ -90,11 +104,11 @@ ansteht.
   bei Prüfkörper 2 — Verhältnis oben/unten nur ~23 %),
   R2-GL75-II-T-B-BR-11-RES-003 (gepoolter K_ser-Mittelwert, n=6,
   226,596 kN/mm) und R2-GL75-II-T-B-BR-22-RES-003 (gepoolter
-  K_ser-Mittelwert, n=6, 1.119,496 kN/mm, aber mit Vorsicht zu
-  verwenden — siehe dortiger Vorbehalt zur Streuung) — beide gemäß
-  R2-COMMON-DEC-003 direkt aus Blatt "Überblick" übernommen, bisher
-  aber in keiner GL75-Steifigkeitskette verwendet, da eine solche noch
-  nicht existiert (R2-GL75-OPQ-001).
+  K_ser-Mittelwert, n=6, 1.119,496 kN/mm, mit Vorsicht zu verwenden —
+  siehe dortiger Vorbehalt zur Streuung) — beide gemäß
+  R2-COMMON-DEC-003 direkt aus Blatt "Überblick" übernommen; der
+  Zugseiten-Messwert (`II-T-B-BR-22`) ist seit 2026-09-18 in
+  R2-GL75-CALC-011 (`c_T`) verwendet.
 - Interpretationen/Schlussfolgerungen: — (Beobachtung zum materialabhängig
   verschobenen Versagensmodus bisher nur als Freitext in
   R2-GL75-CALC-003 vermerkt, `CLAUDE_DRAFT` — noch vom Forschenden zu
@@ -102,25 +116,31 @@ ansteht.
 
 ## Offene Fragen / bekannte Widersprüche
 
-R2-GL75-OPQ-001 offen (fehlende Steifigkeitskette). R2-GL75-OPQ-002
-(ASSY-Verstärkungsblock) am 2026-09-18 RESOLVED — vom Nutzer bestätigt:
-keine ASSY-Querdruckverstärkung bei GL75. R2-GL75-OPQ-003 (Anwendbarkeit der
-SWB-Querdruckbeiwerte auf BauBuche) am 2026-09-17 RESOLVED
-(R2-GL75-DEC-001: Hardwood GLVL, `k_mat=1,0`). Dazu die
-materialunabhängigen offenen Fragen unter
+R2-GL75-OPQ-001 (fehlende Zugseiten-Steifigkeitskette) am 2026-09-18
+RESOLVED — vollständige Kette R2-GL75-CALC-009/010/011 aufgestellt.
+R2-GL75-OPQ-002 (ASSY-Verstärkungsblock) am 2026-09-18 RESOLVED — vom
+Nutzer bestätigt: keine ASSY-Querdruckverstärkung bei GL75.
+R2-GL75-OPQ-003 (Anwendbarkeit der SWB-Querdruckbeiwerte auf BauBuche)
+am 2026-09-17 RESOLVED (R2-GL75-DEC-001: Hardwood GLVL, `k_mat=1,0`).
+Dazu die materialunabhängigen offenen Fragen unter
 `research/R2/COMMON/open_questions/`, von denen R2-COMMON-OPQ-001
 (Druckzonen-Geometrie) am 2026-09-04 RESOLVED wurde (rechteckige
-Druckzone, Hebelarm mittig, R2-COMMON-DEC-002).
+Druckzone, Hebelarm mittig, R2-COMMON-DEC-002). Weiterhin OPEN:
+R2-COMMON-OPQ-006 (Kombinationsformel `S_j,ini`, `CLAUDE_DRAFT`
+R2-COMMON-HYP-001 noch nicht Betreuerin-geprüft) und
+R2-COMMON-OPQ-011 (`c_c,0`-Modellierungsannahme `l=240mm`, betrifft
+auch `z=560mm` gemäß R2-COMMON-ASS-006).
 
 ## Nächste Schritte
 
-Klärung, ob/wie eine Zugseiten-Steifigkeitskette für GL75 aufgestellt
-werden soll (R2-GL75-OPQ-001). Die "edgewise"-Annahme hinter
-`k_mat=1,0` (R2-GL75-DEC-001) ist noch nicht anhand der konkreten
-BauBuche-Einbaugeometrie in R2 verifiziert — falls "flatwise" zutrifft,
-wäre `k_mat=1,3` (Case A) statt `1,0` anzusetzen. Für eine spätere
-Druckseiten-Steifigkeitskette steht die Modellierungsgrundlage bereits
-fest (rechteckige Druckzone, R2-COMMON-DEC-002).
+Die "edgewise"-Annahme hinter `k_mat=1,0` (R2-GL75-DEC-001) ist noch
+nicht anhand der konkreten BauBuche-Einbaugeometrie in R2 verifiziert —
+falls "flatwise" zutrifft, wäre `k_mat=1,3` (Case A) statt `1,0`
+anzusetzen. Größere Blocker vor einem formalen Abschluss von Phase 2:
+alle unter "Offene Fragen" genannten `OPEN`-Punkte sind noch nicht mit
+der Betreuerin abgestimmt (Kombinationsformel, `l=240mm`-Annahme für
+`c_c,0`/`z`, `G_r,mean=500 N/mm²`-Annahme für die
+Sperrholzverstärkung, Streuung des Stangengruppen-Messwerts).
 
 **Update (2026-09-18): Druckseiten-Steifigkeitskette für GL75 erstmals
 vollständig.** Da R2-GL75-OPQ-002 jetzt RESOLVED ist (keine
@@ -135,7 +155,26 @@ Lastausbreitung, aus R2-GL75-CALC-005) und `E_90,mean=470 N/mm²`:
 verifiziert (Sheet "Rahmenecke GL75 SD", Zellen I55/I66/I70) und vom
 Nutzer unabhängig nachgerechnet. Bemerkenswert: liegt über dem
 ASSY-verstärkten GL24h-Wert (`160,137 kN/mm`, R2-GL24h-CALC-020), da
-BauBuche auch unverstärkt ein deutlich höheres `E_90,mean` hat. Fehlt für
-ein vollständiges `S_j,ini(GL75)` weiterhin: die Zugseitensteifigkeit
-`c_T` (R2-GL75-OPQ-001) und die Kombination über den Hebelarm `z`
-(R2-COMMON-OPQ-006).
+BauBuche auch unverstärkt ein deutlich höheres `E_90,mean` hat.
+
+**Update (2026-09-18): Zugseiten-Steifigkeitskette für GL75 erstmals
+vollständig, `S_j,ini(GL75)` berechnet.** Analog zur Druckseite:
+`c_c,90=158,021 kN/mm` (Zugseite, unverstärkt, einseitige
+Lastausbreitung, R2-GL75-CALC-009), Schubfeld `c_v,ges=145 kN/mm`
+(Holz + 2× BFU-BU-Sperrholzplatten `t=9mm` auf den Seitenflächen des
+Trägers flankierend um die Gewindestangen, R2-GL75-CALC-010, korrigierte
+Geometrie gemäß R2-COMMON-ASS-003). Zusammen mit dem gepoolten
+Stangengruppen-Messwert (`1.119,496 kN/mm`, mit Vorsicht zu verwenden,
+R2-GL75-II-T-B-BR-22-RES-003) ergibt die Serienschaltung
+`c_T=70,831 kN/mm` (R2-GL75-CALC-011, löst R2-GL75-OPQ-001). Mit `c_T`
+und `c_C` (R2-GL75-CALC-008) sowie dem materialunabhängigen Hebelarm
+`z=560mm` (R2-COMMON-ASS-006) liefert die Kombinationsformel
+R2-COMMON-HYP-001: `S_j,ini(GL75)=15.556,5 kNm/rad`
+(R2-GL75-CALC-012, vom Nutzer unabhängig bestätigt: 15.556,61) — rund
+24 % über dem GL24h-Pendant (`12.540,8 kNm/rad`, R2-GL24h-CALC-022),
+obwohl GL75 unverstärkt bleibt. Damit liegt für GL75 erstmals ein
+vollständiges Anfangssteifigkeits-Ergebnis vor, analog zu GL24h — beide
+noch als `CLAUDE_DRAFT`/`OPEN` markierte Kombinationsformel
+(R2-COMMON-HYP-001, R2-COMMON-OPQ-006) und mit den jeweils
+materialspezifisch dokumentierten Vorbehalten zu behandeln, nicht als
+mit der Betreuerin abgestimmtes Endergebnis.
