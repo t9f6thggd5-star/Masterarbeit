@@ -16,13 +16,14 @@ statement: >
   gemeinsamen Linie und sind über einen als starr angenommenen Balken
   verbunden, der um ein (durch das Kräftegleichgewicht bestimmtes)
   Rotationszentrum `x₀` um den Winkel `φ` rotiert (T/C/z/φ-Topologie
-  nach Fig. 7, siehe R2-COMMON-CLAIM-031). Aus der
-  Starrkörperkinematik folgt für die Federverschiebungen `δ_T=φ·(z-x₀)`
-  bzw. `δ_C=φ·x₀` (bei vertauschter Anordnung symmetrisch `δ_T=φ·x₀`,
-  `δ_C=φ·(z-x₀)` — das Ergebnis ist in beiden Fällen identisch, siehe
-  unten). Aus dem Momentengleichgewicht (reines Kräftepaar, `c_T·δ_T =
-  c_C·δ_C`) folgt `x₀ = c_T·z/(c_T+c_C)` und damit
-  `M = φ·z²·c_T·c_C/(c_T+c_C)`, also obige Formel für `S_j,ini = M/φ`.
+  nach Fig. 7, siehe R2-COMMON-CLAIM-031). Zugfeder `T` bei `x=0`,
+  Druckfeder `C` bei `x=z`. Aus der Starrkörperkinematik folgt für die
+  Federverschiebungen `δ_T=φ·x₀` bzw. `δ_C=φ·(z-x₀)` (bei vertauschter
+  Anordnung symmetrisch `δ_T=φ·(z-x₀)`, `δ_C=φ·x₀` — das Ergebnis ist
+  in beiden Fällen identisch, siehe unten). Aus dem Momentengleichgewicht
+  (reines Kräftepaar, `c_T·δ_T = c_C·δ_C`) folgt
+  `x₀ = c_C·z/(c_T+c_C)` und damit `M = φ·z²·c_T·c_C/(c_T+c_C)`, also
+  obige Formel für `S_j,ini = M/φ`.
   Strukturell analog zur Bauteilmethode für Stahlanschlüsse (EN
   1993-1-8, 6.3.1) und konsistent mit der Fig.-7-Topologie, aber eine
   eigene mechanische Herleitung — keine wörtliche Formel aus
@@ -47,24 +48,24 @@ reviewed: false
 
 ## Herleitung im Detail
 
-Koordinate `x` entlang des Hebelarms, Druckfeder `C` bei `x=0`,
-Zugfeder `T` bei `x=z`, Rotationszentrum bei `x=x₀` (zunächst
+Koordinate `x` entlang des Hebelarms, Zugfeder `T` bei `x=0`,
+Druckfeder `C` bei `x=z`, Rotationszentrum bei `x=x₀` (zunächst
 unbekannt):
 
 ```
-x=0 (C)                      x=x₀                          x=z (T)
+x=0 (T)                      x=x₀                          x=z (C)
   |---------------------------|------------------------------|
   |<---------- x₀ ----------->|<---------- z-x₀ ------------>|
 ```
 
 Starrkörperrotation um `φ`: Verschiebung eines Punkts = `φ · Abstand
-von x₀`. Damit `δ_C = φ·x₀`, `δ_T = φ·(z-x₀)`.
+von x₀`. Damit `δ_T = φ·x₀`, `δ_C = φ·(z-x₀)`.
 
 Gleichgewicht (reines Moment, keine Normalkraft, also Zug- und
 Druckkraft betragsgleich): `c_T·δ_T = c_C·δ_C`, eingesetzt
-`c_T·(z-x₀) = c_C·x₀`, aufgelöst `x₀ = c_T·z/(c_T+c_C)`.
+`c_T·x₀ = c_C·(z-x₀)`, aufgelöst `x₀ = c_C·z/(c_T+c_C)`.
 
-Moment über die Zugfeder: `M = F·z = c_T·δ_T·z = c_T·φ·(z-x₀)·z`.
+Moment über die Zugfeder: `M = F·z = c_T·δ_T·z = c_T·φ·x₀·z`.
 Einsetzen von `x₀` ergibt nach Umformen:
 
 ```
@@ -72,13 +73,26 @@ M = φ · z² · c_T·c_C/(c_T+c_C)
 S_j,ini = M/φ = z²/(1/c_T + 1/c_C)
 ```
 
-**Vertauschungsprobe:** Tauscht man die Positionen (Zugfeder bei
-`x=0`, Druckfeder bei `x=z`), ergibt dieselbe Herleitung
-`x₀=c_C·z/(c_T+c_C)` und wieder `S_j,ini=z²/(1/c_T+1/c_C)` — die
+**Zahlenbeispiel (GL24h, siehe R2-GL24h-CALC-022):** mit
+`c_T=53,300 kN/mm`, `c_C=160,137 kN/mm`, `z=560mm`:
+`x₀ = c_C·z/(c_T+c_C) = 160,137·560/213,437 ≈ 420,2mm` (Abstand von
+`T`), `z-x₀ ≈ 139,8mm` (Abstand von `C`) — das Rotationszentrum liegt
+näher an der steiferen Feder `C`, wie erwartet.
+
+**Vertauschungsprobe:** Tauscht man die Positionen (Druckfeder bei
+`x=0`, Zugfeder bei `x=z`), ergibt dieselbe Herleitung
+`x₀=c_T·z/(c_T+c_C)` und wieder `S_j,ini=z²/(1/c_T+1/c_C)` — die
 Formel ist symmetrisch in `c_T`/`c_C`, nur die Lage von `x₀` selbst
 "wandert" mit der Vertauschung an die jeweils andere Seite (das
 Rotationszentrum liegt stets näher an der steiferen der beiden
 Federn).
+
+**Hinweis zur Orientierung (2026-09-18):** Diese Fassung führt `T` bei
+`x=0` und `C` bei `x=z` als Hauptdarstellung, auf Wunsch des Nutzers
+(entspricht dessen eigener Skizzenkonvention); zuvor war es umgekehrt
+(`C` bei `x=0`, `T` bei `x=z`, jetzt die Vertauschungsprobe oben).
+Reine Darstellungsfrage, keine inhaltliche Änderung — Endformel und
+Zahlenwert (R2-GL24h-CALC-022) sind unverändert.
 
 ## Einordnung / Vorbehalt
 
