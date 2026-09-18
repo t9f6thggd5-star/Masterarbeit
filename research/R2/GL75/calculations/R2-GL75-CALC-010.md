@@ -25,10 +25,22 @@ result:
   original_value: 145000
   original_unit: N/mm
 source_file: >
-  Noch nicht im R2-Excel als eigener Block hinterlegt (Stand
-  2026-09-18). Vom Nutzer im Chat berechnet (c_v,H=136, Platte je
-  4,5) und hier formelbasiert nachvollzogen/bestätigt; `G_mean=850
-  N/mm²` gegen Holzkennwerte!F36 verifiziert.
+  Vom Nutzer im Chat berechnet (c_v,H=136, Platte je 4,5) und hier
+  formelbasiert nachvollzogen/bestätigt; `G_mean=850 N/mm²` gegen
+  Holzkennwerte!F36 verifiziert. **Update (2026-09-18):** Der Nutzer hat
+  den Zugseiten-Rechenweg jetzt auch im R2-Excel ergänzt — Sheet
+  "Rahmenecke GL75 SD", Block K63:M80: `M67` (A_v=128.000, `=M66*M64`),
+  `M69` (c_v,H=136, `=(Holzkennwerte!F36*M67)/M65*10^-3`), `M75`
+  (A_v,P=7.200, `=M72*M73`), `M77` (c_v,P=4,5 je Platte,
+  `=(Holzkennwerte!L23*M75)/M74*10^-3`), `M80` (c_v,ges=145,
+  `=M69+2*M77`) — alle Werte exakt deckungsgleich mit den hier
+  dokumentierten. **Neuer Fund:** die Notiz in N77 lautet "Annahme
+  Schubmodul 500 N/mm^2 KLH ETA Scheibenbeanspruchung" — liefert damit
+  erstmals eine konkrete technische Quellenangabe für die
+  `G_r,mean=500 N/mm²`-Annahme (Bezug auf eine ETA für KLH-Brettsperrholz,
+  Scheibenbeanspruchung), bisher in R2-COMMON-ASS-003 nur als
+  Nutzerangabe ohne Dokumentquelle vermerkt — sollte dort nachgetragen
+  werden.
 certainty: CALCULATED
 superseded_by:
 ---
@@ -52,5 +64,5 @@ erwartete lineare Skalierung mit der Plattendicke bei sonst gleichem
 `G_r,mean`. `G_mean(GL75)/G_mean(GL24h) = 850/650 ≈ 1,308`, passend zum
 Verhältnis `c_v,H(GL75)/c_v,H(GL24h) = 136/104 ≈ 1,308`.
 
-Weiterverwendung: eine der drei Federn der Zugseiten-Gesamt-
+Weiterverwendung: eine der Federn der Zugseiten-Gesamt-
 steifigkeitskette `c_T`, siehe R2-GL75-CALC-011.

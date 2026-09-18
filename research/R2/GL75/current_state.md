@@ -18,14 +18,15 @@ Abschnitt "ID naming convention") und wird nicht von
 
 R2 = Rahmenecke mit eingeklebten Gewindestangen, Materialvariante
 GL75 (= BauBuche/Pollmeier-Furnierschichtholz, siehe
-COMMON-COMMON-DEC-004). Im R2-Excel liegt für GL75 bisher nur der
-Festigkeitsnachweis vor (Stabdübel-Johansen mit ungeklärter Rolle,
-Momenten-Abschätzung `M_max≈162,96 kNm`); die vollständige
-Druck- und Zugseiten-Steifigkeitskette sowie `S_j,ini(GL75)` wurden
-seit 2026-09-18 im Chat mit dem Nutzer aufgestellt und im Wiki
-dokumentiert (R2-GL75-CALC-006–012), bisher aber noch nicht als
-eigener Block im R2-Excel nachgebildet (ein ASSY-Verstärkungsblock
-entfällt für GL75 ohnehin, R2-GL75-OPQ-002 RESOLVED).
+COMMON-COMMON-DEC-004). Neben dem Festigkeitsnachweis (Stabdübel-
+Johansen mit ungeklärter Rolle, Momenten-Abschätzung
+`M_max≈162,96 kNm`) liegt im R2-Excel jetzt auch die vollständige
+Druck- und Zugseiten-Steifigkeitskette samt `S_j,ini(GL75)` als eigener
+Block vor (Sheet "Rahmenecke GL75 SD", zunächst im Chat mit dem Nutzer
+aufgestellt und im Wiki dokumentiert [R2-GL75-CALC-006–012], seit
+2026-09-18 vom Nutzer auch ins Excel übertragen und gegen die dortigen
+Formeln/Zellwerte verifiziert — ein ASSY-Verstärkungsblock entfällt für
+GL75 ohnehin, R2-GL75-OPQ-002 RESOLVED).
 Anders als bei GL24h ist für GL75 rechnerisch die Gewindestangen-
 Zugtragfähigkeit (`291,00 kN`), nicht die Querdruckfestigkeit, der
 maßgebende Widerstandsmechanismus. Die unverstärkte
@@ -88,10 +89,13 @@ ansteht.
   145 kN/mm), R2-GL75-CALC-011 (`c_T`, Serienschaltung mit gepooltem
   Stangenmesswert, 70,831 kN/mm, löst R2-GL75-OPQ-001); und —
   aufbauend auf beiden Ketten — R2-GL75-CALC-012 (`S_j,ini`,
-  Kombination über `z=560mm` nach R2-COMMON-HYP-001, 15.556,5 kNm/rad,
-  vom Nutzer unabhängig bestätigt: 15.556,61) — erste vollständige
-  Anfangsrotationssteifigkeit für GL75, analog zu
-  R2-GL24h-CALC-020/021/022.
+  Kombination über `z=560mm` nach R2-COMMON-HYP-001, `15.556,61
+  kNm/rad`, seit 2026-09-18 auch Excel-exakt bestätigt, Zelle I89) —
+  erste vollständige Anfangsrotationssteifigkeit für GL75, analog zu
+  R2-GL24h-CALC-020/021/022. Alle vier Einträge (CALC-009–012) sind seit
+  2026-09-18 auch als eigener Rechenblock im R2-Excel nachgebildet
+  (Sheet "Rahmenecke GL75 SD", Zeilen 51-89) und gegen dessen exakte
+  Zellwerte verifiziert.
 - Annahmen: R2-COMMON-ASS-003 [Schubfeldverstärkung, Sperrholzplatten
   links/rechts auf den Seitenflächen des Trägers flankierend um die
   Gewindestangen, `G_r,mean=500 N/mm²`] und R2-COMMON-ASS-006 [Herkunft
@@ -169,12 +173,33 @@ R2-GL75-II-T-B-BR-22-RES-003) ergibt die Serienschaltung
 `c_T=70,831 kN/mm` (R2-GL75-CALC-011, löst R2-GL75-OPQ-001). Mit `c_T`
 und `c_C` (R2-GL75-CALC-008) sowie dem materialunabhängigen Hebelarm
 `z=560mm` (R2-COMMON-ASS-006) liefert die Kombinationsformel
-R2-COMMON-HYP-001: `S_j,ini(GL75)=15.556,5 kNm/rad`
-(R2-GL75-CALC-012, vom Nutzer unabhängig bestätigt: 15.556,61) — rund
-24 % über dem GL24h-Pendant (`12.540,8 kNm/rad`, R2-GL24h-CALC-022),
-obwohl GL75 unverstärkt bleibt. Damit liegt für GL75 erstmals ein
-vollständiges Anfangssteifigkeits-Ergebnis vor, analog zu GL24h — beide
-noch als `CLAUDE_DRAFT`/`OPEN` markierte Kombinationsformel
-(R2-COMMON-HYP-001, R2-COMMON-OPQ-006) und mit den jeweils
-materialspezifisch dokumentierten Vorbehalten zu behandeln, nicht als
-mit der Betreuerin abgestimmtes Endergebnis.
+R2-COMMON-HYP-001: `S_j,ini(GL75)=15.556,61 kNm/rad`
+(R2-GL75-CALC-012) — rund 24 % über dem GL24h-Pendant
+(`12.540,8 kNm/rad`, R2-GL24h-CALC-022), obwohl GL75 unverstärkt
+bleibt. Damit liegt für GL75 erstmals ein vollständiges
+Anfangssteifigkeits-Ergebnis vor, analog zu GL24h — beide noch als
+`CLAUDE_DRAFT`/`OPEN` markierte Kombinationsformel (R2-COMMON-HYP-001,
+R2-COMMON-OPQ-006) und mit den jeweils materialspezifisch
+dokumentierten Vorbehalten zu behandeln, nicht als mit der Betreuerin
+abgestimmtes Endergebnis.
+
+**Update (2026-09-18, Fortsetzung): vollständiger Rechenweg auch im
+R2-Excel ergänzt.** Der Nutzer hat den kompletten Zugseiten- und
+Kombinationsblock (bis dahin nur im Wiki) als eigenen Rechenblock ins
+R2-Excel übertragen (Sheet "Rahmenecke GL75 SD", Zeilen 51-89) — analog
+zur bereits vorher vorhandenen Druckseiten-Kette. Per openpyxl
+zellgenau geprüft: `M61` (`c_c,90` Zugseite, deckt sich exakt mit
+R2-GL75-CALC-009), `M80` (`c_v,ges`, deckt sich exakt mit
+R2-GL75-CALC-010), `M84` (`c_T=70,83175 kN/mm`, praktisch identisch zu
+R2-GL75-CALC-011) und `I89` (`S_j,ini=15.556,61279 kNm/rad`, exakt
+deckungsgleich mit dem vom Nutzer unabhängig berechneten Wert). Dabei
+zwei Nebenfunde: (1) das Excel-Modell führt `c_T` formal als
+Serienschaltung von vier statt drei Federn (zusätzlich `c_t,ep`,
+Stahlplatten-Nachgiebigkeit, aber als starr angenommen und damit
+numerisch irrelevant) — in R2-GL75-CALC-011 nachgetragen; (2) die
+bisher in R2-GL24h-CALC-022 falsch zitierte Fundstelle für `z` auf
+diesem Blatt ("I54/I56") wurde korrigiert auf die tatsächliche Zelle
+`C84`/`C86`. Damit steht GL75 formal auf demselben Stand wie GL24h:
+beide Materialien haben die vollständige Druck- und Zugseiten-
+Steifigkeitskette samt `S_j,ini` sowohl im Wiki als auch im R2-Excel
+selbst dokumentiert.

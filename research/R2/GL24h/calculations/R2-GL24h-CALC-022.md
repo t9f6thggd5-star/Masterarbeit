@@ -17,7 +17,11 @@ method: >
   Druckseiten-Gesamtsteifigkeit `c_C` (R2-GL24h-CALC-020), mit dem
   inneren Hebelarm `z=560mm`, der im R2-Excel identisch in allen drei
   Blättern ("Rahmenecke GL24h SD" C90/C92, "Rahmenecke GL24h HD"
-  I92/I94, "Rahmenecke GL75 SD" I54/I56) als Eingabewert für den
+  I92/I94, "Rahmenecke GL75 SD" C84/C86 — **korrigiert 2026-09-18**:
+  ursprünglich hier fälschlich als "I54/I56" angegeben; bei der
+  Untersuchung der inzwischen für GL75 ergänzten Zugseiten-/
+  S_j,ini-Kette [R2-GL75-CALC-012] wurde die tatsächliche Fundstelle
+  C84/C86 identifiziert) als Eingabewert für den
   Momenten-Tragfähigkeitsnachweis `M_max=F·z` (R2-GL24h-CALC-012)
   verwendet wird. Direkt in der Exceldatei per openpyxl geprüft: `z`
   ist dort ein reiner Zahlen-Input ohne Formelherleitung — unabhängig

@@ -26,10 +26,17 @@ result:
   original_value: 158020.6
   original_unit: N/mm
 source_file: >
-  Noch nicht im R2-Excel als eigener Block hinterlegt (Stand
-  2026-09-18, Sheet "Rahmenecke GL75 SD" enthält bisher nur die
-  Druckseiten-Steifigkeitskette, Zeilen 51-70). Vom Nutzer im Chat
-  berechnet (158,02) und hier formelbasiert nachvollzogen/bestätigt.
+  Vom Nutzer im Chat berechnet (158,02) und hier formelbasiert
+  nachvollzogen/bestätigt. **Update (2026-09-18):** Der Nutzer hat den
+  vollständigen Zugseiten-Rechenweg jetzt auch im R2-Excel ergänzt —
+  Sheet "Rahmenecke GL75 SD", Zelle M61 (Formel
+  `=2*Holzkennwerte!F35/(M37*(1/M42+1/M43))*10^-3`, Normverweis in N61
+  "FpreEN EC5 -2024, Gl. 9.31"), Excel-Wert `158,02396313364056`, per
+  openpyxl mit data_only=True/False geprüft — deckt sich exakt mit dem
+  hier dokumentierten Wert. Eingangsgeometrie im selben Block: `M37`
+  (h_ef=140), `M40` (l_ef=380), `M41` (b_90,c=160), `M42`
+  (A_Stahlplatte=38.400), `M43` (A_ef=60.800) — identisch zu den hier
+  verwendeten Werten.
 certainty: CALCULATED
 superseded_by:
 ---
@@ -58,5 +65,5 @@ identisch zum entsprechenden Verhältnis bei der Tragfähigkeit
 (R2-GL75-CALC-005) und unabhängig vom Material (siehe Chat-Diskussion
 vom 2026-09-18).
 
-Weiterverwendung: eine der drei Federn der Zugseiten-Gesamt-
+Weiterverwendung: eine der Federn der Zugseiten-Gesamt-
 steifigkeitskette `c_T`, siehe R2-GL75-CALC-011.
