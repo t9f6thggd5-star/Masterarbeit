@@ -148,9 +148,21 @@ R2-Excel, Sheet "Rahmenecke GL24h SD", ab Zeile 98 (Zugseite, `A=1`):
 | L103 | `ω` [mm⁻¹] | `=SQRT((1/(210000*L98)+L58/(Holzkennwerte!D35*L42))*L99)` | 71 |
 | L104 | `E_tot` [N/mm²] | `=(Holzkennwerte!D35*L100*L58*L65*(L102/L58+1)*L103*SINHYP(L103*L65))/(L101-L102+L58*(L102/L58+1)*COSHYP(L103*L65)+0,7*L100*L65*L101*L103*SINHYP(L103*L65))` | 67 |
 
-`L65`="Gewindelänge im Holz l_w" und `L67`="l_r" sind hier
-zahlengleich (beide 580mm), aber unterschiedliche Zellen — Details
-siehe Diskussion vom 2026-09-17. `L38`="Lastausbreitungswinkel" (45°)
+`L65`="Gewindelänge im Holz l_w" und `L67`="l_r" sind hier zahlengleich
+(beide 580mm) — **geklärt am 2026-09-18:** kein Zufall, sondern
+dieselbe Größe unter zwei Namen. `l_r` ist die offizielle FprEN-
+1995-1-1:2024-Bezeichnung (Abschnitt 8, Schraubenverstärkung der
+Querdruckzone, Fig. 8.5): "the reinforced length of the threaded part
+of the screw or rod in the timber member" — inhaltlich identisch mit
+dem, was die Excel-Datei unter dem beschreibenden Label `l_w`
+("Gewindelänge im Holz") führt, und passend zum ASSY-Verstärkungs-
+kontext von R2. `l_r` wird in der Excel-Datei separat (als fester
+Zahlenwert, nicht per Formel mit `L65` verknüpft) für zwei Formeln
+verwendet: die Gruppen-Effektivlänge `l_2,ef` (Gl. 8.15, Zeile 70) und
+als `l_S`-Eingang in Bejtkas eigener `c_v`-Formel (Gl. 10, Zeile
+99/101, s. Tabelle oben). Da beide Größen per Definition identisch
+sind, besteht hier kein Risiko eines stillen Auseinanderlaufens.
+`L38`="Lastausbreitungswinkel" (45°)
 ist derselbe Winkel wie in der FprEN-Ausbreitung (Tab. 8.2), hier als
 `tanα` in `f_LA` verwendet.
 

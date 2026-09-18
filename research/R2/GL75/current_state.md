@@ -97,8 +97,9 @@ ansteht.
 
 ## Offene Fragen / bekannte Widersprüche
 
-R2-GL75-OPQ-001–002 offen (fehlende Steifigkeitskette, fehlender
-ASSY-Verstärkungsblock); R2-GL75-OPQ-003 (Anwendbarkeit der
+R2-GL75-OPQ-001 offen (fehlende Steifigkeitskette). R2-GL75-OPQ-002
+(ASSY-Verstärkungsblock) am 2026-09-18 RESOLVED — vom Nutzer bestätigt:
+keine ASSY-Querdruckverstärkung bei GL75. R2-GL75-OPQ-003 (Anwendbarkeit der
 SWB-Querdruckbeiwerte auf BauBuche) am 2026-09-17 RESOLVED
 (R2-GL75-DEC-001: Hardwood GLVL, `k_mat=1,0`). Dazu die
 materialunabhängigen offenen Fragen unter
@@ -115,3 +116,16 @@ BauBuche-Einbaugeometrie in R2 verifiziert — falls "flatwise" zutrifft,
 wäre `k_mat=1,3` (Case A) statt `1,0` anzusetzen. Für eine spätere
 Druckseiten-Steifigkeitskette steht die Modellierungsgrundlage bereits
 fest (rechteckige Druckzone, R2-COMMON-DEC-002).
+
+**Update (2026-09-18):** Die Druckseiten-Steifigkeitskette für GL75
+wurde begonnen (Chat, noch nicht als CALC-Einträge festgehalten). Da
+R2-GL75-OPQ-002 jetzt RESOLVED ist (keine ASSY-Verstärkung bei GL75),
+kommt durchgängig der unverstärkte FprEN-Ansatz (Gl. 9.31) zum Einsatz,
+mit der bereits für GL75 im Excel hinterlegten Druckseiten-Geometrie
+(`A_ef=83.200mm²`, beidseitige Lastausbreitung, aus R2-GL75-CALC-005)
+und `E_90,mean=470 N/mm²`: `c_c,90≈176,41 kN/mm`. Mit `c_c,0` (gleiche
+`l=240mm`-Annahme wie GL24h, R2-COMMON-OPQ-011, `E_0,mean=16.800 N/mm²`)
+`≈2.688 kN/mm` ergibt die Serienschaltung `c_C≈165,55 kN/mm` — bemerkenswert
+über dem ASSY-verstärkten GL24h-Wert (`160,137 kN/mm`, R2-GL24h-CALC-020),
+da BauBuche auch unverstärkt ein deutlich höheres `E_90,mean` hat. Noch
+nicht als formale CALC-Einträge im Wiki angelegt.
