@@ -30,7 +30,7 @@ source_file: >
   "Rahmenecke GL75 SD", Zellen C23-C26, C45/C50 (per openpyxl mit
   data_only=True ausgelesen, Stand der abgelegten Datei am 2026-09-01)
 certainty: CALCULATED
-superseded_by:
+superseded_by: R1-GL75-CALC-003
 ---
 
 Übernommen aus chat-2, KNOWLEDGE.md §5 ("BauBuche/GL75 example: n_0=8,
@@ -43,10 +43,11 @@ Unterschied zu GL24h (R1-GL24h-CALC-001, softwood-artige Abstandsregel,
 n_ef≈5.50) wird hier die LVL/GLVL-spezifische Formel verwendet, siehe
 R1-GL24h-DEC-005.
 
-**Hinweis (2026-09-21):** Der Wert 3,927 entspricht Zelle C52 des Blattes
-mit t = t_ms = 12mm (Stahlblech als Innenteil). Ob das Stahl-Innenteil in
-t nach Tab. 11.10 (9) eingeht, ist offen (R1-GL75-OPQ-002); mit
-t = min{2t_1; 2t_2} = 144mm ergäbe sich n_ef = 7,308 (R1-GL75-CALC-003).
-Vergleichswert nach DIN EN 1995-1-1 Gl. (8.34): 5,499 (R1-GL75-CALC-002).
-Zellbezüge und Dateiname dieses Eintrags entsprechen nicht mehr dem
-aktuellen Stand des Blattes (siehe Hinweis in R1-GL75-CALC-002).
+**Hinweis (2026-09-21):** Ersetzt durch R1-GL75-CALC-003. Der Wert 3,927
+entspricht Zelle C52 des Blattes mit t = t_ms = 12mm (Stahlblech als
+Innenteil). Der Nutzer hat am 2026-09-21 t = min{2t_1; 2t_2} = 144mm
+bestätigt (R1-GL75-OPQ-002, RESOLVED); damit gilt n_ef = 7,308 und dieser
+Wert ist Grundlage von F_est. Vergleichswert nach DIN EN 1995-1-1
+Gl. (8.34): 5,499 (R1-GL75-CALC-002). Zellbezüge und Dateiname dieses
+Eintrags entsprechen nicht mehr dem aktuellen Stand des Blattes (siehe
+Hinweis in R1-GL75-CALC-002).

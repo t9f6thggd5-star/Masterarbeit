@@ -194,23 +194,6 @@ sources:
     chat-1 diskutierten BFU-BU-F50/25-Kennwerte ausreicht oder ob tatsaechlich
     die 2025-11-Fassung benoetigt wird -- vor Verwendung von Zahlenwerten aus
     dieser Norm pruefen, siehe R3-GL24h-OPQ-016.
-- id: DIN-EN-1995-1-1-2010
-  type: NORMATIVE
-  authority: normative
-  file: common/norms/DIN EN 1995-1-1_2010-12 Holzbau-Allgemeine Regeln und Regeln für den Hochbau.pdf
-  scope:
-    connection: COMMON
-    material: COMMON
-  title: 'Eurocode 5 – Bemessung und Konstruktion von Holzbauten – Teil 1-1: Allgemeines – Allgemeine Regeln und Regeln für den Hochbau; Deutsche Fassung EN 1995-1-1:2004 + AC:2006 + A1:2008'
-  issuing_body: DIN (Normenausschuss Bauwesen (NABau))
-  designation: DIN EN 1995-1-1:2010-12
-  date: 2010-12
-  pages: 135
-  notes: >-
-    Ersatz für DIN EN 1995-1-1:2008-09. Der Nationale Anhang DIN EN 1995-1-1/NA
-    liegt nicht im Quellenordner. Am 2026-09-21 vom Nutzer abgelegt; belegt
-    u. a. Gl. (8.34)/(8.35) (effektive Anzahl n_ef, 8.5.1.1(4)) und Tab. 8.5
-    (Mindestabstände Stabdübel).
 - id: ETA-11-0190-2026
   type: NORMATIVE
   authority: normative

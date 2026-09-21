@@ -64,3 +64,15 @@ Aufgenommen auf Wunsch des Nutzers (2026-09-21). Bis zur Klärung sind alle
 daraus abgeleiteten Zugpfad-Steifigkeiten als vorläufig zu kennzeichnen;
 Claude rechnet vorläufig mit den K_ser-Werten der Tabelle (F_est = 480 kN
 bei GL24h).
+
+**Update (2026-09-21):** Für GL75 hat sich die C30-Basis geändert. Nach der
+Bestätigung von n_ef = 7,308 (R1-GL75-OPQ-002, R1-GL75-CALC-003) ist
+C30 = C72 = 1254,16 kN (4×8), je getesteter 2×8-Gruppe 627,08 kN; der
+Nutzer verwendet diesen Wert für F_est. Die oben genannten Zahlen für GL75
+"471,8 kN / 547 kN/mm" beruhen auf dem früheren n_ef und sind überholt. Die
+Versuchsblätter I-T-B-SD-28-1 bis -3 rechnen weiter mit F_est = 800 kN (M5;
+K_ser-Mittel 727,74 kN/mm), die Zeilen V11-V16 sind nicht neu gewählt und
+K_ser wurde für das Fenster 0,1 bis 0,4 · 627,08 kN (63 bis 251 kN) noch
+nicht ausgewertet. Höchstlasten der Versuche laut Excel 581,0 / 640,2 /
+645,7 kN (Mittel 622,3 kN), also 0,93 bis 1,03 · 627,08 kN. Für GL24h
+unverändert (Arbeitsstand F_est = 480 kN). Die Frage bleibt für GL75 OPEN.

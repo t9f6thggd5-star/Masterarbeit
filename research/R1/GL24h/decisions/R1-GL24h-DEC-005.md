@@ -22,3 +22,9 @@ GL24h können materiell unterschiedliche n_ef-Ergebnisse liefern — bestätigt
 durch die tatsächlichen Berechnungswerte: n_ef ≈ 5.50 für GL24h
 (R1-GL24h-CALC-001, softwood-artige Abstandsregel) gegenüber n_ef ≈ 3.93
 für BauBuche/GL75 (R1-GL75-CALC-001, LVL/GLVL-Regel).
+
+**Update (2026-09-21):** Für GL75 ist die LVL/GLVL-Regel mit
+t = min{2t_1; 2t_2} = 144mm angesetzt und vom Nutzer bestätigt; n_ef beträgt
+damit 7,31 (R1-GL75-CALC-003, R1-GL75-OPQ-002) statt der oben genannten
+3,93 (R1-GL75-CALC-001, ersetzt). Für GL24h bleibt n_ef ≈ 5,50 (Zeile (6)),
+Einordnung offen in R1-GL24h-OPQ-007.

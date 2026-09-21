@@ -5,24 +5,28 @@ scope:
   material: GL75
 type: CALCULATION
 inputs:
-  normative_sources: DIN-EN-1995-1-1-2010, ETA-14-0354-2026
+  normative_sources: ETA-14-0354-2026
   literature: Gauss2024
   experimental_data:
   assumptions:
 method: >
   Effektive Anzahl n_ef der Stabdübel je Reihe in Faserrichtung nach
   DIN EN 1995-1-1 (Eurocode 5 mit A1:2008) für die BauBuche/GL75-Variante
-  des R1-Anschlusses, mit n_0=8, d=12mm und a_1=80mm. Dient als
-  Gegenüberstellung zur FprEN-Regel (R1-GL75-CALC-001 und -003). Die
-  DIN-Formel enthält weder eine Materialunterscheidung noch die
-  Bauteildicke; für Stabdübel gilt sie nach 8.6(1) über 8.5.1.1(4).
+  des R1-Anschlusses, mit n_0=8, d=12mm und a_1=80mm. Reiner
+  Vergleichswert zur FprEN-Regel (R1-GL75-CALC-003), nicht Grundlage von
+  F_est. Die DIN-Formel enthält weder eine Materialunterscheidung noch die
+  Bauteildicke; für Stabdübel gilt sie nach DIN 8.6(1) über 8.5.1.1(4).
+  Die DIN-Norm ist nicht im Quellenordner und nicht in
+  bibliography/sources.yaml geführt (siehe Hinweis unten); Formel und
+  Gleichungsnummern beruhen auf der Prüfung am 2026-09-21 und, unabhängig
+  davon, auf Gauss2024.
 equations: >
   DIN EN 1995-1-1:2010-12, Gl. (8.34):
   n_ef = min{n; n^0,9 · (a_1/(13·d))^(1/4)}
   (Kraft in Faserrichtung; Gl. (8.35) ist dagegen der Fall rechtwinklig
   zur Faser mit n_ef = n)
 result:
-  quantity: Effektive Anzahl n_ef (BauBuche/GL75, DIN EN 1995-1-1 Gl. 8.34)
+  quantity: Effektive Anzahl n_ef (BauBuche/GL75, DIN EN 1995-1-1 Gl. 8.34, Vergleichswert)
   value: 5.499
   unit: "-"
   original_value: 5.4988558557348375
@@ -44,7 +48,7 @@ Gl. (8.34)); dieselbe Formel gibt Gauß (Gauss2024, Gl. 2-8) mit Verweis
 auf Jorissen (1998) wieder.
 
 **Abstände:** a_1 = 80mm ≥ (3+2|cos α|)·d = 60mm; a_3,t = 183mm ≥
-max(7d; 80mm) = 84mm (Tabelle 8.5, Stabdübel); a_2 = 50mm ≥ 3d = 36mm
+max(7d; 80mm) = 84mm (DIN Tabelle 8.5, Stabdübel); a_2 = 50mm ≥ 3d = 36mm
 (a_2 laut Nutzer 2026-09-21 wie bei der getesteten Gruppe).
 
 **Anwendbarkeit auf BauBuche:** Die DIN-Formel kennt keine Materialklasse.
@@ -53,16 +57,23 @@ Träger BauBuche vor: "Die Berechnung der Verbindungsmittel kann gemäß
 EN 1995-1-1 erfolgen" (Lochleibungsfestigkeit bei d ≥ 8mm in den
 Schmalflächen mit Faktor 0,8) und enthält keine eigene n_ef-Regel. Die
 materialspezifische Zeile für LVL/GLVL steht erst im FprEN-Entwurf
-(Tab. 11.10 (7), siehe R1-GL75-CALC-001/-003). Ob die Dübel in den
+(Tab. 11.10 (7), siehe R1-GL75-CALC-003). Ob die Dübel in den
 Schmalflächen liegen und der Faktor 0,8 im Blatt berücksichtigt ist, wurde
 nicht geprüft.
 
-**Verwendung im Blatt:** C71 (F_D,k,ges = C51·C24·C69·C6 = 943,66 kN)
-speist über C30 die Höchstlast F_est der Versuchsblätter (halbiert für die
-getestete 2×8-Gruppe: 471,83 kN). C72 rechnet mit dem FprEN-Wert
-(C52 = 3,93; 673,84 kN). Die Gegenüberstellung DIN gegen prEN ist vom
-Nutzer so gewollt (Bestätigung 2026-09-21); kein Widerspruch zu
-R1-GL75-CALC-001.
+**Verwendung im Blatt:** C71 (F_D,k,ges = C51·C24·C69·C6 = 943,66 kN) ist
+die DIN-Gegenüberstellung zu C72 (FprEN). Ursprünglich speiste C71 über
+C30 die Höchstlast F_est; seit der Bestätigung von R1-GL75-OPQ-002
+(2026-09-21) gilt C30 = C72 (n_ef = 7,308, 1254,16 kN), C71 bleibt nur als
+Vergleichswert stehen.
+
+**Quellenlage DIN:** Auf Wunsch des Nutzers (2026-09-21) bleibt FprEN
+1995-1-1:2024 die primäre Normquelle (COMMON-COMMON-DEC-005); die
+DIN-Datei lag nur kurzzeitig im Quellenordner und wurde wieder entfernt.
+Deshalb gibt es keinen Eintrag in bibliography/sources.yaml; die hier
+genannten DIN-Stellen sind ohne abgelegte Quelldatei nicht mehr
+nachprüfbar (Gauss2024 dient als unabhängiger Beleg der Formel, nicht der
+Gleichungsnummern).
 
 **Hinweis Quellenangabe:** R1-GL24h-CALC-001 und R1-GL75-CALC-001 nennen
 als Quelldatei "20260208_Berechnung_Rahmenecke_SB+SD.xlsx". Im

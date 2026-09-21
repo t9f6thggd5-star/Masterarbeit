@@ -17,20 +17,20 @@ Abschnitt "ID naming convention") und wird nicht von
 ## Zusammenfassung
 
 R1 = Schlitzblech + Stabdübel-Anschluss, hier die BauBuche/GL75-Variante.
-Bisher liegen nur Werte zur effektiven Anzahl n_ef vor (DIN EN 1995-1-1
-gegen FprEN Tab. 11.10 (7)); die übrige Bearbeitung von R1 konzentriert
-sich bislang auf GL24h (siehe research/R1/GL24h/current_state.md).
-Zugversuche I-T-B-SD-28-1 bis -3 (2×8, GL75) liegen in der Excel
-"Auswertung Steifigkeiten_0703_..." (R1/COMMON/calculations) vor, sind
-aber noch nicht als Versuchsergebnisse im Wiki abgelegt.
+Bisher liegen nur Werte zur effektiven Anzahl n_ef vor: n_ef = 7,31 nach
+FprEN Tab. 11.10 (7) mit t = 144mm (vom Nutzer bestätigt, Grundlage von
+F_est = 1254,16 kN für 4×8, 627,08 kN je 2×8-Gruppe) und der DIN-Vergleichswert
+5,50. Die übrige Bearbeitung von R1 konzentriert sich bislang auf GL24h
+(siehe research/R1/GL24h/current_state.md). Zugversuche I-T-B-SD-28-1 bis -3
+(2×8, GL75) liegen in der Excel "Auswertung Steifigkeiten_0703_..."
+(R1/COMMON/calculations) vor, sind aber noch nicht als Versuchsergebnisse
+im Wiki abgelegt.
 
 ## Wichtigste Einträge
 
-- Berechnungen: R1-GL75-CALC-001 (n_ef ≈ 3.93 nach FprEN Tab. 11.10 (7)
-  mit t = t_ms = 12mm, siehe R1-GL24h-DEC-005 zur Materialunterscheidung),
-  R1-GL75-CALC-002 (n_ef ≈ 5.50 nach DIN EN 1995-1-1 Gl. 8.34, Formel
-  gegen die Norm geprüft), R1-GL75-CALC-003 (n_ef nach (7) in Abhängigkeit
-  von t, Variante t = 144mm: 7.31).
+- Berechnungen: R1-GL75-CALC-003 (n_ef = 7,308 nach FprEN Tab. 11.10 (7),
+  t = 144mm, bestätigt; ersetzt R1-GL75-CALC-001 mit 3,93), R1-GL75-CALC-002
+  (n_ef = 5,50 nach DIN EN 1995-1-1 Gl. 8.34, nur Vergleichswert).
 - Annahmen: —
 - Versuchsergebnisse: —
 - Interpretationen/Schlussfolgerungen: —
@@ -38,10 +38,11 @@ aber noch nicht als Versuchsergebnisse im Wiki abgelegt.
 ## Offene Fragen / bekannte Widersprüche
 
 - R1-GL75-OPQ-001 (Rohdichte 730 vs. 800 kg/m³ in den Versuchsblättern).
-- R1-GL75-OPQ-002 (Auslegung von t in FprEN Tab. 11.10 (9) bei
-  Stahl-Innenteil: 12mm oder 144mm, n_ef 3.93 gegen 7.31; DIN-Wert 5.50).
+- R1-GL75-OPQ-002 (t in Tab. 11.10 (9) bei Stahl-Innenteil): am 2026-09-21
+  RESOLVED, t = 144mm, n_ef = 7,31. Offen bleiben Beschriftungen im Blatt
+  (D47, D72, A96, A97) und das R2-Blatt (Zeile (6) für GL75).
 - Auch für GL75 relevant: R1-COMMON-OPQ-003 (LVDT-Bezugspunkte),
-  R1-COMMON-OPQ-004 (F_est-Basis für K_ser); R1-COMMON-OPQ-002 (Mittelwerte
+  R1-COMMON-OPQ-004 (F_est-Basis für K_ser, für GL75 jetzt 627,08 kN je 2×8); R1-COMMON-OPQ-002 (Mittelwerte
   K_ser, gelöst); siehe außerdem `research/R1/GL24h/open_questions/`.
 
 ## Nächste Schritte
