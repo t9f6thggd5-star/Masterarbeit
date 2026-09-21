@@ -17,7 +17,8 @@ Abschnitt "ID naming convention") und wird nicht von
 ## Zusammenfassung
 
 R1 = Schlitzblech + Stabdübel-Anschluss, hier die BauBuche/GL75-Variante.
-Bisher liegen nur Werte zur effektiven Anzahl n_ef vor: n_ef = 7,31 nach
+Vorliegend sind die effektive Anzahl n_ef sowie die Steifigkeitsgrößen
+des Federmodells (Drehfeder der Dübelgruppen, Zugpfad): n_ef = 7,31 nach
 FprEN Tab. 11.10 (7) mit t = 144mm (vom Nutzer bestätigt, Grundlage von
 F_est = 1254,16 kN für 4×8, 627,08 kN je 2×8-Gruppe) und der DIN-Vergleichswert
 5,50. Die übrige Bearbeitung von R1 konzentriert sich bislang auf GL24h
@@ -31,13 +32,21 @@ im Wiki abgelegt.
 - Berechnungen: R1-GL75-CALC-003 (n_ef = 7,308 nach FprEN Tab. 11.10 (7),
   t = 144mm, bestätigt; ersetzt R1-GL75-CALC-001 mit 3,93), R1-GL75-CALC-002
   (n_ef = 5,50 nach DIN EN 1995-1-1 Gl. 8.34, nur Vergleichswert).
-- Annahmen: —
+  R1-GL75-CALC-004 (Drehfeder C_rot,v,f = 55.496 kNm/rad je Gruppe),
+  R1-GL75-CALC-005 (Zugpfad c_t,tot = 727,74 kN/mm).
+- Entscheidungen: R1-GL75-DEC-001 (K_ser,Dübel = 47,22 kN/mm nach FprEN
+  Tab. 11.12 mit ρ_mean = 800 kg/m³; C_rot,v,f = 55.496 kNm/rad je 4×8-Gruppe).
+- Annahmen: R1-COMMON-ASS-001 (Geometrie der vier Dübelgruppen, identisch mit
+  GL24h).
 - Versuchsergebnisse: —
 - Interpretationen/Schlussfolgerungen: —
 
 ## Offene Fragen / bekannte Widersprüche
 
 - R1-GL75-OPQ-001 (Rohdichte 730 vs. 800 kg/m³ in den Versuchsblättern).
+- R1-GL75-OPQ-003 (K_ser stammt aus der Formel FprEN Tab. 11.12 mit
+  ρ_mean = 800 kg/m³; offen ist, ob Versuche an Einzeldübeln den Normwert
+  belegen).
 - R1-GL75-OPQ-002 (t in Tab. 11.10 (9) bei Stahl-Innenteil): am 2026-09-21
   RESOLVED, t = 144mm, n_ef = 7,31. Offen bleiben Beschriftungen im Blatt
   (D47, D72, A96, A97) und das R2-Blatt (Zeile (6) für GL75).
