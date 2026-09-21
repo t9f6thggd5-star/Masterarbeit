@@ -42,3 +42,11 @@ Dies ist der erste eigenständige Eintrag für R1/GL75 in diesem Wiki. Im
 Unterschied zu GL24h (R1-GL24h-CALC-001, softwood-artige Abstandsregel,
 n_ef≈5.50) wird hier die LVL/GLVL-spezifische Formel verwendet, siehe
 R1-GL24h-DEC-005.
+
+**Hinweis (2026-09-21):** Der Wert 3,927 entspricht Zelle C52 des Blattes
+mit t = t_ms = 12mm (Stahlblech als Innenteil). Ob das Stahl-Innenteil in
+t nach Tab. 11.10 (9) eingeht, ist offen (R1-GL75-OPQ-002); mit
+t = min{2t_1; 2t_2} = 144mm ergäbe sich n_ef = 7,308 (R1-GL75-CALC-003).
+Vergleichswert nach DIN EN 1995-1-1 Gl. (8.34): 5,499 (R1-GL75-CALC-002).
+Zellbezüge und Dateiname dieses Eintrags entsprechen nicht mehr dem
+aktuellen Stand des Blattes (siehe Hinweis in R1-GL75-CALC-002).
