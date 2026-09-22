@@ -103,12 +103,17 @@ unverändert fort.
   Push-Out-Daten, `≈329,1 kN` je Laschenseite, CALCULATED, nicht
   bemessungsreif); R3-GL24h-CALC-007 (Hochrechnung
   ASSY-Schraubengruppen-Anfangssteifigkeit Column-Seite 16→32 Schrauben,
-  `c_32,Column ≈ 183,68 kN/mm`, Potenzgesetz-Modell mit α=0,807; Beam-Seite
-  noch offen).
+  `c_32,Column ≈ 183,68 kN/mm`, Potenzgesetz-Modell mit α=0,807);
+  R3-GL24h-CALC-008 (Hochrechnung Beam-Seite 16→32 Schrauben über
+  konstantes Beam/Column-Verhältnis, `c_32,Beam ≈ 147,47 kN/mm`,
+  ausdrücklich als vorläufige Vereinfachung gekennzeichnet).
 - Annahmen: R3-GL24h-ASS-001–002 (starre Kopf-/Endplatten,
   Equal-row-load ASSY-Schrauben); R3-GL24h-ASS-003 (Gruppenineffizienz
   ASSY-Schraubengruppe nur über Reihen, Spalten linear — Grundlage für
-  CALC-007, ausdrücklich nur Column-Seite geltend).
+  CALC-007, ausdrücklich nur Column-Seite geltend); R3-GL24h-ASS-004
+  (Beam/Column-Steifigkeitsverhältnis als schraubenzahl-unabhängig
+  angenommen — Grundlage für CALC-008, bewusste Vereinfachung mangels
+  belastbarer Beam-Gruppendaten).
 - Versuchsergebnisse: R3-GL24h-III-PO-S-SD-36-RES-001/002/003/004,
   R3-GL24h-III-PO-S-WD-36-RES-001/002/003/004,
   R3-GL24h-III-PO-S-SC-11-B-RES-001/002/003/004,
@@ -129,7 +134,17 @@ davon sind OPQ-016 und OPQ-017 bereits RESOLVED, tatsächlich offen aus
 diesem Block sind nur OPQ-001–015, 018–019; neu am 2026-09-16:
 R3-GL24h-OPQ-020 (Prüfkörper 1 von `III-PO-S-SD-36` als "entfällt"
 markiert, Ursache unklar) und R3-GL24h-OPQ-021 (Prüfkörper 2/3 von
-`III-PO-S-SC-44-B` fehlen komplett, Ursache unklar).
+`III-PO-S-SC-44-B` fehlen komplett; Ursache für PK1's "nv"-Steifigkeit
+mittlerweile geklärt — Querzugversagen, s. u. — Ursache für die
+komplett fehlenden PK2/PK3 aber weiterhin unklar).
+
+**Neu (2026-09-22):** R3-GL24h-OPQ-022 — die Beam-seitige ASSY-
+Schraubengruppen-Steifigkeit für 4×4/4×8 ist nicht empirisch belegt;
+der aktuell verwendete Wert (R3-GL24h-CALC-008, c32,Beam≈147,47 kN/mm)
+beruht vollständig auf der unbelegten Vereinfachungsannahme
+R3-GL24h-ASS-004 (konstantes Beam/Column-Verhältnis). Offen bis eine
+verwertbare Beam-Gruppenmessung oder eine faserwinkelabhängige
+normative/wissenschaftliche Methode verfügbar wird.
 
 **Update (2026-09-22):** Arbeit an der Anfangsrotationssteifigkeit S_j,ini
 begonnen (Variante priorisiert: No-Contact + zugseitige Vorspannung).
@@ -188,17 +203,36 @@ Tragfähigkeitsdaten derselben Serien (eigener Exponent α_F=0,968)
 weicht nur ≈2,2 % vom unabhängig ermittelten CALC-006-Wert (329,054 kN)
 ab.
 
-Für die Beam-Seite (`c_ax+br,perp`) ist die Hochrechnung noch offen:
+Für die Beam-Seite (`c_ax+br,perp`) liegt jetzt ebenfalls eine
+(als vorläufige Vereinfachung gekennzeichnete) Hochrechnung vor:
 keine verwertbaren 4×4-Steifigkeitsdaten (`III-PO-S-SC-44-B`,
-OPQ-021), und der einzige dortige Fmax-Wert (n=1, 47,3 kN) gilt nach
-Rücksprache mit dem Nutzer (2026-09-22) ebenfalls nicht als belastbare
-Datenbasis für eine indirekte Ableitung. Zwei bereits diskutierte
-Ansätze — (a) gleiches α wie Column-Seite, (b) Kreuzverhältnis-Schätzung
-aus dem Beam/Column-Tragfähigkeitsverhältnis — wurden vom Nutzer beide
-verworfen bzw. sind mangels belastbarer 44-B-Daten hinfällig. Als
-nächstes: Literaturrecherche zu normativen/wissenschaftlichen Ansätzen
-für die Gruppensteifigkeit axial beanspruchter, geneigter
-Schraubengruppen, unabhängig von den fehlenden 44-B-Testdaten.
+OPQ-021 — Ursache jetzt geklärt, Nutzerhinweis 2026-09-22:
+Querzugversagen im Holz, "nv"-Flag in der Auswertungsdatei ist eine
+bewusste manuelle Markierung, kein Formelfehler), und der einzige
+dortige Fmax-Wert (n=1, 47,3 kN) gilt aus demselben Grund ebenfalls
+nicht als belastbare Datenbasis für eine indirekte Ableitung. Geprüfte
+und verworfene Ansätze: (a) gleiches α wie Column-Seite, (b) Kreuz-
+verhältnis-Schätzung aus dem Beam/Column-Tragfähigkeitsverhältnis
+(hängt vollständig vom nicht belastbaren 44-B-Fmax-Wert ab), (c) eine
+im Push-Out-Workbook für die Column-Seite hinterlegte normative
+n_ef-Formel (FprEN 1995-1-1 Tab. 11.10(6), n_ef≈12,48 für 4×4) — diese
+ist zwar unabhängig von Column-Testdaten, aber faserrichtungsunabhängig
+und liefert daher zwangsläufig dasselbe Verhältnis wie (a)/(b)
+(mathematisch äquivalent, siehe Diskussion 2026-09-22). Literatur-
+recherche (Stamatopoulos & Malo 2017 u. a.) bestätigt, dass der
+Gruppeneffekt bei axial beanspruchten Schrauben/Gewindestangen real
+vom Faserwinkel abhängt, liefert aber keine direkt anwendbare Formel.
+
+**Nutzerentscheidung 2026-09-22:** pragmatische Vereinfachung gewählt
+(R3-GL24h-ASS-004) — das Verhältnis c1,Beam/c1,Column = 0,8028 wird als
+bei jeder Schraubenanzahl konstant angenommen (rechnerisch identisch
+zu "gleiches α", jetzt aber bewusst als vorläufige Näherung markiert).
+Ergebnis (R3-GL24h-CALC-008): c16,Beam ≈ 84,275 kN/mm,
+c32,Beam ≈ 147,466 kN/mm. Damit liegen für beide Seiten Hochrechnungen
+auf die reale 4×8-Gruppe vor: c32,Column = 183,684 kN/mm (CALC-007,
+empirisch kalibriertes α), c32,Beam = 147,466 kN/mm (CALC-008, über
+Beam/Column-Verhältnis). Beide noch nicht in die Zugpfad-
+Gesamtsteifigkeitskette eingebunden (c_c,0 weiterhin offen).
 
 ## Nächste Schritte
 
