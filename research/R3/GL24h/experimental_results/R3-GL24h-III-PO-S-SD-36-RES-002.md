@@ -36,3 +36,15 @@ Einzelwerte (Blatt "Überblick"), alle in kN/mm:
 | **Mittelwert** | **66.381** | **55.009** | **157.325** | **143.418** |
 
 n=2 ist eine sehr kleine Stichprobe; der Mittelwert wird deshalb ausdrücklich nicht als charakteristischer Wert dargestellt (CLAUDE.md Abschnitt 15, sinngemäß auch für n=2 angewendet).
+
+**Update (2026-09-22, R3-GL24h-DEC-012):** Die obige Beschreibung
+("zwei getrennte Messstellenpaare am selben Prüfkörper") ist überholt —
+LINKS und RECHTS sind laut Nutzerbestätigung zwei unabhängige
+Verbindungen. Gepoolter Mittelwert (n=4, PK1 weiterhin ausgeschlossen):
+siehe R3-GL24h-III-PO-S-SD-36-RES-003 (60,695 kN/mm).
+
+**Update (2026-09-22, R3-GL24h-DEC-013):** RES-003 ist seinerseits um
+Faktor 2 zu hoch (ungeteilte statt scherfugenbezogener Kraft, siehe
+DEC-013) und wurde durch R3-GL24h-III-PO-S-SD-36-RES-004
+(30,348 kN/mm) ersetzt. Die K_ser-Rohwerte in der Tabelle oben sind
+ebenfalls als ungeteilt (Gesamtkraft) zu lesen.

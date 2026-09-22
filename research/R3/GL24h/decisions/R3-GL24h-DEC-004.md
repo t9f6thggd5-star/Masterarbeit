@@ -28,3 +28,11 @@ variant" markiert. Siehe auch REQUIREMENTS.md ("Maintain a
 no-pressure-contact variant because exact seating cannot be guaranteed")
 und OPEN_QUESTIONS.md Punkt 4 (endgültiger Kontaktzustand am realen
 Prüfkörper weiterhin offen).
+
+**Update (2026-09-22, Nutzerhinweis):** Konkrete physische Ursache jetzt
+benannt — die Seitenlasche selbst ist im Bereich der Rahmenecke (also
+genau in der Fuge zwischen Träger und Stütze) gestoßen, nicht
+durchgängig. Dieser Laschenstoß in der Eckfuge ist der konkrete Grund,
+warum ein garantierter Druckkontakt beim Vorspannen nicht sichergestellt
+werden kann (bislang nur allgemein als "reale Passung/Kontakt kann nicht
+sichergestellt werden" dokumentiert, jetzt physisch begründet).

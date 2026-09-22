@@ -5,15 +5,26 @@ scope:
   material: GL24h
 type: CALCULATION
 inputs:
-  normative_sources:
+  normative_sources: >
+    DIN EN 1993-1-8:2010-12, Tab. 6.11, Steifigkeitskoeffizient k_10 für
+    Schrauben auf Zug (k_10 = 1,6·A_s/L_b).
   literature:
   experimental_data:
-  assumptions:
+  assumptions: >
+    Gewindestange M20 (A_s = 245 mm², Spannungsquerschnitt), Dehnlänge
+    L_b = 1660 mm, Stahl E_s = 210000 N/mm².
 method: >
-  Axiale Dehnsteifigkeit der Gewindestange (Zug). Herleitungsdetails
-  (Querschnitt, Länge, E-Modul Stahl) sind im Ursprungsmaterial nicht
-  überliefert — siehe Hinweis unten.
-equations:
+  Axiale Dehnsteifigkeit der Gewindestange (Zug), berechnet als
+  Steifigkeitskoeffizient k_10 nach DIN EN 1993-1-8 Tab. 6.11
+  (k_10 = 1,6·A_s/L_b, Schrauben auf Zug), multipliziert mit dem
+  Stahl-E-Modul E_s, um von der dimensionslosen Steifigkeitszahl auf die
+  tatsächliche Federsteifigkeit zu kommen: c_t = E_s·k_10 = E_s·1,6·A_s/L_b.
+  Herleitung am 2026-09-22 vollständig nachvollzogen (siehe Update unten) —
+  ursprünglich als nicht nachvollziehbar markiert.
+equations: >
+  c_t = E_s · 1,6 · A_s / L_b [N/mm]
+  = 210000 · 1,6 · 245 / 1660
+  = 49590,36 N/mm ≈ 49,59 kN/mm
 result:
   quantity: Axiale Steifigkeit der Gewindestange
   value: 49.59
@@ -25,14 +36,32 @@ source_file: >
   Holzlaschen.xlsx, Sheet "Rahmenecke GL24h SD" Zelle H71 bzw. Sheet
   "Rahmenecke GL24h HD" Zelle I69 (beide 49,59036144578313 ≈ 49,59,
   Zellwert per openpyxl verifiziert); Stand August 2026 trotz Dateiname
-  vom 08.02.2026
+  vom 08.02.2026. **Korrigiert 2026-09-22:** die tatsächliche Formelzelle
+  ist "Rahmenecke GL24h SD" I83 bzw. "Rahmenecke GL24h HD" I73 (Label
+  "c_t"), nicht H71/I69 wie ursprünglich notiert — Zeilenverschiebung
+  vermutlich durch spätere Bearbeitung der Quelldatei nach der
+  ursprünglichen Übernahme. Beide Zellen enthalten dieselbe Formel
+  `=((1.6*A_s)/L_b*E_s)*10^-3` und ergeben denselben Wert 49,59036...
+  kN/mm — der übernommene Zahlenwert war also stets korrekt, nur die
+  dokumentierte Zellreferenz war veraltet.
 certainty: CALCULATED
 superseded_by:
 ---
 
 Übernommen aus chat-1, KNOWLEDGE.md ("c_t=49.59 kN/mm").
 
-**Nachvollziehbarkeit:** die konkrete Herleitung (Gewindestangen-
-Querschnitt, freie Länge, Stahl-E-Modul) ist in den übernommenen
-Chat-Dateien nicht enthalten — nur das Endergebnis ist überliefert.
-Als Endergebnis übernommen, nicht eigenständig nachgerechnet.
+**Nachvollziehbarkeit (ursprünglich, bis 2026-09-22):** die konkrete
+Herleitung (Gewindestangen-Querschnitt, freie Länge, Stahl-E-Modul) war
+in den übernommenen Chat-Dateien nicht enthalten — nur das Endergebnis
+war überliefert. Als Endergebnis übernommen, nicht eigenständig
+nachgerechnet.
+
+**Update (2026-09-22):** Herleitung jetzt vollständig nachvollzogen durch
+direkte Prüfung der Formelzellen in der Quelldatei (siehe Nutzerhinweis
+auf DIN EN 1993-1-8 Tab. 6.11, k_10 = 1,6·A_s/L_b für Schrauben auf Zug).
+Eingangswerte aus der Quelldatei: Gewindestange M20, A_s = 245 mm²
+(Spannungsquerschnitt), L_b = 1660 mm (Dehnlänge), E_s = 210000 N/mm².
+c_t = E_s·1,6·A_s/L_b = 210000·1,6·245/1660 = 49590,36 N/mm = 49,59 kN/mm
+— exakte Übereinstimmung mit dem bisherigen Wert. Damit ist CALC-004 nun
+vollständig nachvollziehbar (siehe `equations`-Feld oben) statt nur als
+Endergebnis übernommen.
