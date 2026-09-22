@@ -97,11 +97,18 @@ unverändert fort.
   selbst bleiben als Historie erhalten).
 - Berechnungen: R3-GL24h-CALC-001–005 (Zugpfad-Steifigkeitskette:
   Holzlasche mit/ohne ASSY-Abstützung, ASSY-Schraubengruppe,
-  Gewindestange, kombinierter Arbeitswert); R3-GL24h-CALC-006 (grobe
-  4×8-Tragfähigkeits-Vorhersage ASSY-Schraubengruppe aus Push-Out-Daten,
-  `≈329,1 kN` je Laschenseite, CALCULATED, nicht bemessungsreif).
+  Gewindestange, kombinierter Arbeitswert; CALC-004 seit 2026-09-22
+  vollständig nachvollziehbar, DIN EN 1993-1-8 Tab. 6.11); R3-GL24h-CALC-006
+  (grobe 4×8-Tragfähigkeits-Vorhersage ASSY-Schraubengruppe aus
+  Push-Out-Daten, `≈329,1 kN` je Laschenseite, CALCULATED, nicht
+  bemessungsreif); R3-GL24h-CALC-007 (Hochrechnung
+  ASSY-Schraubengruppen-Anfangssteifigkeit Column-Seite 16→32 Schrauben,
+  `c_32,Column ≈ 183,68 kN/mm`, Potenzgesetz-Modell mit α=0,807; Beam-Seite
+  noch offen).
 - Annahmen: R3-GL24h-ASS-001–002 (starre Kopf-/Endplatten,
-  Equal-row-load ASSY-Schrauben).
+  Equal-row-load ASSY-Schrauben); R3-GL24h-ASS-003 (Gruppenineffizienz
+  ASSY-Schraubengruppe nur über Reihen, Spalten linear — Grundlage für
+  CALC-007, ausdrücklich nur Column-Seite geltend).
 - Versuchsergebnisse: R3-GL24h-III-PO-S-SD-36-RES-001/002/003/004,
   R3-GL24h-III-PO-S-WD-36-RES-001/002/003/004,
   R3-GL24h-III-PO-S-SC-11-B-RES-001/002/003/004,
@@ -161,6 +168,37 @@ auf einem vom Nutzer geteilten generischen Komponentenmethode-Federmodell,
 vgl. Buchholz et al. WCTE2025-Systematik) — Kombination vorgeschlagen als
 `1/S_j,ini = 1/(z²·c_eq) + 1/C_v,f,rot`, noch nicht mit dem Forschenden
 abgestimmt.
+
+**Update (2026-09-22, Hochrechnung ASSY-Schraubengruppe 16→32):**
+Zugpfad-Zusammenfassung der Spring-Chain (`c_t,sleeve`) geklärt:
+Reihenfolge Gewindestange (`c_t`, DIN EN 1993-1-8 Tab. 6.11, `c_t=49,59
+kN/mm`, CALC-004 vollständig nachvollziehbar gemacht) — Stahlplatte
+(`c_c,ep=∞`, je Anschlussende) — Holzstauchung unter der Platte (`c_c,0`,
+je Anschlussende, gleicher Wert beidseitig da konstante Laschenfaser,
+noch offen) — ASSY-Schraubengruppe (lumped `c_ax+br,par` Column-Seite
+bzw. `c_ax+br,perp` Beam-Seite, jeweils axial+queraxial in einem
+Push-Out-Wert enthalten, keine weitere Aufschlüsselung).
+
+Für die Column-Seite (`c_ax+br,par`) liegt jetzt eine Hochrechnung von
+16 auf 32 Schrauben vor: mit R3-GL24h-ASS-003 (Spalten linear, Reihen
+mit Potenzgesetz-Abminderung n_Reihen^α) aus den 1×1-/4×4-Push-Out-
+Steifigkeiten (RES-004) kalibriert α=0,807, damit `c_32,Column ≈
+183,68 kN/mm` (R3-GL24h-CALC-007). Plausibilitätsprüfung mit den
+Tragfähigkeitsdaten derselben Serien (eigener Exponent α_F=0,968)
+weicht nur ≈2,2 % vom unabhängig ermittelten CALC-006-Wert (329,054 kN)
+ab.
+
+Für die Beam-Seite (`c_ax+br,perp`) ist die Hochrechnung noch offen:
+keine verwertbaren 4×4-Steifigkeitsdaten (`III-PO-S-SC-44-B`,
+OPQ-021), und der einzige dortige Fmax-Wert (n=1, 47,3 kN) gilt nach
+Rücksprache mit dem Nutzer (2026-09-22) ebenfalls nicht als belastbare
+Datenbasis für eine indirekte Ableitung. Zwei bereits diskutierte
+Ansätze — (a) gleiches α wie Column-Seite, (b) Kreuzverhältnis-Schätzung
+aus dem Beam/Column-Tragfähigkeitsverhältnis — wurden vom Nutzer beide
+verworfen bzw. sind mangels belastbarer 44-B-Daten hinfällig. Als
+nächstes: Literaturrecherche zu normativen/wissenschaftlichen Ansätzen
+für die Gruppensteifigkeit axial beanspruchter, geneigter
+Schraubengruppen, unabhängig von den fehlenden 44-B-Testdaten.
 
 ## Nächste Schritte
 
