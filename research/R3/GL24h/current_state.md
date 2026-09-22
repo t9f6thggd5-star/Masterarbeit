@@ -98,7 +98,11 @@ unverändert fort.
 - Berechnungen: R3-GL24h-CALC-001–005 (Zugpfad-Steifigkeitskette:
   Holzlasche mit/ohne ASSY-Abstützung, ASSY-Schraubengruppe,
   Gewindestange, kombinierter Arbeitswert; CALC-004 seit 2026-09-22
-  vollständig nachvollziehbar, DIN EN 1993-1-8 Tab. 6.11); R3-GL24h-CALC-006
+  vollständig nachvollziehbar, DIN EN 1993-1-8 Tab. 6.11). **CALC-003
+  seit 2026-09-22 `superseded_by` CALC-007/CALC-008** (war ein
+  normativer EC5-Theoriewert, FprEN 1995-1-1 Gl. 11.29, nicht
+  versuchsbasiert und beidseitig undifferenziert — siehe Update unten,
+  nicht mehr für die aktive Kette verwenden). R3-GL24h-CALC-006
   (grobe 4×8-Tragfähigkeits-Vorhersage ASSY-Schraubengruppe aus
   Push-Out-Daten, `≈329,1 kN` je Laschenseite, CALCULATED, nicht
   bemessungsreif); R3-GL24h-CALC-007 (Hochrechnung
@@ -234,15 +238,60 @@ empirisch kalibriertes α), c32,Beam = 147,466 kN/mm (CALC-008, über
 Beam/Column-Verhältnis). Beide noch nicht in die Zugpfad-
 Gesamtsteifigkeitskette eingebunden (c_c,0 weiterhin offen).
 
+**Update (2026-09-22, Originalformel c_t,sleeve nachvollzogen /
+CALC-003 superseded):** Die exakte Formel hinter dem bisherigen
+Arbeitswert `c_t,sleeve = 27,09 kN/mm` (CALC-005) wurde jetzt in der
+Quelldatei nachvollzogen (Sheet "VSP GL24h ohne Druckkontakt", Zelle
+C17):
+
+```
+1/c_t,sleeve = 1/c_t + 2/c_ASSY,S + 2/c_H,Lasche
+```
+
+Das sind **drei** Glieder (c_t=CALC-004, c_ASSY,S=CALC-003-Altwert,
+c_H,Lasche=CALC-001), **kein** eigenes `c_c,0`-Glied
+("Holzstauchung unter der Stahlplatte"). Geprüft: die Kapazitäts-
+Nachweiszelle "Holzpressung unter Lagerplatte" (F_c,R, VSP-Zelle C6)
+verwendet exakt dieselbe Nettoquerschnittsfläche A_netto=11678mm²
+wie `c_H,Lasche` selbst (nicht eine kleinere, separate
+Plattenkontaktfläche) — d. h. im Originalmodell ist die
+"Plattenpressung" konzeptionell bereits deckungsgleich mit der
+Lasche-Drucksteifigkeit, keine eigenständige, lokal steifere
+Kontaktzone. Ein separates `c_c,0` würde diese Zone daher
+voraussichtlich doppelt erfassen statt eine fehlende Komponente
+abzubilden — das ist als Einschätzung an den Nutzer kommuniziert,
+noch nicht abschließend entschieden/dokumentiert.
+
+Außerdem dabei entdeckt und korrigiert: **CALC-003 (c_ax=199,1466
+kN/mm) ist der normative EC5-Theoriewert K_ax,v,f,alpha (FprEN 1995-1-1
+Gl. 11.29)**, nicht — wie ursprünglich aus chat-1 übernommen — eine
+Summe von Einzelschrauben-Steifigkeiten, und wird im Original
+undifferenziert für beide Anschlussseiten verwendet. Auf
+Nutzeranweisung (2026-09-22: "der Assy Gruppenwert ist ungültig...
+jetzt liegen Versuchsergebnisse vor") jetzt `superseded_by`
+R3-GL24h-CALC-007 (Column) / R3-GL24h-CALC-008 (Beam) markiert — der
+alte Theoriewert bleibt als Historie erhalten, darf aber nicht mehr in
+der aktiven Kette verwendet werden.
+
+Die vollständige Neu-Zusammensetzung von `c_t,sleeve` mit den neuen,
+seitenspezifischen CALC-007/008-Werten (statt des alten
+undifferenzierten CALC-003-Werts) und die c_c,0-Frage sind noch offen
+und mit dem Nutzer abzustimmen.
+
 ## Nächste Schritte
 
-Klärung von R3-GL24h-OPQ-020/021 mit dem Nutzer. Schritt-für-Schritt-
-Neuherleitung der Zugpfad-Teilsteifigkeiten (c_t, c_H,eff, c_ax) statt der
-bisherigen, teils undokumentierten Altwerte (CALC-001–005) — dabei c_ax
-jetzt mit echten SC-11/SC-44-Versuchsdaten statt Theoriewert möglich,
-Hochrechnung 16→32 Schrauben aber noch offen (kein normativer
-Gruppensteifigkeits-Ansatz in ETA-11/0190 gefunden, nur ein
-Tragfähigkeits-n_ef in Anhang A.8.2). Druckseiten-Steifigkeitskette
-(c_c,90/c_c,0) existiert für R3 noch gar nicht und muss neu aufgebaut
-werden. C_v,f,rot-Integration ins Kinematikmodell mit dem Forschenden
-abstimmen. R3-GL24h-HYP-001 durch den Forschenden reviewen lassen.
+Entscheidung mit dem Nutzer: (a) ob `c_c,0` als eigene Komponente
+vernachlässigt werden kann (vorläufige Einschätzung: ja, da im
+Originalmodell bereits über `c_H,Lasche` mit abgedeckt) oder separat
+ergänzt werden muss; (b) Neuzusammensetzung von `c_t,sleeve` mit den
+CALC-007/008-Werten statt des jetzt superseded CALC-003-Werts.
+Anschließend neue CALC-Einträge für die aktualisierte Zugpfad-Kette
+und ggf. Aktualisierung von CALC-005 (`superseded_by`).
+
+Klärung von R3-GL24h-OPQ-020/021 mit dem Nutzer. Druckseiten-
+Steifigkeitskette (c_c,90/c_c,0-Querdruckzone, DAVON ZU UNTERSCHEIDEN:
+die R3-spezifische Druckseite der Rahmenecke, nicht der hier
+behandelte Zugpfad-Kontaktterm) existiert für R3 noch gar nicht und
+muss neu aufgebaut werden. C_v,f,rot-Integration ins Kinematikmodell
+mit dem Forschenden abstimmen. R3-GL24h-HYP-001 durch den Forschenden
+reviewen lassen.
