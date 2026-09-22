@@ -2,7 +2,7 @@
 scope:
   connection: R2
   material: GL24h
-last_updated: "2026-09-17"
+last_updated: "2026-09-22"
 ---
 
 # Bearbeitungsstand: R2 / GL24h
@@ -140,6 +140,24 @@ Betreuerin abgestimmt — R2-COMMON-OPQ-006 bleibt daher bewusst `OPEN`,
 auch wenn damit erstmals ein vollständiger, wenn auch vorläufiger,
 Zahlenwert für die Gesamtsteifigkeit der Rahmenecke R2/GL24h vorliegt.
 
+**Update (2026-09-22): R2-GL24h-INT-001 neu gefasst, Stabdübel-/
+VSP-Frage geklärt.** R2-GL24h-INT-001 (Serienfeder-Interpretation) ist
+jetzt mit dem aktuellen `c_T=53,300 kN/mm` (CALC-021, ASSY-verstärktes
+`c_c,90`) als R2-GL24h-INT-002 neu gefasst (`superseded_by` in INT-001
+gesetzt); Kernaussage unverändert (`c_c,90`/`c_v,ges` bestimmen weiterhin
+≈94 % der Nachgiebigkeit, Sättigungsgrad ≈93,8 % statt zuvor 94,1 %).
+Dabei fiel eine kleine Ungenauigkeit in CALC-021 auf und wurde dort
+korrigiert: `c_c,90` (111,339 kN/mm) bleibt weiterhin knapp die
+weichste Einzelkomponente, nicht `c_v` (116,0 kN/mm) wie dort zunächst
+vermerkt — am Ergebnis `c_T` ändert das nichts. Außerdem hat der Nutzer
+zwei der vier Punkte aus R2-COMMON-OPQ-008 direkt geklärt: (1) die
+Stabdübel haben keinen Einfluss auf die Rotationssteifigkeit, sie nehmen
+nur die Querkraft aus der Umlenkung auf — kein Bestandteil des
+Federmodells; (4) die "VSP"-Arbeitsblätter existieren bei R2 nicht und
+spielen dort keine Rolle. Von den vier Punkten in OPQ-008 ist damit nur
+noch Punkt (3) offen (deckungsgleich mit OPQ-011, `z=560mm`/`c_c,0`
+noch nicht Betreuerin-geprüft).
+
 ## Wichtigste Einträge
 
 - Entscheidungen: R2-GL24h-DEC-001–008 (u. a. freie Stangenlänge,
@@ -182,14 +200,16 @@ Zahlenwert für die Gesamtsteifigkeit der Rahmenecke R2/GL24h vorliegt.
   n=6, 862,531 kN/mm — jetzt Eingangswert von R2-GL24h-CALC-014),
   R2-GL24h-II-T-S-BR-11-RES-003 (analog gepoolt, 203,303 kN/mm, bisher
   nicht in einer Kette verwendet, siehe R2-COMMON-DEC-003).
-- Interpretationen/Schlussfolgerungen: R2-GL24h-INT-001 (neu,
-  `CLAUDE_DRAFT`, noch vom Forschenden zu prüfen — ordnet ein, warum der
-  Anstieg von `c_T` durch den BR-22-Messwert trotz Faktor ≈6,48 bei der
-  Stangengruppe selbst nur +32,3 % beträgt: Serienfeder-Mechanik, die
-  Stangengruppe fällt als limitierender Faktor praktisch aus der Kette
-  heraus, `c_c,90`/`c_v,ges` bestimmen jetzt ca. 94 % der
-  Gesamt-Nachgiebigkeit — beide weiterhin rein rechnerisch, nicht
-  versuchsgestützt). Weiterhin nur als Freitext vermerkt: frühere
+- Interpretationen/Schlussfolgerungen: R2-GL24h-INT-001 (`CLAUDE_DRAFT`,
+  `superseded_by: R2-GL24h-INT-002` — ursprüngliche Fassung, ordnet ein,
+  warum der Anstieg von `c_T` durch den BR-22-Messwert trotz Faktor ≈6,48
+  bei der Stangengruppe selbst nur moderat ausfällt, basiert aber auf dem
+  inzwischen überholten `c_T=50,78 kN/mm`); R2-GL24h-INT-002 (neu,
+  2026-09-22, `CLAUDE_DRAFT`, noch vom Forschenden zu prüfen — Neufassung
+  mit aktuellem `c_T=53,300 kN/mm`, `c_c,90`/`c_v,ges` bestimmen weiterhin
+  ca. 94 % der Gesamt-Nachgiebigkeit — beide weiterhin rein rechnerisch,
+  nicht versuchsgestützt; korrigiert außerdem eine kleine Ungenauigkeit
+  in R2-GL24h-CALC-021 zur "weichsten Komponente"). Weiterhin nur als Freitext vermerkt: frühere
   Beobachtung zum materialabhängigen Versagensmodus in R2-GL24h-CALC-008
   durch die Korrektur in R2-GL24h-CALC-012 überholt (GL24h und GL75
   werden jetzt rechnerisch durch denselben Mechanismus
@@ -227,17 +247,15 @@ R2-COMMON-HYP-001). Nächster Schritt: fachliche Absicherung mit der
 Betreuerin — sowohl der Kombinationsformel selbst als auch der
 Wiederverwendung von `z=560mm` für die Steifigkeitskette — sowie die
 `c_c,0`-Modellierungsannahme (`l=240mm`, R2-COMMON-OPQ-011) und die
-generelle Bejtka-Übernahme in `c_T`/`c_C`. R2-GL24h-INT-001 mit den
-aktualisierten `c_T`-Zahlen (CALC-021) neu fassen. Klärung der Rolle
-des Stabdübel-Nachweises und der VSP-Excel-Blätter mit dem Nutzer
-(R2-COMMON-OPQ-008, Punkte 1/3/4 weiterhin offen — Punkt 2,
-"Stütze auf Zug"-Block, ist inzwischen ausreichend geklärt: Rolle im
-Rechenschema als MIN-Kandidat für `M_max` sowie die bewusste
-Mittelwertbasis sind bestätigt, die genaue Normzuordnung der
-Zellbeschriftung "Gl. 11.14" wird vom Nutzer nicht weiterverfolgt).
-Die Sensitivität von `c_T` gegenüber dem BR-22-Messwert ist jetzt
-formal als R2-GL24h-INT-001 dokumentiert (`CLAUDE_DRAFT`, noch zu
-prüfen). Perspektivisch weiterhin offen: den auffälligen Faktor ≈6,48
-zwischen BR-22-Messwert und FprEN-Vorhersage selbst (R2-GL24h-CALC-014)
-fachlich einordnen (eigene INTERPRETATION, noch nicht angelegt — bewusst
-nicht Teil von INT-001).
+generelle Bejtka-Übernahme in `c_T`/`c_C`. Von R2-COMMON-OPQ-008 ist nur
+noch Punkt (3) offen (deckungsgleich mit OPQ-011) — Punkte (1) (Stabdübel
+ohne Einfluss auf Rotationssteifigkeit) und (4) (VSP-Blätter existieren
+bei R2 nicht) wurden am 2026-09-22 vom Nutzer geklärt, Punkt (2) war
+bereits zuvor geklärt. R2-GL24h-INT-001 wurde am 2026-09-22 mit den
+aktualisierten `c_T`-Zahlen als R2-GL24h-INT-002 neu gefasst — erledigt.
+Perspektivisch weiterhin offen: den auffälligen Faktor ≈6,48 zwischen
+BR-22-Messwert und FprEN-Vorhersage selbst (R2-GL24h-CALC-014) fachlich
+einordnen (eigene INTERPRETATION, noch nicht angelegt — bewusst nicht
+Teil von INT-001/INT-002) — das ist der zentrale, laut Aufgabenstellung
+Phase 3 explizit geforderte "Einflussfaktoren"-Punkt, der für R2/GL24h
+noch fehlt.

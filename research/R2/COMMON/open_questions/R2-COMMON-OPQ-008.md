@@ -133,6 +133,28 @@ beabsichtigt; genaue Normzuordnung der Zellbeschriftung: vom Nutzer
 bewusst nicht weiterverfolgt). Die übergeordnete Frage (1), (3) und (4)
 bleiben unverändert offen — die Frage bleibt daher insgesamt OPEN.
 
+**Klärung von Punkt (1) und (4), 2026-09-22 (Nutzerangabe):** Der Nutzer
+hat beide verbleibenden Punkte direkt beantwortet. Punkt (1)
+(Stabdübel-Johansen-Nachweis): Die Stabdübel haben **keinen Einfluss auf
+die Rotationssteifigkeit** der Rahmenecke — sie dienen ausschließlich
+dazu, die Querkraft aus der Umlenkung (des Kraftflusses am Rahmeneck)
+aufzunehmen. Der Stabdübel-Nachweis ist damit ein reiner
+Tragfähigkeits-/Querkraftnachweis, kein Bestandteil des
+Federmodells/der `c_T`-/`c_C`-Steifigkeitsketten und fließt folglich
+nicht in `S_j,ini` (R2-GL24h-CALC-022, R2-GL75-CALC-012) ein. Punkt (4)
+("VSP GL24h "/"VSP GL75 "-Arbeitsblätter): Diese Blätter **gibt es bei
+R2 nicht** (Nutzerangabe) — sie spielen im R2-Konzept keine Rolle und
+sind vom weiteren R2-Federmodell auszuschließen; ihre genaue Herkunft im
+Excel (evtl. Kopierartefakt aus einem anderen Arbeitsblatt/Anschluss)
+bleibt unaufgeklärt, ist aber ohne Bedeutung für R2, da sie dort schlicht
+nicht existent sind.
+
+Damit sind von den vier ursprünglichen Punkten (1), (2) und (4) geklärt;
+nur Punkt (3) (Herkunft/Wiederverwendung von `z=560mm` bzw. die daran
+hängende `c_c,0`/Druckzonenhöhen-Modellierung) bleibt offen — deckungsgleich
+mit R2-COMMON-OPQ-011. Der Status dieser Frage bleibt daher `OPEN`,
+ausschließlich wegen Punkt (3).
+
 **Teilweise Klärung von Punkt (3), 2026-09-18:** Der Nutzer hat die
 geometrische Herkunft des Hebelarms `z=560mm` (Abschnitt "innerer
 Hebelarm Rahmeneck") erklärt: Stützenbreite 800 mm abzüglich je 120 mm

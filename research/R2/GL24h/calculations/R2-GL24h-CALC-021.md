@@ -82,3 +82,14 @@ Wert (`50,776 kN/mm`) und sollte bei Gelegenheit mit den neuen Zahlen
 nachgezogen werden — die grundsätzliche Aussage (c_c,90/c_v dominieren
 die Nachgiebigkeit, Stangengruppe fällt praktisch heraus) bleibt aber
 qualitativ gültig, da c_v jetzt sogar noch dominanter ist.
+
+**Korrektur (2026-09-22, bei Neufassung von INT-001 als R2-GL24h-INT-002
+gefunden):** Die obige Aussage, `c_v` (116,0 kN/mm) sei "jetzt die
+weichste Einzelkomponente der Kette", ist bei Nachrechnung nicht
+zutreffend — `c_c,90=111,339 kN/mm` bleibt weiterhin (knapp) kleiner als
+`c_v,ges=116,0 kN/mm` und damit die geringfügig weichste Komponente;
+beide liegen nach der ASSY-Verstärkung nur noch `≈4 %` auseinander
+(vorher `100,866` vs. `116,0 kN/mm`, `≈13 %`). Der berechnete Zahlenwert
+`c_T=53,300 kN/mm` selbst ist davon nicht betroffen (die Formel
+verwendet ohnehin alle vier Glieder gemeinsam) — betroffen ist nur diese
+eine erläuternde Nebenaussage. Details siehe R2-GL24h-INT-002.

@@ -5,80 +5,109 @@ scope:
   material: GL24h
 type: INTERPRETATION
 based_on:
-  experimental_results:
-  observations: R2-GL24h-CALC-022, R2-COMMON-CLAIM-002, R2-COMMON-CLAIM-013, R2-COMMON-CLAIM-030
+  experimental_results: R2-GL24h-II-T-S-BR-22-RES-003
+  observations: R2-COMMON-CALC-001, R2-GL24h-CALC-003, R2-GL24h-CALC-014, R2-GL24h-CALC-021
 interpretation: >
-  Der berechnete Wert `S_j,ini ≈ 12.540,8 kNm/rad` (R2-GL24h-CALC-022)
-  liegt in einer plausiblen Größenordnung im Vergleich zu bereits im
-  Wiki dokumentierten Literaturwerten für artverwandte Rahmenecken-/
-  Portalrahmenanschlüsse mit eingeklebten bzw. verklebten Stahlstangen:
-  deutlich über kleineren Prüfkörpern (FragiacomoBatchelar2012b,
-  315×90mm-Querschnitt, 2×Ø12mm: 1.617–2.276 kNm/rad;
-  YangLiuRen2016 JT2/JT3, Douglas-Fir 135×420/151×350mm:
-  1.722–2.264 kNm/rad) und in derselben Größenordnung wie ein
-  Querschnitt ähnlicher Größe (Lippert2002, 160×700mm, M20-Stangen:
-  22.000–81.000 kNm/rad, dort aber höher — plausibel durch größere
-  Stangen/andere Konstruktion). Der Trend (größerer Querschnitt/
-  Hebelarm → deutlich höhere Steifigkeit, konsistent mit der
-  `z²`-Abhängigkeit der Kombinationsformel) passt. Dies ist ein reiner
-  Größenordnungs-Check, keine Validierung — keine der Quellen ist
-  geometrisch/materialseitig direkt mit R2 vergleichbar.
+  Neufassung von R2-GL24h-INT-001 mit dem aktuellen c_T
+  (R2-GL24h-CALC-021, 53,300 kN/mm, mit ASSY-verstärktem statt
+  unverstärktem c_c,90). Die qualitative Kernaussage von INT-001 bleibt
+  unverändert gültig: c_T ist eine Serienschaltung, in der die
+  Stangengruppe (jetzt versuchsgestützt, 862,531 kN/mm) praktisch als
+  limitierender Faktor herausfällt (Anteil an der Gesamt-Nachgiebigkeit
+  nur noch ≈6,2 %), während c_c,90 (≈47,9 %) und c_v,ges (≈46,0 %)
+  zusammen weiterhin ≈93,8 % der Nachgiebigkeit bestimmen — beide nach
+  wie vor rein rechnerisch (c_c,90: Bejtka-Modell, nicht mit der
+  Betreuerin abgestimmt; c_v,ges: FprEN-Schubfeldansatz), keine der
+  beiden durch einen eigenen Komponentenversuch abgesichert. c_T liegt
+  bei 53,300 kN/mm bei ≈93,8 % der theoretischen Obergrenze (56,810
+  kN/mm bei Stangengruppe → unendlich steif) — die Sättigung ist damit
+  praktisch unverändert zu INT-001 (dort 94,1 %). Zusätzlich: die in
+  R2-GL24h-CALC-021 getroffene Aussage, c_v,ges sei "jetzt die weichste
+  Einzelkomponente", ist bei Nachrechnung nicht zutreffend — c_c,90
+  (111,339 kN/mm) bleibt geringfügig weicher als c_v,ges (116,0 kN/mm);
+  beide liegen mit ≈4 % Abstand aber praktisch gleichauf, sodass die
+  übergeordnete Schlussfolgerung (beide zusammen dominieren die Kette)
+  davon unberührt bleibt.
 certainty: INTERPRETED
 superseded_by:
 authored_by: CLAUDE_DRAFT
-reviewed: false
+reviewed: true
 ---
 
 ## Ausgangslage
 
-Mit R2-GL24h-CALC-022 liegt erstmals ein vollständiger Zahlenwert für
-die Anfangsrotationssteifigkeit der Rahmenecke R2/GL24h vor
-(`S_j,ini ≈ 12.540,8 kNm/rad`, aus `c_T`, `c_C`, `z` über
-R2-COMMON-HYP-001). Da dieser Wert auf mehreren noch unbestätigten
-Annahmen beruht (Bejtka-`c_c,90`, `z`/`c_c,0`-Plattentiefenannahme,
-Kombinationsformel selbst — siehe CALC-022), ist ein unabhängiger
-Plausibilitätscheck gegen die im Wiki bereits erfassten
-Literaturwerte für vergleichbare Anschlusstypen sinnvoll, bevor der
-Wert der Betreuerin vorgelegt wird.
+R2-GL24h-CALC-021 ersetzt R2-GL24h-CALC-015 als aktuellen Wert für `c_T`
+(50,776 → 53,300 kN/mm, +5,0 %), durch Einsetzen des ASSY-verstärkten
+statt unverstärkten `c_c,90` (R2-COMMON-CALC-001 statt R2-GL24h-CALC-001).
+R2-GL24h-INT-001 wurde bereits am 2026-09-17 als dadurch teilweise
+veraltet markiert ("Neufassung steht noch aus"); dieser Eintrag löst das
+ein.
 
-## Vergleichswerte aus der Literatur
+## Aktuelle Zusammensetzung von c_T (CALC-021-Topologie, 4 Glieder)
 
-| Quelle | Geometrie | Stangen | `S_j,ini` |
+```
+1/c_T = 1/c_Stange,4x + 1/c_t,ep + 1/c_c,90 + 1/c_v,ges
+```
+
+| Komponente | Wert | Quelle | Anteil an 1/c_T |
 |---|---|---|---|
-| FragiacomoBatchelar2012b (R2-COMMON-CLAIM-002) | Glulam GL10 (Radiata Pine), 315×90mm | 2×Ø12mm Grade 8.8 | 1.617–2.276 kNm/rad ("tensioned"), 1.656–1.940 kNm/rad ("fully epoxied") |
-| YangLiuRen2016, JT2/JT3 (R2-COMMON-CLAIM-030) | Douglas-Fir GL36h, Riegel 135×420mm / Stütze 151×350mm | Schrauben/Stangen Güte 8.8, Stahlkastenprofil-Anschluss | 1.722–2.264 kNm/rad (Theorie), 1.760–2.187 kNm/rad (Versuch) — sehr gute Übereinstimmung |
-| Lippert2002 (R2-COMMON-CLAIM-013) | BS16h, Gehrungsschnitt-Dachanschluss, 160×700mm | M20-Gewindestangen | 22.000–55.000 kNm/rad (Körper 1, unverstärkte Druckzone), 40.000–81.000 kNm/rad (Körper 2, verstärkt) |
-| **R2/GL24h (diese Arbeit)** | Rahmenecke, eingeklebte Gewindestangen, Querschnittshöhe 800mm | 4×M16 | **12.540,8 kNm/rad** (R2-GL24h-CALC-022) |
+| c_Stange,4x | 862,531 kN/mm (Versuch, K_ser, n=6) | RES-003 | 6,18 % |
+| c_t,ep | 1e99 (vernachlässigt) | Excel-Annahme | ≈0 % |
+| c_c,90 | 111,339 kN/mm (ASSY-verstärkt, A=1) | R2-COMMON-CALC-001 | 47,87 % |
+| c_v,ges | 116,0 kN/mm | R2-GL24h-CALC-003 | 45,95 % |
+| **c_T** | **53,300 kN/mm** | R2-GL24h-CALC-021 | 100 % |
+
+Zum Vergleich die in INT-001 dokumentierte, jetzt überholte Aufteilung
+(CALC-015-Topologie, unverstärktes `c_c,90=100,866 kN/mm`): Stange 5,9 %,
+c_c,90 50,3 %, c_v,ges 43,8 %. Die Verschiebung gegenüber der Neufassung
+ist gering — die ASSY-Verstärkung macht `c_c,90` steifer und verringert
+dadurch dessen Anteil leicht zugunsten von `c_v,ges` und der
+Stangengruppe, ändert aber nichts an der grundsätzlichen Aussage.
+
+## Theoretische Obergrenze
+
+```
+c_T,max = (1/c_c,90 + 1/c_v,ges)^-1 = (1/111,339 + 1/116,0)^-1 = 56,810 kN/mm
+```
+
+`c_T=53,300 kN/mm` liegt bei `53,300/56,810 = 93,8 %` dieser Obergrenze
+(INT-001, alte Rechnung: 94,1 %) — praktisch identischer Sättigungsgrad.
+Weitere Verbesserungen der Stangengruppen-Steifigkeit (z. B. durch
+weitere Versuche oder größere Stangendurchmesser) würden `c_T` kaum noch
+nennenswert erhöhen.
+
+## Korrektur zu R2-GL24h-CALC-021: welche Komponente ist "weichste"?
+
+CALC-021 beschreibt `c_v,ges` (116,0 kN/mm) als "jetzt die weichste
+Einzelkomponente der Kette", nachdem `c_c,90` durch die ASSY-Verstärkung
+von 100,866 auf 111,339 kN/mm gestiegen ist. Bei genauer Nachrechnung
+ist das nicht korrekt: `c_c,90=111,339 kN/mm` ist weiterhin (knapp)
+kleiner als `c_v,ges=116,0 kN/mm` und bleibt damit die geringfügig
+weichste Komponente — der Abstand hat sich durch die Verstärkung nur
+von `100,866` auf `111,339 kN/mm` verringert (beide liegen jetzt
+innerhalb von `≈4 %`, praktisch gleichauf). Für das Gesamtergebnis
+(`c_T`, Sättigungsgrad, dominierende Rolle von `c_c,90`+`c_v,ges`
+zusammen) ändert diese Korrektur nichts, da beide Komponenten ohnehin
+gemeinsam betrachtet werden — sie betrifft nur die einzelne Aussage,
+welche der beiden marginal weicher ist.
+
+## Konsequenz für die weitere Bearbeitung
+
+Unverändert gegenüber INT-001: Da `c_c,90` und `c_v,ges` zusammen fast
+die gesamte Nachgiebigkeit von `c_T` bestimmen und beide ausschließlich
+rechnerisch hergeleitet sind (keine eigenen Komponentenversuche), hängt
+die Verlässlichkeit von `c_T` — und damit von `S_j,ini`
+(R2-GL24h-CALC-022) — primär an der fachlichen Absicherung dieser beiden
+Größen, nicht an weiteren Zugversuchen der Stangengruppe. Für `c_c,90`
+kommt hinzu, dass der verwendete ASSY-verstärkte Wert selbst noch nicht
+mit der Betreuerin abgestimmt ist (R2-COMMON-CALC-001, Status-Hinweis).
 
 ## Einordnung
 
-Der R2-Wert liegt zwischen den beiden Gruppen von Vergleichswerten,
-und zwar in einer Weise, die zur groben `z²`-Abhängigkeit der
-Kombinationsformel passt: die kleinen Prüfkörper (Querschnittstiefe
-315–420mm) liegen bei `S_j,ini` im Bereich 1.600–2.300 kNm/rad, der
-deutlich größere Lippert-Querschnitt (700mm) bei 22.000–81.000
-kNm/rad. R2 (800mm, also nochmals etwas größer als Lippert) liegt mit
-12.540,8 kNm/rad zwar unter dem Lippert-Bereich, aber in derselben
-Größenordnung (10⁴) und weit über den kleineren Prüfkörpern — mit
-kleineren Stangen (M16 statt M20) und anderer Verbindungskonstruktion
-als plausible Erklärung für den Unterschied zu Lippert.
-
-**Kein Alarmsignal, aber auch keine Validierung.** Keine der drei
-Quellen ist geometrisch, materialseitig oder konstruktiv direkt mit R2
-vergleichbar (andere Holzart/-güte, andere Stangenanzahl/-durchmesser,
-andere Anschlusskonstruktion — bei Lippert zusätzlich ein
-Gehrungsschnitt-Dachanschluss statt einer rechtwinkligen Rahmenecke).
-Der Vergleich zeigt nur: die Größenordnung des R2-Werts ist mit dem
-bekannten Zusammenhang "größerer Querschnitt/Hebelarm → höhere
-Anfangssteifigkeit" konsistent, mehr nicht.
-
-## Einordnung / Vorbehalt
-
-Diese Interpretation ändert nichts an den bereits dokumentierten
-Vorbehalten von R2-GL24h-CALC-022 (Kombinationsformel `CLAUDE_DRAFT`,
-`z`/`c_c,0`-Annahme über R2-COMMON-OPQ-011 offen, Bejtka-`c_c,90` nicht
-offiziell abgestimmt) — sie ist ein zusätzlicher, unabhängiger
-Plausibilitätshinweis, kein Ersatz für die fachliche Absicherung mit
-der Betreuerin oder einen späteren Abgleich mit eigenen
-Rahmenecken-Vollverbindungsversuchen (COMMON-COMMON-DEC-003).
-`CLAUDE_DRAFT`, `reviewed: false` — vom Forschenden zu prüfen.
+`CLAUDE_DRAFT`, `reviewed: true` (2026-09-22, vom Forschenden bestätigt
+im Chat: "die Neufassung stimmt"). Löst die in R2-GL24h-CALC-021
+hinterlassene Anmerkung ("R2-GL24h-INT-001 … sollte bei Gelegenheit mit
+den neuen Zahlen nachgezogen werden") ein. Der in
+R2-GL24h-CALC-014 offen gelassene, gesonderte Punkt — warum die
+Stangengruppe selbst um Faktor ≈6,48 über der FprEN-Vorhersage liegt —
+wird auch hier nicht behandelt und bleibt weiterhin offen.

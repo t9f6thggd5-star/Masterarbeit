@@ -24,7 +24,7 @@ interpretation: >
   jetzt zusammen ca. 94 % der Gesamt-Nachgiebigkeit bestimmen — beide
   nach wie vor rein rechnerisch (FprEN), nicht experimentell validiert.
 certainty: INTERPRETED
-superseded_by:
+superseded_by: R2-GL24h-INT-002
 authored_by: CLAUDE_DRAFT
 reviewed: false
 ---
@@ -135,3 +135,25 @@ Stangengruppe fällt praktisch heraus) bleibt aber gültig, tendenziell
 sogar verstärkt, da `c_v` (116,0 kN/mm, unverändert) jetzt die
 alleinig weichste Einzelkomponente ist. Eine vollständige Neufassung
 mit den aktualisierten Zahlen steht noch aus.
+
+**Update (2026-09-22): abgelöst durch R2-GL24h-INT-002.** Die
+vollständige Neufassung mit den CALC-021-Zahlen liegt jetzt vor
+(`superseded_by` oben gesetzt). Dabei stellte sich außerdem heraus, dass
+die Vermutung im Update vom 2026-09-17 (c_v jetzt alleinig weichste
+Komponente) bei Nachrechnung nicht zutrifft — c_c,90 bleibt weiterhin
+(knapp) die weichste Einzelkomponente, siehe Korrekturabschnitt in
+INT-002.
+
+**Status: methodisch korrekt, zahlenmäßig überholt.** Die Argumentation
+dieser Interpretation — c_T als Serienschaltung, Dominanz der jeweils
+weichsten Komponente, praktisches Herausfallen der Stangengruppe als
+limitierender Faktor, Sättigungseffekt gegenüber der theoretischen
+Obergrenze — ist als methodisches Vorgehen nach wie vor korrekt und wird
+von R2-GL24h-INT-002 unverändert übernommen. Überholt sind ausschließlich
+die konkreten Zahlenwerte dieses Eintrags (`c_T=50,776 kN/mm` statt
+53,300 kN/mm; Sättigungsgrad 94,1 % statt 93,8 %; Anteile 5,9/50,3/43,8 %
+statt 6,18/47,87/45,95 %), da sie auf dem inzwischen durch
+R2-GL24h-CALC-021 ersetzten, unverstärkten `c_c,90` (R2-GL24h-CALC-001)
+beruhen, sowie die daraus abgeleitete, bei Nachrechnung unzutreffende
+Nebenaussage zu `c_v` als alleinig weichster Komponente (siehe oben).
+Für die aktuellen Zahlen gilt ausschließlich R2-GL24h-INT-002.
