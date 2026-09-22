@@ -63,3 +63,15 @@ Kette durch den gepoolten Messwert der BR-22-Zugversuche
 des `c_c,90`-Anteils. Dieser Eintrag bleibt als rein rechnerischer
 Referenzwert (FprEN-Vorhersage ohne Versuchsdaten) gültig dokumentiert,
 ist aber nicht mehr der aktuelle Wert für die Zugseiten-Steifigkeitskette.
+
+**Update (2026-09-22, R2-GL24h-DEC-009):** Sämtliche hier verwendeten
+Eingangswerte (`c_t,1`, `K_SLS,w`/`c_ax,f,par`, `c_t,ep`, `c_c,90`)
+stammen aus dem Excel-Bereich "Steifigkeiten Zugseite (in Bearbeitung)"
+(Zeilen 124-178, Sheet "Rahmenecke GL24h SD"), den der Nutzer als
+händische, vorerst ungültige Berechnung gekennzeichnet hat — weder als
+Eingangsgröße noch als Vergleichsbasis zu verwenden (R2-GL24h-DEC-009).
+Dieser Eintrag war durch CALC-014 ohnehin bereits nicht mehr aktuell;
+dieses Update ergänzt nur den zusätzlichen Vorbehalt. Zellreferenzen
+(C120-C147) zudem veraltet — in der aktuell vorliegenden Dateiversion
+"20260109_..." (nicht mehr "20260208_...") liegen dieselben Werte bei
+C128-C149, siehe R2-GL24h-CALC-001 für Details.

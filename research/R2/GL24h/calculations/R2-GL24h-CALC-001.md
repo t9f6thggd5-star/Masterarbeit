@@ -21,10 +21,13 @@ result:
   original_value: 100866.359
   original_unit: N/mm
 source_file: >
-  R2/COMMON/calculations/20260208_Berechnung_Rahmenecke_eingeklebte
-  Gewindestangen.xlsx, Sheet "Rahmenecke GL24h SD", Zelle C141 (per
-  openpyxl mit data_only=True ausgelesen, Stand der abgelegten Datei am
-  2026-09-01)
+  R2/COMMON/calculations/20260109_Berechnung_Rahmenecke_eingeklebte
+  Gewindestangen.xlsx (Update 2026-09-22: einzige unter diesem
+  Dateistamm noch vorhandene Version; der ursprünglich zitierte
+  Dateiname "...20260208..." existiert nicht mehr, Werte identisch,
+  Zeilen um ca. 8 verschoben), Sheet "Rahmenecke GL24h SD", Zelle C149
+  (ursprünglich C141 zitiert; per openpyxl mit data_only=True erneut
+  ausgelesen und verifiziert am 2026-09-22)
 certainty: CALCULATED
 superseded_by:
 ---
@@ -42,3 +45,15 @@ Eingang in die Stangen-Steifigkeitskette: unter der Annahme
 gleichmäßiger Lastaufteilung auf vier Stangen (R2-COMMON-ASS-002) ergibt
 sich der äquivalente Wert je Stange als `c_c,90 / 4 ≈ 25,2 kN/mm`, siehe
 R2-GL24h-CALC-002.
+
+**Update (2026-09-22, R2-GL24h-DEC-009):** Die Quellzelle dieses Werts
+liegt innerhalb des Excel-Bereichs "Steifigkeiten Zugseite (in
+Bearbeitung)" (Zeilen 124-178, Sheet "Rahmenecke GL24h SD"), den der
+Nutzer als händische, vorerst ungültige Berechnung gekennzeichnet hat —
+weder als Eingangsgröße noch als Vergleichsbasis zu verwenden (siehe
+R2-GL24h-DEC-009). Dieser Eintrag (unverstärktes `c_c,90=100,866 kN/mm`)
+gilt damit vorerst nicht als belastbarer Wert. Für die tatsächlich
+verwendete, ASSY-verstärkte Querdrucksteifigkeit gilt stattdessen die
+Bejtka-basierte Herleitung R2-COMMON-CALC-001 (111,339 kN/mm) — bereits
+seit R2-GL24h-CALC-021 die maßgebende Größe in der `c_T`-Kette,
+unberührt von diesem Update.

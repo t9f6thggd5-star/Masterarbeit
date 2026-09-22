@@ -57,10 +57,18 @@ ausdrücklich nicht als charakteristischer/typischer Wert dargestellt
 (CLAUDE.md Abschnitt 15) — die Einzelwerte streuen zu stark, um sie ohne
 Weiteres als eine homogene Stichprobe zu behandeln.
 
-Nicht weiter interpretiert (kein eigener INTERPRETATION- oder
-OPEN_QUESTION-Eintrag) — die Ursache der großen Streuung (Prüfkörper-
-Varianz, Messmethodik, Auswertungsfenster o. ä.) ist ungeklärt und wird
-hier bewusst nicht geraten (CLAUDE.md Abschnitt 4). Siehe
+Ursprünglich nicht weiter interpretiert — die Ursache der großen Streuung
+(Prüfkörper-Varianz, Messmethodik, Auswertungsfenster o. ä.) war
+ungeklärt und wurde hier bewusst nicht geraten (CLAUDE.md Abschnitt 4).
+**Update (2026-09-22):** eine gekennzeichnete, unbestätigte
+Kandidatenliste möglicher Ursachen liegt jetzt vor, siehe
+R2-GL24h-HYP-001 (`CLAUDE_DRAFT`, `reviewed: false`). Ein dort ursprünglich
+diskutierter möglicher Zusammenhang mit dem in R2-GL24h-CALC-014
+dokumentierten Faktor ≈6,48 gegenüber der FprEN-Vorhersage ist
+inzwischen gegenstandslos, da diese FprEN-Vergleichsgröße selbst als
+vorerst ungültige Handrechnung gekennzeichnet wurde (R2-GL24h-DEC-009,
+2026-09-22) — die Streuung hier bleibt davon unberührt weiterhin
+ungeklärt, siehe HYP-001-Update. Siehe
 R2-GL24h-II-T-S-BR-22-RES-001 für die zugehörige Höchstzugkraft F_max
 derselben Prüfkörperserie.
 

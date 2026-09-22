@@ -55,11 +55,12 @@ des Messwerts): die 4 Stangen ohne `c_c,90` ergäben rechnerisch nur
 133,115 kN/mm (`(1/(1/40,95+1/177,646))·4`) — der gemessene
 Wert (862,531 kN/mm) liegt damit um den Faktor ≈6,48 über der
 rechnerischen FprEN-Vorhersage für denselben Teilanteil. Dieser
-auffällig große Faktor wird hier nur als Beobachtung festgehalten und
-nicht weiter gedeutet (kein eigener INTERPRETATION-Eintrag,
-`CLAUDE_DRAFT`-Charakter — eine mögliche Ursache könnte z. B. eine
-konservative Verbundspannungs-Grenzwertannahme in FprEN 11.3.8.3 sein,
-das ist aber Spekulation und noch vom Forschenden zu prüfen). Zu
+auffällig große Faktor wurde hier zunächst nur als Beobachtung
+festgehalten. **Update (2026-09-22):** eine gekennzeichnete, unbestätigte
+Kandidatenliste möglicher Ursachen (u. a. Bezugslängen-Diskrepanz,
+konservative FprEN-Verbundsteifigkeit, Gruppenwirkung,
+Prüfkörperstreuung) liegt jetzt vor, siehe R2-GL24h-HYP-001
+(`CLAUDE_DRAFT`, `reviewed: false`, keiner der Kandidaten bestätigt). Zu
 beachten: die zugrunde liegende Messreihe RES-002/RES-003 zeigt selbst
 eine erhebliche Streuung zwischen den drei Prüfkörpern (Faktor ~3,4 bei
 K_ser oben) — der Faktor 6,48 ist entsprechend mit Vorsicht zu
@@ -75,3 +76,21 @@ Stangengruppe selbst.
 
 Eingang in R2-GL24h-CALC-015 (neue Gesamt-Zugseitensteifigkeit `c_T`, in
 Serie mit dem unveränderten Schubfeld R2-GL24h-CALC-003).
+
+**Update (2026-09-22, R2-GL24h-DEC-009):** Der Nutzer hat klargestellt,
+dass die Excel-Zeilen 124-178 (Sheet "Rahmenecke GL24h SD"), aus denen
+der Vergleichswert 133,115 kN/mm sowie (über R2-GL24h-CALC-001) der hier
+verwendete unverstärkte `c_c,90=100,866 kN/mm` stammen, eine händische,
+vorerst ungültige Berechnung sind — weder als Eingangsgröße noch als
+Vergleichsbasis zu verwenden (R2-GL24h-DEC-009). Damit gilt: **der
+"Faktor ≈6,48" ist keine reale fachliche Diskrepanz und nicht mehr zu
+interpretieren** — R2-GL24h-HYP-001 (oben verlinkt) ist entsprechend als
+vorerst gegenstandslos markiert. Der hier dokumentierte Ergebniswert
+selbst (90,306 kN/mm) verwendet ebenfalls den jetzt ungültigen
+unverstärkten `c_c,90` und ist damit ebenfalls nicht mehr als aktuelle
+Eingangsgröße zu verwenden. Für die tatsächlich aktuelle Zugseitenkette
+gilt R2-GL24h-CALC-021 (verwendet direkt die Bejtka-basierte, ASSY-
+verstärkte Querdrucksteifigkeit R2-COMMON-CALC-001, nicht den hier
+dokumentierten Zwischenwert) — unberührt von diesem Update. Der
+versuchsbasierte Kettenanteil dieses Eintrags (`c_Stange,4x=862,531
+kN/mm`, RES-003) bleibt gültig und wird auch in CALC-021 weiterverwendet.

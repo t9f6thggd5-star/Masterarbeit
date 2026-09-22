@@ -215,8 +215,11 @@ noch nicht Betreuerin-geprüft).
   werden jetzt rechnerisch durch denselben Mechanismus
   [Gewindestangenzug] begrenzt), sowie der Faktor ≈6,48 zwischen
   gemessener und FprEN-rechnerischer Stangengruppen-Steifigkeit selbst
-  (R2-GL24h-CALC-014) — dessen fachliche Deutung ist von
-  R2-GL24h-INT-001 bewusst ausgeklammert und bleibt weiterhin offen.
+  (R2-GL24h-CALC-014) — dessen fachliche Deutung war von
+  R2-GL24h-INT-001 bewusst ausgeklammert; seit 2026-09-22 liegt dazu eine
+  eigene, noch unbestätigte Kandidatenliste möglicher Ursachen vor
+  (R2-GL24h-HYP-001, `CLAUDE_DRAFT`, `reviewed: false` — siehe Update am
+  Ende dieses Dokuments).
 
 ## Offene Fragen / bekannte Widersprüche
 
@@ -253,9 +256,45 @@ ohne Einfluss auf Rotationssteifigkeit) und (4) (VSP-Blätter existieren
 bei R2 nicht) wurden am 2026-09-22 vom Nutzer geklärt, Punkt (2) war
 bereits zuvor geklärt. R2-GL24h-INT-001 wurde am 2026-09-22 mit den
 aktualisierten `c_T`-Zahlen als R2-GL24h-INT-002 neu gefasst — erledigt.
-Perspektivisch weiterhin offen: den auffälligen Faktor ≈6,48 zwischen
-BR-22-Messwert und FprEN-Vorhersage selbst (R2-GL24h-CALC-014) fachlich
-einordnen (eigene INTERPRETATION, noch nicht angelegt — bewusst nicht
-Teil von INT-001/INT-002) — das ist der zentrale, laut Aufgabenstellung
-Phase 3 explizit geforderte "Einflussfaktoren"-Punkt, der für R2/GL24h
-noch fehlt.
+**Update (2026-09-22):** Der Aufgabenstellungs-Phase-3-Punkt
+"Einflussfaktoren statistisch untersuchen" liegt jetzt in Erstfassung
+vor: R2-GL24h-HYP-001 (`CLAUDE_DRAFT`, `reviewed: false`) benennt vier
+nicht bestätigte Kandidatenmechanismen (Bezugslängen-Diskrepanz,
+konservative FprEN-Verbundsteifigkeit, Gruppenwirkung,
+Prüfkörper-/Werkstoffstreuung) sowohl für den Faktor ≈6,48
+(R2-GL24h-CALC-014) als auch für die erhebliche Prüfkörperstreuung
+(R2-GL24h-II-T-S-BR-22-RES-002), ohne einen der Kandidaten als
+wahrscheinlicher zu kennzeichnen. Beide Fundstellen (CALC-014, RES-002)
+verweisen jetzt auf HYP-001. Empfehlung dort: mit der Betreuerin klären,
+ob eine vertiefte Prüfung (Messaufbau-Bezugslänge, Literaturabgleich,
+weitere Komponentenversuche) im Rahmen der Arbeit noch erfolgen soll,
+oder ob die Ursache stattdessen als Limitation benannt wird — ggf. als
+zusätzlicher Punkt für die ohnehin für R2-COMMON-OPQ-006/008/011
+anstehende Besprechung.
+
+**Korrektur (2026-09-22, direkt im Anschluss):** Der Nutzer hat
+klargestellt, dass die Excel-Zeilen 124-178 (Sheet "Rahmenecke GL24h SD"),
+aus denen sowohl der FprEN-Vergleichswert (133,115 kN/mm, CALC-014) als
+auch der unverstärkte `c_c,90` (CALC-001) stammen, eine händische,
+vorerst ungültige Berechnung sind — weder als Eingangsgröße noch als
+Vergleichsbasis zu verwenden (neue Entscheidung R2-GL24h-DEC-009). Damit
+ist der "Faktor ≈6,48" keine reale Diskrepanz mehr; die Kandidaten (1)-(3)
+in R2-GL24h-HYP-001 sind gegenstandslos (siehe dortiges Update). Nur
+Kandidat (4) (Prüfkörper-/Werkstoffstreuung, zur realen Streuung in
+RES-002) bleibt als offene Hypothese bestehen. CALC-001, CALC-002 und
+CALC-014 wurden entsprechend mit Vorbehaltshinweisen versehen;
+CALC-021/INT-001/INT-002/CALC-022 sind unberührt (verwenden bereits die
+Bejtka-basierte, verstärkte Querdrucksteifigkeit R2-COMMON-CALC-001, nicht
+den jetzt ungültigen Handrechnungswert).
+
+Damit ist der Aufgabenstellungs-Phase-3-Punkt "Einflussfaktoren
+statistisch untersuchen" für R2/GL24h nur noch teilweise bearbeitet: die
+versuchsbasierte Streuung (RES-002) hat weiterhin eine offene, unbestätigte
+Kandidatenerklärung (HYP-001, Punkt 4); ein Versuch-vs-FprEN-Vergleich
+existiert dagegen nicht mehr als offene Frage, da die Vergleichsbasis
+selbst ungültig ist. Die übrigen Teilpunkte (Zugseiten-Federmodell inkl.
+Versuchsdaten, Kombination zu `S_j,ini`) bleiben wie oben beschrieben in
+Erstfassung bearbeitet. Offen bleiben die drei Betreuerin-Rückfragen
+(R2-COMMON-OPQ-006/008/011) als fachliche Absicherung, bevor Phase 3 für
+R2/GL24h als abgeschlossen gelten kann. Eine projektweite Phasenzuordnung
+wird hier nicht ungefragt geändert.
