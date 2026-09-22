@@ -7,8 +7,9 @@ status: OPEN
 question: >
   Welches Modell soll als primärer Vorbemessungs-Vergleichswert für die
   querdruckverstärkte Widerstandsseite dienen — das FprEN-2024-Modell
-  (`≈248,85 kN` für GL24h, siehe R2-GL24h-CALC-006) oder das
-  ETA/Würth-Vergleichsmodell (`≈356,3 kN`, altes `k_c,90 = 1,75`)?
+  (`≈248,85 kN` für GL24h, siehe R2-GL24h-CALC-006 — veraltet, siehe
+  Update unten) oder das ETA/Würth-Vergleichsmodell (`≈356,3 kN`, altes
+  `k_c,90 = 1,75`)?
 context: >
   Je nach gewähltem Modell kann sich der maßgebende Versagensmodus
   zwischen Gewindestangen-Zugversagen und Querdruckversagen verschieben.
@@ -35,3 +36,12 @@ vorliegenden R2-Excel nicht als eigenes Berechnungsblatt auffindbar
 R2-GL24h-CALC-005/006) — die in chat-3 genannten ETA/Würth-Zahlenwerte
 (`≈356,3 kN` u. a.) sind daher bisher nicht unabhängig gegen die Excel-
 Datei verifizierbar.
+
+**Fehlerkorrektur (2026-09-22, Nutzerhinweis):** Der hier zitierte
+FprEN-Wert `≈248,85 kN` (CALC-006) ist inzwischen durch die
+`k_mat`-Korrektur überholt: aktuell `≈384,124 kN` (R2-GL24h-CALC-011,
+Druckseite) bzw. `≈356,273 kN` (R2-GL24h-CALC-017, Zugseite) — beide
+bereits am 2026-09-01/17 korrigiert, also schon zum Zeitpunkt dieser
+Fragestellung veraltet zitiert. Die eigentliche methodische Frage
+(FprEN als primärer Wert vs. ETA/Würth als Vergleichswert) bleibt davon
+unberührt offen.

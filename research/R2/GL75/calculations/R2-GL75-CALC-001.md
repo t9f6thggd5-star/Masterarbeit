@@ -56,6 +56,7 @@ C60-C65, governierend Modus f `F_D,k=15,508 kN` (C65/C66),
 `F_D,k,ges=71,627 kN` (C68).
 
 **Vergleich mit realer Versuchsreihe** `II-PO-B-SD-23` (n=3, Mittelwert
-`103,915 kN`, siehe R2-GL75-II-PO-B-SD-23-RES-001): deutlich höher als
+`102,853 kN` — korrigiert 2026-09-22, zuvor fälschlich `103,915 kN`
+dokumentiert, siehe R2-GL75-II-PO-B-SD-23-RES-001): deutlich höher als
 beide rechnerischen Werte — passt zur insgesamt höheren
 Querdruckfestigkeit von BauBuche/GL75 gegenüber GL24h.

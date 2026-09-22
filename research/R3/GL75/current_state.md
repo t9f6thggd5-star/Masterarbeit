@@ -17,7 +17,12 @@ Abschnitt "ID naming convention") und wird nicht von
 ## Zusammenfassung
 
 R3 = Rahmenecke mit seitlichen Holzlaschen (Anschlusstyp `III`), hier
-die GL75/Buche-Variante. Erste Push-Out-Komponentenversuche liegen jetzt
+die GL75/Buche-Variante. Materialunabhängig gelten außerdem
+`R3-COMMON-DEC-001` (Vorspannung nur auf der Zugseite) und
+`R3-COMMON-DEC-002` (Kriechen/Schwinden werden experimentell bestimmt,
+nicht rechnerisch angesetzt) — neu angelegt 2026-09-22, zuvor nur unter
+GL24h geführt, siehe R3-GL24h/current_state.md. Erste
+Push-Out-Komponentenversuche liegen jetzt
 vor (Quelle: `common/general/Auswertung_Steifigkeiten_Push-Out-
 Versuche_FINAL.xlsx`, Blatt "Überblick", eingepflegt 2026-09-16):
 Stabdübel 2×5 (`III-PO-B-SD-25`, vollständig) und Schraube 1×1 mit
@@ -77,7 +82,19 @@ R3-GL75-OPQ-001 (zunächst: alle 6 Prüfkörper der 4×4-Schraubenserien
 am selben Tag RESOLVED — die Versuche waren durchgeführt, nur die
 Auswertung fehlte, Werte vom Nutzer nachgereicht.
 
+**Neu (2026-09-22, Nutzerhinweis):** R3-GL75-OPQ-002 — für beide
+44er-Serien (`III-PO-B-SC-44-B`/`-C`) liegt zwar Fmax,SF vollständig
+vor, eine K_ser/K_e-Steifigkeitsauswertung (RES-002) fehlt aber für
+beide komplett, anders als bei allen anderen Push-Out-Serien dieser
+Wiki (GL75: SC-11-B/-C, SD-25; GL24h: SC-11-B/-C, SD-36, WD-36,
+SC-44-C haben je RES-001+RES-002). Noch ungeklärt, ob die Steifigkeit
+für diese Prüfkörper nie ermittelt wurde oder nur nicht übernommen
+wurde.
+
 ## Nächste Schritte
 
-Keine offenen Schritte mehr zu `III-PO-B-SC-44-B`/`-C` — Fmax,SF liegt
-jetzt vor und ist mit den übrigen 44er-Serien vergleichbar.
+Klärung von R3-GL75-OPQ-002 (fehlende Steifigkeitsauswertung
+`III-PO-B-SC-44-B`/`-C`) mit dem Nutzer bzw. anhand der
+Auswertungsdatei. Ansonsten keine weiteren offenen Schritte zu
+`III-PO-B-SC-44-B`/`-C` — Fmax,SF liegt vor und ist mit den übrigen
+44er-Serien vergleichbar.

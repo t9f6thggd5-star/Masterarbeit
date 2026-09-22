@@ -61,7 +61,3 @@ Lasche-an-Column bleiben als separate Prüfkörpergruppen dokumentiert
 Im Unterschied zur entsprechenden GL24h-Serie (`III-PO-S-SC-44-B`, siehe
 R3-GL24h-III-PO-S-SC-44-B-RES-001, nur PK1 mit Wert, PK2/PK3 fehlend,
 R3-GL24h-OPQ-021) liegen hier für **alle drei** Prüfkörper Werte vor.
-
-Im Unterschied zur entsprechenden GL24h-Serie (`III-PO-S-SC-44-B`, siehe
-R3-GL24h-III-PO-S-SC-44-B-RES-001, nur PK1 mit Wert, PK2/PK3 fehlend,
-R3-GL24h-OPQ-021) liegen hier für **alle drei** Prüfkörper Werte vor.

@@ -42,6 +42,20 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
+# Entries and reports routinely contain non-ASCII technical notation
+# (Δ, ², °, ≈, …). On Windows, stdout defaults to the console codepage
+# (e.g. cp1252) instead of UTF-8, so a plain print() of such content
+# raises UnicodeEncodeError and aborts the whole lint run (and thus the
+# pre-commit hook) even though the report itself is written to
+# _index/lint_report.md correctly (that write already uses
+# encoding="utf-8"). Force UTF-8 on stdout/stderr wherever the runtime
+# supports it (Python 3.7+); reconfigure() is a no-op error otherwise,
+# so guard it defensively rather than assume it always exists.
+for _stream in (sys.stdout, sys.stderr):
+    _reconfigure = getattr(_stream, "reconfigure", None)
+    if _reconfigure is not None:
+        _reconfigure(encoding="utf-8", errors="replace")
+
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _repo_lib import (  # noqa: E402
     ROOT, load_entries, load_schema, get_path, is_blank,

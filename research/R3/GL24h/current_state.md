@@ -29,9 +29,9 @@ ASSY-Schraubengruppe (32 Schrauben, 8 Reihen in Lastrichtung × 4
 nebeneinander, "Equal-row-load"-Annahme R3-GL24h-ASS-002) und
 Gewindestange; ein vom Forschenden angegebener Arbeitswert für den
 kombinierten "sleeve"-Zugpfad liegt bei `27,09 kN/mm`
-(R3-GL24h-CALC-005). Vorspannung nur auf der Zugseite (R3-GL24h-DEC-002),
+(R3-GL24h-CALC-005). Vorspannung nur auf der Zugseite (R3-COMMON-DEC-001, ehemals R3-GL24h-DEC-002),
 Kriechen/Schwinden werden experimentell erfasst statt rechnerisch
-angesetzt (R3-GL24h-DEC-003); beide Vorspannungsvarianten ("Contact" und
+angesetzt (R3-COMMON-DEC-002, ehemals R3-GL24h-DEC-003); beide Vorspannungsvarianten ("Contact" und
 "No-Contact") werden als getrennte, aktive Modellvarianten geführt
 (R3-GL24h-DEC-004/010). Wirksame Laschenlänge 800 mm (R3-GL24h-DEC-005/
 006, nicht die volle Länge als Verformungslänge wirksam), Hebelarm
@@ -70,12 +70,27 @@ unverändert fort.
 
 ## Wichtigste Einträge
 
-- Entscheidungen: R3-GL24h-DEC-002–010 (Vorspannung/Kriechen/
-  No-Contact-Variante, Laschenlänge, Hebelarm, Prüfstandkonfiguration,
-  Status Vorbemessung, Modellvarianten); R3-GL24h-DEC-011 (gewählte Last
-  4×8-ASSY-Schraubengruppe = 329,054 kN, aus CALC-006 übernommen); siehe
-  auch R3-COMMON-DEC-001/002 und COMMON-COMMON-DEC-001–004 für
-  projektweite/materialunabhängige Punkte.
+- Entscheidungen: R3-GL24h-DEC-002–003 (historisch, siehe unten),
+  R3-GL24h-DEC-004–010 (No-Contact-Variante, Laschenlänge, Hebelarm,
+  Prüfstandkonfiguration, Status Vorbemessung, Modellvarianten);
+  R3-GL24h-DEC-011 (gewählte Last 4×8-ASSY-Schraubengruppe = 329,054 kN,
+  aus CALC-006 übernommen); siehe auch COMMON-COMMON-DEC-001–006
+  (korrigiert 2026-09-22, zuvor stand hier "–004"; tatsächlich 6
+  Einträge, siehe DEC-005 FprEN als primäre Normquelle und DEC-006
+  K_ser statt K_e projektweit) für projektweite/materialunabhängige
+  Punkte. **Nummerierung:** Die Entscheidungsdateien beginnen bei
+  DEC-002, nicht DEC-001 — keine Spur eines DEC-001 im Projekt
+  gefunden; Ursache laut Nutzer nicht mehr rekonstruierbar und ohne
+  Bedeutung, Nummerierung bleibt bewusst bei 002 beginnend stehen
+  (2026-09-22). **Gelöst 2026-09-22 (Nutzerentscheidung):** Der zuvor
+  dangling Verweis "R3-COMMON-DEC-001/002" ist aufgelöst — es gibt
+  jetzt einen `research/R3/COMMON/decisions/`-Zweig mit
+  `R3-COMMON-DEC-001` (Vorspannung nur Zugseite) und
+  `R3-COMMON-DEC-002` (Kriechen/Schwinden experimentell bestimmt) —
+  beide inhaltlich übernommen aus den zuvor als GL24h-spezifisch
+  geführten, tatsächlich aber materialunabhängigen R3-GL24h-DEC-002/003
+  (jetzt `superseded_by` auf die neuen COMMON-IDs verweisend, Einträge
+  selbst bleiben als Historie erhalten).
 - Berechnungen: R3-GL24h-CALC-001–005 (Zugpfad-Steifigkeitskette:
   Holzlasche mit/ohne ASSY-Abstützung, ASSY-Schraubengruppe,
   Gewindestange, kombinierter Arbeitswert); R3-GL24h-CALC-006 (grobe
@@ -96,7 +111,9 @@ unverändert fort.
 ## Offene Fragen / bekannte Widersprüche
 
 R3-GL24h-OPQ-001–019 (bereits vorhanden, Inhalt im Rahmen dieser
-Aktualisierung nicht im Detail neu geprüft); neu am 2026-09-16:
+Aktualisierung nicht im Detail neu geprüft) — **korrigiert 2026-09-22:**
+davon sind OPQ-016 und OPQ-017 bereits RESOLVED, tatsächlich offen aus
+diesem Block sind nur OPQ-001–015, 018–019; neu am 2026-09-16:
 R3-GL24h-OPQ-020 (Prüfkörper 1 von `III-PO-S-SD-36` als "entfällt"
 markiert, Ursache unklar) und R3-GL24h-OPQ-021 (Prüfkörper 2/3 von
 `III-PO-S-SC-44-B` fehlen komplett, Ursache unklar).

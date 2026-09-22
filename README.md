@@ -51,7 +51,8 @@ master-thesis-research-wiki/
 ├── .gitignore
 │
 ├── research/              aktueller Forschungsstand (kein Quellenmaterial)
-│   ├── common/            Methodik, Annahmen, Entscheidungen, offene Fragen
+│   ├── common/            Methodik, Annahmen, Entscheidungen, offene Fragen,
+│                          experimental_results/
 │   ├── thesis/            Abstract, Einleitung, Grundlagen, Stand der
 │                          Technik, Methodik, Diskussion, Grenzen der
 │                          Arbeit, Schluss, Ausblick, general

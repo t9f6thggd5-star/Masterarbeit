@@ -8,7 +8,9 @@ inputs:
   normative_sources: FprEN-1995-1-1-2024
   literature:
   experimental_data:
-  assumptions:
+  assumptions: >
+    R2-GL24h-DEC-008 (einseitige statt beidseitige Lastausbreitung:
+    l_ef=l_90,c+Δl, nicht +2Δl — Stahlplatte liegt direkt am Trägerrand)
 method: >
   FprEN-Querdruckverformungsmodell unter der 160×240 mm-Ankerplatte:
   `c_c,90 = 2·E_90,mean / (h_ef·(1/A + 1/A_ef))`, mit
@@ -57,3 +59,19 @@ verwendete, ASSY-verstärkte Querdrucksteifigkeit gilt stattdessen die
 Bejtka-basierte Herleitung R2-COMMON-CALC-001 (111,339 kN/mm) — bereits
 seit R2-GL24h-CALC-021 die maßgebende Größe in der `c_T`-Kette,
 unberührt von diesem Update.
+
+**Klarstellung (2026-09-22):** Die einseitige Lastausbreitung
+(`l_ef=l_90,c+Δl` statt `+2Δl`, Eingangswert C138=380mm oben) ist keine
+offene bzw. unbestätigte Annahme, sondern eine bereits am 2026-09-01
+getroffene und dokumentierte Entscheidung des Nutzers, siehe
+**R2-GL24h-DEC-008**: die Ankerplatte liegt an dieser Stelle direkt am
+Trägerrand, sodass sich die Lastausbreitung geometrisch nur einseitig
+ausbilden kann — anders als bei der (zunächst fehlerhaft einseitig
+angesetzten, dann korrigierten) Querdrucktragfähigkeit unter derselben
+Ankerplatte, siehe R2-GL24h-CALC-010/011. Die Bejtka-Beispielrechnung
+in R2-COMMON-CALC-001 verweist an ihrem `A=1`-Eingang bereits explizit
+auf diese Entscheidung. Nicht in dieser Berechnung enthalten ist die
+zusätzliche, verstärkende Wirkung der Bejtka-Schraubensteifigkeit
+selbst (dafür siehe R2-COMMON-CALC-001) — deren Einarbeitung in diese
+unverstärkte `c_c,90`-Berechnung hat der Nutzer als eigenen nächsten
+Schritt angekündigt.

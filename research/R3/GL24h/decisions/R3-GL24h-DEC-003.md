@@ -14,7 +14,15 @@ decision: >
 reason: "Im Ursprungsmaterial (chat-1) nicht dokumentiert."
 alternatives_considered:
 date: "UNKNOWN (chat-1, Abschnitt Kriechversuch-Diskussion; kein genaues Datum überliefert)"
+superseded_by: R3-COMMON-DEC-002
 ---
 
 Übernommen aus chat-1, DECISIONS.md Punkt 4, dort als `[Fact]`/„Active"
 markiert.
+
+**Verschoben nach COMMON (2026-09-22, Nutzerhinweis):** Diese Entscheidung
+ist methodisch materialunabhängig (Kriechen/Schwinden werden generell
+experimentell statt rechnerisch erfasst) und wird daher inhaltlich
+identisch unter `R3-COMMON-DEC-002` weitergeführt. Dieser Eintrag bleibt
+als historischer Verweis erhalten, damit keine bestehende Referenz auf
+`R3-GL24h-DEC-003` ins Leere zeigt.

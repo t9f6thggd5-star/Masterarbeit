@@ -15,7 +15,7 @@ method: >
   "II-PO-B-SD-23", GL75/BauBuche, Sheet "Rahmenecke GL75 SD").
 result:
   quantity: Höchstlast F_max (Mittelwert aus 3 Prüfkörpern)
-  value: 103.915
+  value: 102.853
   unit: kN
   original_value:
   original_unit:
@@ -27,7 +27,13 @@ Einzelwerte (Zellen B70-C72, Sheet "Rahmenecke GL75 SD" der Datei
 Gewindestangen.xlsx`, per openpyxl mit data_only=True ausgelesen, Stand
 der abgelegten Datei am 2026-09-01): `II-PO-B-SD-23-1 = 105,46 kN`
 (C70), `II-PO-B-SD-23-2 = 100,73 kN` (C71), `II-PO-B-SD-23-3 =
-102,37 kN` (C72). Mittelwert `103,915 kN` (C73).
+102,37 kN` (C72). Mittelwert `102,853 kN` (C73).
+
+**Korrektur (2026-09-22, Nutzerhinweis):** Der zuvor hier dokumentierte
+Mittelwert `103,915 kN` entsprach nicht dem arithmetischen Mittel der
+drei aufgelisteten Einzelwerte (105,46+100,73+102,37)/3 = 102,853 kN —
+kein Rundungsfehler, sondern eine Abweichung von ca. 1 %. Der Nutzer hat
+`102,853 kN` als korrekten Wert bestätigt.
 
 Deutlich höher als die vergleichbaren GL24h-Versuchsreihen
 (`II-PO-S-SD-34`: 68,715 kN; `II-PO-S-WD-34`: 69,605 kN) — konsistent mit

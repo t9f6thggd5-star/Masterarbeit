@@ -45,10 +45,13 @@ liegen n_ef, Drehfeder und Zugpfad-Steifigkeit vor.
 
 ## Offene Fragen / bekannte Widersprüche
 
-12 offene Fragen unter `research/R1/GL24h/open_questions/`
+12 Fragedateien unter `research/R1/GL24h/open_questions/`
 (R1-GL24h-OPQ-001–012), u. a. zur Kinematik der Rahmeneckenrotation,
 zum Faktor-2 bei der Gesamttragfähigkeit und zu zwei fehlenden externen
-Quellen (DIN EN 14080, EN 1995-3:202y §6.4).
+Quellen (DIN EN 14080, EN 1995-3:202y §6.4). **Korrigiert 2026-09-22:**
+OPQ-003 (Bedeutung z=550mm) und OPQ-006 (Faktor "m=2") sind bereits
+RESOLVED — tatsächlich offen sind nur OPQ-001–002, 004–005, 007–012
+(10 von 12).
 Neu seit 2026-09-21: R1-GL24h-OPQ-013 (K_ser je Dübel für die Drehfeder
 c_v,f,rot, entschieden) und R1-GL24h-DEC-010 (K_ser,Dübel = 17,96 kN/mm nach
 FprEN Tab. 11.12; C_rot,v,f = 21.111 kNm/rad je 4×8-Gruppe). Offen dazu: R1-GL24h-OPQ-014

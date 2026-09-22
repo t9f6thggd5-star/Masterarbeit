@@ -113,10 +113,14 @@ ansteht.
   R2-COMMON-DEC-003 direkt aus Blatt "Überblick" übernommen; der
   Zugseiten-Messwert (`II-T-B-BR-22`) ist seit 2026-09-18 in
   R2-GL75-CALC-011 (`c_T`) verwendet.
-- Interpretationen/Schlussfolgerungen: — (Beobachtung zum materialabhängig
-  verschobenen Versagensmodus bisher nur als Freitext in
-  R2-GL75-CALC-003 vermerkt, `CLAUDE_DRAFT` — noch vom Forschenden zu
-  prüfen).
+- Interpretationen/Schlussfolgerungen: — **Korrigiert 2026-09-22
+  (Nutzerhinweis):** die in R2-GL75-CALC-003 als Freitext vermerkte
+  Beobachtung zum materialabhängig verschobenen Versagensmodus ist
+  hinfällig — R2-GL24h-CALC-012 hat den analogen GL24h-Befund
+  (R2-GL24h-CALC-008) bereits widerlegt: GL24h und GL75 werden nach der
+  `k_mat`-Korrektur durch denselben Mechanismus (Gewindestangenzug)
+  begrenzt, kein materialabhängiger Wechsel. `M_max≈162,96 kNm` selbst
+  bleibt unverändert gültig.
 
 ## Offene Fragen / bekannte Widersprüche
 

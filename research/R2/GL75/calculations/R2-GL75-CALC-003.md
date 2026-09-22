@@ -54,6 +54,16 @@ höheren Querdruckfestigkeit von BauBuche. Diese Einordnung ist eine
 eigene Interpretation (Claude) auf Basis der Zellwerte, noch nicht vom
 Forschenden bestätigt.
 
+**Korrektur (2026-09-22, Nutzerhinweis):** Diese Beobachtung ist
+mittlerweile hinfällig. Die GL24h-Seite (R2-GL24h-CALC-008) hatte
+denselben materialabhängigen Wechsel postuliert, R2-GL24h-CALC-012 hat
+das aber explizit für hinfällig erklärt: nach der `k_mat`-Korrektur sind
+GL24h und GL75 rechnerisch durch **denselben** Mechanismus
+(Gewindestangenzug) begrenzt, kein materialabhängiger Wechsel mehr. Das
+hier für GL75 berechnete Ergebnis selbst (`M_max=162,962 kNm`,
+maßgebend Gewindestangenzug `291,00 kN`) bleibt unverändert korrekt —
+nur die vergleichende Einordnung "GL24h anders als GL75" ist überholt.
+
 Nachgelagert im selben Block: "Zylinderkraft"-Abschnitt (Hebelarm 3,03 m,
 `V_ed je Seite=38,03 kN`, `Z_ed,ges=53,78 kN`, Zellen I94-I96) — wie bei
 GL24h vermutlich eine Rückrechnung auf die Prüfstands-Aktuatorkraft,

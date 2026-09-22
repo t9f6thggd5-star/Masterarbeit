@@ -28,9 +28,11 @@ danach 70 mm ergibt sich eine wirksame Länge `L_eff = 450 mm` und daraus
 `c_H,eff = 299,0 kN/mm` (gegenüber `c_H,800 = 168,19 kN/mm` bei voller
 Laschenlänge ohne ASSY-Abstützung).
 
-`OPEN_QUESTIONS.md` Punkt 6 hält ausdrücklich fest, dass die Genauigkeit
-dieser Annahme (gleicher Kraftanteil F/8 je Reihe) noch nicht abschließend
-geklärt ist — siehe den zugehörigen offenen-Frage-Eintrag.
+`OPEN_QUESTIONS.md` Punkt 6 (chat-1) hält ausdrücklich fest, dass die
+Genauigkeit dieser Annahme (gleicher Kraftanteil F/8 je Reihe) noch
+nicht abschließend geklärt ist — siehe **R3-GL24h-OPQ-011** für den
+zugehörigen, aktuell geführten offenen-Frage-Eintrag (Wiki-ID ergänzt
+2026-09-22; zuvor nur als Altreferenz auf chat-1 geführt).
 
 **Hinweis zur Materialabhängigkeit (2026-09-01):** In der zugrundeliegenden
 Exceltabelle (`R3-GL24h-CALC-001` bzw. deren `source_file`) ergibt sich

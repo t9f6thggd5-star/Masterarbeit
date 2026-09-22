@@ -29,3 +29,11 @@ model". Umgesetzt in R2-GL24h-CALC-006: Holzanteil `≈143,24 kN`
 (Zelle H105) → `F_R1 ≈ 248,85 kN` (Zelle H106), zweiter Modus
 `F_R2 ≈ 413,79 kN` (Zelle H107), maßgebend `F_c,90 ≈ 248,85 kN`
 (Zelle H109, Gl. 8.12).
+
+**Hinweis (2026-09-22, Nutzerhinweis):** Diese Zahlen (`143,24`/`248,85
+kN`) stammen aus R2-GL24h-CALC-006, das durch R2-GL24h-CALC-011
+(`k_mat`-Korrektur: `≈384,124 kN` statt `≈248,85 kN`, Druckseite) und
+R2-GL24h-CALC-017 (`356,273 kN`, Zugseite) superseded ist. Die hier
+getroffene **methodische** Entscheidung (dedizierte Gl. 8.12 statt
+einfacher Summe) bleibt davon unberührt gültig — nur die als Beispiel
+zitierten Zahlenwerte sind veraltet. Aktuelle Werte: siehe CALC-011/017.
