@@ -21,7 +21,8 @@ basis: >
   identisch; GL75 identisch). n_0 = 8, n_90 = 4 und a_1 = 80 mm stehen im
   Blatt "Rahmenecke GL75 SD" (C25, C24, C26); a_2 = 50 mm entspricht der
   getesteten Gruppe (Angabe des Nutzers). Nicht Teil der Annahme: der
-  innere Hebelarm z (Blatt C89 = 550 mm) und die Lage der Gruppenschwerpunkte
+  innere Hebelarm z (550 mm, Abstand der resultierenden Zug- und Druckkraft,
+  R1-GL24h-OPQ-003) und die Lage der Gruppenschwerpunkte
   zueinander.
 supported_by:
 contradicted_by:

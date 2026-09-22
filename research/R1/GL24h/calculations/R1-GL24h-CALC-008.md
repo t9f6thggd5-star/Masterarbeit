@@ -46,4 +46,4 @@ festlegt, ob c_br,par im Messwert steckt (R1-COMMON-OPQ-003).
 **Druckseite offen:** Für c_c,tot (Gl. 1) fehlen c_v,f der Druckgruppe und
 c_c,0; Versuche liegen nicht vor. Ohne c_c,tot liegt C_rot,t+c zwischen
 42.277 kNm/rad (c_c,tot = c_t,tot) und 84.555 kNm/rad (Druckseite starr) mit
-z = 550 mm.
+z = 550 mm (Abstand der resultierenden Zug- und Druckkraft, R1-GL24h-OPQ-003).

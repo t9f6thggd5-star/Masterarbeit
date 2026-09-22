@@ -50,5 +50,5 @@ mit Reihendeckel, c_T / 12) 27.374 kNm/rad; mit ρ = 385 kg/m³ 18.527 kNm/rad.
 parallel, Träger und Stütze in Reihe): 21.111 kNm/rad. Die Entscheidung des
 Nutzers steht aus. Zum Vergleich: die obere Grenze des Kräftepaar-Glieds
 C_rot,t+c = z² · c_t,tot (Druckseite starr) ist 84.555 kNm/rad mit
-z = 550 mm (Blatt C89, für GL24h mit demselben Wert gerechnet, nicht getrennt
-geprüft); mit c_c,tot = c_t,tot 42.277 kNm/rad.
+z = 550 mm (Abstand der resultierenden Zug- und Druckkraft, R1-GL24h-OPQ-003;
+Blatt C101); mit c_c,tot = c_t,tot 42.277 kNm/rad.

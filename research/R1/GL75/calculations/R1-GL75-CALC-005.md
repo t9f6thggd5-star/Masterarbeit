@@ -37,4 +37,4 @@ superseded_by:
 (R1-GL75-CALC-003) steht aus (R1-COMMON-OPQ-004). Ebenfalls offen ist die
 Messbasis der Wegaufnehmer (R1-COMMON-OPQ-003). Die Drehfedern gehen nicht in
 c_t,tot ein, siehe R1-GL75-CALC-004; die Druckseite (c_c,tot) fehlt, die obere
-Grenze von C_rot,t+c ist z² · c_t,tot = 220.141 kNm/rad mit z = 550 mm.
+Grenze von C_rot,t+c ist z² · c_t,tot = 220.141 kNm/rad mit z = 550 mm (R1-GL24h-OPQ-003).

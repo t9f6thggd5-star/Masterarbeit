@@ -42,5 +42,5 @@ abgeleiteten c_T / 32 = 45,48 kN/mm 53.453 kNm/rad; mit Reihendeckel
 **Kombination der vier Drehfedern (offen):** Gl. (5) wörtlich 4 · 55.496 =
 221.983 kNm/rad, physikalische Lesart 55.496 kNm/rad. Die Entscheidung des
 Nutzers steht aus. Die obere Grenze des Kräftepaar-Glieds z² · c_t,tot
-(Druckseite starr, z = 550 mm) ist 220.141 kNm/rad, mit c_c,tot = c_t,tot
+(Druckseite starr, z = 550 mm nach R1-GL24h-OPQ-003, Blatt C91) ist 220.141 kNm/rad, mit c_c,tot = c_t,tot
 110.070 kNm/rad.
