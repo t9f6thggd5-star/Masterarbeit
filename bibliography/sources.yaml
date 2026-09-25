@@ -157,6 +157,30 @@ sources:
   publisher: World Conference on Timber Engineering (WCTE) 2025 Proceedings, DOI 10.52202/080513-0213
   pages: 10
   notes: Gleiche Erstautorin/Institut wie die Konstruktionszeichnungen (Uni Stuttgart, Institut fuer Konstruktion und Entwurf).
+- id: Bejtka-2005
+  type: LITERATURE
+  authority: peer_reviewed_or_secondary
+  file: common/literature/Bejtka Verstärkung von Bauteilen aus Holz mit Vollgewindeschrauben.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Verstärkung von Bauteilen aus Holz mit Vollgewindeschrauben
+  authors: Ireneusz Bejtka
+  year: 2005
+  publisher: >-
+    Dissertation, Universitaet Fridericiana zu Karlsruhe (TH), Lehrstuhl fuer
+    Ingenieurholzbau und Baukonstruktionen; Karlsruher Berichte zum
+    Ingenieurholzbau, Band 2; Universitaetsverlag Karlsruhe (heute KIT
+    Scientific Publishing), ISBN 3-937300-54-6, ISSN 1860-093X,
+    DOI 10.5445/KSP/1000003354
+  pages: 265
+  notes: >-
+    Nachtraeglich registriert (2026-09-25): wurde bereits vorher in
+    R2-GL24h-Eintraegen als literature: Bejtka-2005 zitiert (u. a. CALC-020,
+    CALC-023, DEC-009), ohne Eintrag hier. Zitierangabe vom Nutzer
+    (KIT Scientific Publishing, DOI s. o.); Impressum des PDFs nennt den
+    Vorgaengerverlag "Universitaetsverlag Karlsruhe", 2005 -- gleiche
+    Publikation. Seitenzahl = PDF-Seiten inkl. Titelei.
 - id: DIN-EN-636-2015
   type: NORMATIVE
   authority: normative
@@ -177,8 +201,8 @@ sources:
   scope:
     connection: COMMON
     material: COMMON
-  title: Holzwerkstoffe – Charakteristische Werte für die Berechnung und Bemessung
-    von Holzbauwerken – Teil 2: Sperrholz; Deutsche Fassung EN 12369-2:2011
+  title: "Holzwerkstoffe – Charakteristische Werte für die Berechnung und Bemessung
+    von Holzbauwerken – Teil 2: Sperrholz; Deutsche Fassung EN 12369-2:2011"
   issuing_body: DIN (Normenausschuss Holzwirtschaft und Moebel (NHM) / Normenausschuss
     Bauwesen (NABau)) / CEN/TC 112
   designation: DIN EN 12369-2:2011-09

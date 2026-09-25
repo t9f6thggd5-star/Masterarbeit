@@ -36,7 +36,9 @@ Auswertung neben `K_ser` (Erstbelastung) auch `K_e` (Wiederbelastung)
 ausgewertet vorliegt und `K_e` durchgängig etwas über `K_ser` liegt
 (Kommentar in der Datei: vermutlich Imperfektionen bei Erstbelastung).
 Für die Verwendung als Eingangsgröße der Federn — und damit für die
-Anfangsrotationssteifigkeit `S_j,ini` im Sinne von EN 1993-1-8, 6.3.1
+Anfangsrotationssteifigkeit `S_j,ini` im Sinne von DIN EN 1993-1-8:2025-04,
+Anhang B.4.1(4), Gl. (B.6) (Quelle `DIN-EN-1993-1-8-2025`; in der Fassung
+2010-12 Abschnitt 6.3.1)
 bzw. deren Analogon im Holzbau — ist definitionsgemäß die
 Anfangs-/Erstbelastungssteifigkeit maßgebend; diese Entscheidung macht
 das jetzt auch für dieses Projekt explizit und einheitlich, statt es

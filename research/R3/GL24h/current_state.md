@@ -98,7 +98,8 @@ unverändert fort.
 - Berechnungen: R3-GL24h-CALC-001–005 (Zugpfad-Steifigkeitskette:
   Holzlasche mit/ohne ASSY-Abstützung, ASSY-Schraubengruppe,
   Gewindestange, kombinierter Arbeitswert; CALC-004 seit 2026-09-22
-  vollständig nachvollziehbar, DIN EN 1993-1-8 Tab. 6.11). **CALC-003
+  vollständig nachvollziehbar, DIN EN 1993-1-8:2025-04 Anh. A.13.2,
+  Gl. (A.40), `k_t` — vormals 2010-12 Tab. 6.11, `k_10`). **CALC-003
   seit 2026-09-22 `superseded_by` CALC-007/CALC-008** (war ein
   normativer EC5-Theoriewert, FprEN 1995-1-1 Gl. 11.29, nicht
   versuchsbasiert und beidseitig undifferenziert — siehe Update unten,
@@ -190,7 +191,8 @@ abgestimmt.
 
 **Update (2026-09-22, Hochrechnung ASSY-Schraubengruppe 16→32):**
 Zugpfad-Zusammenfassung der Spring-Chain (`c_t,sleeve`) geklärt:
-Reihenfolge Gewindestange (`c_t`, DIN EN 1993-1-8 Tab. 6.11, `c_t=49,59
+Reihenfolge Gewindestange (`c_t`, DIN EN 1993-1-8:2025-04 Anh. A.13.2
+Gl. (A.40) [vormals 2010-12 Tab. 6.11], `c_t=49,59
 kN/mm`, CALC-004 vollständig nachvollziehbar gemacht) — Stahlplatte
 (`c_c,ep=∞`, je Anschlussende) — Holzstauchung unter der Platte (`c_c,0`,
 je Anschlussende, gleicher Wert beidseitig da konstante Laschenfaser,

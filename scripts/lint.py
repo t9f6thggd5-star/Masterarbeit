@@ -22,6 +22,16 @@ check by hand every time:
   - RAW_MEASUREMENT.experiment_id actually exists as a registered
     experiment in the external sources folder (opt-in per machine, see
     check_external_experiments() and _index/README.md)
+  - bibliography/sources.yaml parses as YAML, has unique IDs, required
+    fields and valid source types (check_sources_file())
+  - every source reference in an entry (claim.source, inputs.literature,
+    inputs.normative_sources, related_sources, based_on.sources) is a
+    registered sources.yaml ID (or, for related_sources, an existing
+    entry ID / wiki path) — CLAUDE.md section 1 + rule 3
+    (check_source_references())
+  - every sources.yaml `file` exists in the external sources folder, and
+    every source document there is registered (opt-in, same
+    .external_sources_path as above — check_external_source_files())
 
 It does not try to judge scientific correctness — only the repository's
 own structural rules. The external sources folder is out of scope except
@@ -416,6 +426,193 @@ def check_external_experiments(entries) -> list[Finding]:
     return findings
 
 
+# ---------------------------------------------------------------------------
+# bibliography/sources.yaml checks
+# ---------------------------------------------------------------------------
+
+SOURCES_PATH = ROOT / "bibliography" / "sources.yaml"
+SOURCES_REL = "bibliography/sources.yaml"
+SOURCE_REQUIRED_FIELDS = ["id", "type", "authority", "file", "scope"]
+
+# Frontmatter fields whose values are references to sources.yaml IDs.
+# related_sources is looser by practice: it may also name other entries
+# (by ID) or wiki files (by path), both of which are accepted if they exist.
+SOURCE_REF_FIELDS = ["claim.source", "inputs.literature",
+                     "inputs.normative_sources", "based_on.sources"]
+LOOSE_SOURCE_REF_FIELDS = ["related_sources"]
+
+_ID_TOKEN_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]*$")
+
+
+def load_sources() -> tuple[list[dict] | None, list[Finding]]:
+    """Returns (sources, findings). sources is None if the file is missing
+    or does not parse — in that case every later source check is skipped,
+    because it would only produce follow-up noise."""
+    import yaml  # local import: _repo_lib already requires PyYAML
+    findings: list[Finding] = []
+    if not SOURCES_PATH.exists():
+        findings.append(Finding("ERROR", "sources", SOURCES_REL, "file not found."))
+        return None, findings
+    try:
+        data = yaml.safe_load(SOURCES_PATH.read_text(encoding="utf-8"))
+    except yaml.YAMLError as exc:
+        mark = getattr(exc, "problem_mark", None)
+        where = f" (line {mark.line + 1}, column {mark.column + 1})" if mark else ""
+        findings.append(Finding("ERROR", "sources", SOURCES_REL,
+            f"does not parse as YAML{where}: {getattr(exc, 'problem', exc)}. "
+            f"Typical cause: an unquoted value containing ': ' — put it in quotes. "
+            f"All source-reference checks are skipped until this is fixed."))
+        return None, findings
+    sources = data.get("sources") if isinstance(data, dict) else None
+    if not isinstance(sources, list):
+        findings.append(Finding("ERROR", "sources", SOURCES_REL,
+            "has no top-level 'sources:' list."))
+        return None, findings
+    return [s for s in sources if isinstance(s, dict)], findings
+
+
+def check_sources_file(sources: list[dict], schema: dict) -> list[Finding]:
+    findings = []
+    source_types = schema.get("source_type", {}) or {}
+    seen: dict[str, int] = {}
+    for idx, src in enumerate(sources, start=1):
+        sid = src.get("id")
+        label = f"{SOURCES_REL} [{sid or f'entry #{idx}'}]"
+        for field in SOURCE_REQUIRED_FIELDS:
+            if is_blank(src.get(field)):
+                findings.append(Finding("ERROR", "sources", label,
+                    f"required field '{field}' is empty/missing (see header of sources.yaml)."))
+        if sid:
+            if sid in seen:
+                findings.append(Finding("ERROR", "sources", label,
+                    f"ID '{sid}' is used more than once — source IDs must be unique."))
+            seen[sid] = idx
+        stype = src.get("type")
+        if stype and stype not in source_types:
+            findings.append(Finding("ERROR", "vocabulary", label,
+                f"type '{stype}' is not in schema.yaml source_type {sorted(source_types)}."))
+        elif stype and src.get("authority"):
+            expected = (source_types.get(stype) or {}).get("authority")
+            if expected and src["authority"] != expected:
+                findings.append(Finding("WARNING", "sources", label,
+                    f"authority '{src['authority']}' differs from schema.yaml "
+                    f"source_type.{stype}.authority '{expected}'."))
+    return findings
+
+
+def _flatten_strings(value: Any) -> list[str]:
+    if value is None:
+        return []
+    if isinstance(value, str):
+        return [value]
+    if isinstance(value, list):
+        return [s for item in value for s in _flatten_strings(item)]
+    if isinstance(value, dict):
+        return [s for item in value.values() for s in _flatten_strings(item)]
+    return [str(value)]
+
+
+def _split_id_list(text: str) -> list[str] | None:
+    """'A, B, C' / 'A' -> ['A','B','C']. Returns None if the string is
+    free text (an item contains spaces etc.) rather than a pure ID list."""
+    items = [t.strip().rstrip(".;") for t in text.strip().split(",")]
+    items = [t for t in items if t]
+    if not items or not all(_ID_TOKEN_RE.match(t) for t in items):
+        return None
+    return items
+
+
+def check_source_references(entries, sources: list[dict]) -> list[Finding]:
+    findings = []
+    source_ids = {s.get("id") for s in sources if s.get("id")}
+    entry_ids = {e.id for e in entries if e.id}
+    for e in entries:
+        for field in SOURCE_REF_FIELDS + LOOSE_SOURCE_REF_FIELDS:
+            loose = field in LOOSE_SOURCE_REF_FIELDS
+            for text in _flatten_strings(get_path(e.fm, field)):
+                stripped = text.strip()
+                if not stripped:
+                    continue
+                if loose and stripped.startswith(("wiki/", "research/")):
+                    if not (ROOT / stripped.rstrip(".")).exists():
+                        findings.append(Finding("ERROR", "source-ref", e.rel_path,
+                            f"{field} points to '{stripped}', which does not exist in this repository."))
+                    continue
+                ids = _split_id_list(stripped)
+                if ids is None:
+                    known = sorted(i for i in source_ids if i in stripped)
+                    if loose:
+                        known += sorted(i for i in entry_ids if i in stripped)
+                    hint = (f" It mentions known ID(s) {known}; put only the ID(s) in "
+                            f"this field and move the detail (page, table, equation) into "
+                            f"the body or a separate field.") if known else (
+                            " No registered sources.yaml ID found in it — register the "
+                            "source first, then cite it by ID.")
+                    findings.append(Finding("WARNING", "source-ref", e.rel_path,
+                        f"{field} is free text instead of a sources.yaml ID: "
+                        f"'{stripped[:80]}{'…' if len(stripped) > 80 else ''}'. "
+                        f"CLAUDE.md section 1: sources are cited by ID.{hint}"))
+                    continue
+                for sid in ids:
+                    if sid in source_ids:
+                        continue
+                    if loose and sid in entry_ids:
+                        continue
+                    findings.append(Finding("ERROR", "source-ref", e.rel_path,
+                        f"{field} cites '{sid}', which is not registered in "
+                        f"{SOURCES_REL}" + (" (nor an existing entry ID)" if loose else "")
+                        + ". Register the source there (CLAUDE.md section 1) or fix the ID."))
+    return findings
+
+
+# Folders in the external sources folder that hold own work products
+# (calculations, experiment data) rather than registrable sources — see
+# EXTERNAL_SOURCES.md. Files below them are not expected in sources.yaml.
+EXTERNAL_UNREGISTERED_DIRS = {"calculations", "experiments"}
+EXTERNAL_IGNORED_NAMES = {"README.md", ".gitkeep", "desktop.ini", "Thumbs.db"}
+
+
+def check_external_source_files(sources: list[dict]) -> list[Finding]:
+    """Opt-in (same .external_sources_path as check_external_experiments):
+    every sources.yaml `file` must exist in the external folder, and every
+    source document there should be registered in sources.yaml."""
+    findings = []
+    config_path = ROOT / ".external_sources_path"
+    if not config_path.exists():
+        return findings  # the INFO line from check_external_experiments covers this
+    external_root = Path(config_path.read_text(encoding="utf-8").strip())
+    if not external_root.is_dir():
+        return findings  # already reported as WARNING by check_external_experiments
+
+    registered: set[str] = set()
+    for src in sources:
+        rel = src.get("file")
+        if not rel:
+            continue
+        rel_posix = str(rel).replace("\\", "/")
+        registered.add(rel_posix.casefold())
+        if not (external_root / rel_posix).is_file():
+            findings.append(Finding("ERROR", "external-sources",
+                f"{SOURCES_REL} [{src.get('id')}]",
+                f"file '{rel_posix}' does not exist under '{external_root}' "
+                f"(renamed/moved, or not synced to this machine?)."))
+
+    for path in sorted(external_root.rglob("*")):
+        if not path.is_file() or path.name in EXTERNAL_IGNORED_NAMES or path.name.startswith("~$"):
+            continue
+        rel_parts = path.relative_to(external_root).parts
+        if EXTERNAL_UNREGISTERED_DIRS & set(rel_parts[:-1]):
+            continue
+        rel_posix = "/".join(rel_parts)
+        if rel_posix.casefold() not in registered:
+            findings.append(Finding("WARNING", "external-sources", rel_posix,
+                "lies in the external sources folder but has no entry in "
+                f"{SOURCES_REL}. Register it before citing it (CLAUDE.md section 1) — "
+                "or, if it is an own work product (calculation/evaluation), move it "
+                "to a calculations/ or experiments/ folder (EXTERNAL_SOURCES.md)."))
+    return findings
+
+
 def render_report(findings: list[Finding], entry_count: int) -> str:
     lines = ["# Lint report (auto-generated — do not edit by hand)", ""]
     lines.append(f"Generated by `scripts/lint.py` against {entry_count} entries under "
@@ -423,8 +620,9 @@ def render_report(findings: list[Finding], entry_count: int) -> str:
     lines.append("")
     lines.append("Does not judge scientific correctness — only this repository's own "
                  "structural rules from CLAUDE.md and schema.yaml. The external sources "
-                 "folder itself is out of scope, except for one opt-in cross-check "
-                 "(RAW_MEASUREMENT.experiment_id against registered experiments there) "
+                 "folder itself is out of scope, except for opt-in cross-checks "
+                 "(RAW_MEASUREMENT.experiment_id against registered experiments there, "
+                 "and sources.yaml `file` paths against the files there) "
                  "when `.external_sources_path` is configured — see _index/README.md.")
     lines.append("")
     by_severity = defaultdict(list)
@@ -465,6 +663,13 @@ def run() -> int:
     findings += check_symmetry()
     findings += check_n1_language(entries)
     findings += check_external_experiments(entries)
+
+    sources, source_findings = load_sources()
+    findings += source_findings
+    if sources is not None:
+        findings += check_sources_file(sources, schema)
+        findings += check_source_references(entries, sources)
+        findings += check_external_source_files(sources)
 
     report = render_report(findings, len(entries))
     out_path = ROOT / "_index" / "lint_report.md"

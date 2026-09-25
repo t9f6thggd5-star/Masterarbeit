@@ -24,8 +24,9 @@ statement: >
   (reines Kräftepaar, `c_T·δ_T = c_C·δ_C`) folgt
   `x₀ = c_C·z/(c_T+c_C)` und damit `M = φ·z²·c_T·c_C/(c_T+c_C)`, also
   obige Formel für `S_j,ini = M/φ`.
-  Strukturell analog zur Bauteilmethode für Stahlanschlüsse (EN
-  1993-1-8, 6.3.1) und konsistent mit der Fig.-7-Topologie, aber eine
+  Strukturell analog zur Bauteilmethode für Stahlanschlüsse
+  (DIN-EN-1993-1-8-2025, Anhang B.4.1(4), Gl. (B.6); in der Fassung
+  2010-12 Abschnitt 6.3.1) und konsistent mit der Fig.-7-Topologie, aber eine
   eigene mechanische Herleitung — keine wörtliche Formel aus
   FragiacomoBatchelar2012a (die Quelle liefert laut R2-COMMON-CLAIM-001/
   031 nur die Topologie, keine Kombinationsformel).
@@ -101,7 +102,9 @@ Herleitung (Starrkörperkinematik + Kräftegleichgewicht), keine
 wörtlich aus der Literatur übernommene Gleichung. Sie ist strukturell
 konsistent mit der Fig.-7-Topologie (T/C/z/φ, R2-COMMON-CLAIM-031) und
 mathematisch analog zur klassischen Bauteilmethode für Stahlanschlüsse
-(EN 1993-1-8, 6.3.1, dort `S_j,ini = E·z²/Σ(1/k_i)`), aber weder von
+(DIN EN 1993-1-8:2025-04, Anhang B.4.1(4), Gl. (B.6), dort
+`S_j,ini = E·z²/Σ(1/k_i)`; in der Fassung 2010-12 Abschnitt 6.3.1 —
+Quellenangabe am 2026-09-25 auf die aktuelle Fassung umgestellt), aber weder von
 FragiacomoBatchelar2012a noch von einer anderen hier verwendeten
 Quelle wörtlich bestätigt. `CLAUDE_DRAFT`, `reviewed: false` — vom
 Forschenden und nach Möglichkeit mit der Betreuerin zu prüfen, bevor

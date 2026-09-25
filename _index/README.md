@@ -16,8 +16,10 @@ concepts model.
   connection/material, for quick human browsing.
 - `lint_report.md` — structural findings: R1/R2/R3 symmetry violations,
   duplicate or scope-mismatched IDs, missing required fields, values not
-  covered by `schema.yaml`'s controlled vocabulary, and any unreviewed
-  `CLAUDE_DRAFT` entry cited elsewhere as if confirmed.
+  covered by `schema.yaml`'s controlled vocabulary, any unreviewed
+  `CLAUDE_DRAFT` entry cited elsewhere as if confirmed, and source
+  citations that do not resolve to a registered ID in
+  `bibliography/sources.yaml` (which itself must parse as valid YAML).
 
 ## Regenerating
 
@@ -72,6 +74,13 @@ C:\Users\Lukas\OneDrive\Masterarbeit\Claude Masterarbeit\sources
 Without this file, `lint.py` reports a single INFO line noting the check
 was skipped, rather than failing — a missing local config file is not a
 defect in the repository itself.
+
+With the same file configured, `lint.py` additionally checks that every
+`file` in `bibliography/sources.yaml` actually exists in the external
+folder (ERROR if not), and lists every source document there that has no
+`sources.yaml` entry yet (WARNING). Files below `calculations/` or
+`experiments/` folders are own work products, not sources, and are
+skipped.
 
 ## What this still does not cover
 

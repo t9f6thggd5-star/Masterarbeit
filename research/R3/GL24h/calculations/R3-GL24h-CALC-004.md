@@ -5,9 +5,7 @@ scope:
   material: GL24h
 type: CALCULATION
 inputs:
-  normative_sources: >
-    DIN EN 1993-1-8:2010-12, Tab. 6.11, Steifigkeitskoeffizient k_10 für
-    Schrauben auf Zug (k_10 = 1,6·A_s/L_b).
+  normative_sources: DIN-EN-1993-1-8-2025, DIN-EN-1993-1-8-NA-2026
   literature:
   experimental_data:
   assumptions: >
@@ -15,10 +13,12 @@ inputs:
     L_b = 1660 mm, Stahl E_s = 210000 N/mm².
 method: >
   Axiale Dehnsteifigkeit der Gewindestange (Zug), berechnet als
-  Steifigkeitskoeffizient k_10 nach DIN EN 1993-1-8 Tab. 6.11
-  (k_10 = 1,6·A_s/L_b, Schrauben auf Zug), multipliziert mit dem
-  Stahl-E-Modul E_s, um von der dimensionslosen Steifigkeitszahl auf die
-  tatsächliche Federsteifigkeit zu kommen: c_t = E_s·k_10 = E_s·1,6·A_s/L_b.
+  Steifigkeitskoeffizient k_t nach DIN EN 1993-1-8:2025-04, Anhang A.13.2,
+  Gl. (A.40) (k_t = 1,6·A_s/L_b, nicht vorgespannte Schraubenreihe,
+  Schrauben mit Zugbeanspruchung; L_b nach Tabelle 8.2; entspricht k_10
+  in DIN EN 1993-1-8:2010-12, Tab. 6.11), multipliziert mit dem
+  Stahl-E-Modul E_s, um vom Steifigkeitskoeffizienten auf die
+  tatsächliche Federsteifigkeit zu kommen: c_t = E_s·k_t = E_s·1,6·A_s/L_b.
   Herleitung am 2026-09-22 vollständig nachvollzogen (siehe Update unten) —
   ursprünglich als nicht nachvollziehbar markiert.
 equations: >
@@ -65,3 +65,19 @@ c_t = E_s·1,6·A_s/L_b = 210000·1,6·245/1660 = 49590,36 N/mm = 49,59 kN/mm
 — exakte Übereinstimmung mit dem bisherigen Wert. Damit ist CALC-004 nun
 vollständig nachvollziehbar (siehe `equations`-Feld oben) statt nur als
 Endergebnis übernommen.
+
+**Update (2026-09-25, Quellenangabe auf aktuelle Normfassung umgestellt):**
+Der Normverweis bezog sich ursprünglich auf DIN EN 1993-1-8:2010-12,
+Tab. 6.11 (`k_10`). Diese Fassung ist durch DIN EN 1993-1-8:2025-04
+ersetzt (Quelle `DIN-EN-1993-1-8-2025`, Nationaler Anhang
+`DIN-EN-1993-1-8-NA-2026`); die 2010er-Fassung war nie in
+`bibliography/sources.yaml` registriert und liegt nicht mehr im
+Quellenordner. In der Fassung 2025-04 steht dieselbe Formel in
+Anhang A.13.2, Gl. (A.40), jetzt mit dem Symbol `k_t` (für eine nicht
+vorgespannte Schraubenreihe, Kategorie D; für vorgespannte Schrauben
+Gl. (A.41) `k_t = ∞`); die Dehnlänge `L_b` ist in Tabelle 8.2 definiert.
+Der Nationale Anhang 2026-04 enthält zu A.13.2 keine abweichende
+Festlegung. Formel und Eingangswerte sind unverändert, das Ergebnis
+(49,59 kN/mm) bleibt gültig — deshalb reine Korrektur der Quellenangabe,
+kein neuer Eintrag mit `superseded_by`. Der Nutzerhinweis oben ("Tab.
+6.11, k_10") bleibt als historischer Wortlaut stehen.
