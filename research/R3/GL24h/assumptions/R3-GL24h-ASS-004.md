@@ -18,7 +18,8 @@ reason: >
   Für die Beam-Seite liegen keine verwertbaren 4×4-Steifigkeitsdaten vor
   (III-PO-S-SC-44-B: PK2/PK3 ohne jede Messkurve, PK1 mit Steifigkeit
   manuell als "nv" markiert — Ursache laut Nutzerhinweis 2026-09-22
-  Querzugversagen im Holz, d. h. ein anderer Versagensmechanismus als
+  Querzugversagen im Holz [korrigiert 2026-09-25: Querdruck im
+  Mittelholz, siehe R3-GL24h-INT-001], d. h. ein anderer Versagensmechanismus als
   die ASSY-Schraubengruppen-Steifigkeit selbst; siehe R3-GL24h-OPQ-021).
   Auch der einzige Fmax-Wert dieser Serie (n=1, 47,3 kN) gilt aus
   demselben Grund nicht als belastbare Datenbasis für eine indirekte

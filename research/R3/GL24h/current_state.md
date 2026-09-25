@@ -141,7 +141,9 @@ R3-GL24h-OPQ-020 (Prüfkörper 1 von `III-PO-S-SD-36` als "entfällt"
 markiert, Ursache unklar) und R3-GL24h-OPQ-021 (Prüfkörper 2/3 von
 `III-PO-S-SC-44-B` fehlen komplett; Ursache für PK1's "nv"-Steifigkeit
 mittlerweile geklärt — Querzugversagen, s. u. — Ursache für die
-komplett fehlenden PK2/PK3 aber weiterhin unklar).
+komplett fehlenden PK2/PK3 aber weiterhin unklar). **Korrigiert
+2026-09-25:** Querdruck im Mittelholz statt Querzug, OPQ-021 RESOLVED
+(siehe Update am Ende).
 
 **Neu (2026-09-22):** R3-GL24h-OPQ-022 — die Beam-seitige ASSY-
 Schraubengruppen-Steifigkeit für 4×4/4×8 ist nicht empirisch belegt;
@@ -297,3 +299,18 @@ behandelte Zugpfad-Kontaktterm) existiert für R3 noch gar nicht und
 muss neu aufgebaut werden. C_v,f,rot-Integration ins Kinematikmodell
 mit dem Forschenden abstimmen. R3-GL24h-HYP-001 durch den Forschenden
 reviewen lassen.
+
+**Update (2026-09-25): Versagensursache III-PO-S-SC-44-B geklärt.**
+Geometrie der vier 4×4-Push-Out-Prüfkörper vom Nutzer nachgereicht
+(Skizzen III-BSH-VG-R/S-G-4x4, III-BB-VG-R/S-G-4x4; R = Riegel = "B",
+S = Stütze = "C"; Tiefe 160 mm bei GL24h, 185 mm bei GL75; Last über
+die volle Kopffläche des Mittelholzes). Bei R verläuft die Faser des
+Mittelholzes quer zur Last. Querdruckwiderstand des Mittelholzes
+84,88 kN (Mittelwert, k_mat = 1,0, R3-GL24h-CALC-009) gegenüber
+F_est = 290 kN. PK2/PK3 laut Nutzer durch Querdruck im Mittelholz
+versagt (ohne Messdaten), PK1 nach Kurvenverlauf ebenfalls
+(R3-GL24h-INT-001, `CLAUDE_DRAFT`; zuvor als Querzug vermerkt).
+R3-GL24h-OPQ-021 damit RESOLVED. Nächster Schritt: Rekonstruktion
+der Beam-seitigen 4×4-Steifigkeit aus dem linearen Kurvenast von PK1
+(n = 1) als möglicher Ersatz bzw. Prüfstein für R3-GL24h-ASS-004
+(R3-GL24h-OPQ-022 bleibt OPEN).

@@ -138,8 +138,9 @@ Rahmenecke/Materialkombination) gelten nur für diese Geometrie.
 4. **Dominierende Federn:** Muster, die bei allen drei Anschlüssen
    auftreten, sind übertragbare Aussagen. Ein solcher Vergleich ist nach
    CLAUDE.md Abschnitt 12 unter `wiki/cross_connection/` zu führen.
-5. **Anforderungen an Komponentenversuche:** z. B. Querzugversagen bei
-   III-PO-S-SC-44-B, fehlende Kraftaufteilung je Scherfuge in der
+5. **Anforderungen an Komponentenversuche:** z. B. Querdruckversagen
+   des Mittelholzes bei III-PO-S-SC-44-B (korrigiert 2026-09-25, zuvor
+   „Querzugversagen“; siehe R3-GL24h-INT-001), fehlende Kraftaufteilung je Scherfuge in der
    Auswertungsdatei, fehlende Beam-Gruppenversuche → Empfehlungen für
    künftige Versuchsprogramme.
 

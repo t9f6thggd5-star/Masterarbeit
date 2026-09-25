@@ -68,3 +68,12 @@ Push-Out-Versuch für die Beam-seitige 4×4-Konfiguration vorliegt, oder
 (b) eine belastbare, faserwinkelabhängige normative/wissenschaftliche
 Methode gefunden wird, die unabhängig von den fehlenden 44-B-Daten
 anwendbar ist.
+
+**Korrektur (2026-09-25):** Die Versagensursache bei III-PO-S-SC-44-B
+ist nicht Querzug, sondern Querdruck im Mittelholz an der
+Lasteinleitung (Nutzeraussage für PK2/PK3; für PK1 gedeutet in
+R3-GL24h-INT-001, Widerstand R3-GL24h-CALC-009 = 84,88 kN). Die
+Kraft-Weg-Kurve von PK1 ist unterhalb des Querdruckbeginns
+(≈ 50–64 kN) nahezu linear; eine Rekonstruktion der Beam-seitigen
+4×4-Steifigkeit aus diesem Bereich wird derzeit geprüft (n = 1). Die
+Frage bleibt OPEN.

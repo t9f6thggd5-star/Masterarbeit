@@ -3,7 +3,7 @@ open_question_id: R3-GL24h-OPQ-021
 scope:
   connection: R3
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   Warum liegen für die Serie III-PO-S-SC-44-B (Push-Out, Schraube,
   Lasche am Riegel, 4×4) nur für Prüfkörper 1 Werte vor (Fmax=47,3 kN,
@@ -22,8 +22,15 @@ context: >
 related_sources:
 options_considered:
 date_opened: "2026-09-16"
-date_resolved:
-resolution:
+date_resolved: "2026-09-25"
+resolution: >
+  Nutzer (2026-09-25): PK2 und PK3 sind durch Querdruck im Mittelholz
+  versagt, es gibt keine Messdaten. PK1 hat eine vollständige Kurve,
+  versagt aber vor 0,4·F_est (daher "nv"); Versagensursache ebenfalls
+  Querdruck am Kopf des Mittelholzes (R3-GL24h-INT-001, CLAUDE_DRAFT;
+  R3-GL24h-CALC-009). Ursache ist die Konstruktion des R-Prüfkörpers
+  (Last quer zur Faser auf 160 × 160 mm, Widerstand ≈ 85 kN bei
+  F_est = 290 kN), nicht die Schraubengruppe.
 ---
 
 Aufgefallen beim Einpflegen der Push-Out-Steifigkeitsauswertung ins

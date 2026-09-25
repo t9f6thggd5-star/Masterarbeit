@@ -30,3 +30,14 @@ Einzelwerte (Fmax,SF, Blatt "Überblick"):
 | **Mittelwert** | **47.300** |
 
 **n=1: dieses Ergebnis ist ein Einzelbefund** und wird nicht als typisches oder charakteristisches Verhalten der Serie dargestellt (CLAUDE.md Abschnitt 15). Auch die Steifigkeit von PK1 ist 'nv' (nicht verwertbar) — für diese Serie liegt daher kein Steifigkeits-Eintrag vor. Warum PK2/PK3 fehlen und ob PK1 selbst belastbar ist, ist ungeklärt und wird hier bewusst nicht geraten (CLAUDE.md Abschnitt 4) — bitte beim Nutzer klären.
+
+**Update (2026-09-25, Nutzeraussage + Kurvenprüfung):** PK2 und PK3 sind
+laut Nutzer durch Querdruck im Mittelholz versagt; Messdaten gibt es
+dazu keine (Blätter leer). Für PK1 liegt die vollständige Kraft-Weg-
+Kurve vor (Blatt "III-PO-S-SC-44-B-1", F_max = 93,969 kN, Maschine
+94,6 kN); PK1 hat 0,4·F_est = 116 kN nie erreicht, deshalb ergibt die
+Auswertung nach EN 26891 `#DIV/0!` ("nv"). Die Ursache des Versagens
+wird jetzt als Querdruck am Kopf des Mittelholzes gedeutet, nicht mehr
+als Querzug (R3-GL24h-INT-001, `CLAUDE_DRAFT`; Querdruckwiderstand
+R3-GL24h-CALC-009 = 84,88 kN). Der hier angegebene Wert 47,3 kN je
+Scherfuge ist damit keine Tragfähigkeit der Schraubengruppe.

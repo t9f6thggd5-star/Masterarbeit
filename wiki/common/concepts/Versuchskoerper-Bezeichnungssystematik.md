@@ -84,3 +84,22 @@ für R3.
 `T` (Versuchsart) = Tension/Zugversuch und `BR` (Verbindungsmittelart) =
 eingeklebte Gewindestange (Bonded-in Rod) sind vom Nutzer am 2026-09-16
 im Chat ebenfalls explizit bestätigt (siehe Tabelle oben).
+
+## Plan-Bezeichnungen der R3-Push-Out-Prüfkörper (Ergänzung 2026-09-25)
+
+Die Skizzen der 4×4-Schrauben-Prüfkörper tragen eine abweichende
+Plan-Bezeichnung, z. B. `III-BSH-VG-R-G-4x4`. Zuordnung (vom Nutzer am
+2026-09-25 bestätigt):
+
+| Plan-Segment | Bedeutung | Entspricht im Versuchscode |
+|---|---|---|
+| `BSH` / `BB` | Brettschichtholz GL24h / BauBuche GL75 | `S` / `B` (Holzart) |
+| `VG` | Vollgewindeschraube | `SC` |
+| `R` / `S` | Riegel / Stütze | `B` (Beam) / `C` (Column) |
+| `4x4` | Schraubenanordnung | `44` |
+| `G` | nicht erläutert | — |
+
+Bei `R` verläuft die Faser des Mittelholzes quer zur Prüflast
+(Ansicht zeigt die Stirnfläche), bei `S` parallel dazu; die Laschen
+haben in beiden Varianten Faser parallel zur Last. Tiefe der
+Prüfkörper: 160 mm (GL24h), 185 mm (GL75).
