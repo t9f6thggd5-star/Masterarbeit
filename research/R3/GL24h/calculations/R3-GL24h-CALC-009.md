@@ -34,7 +34,7 @@ result:
   original_value:
   original_unit:
 source_file: >
-  R3/GL24h/calculations/R3_44B_Querdruck_und_Steifigkeit.xlsx, Blatt
+  R3/GL24h/calculations/R3_44B_Querdruck_und_Steifigkeit_2.xlsx, Blatt
   "Querdruck Mittelholz" (erstellt 2026-09-25, Zelle B15). Kraft-Weg-Kurve von PK1 aus
   common/general/Auswertung_Steifigkeiten_Push-Out-Versuche_FINAL.xlsx,
   Blatt "III-PO-S-SC-44-B-1" (Stand 16.09.2026).

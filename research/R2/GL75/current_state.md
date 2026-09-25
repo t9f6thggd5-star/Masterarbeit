@@ -207,3 +207,23 @@ diesem Blatt ("I54/I56") wurde korrigiert auf die tatsächliche Zelle
 beide Materialien haben die vollständige Druck- und Zugseiten-
 Steifigkeitskette samt `S_j,ini` sowohl im Wiki als auch im R2-Excel
 selbst dokumentiert.
+
+## Folgen aus der Betreuungs-Rückmeldung vom 25.09.2026
+
+Die Rückmeldung betraf R1 (siehe R1-COMMON-OPQ-003/004, R1-GL75-OPQ-001,
+R1-GL75-CALC-003, R1/GL24h current_state). Hier stehen die Folgen, die
+sich daraus für diese Verbindung ergeben. Keine direkte Übertragung von
+R1 ohne Bestätigung (CLAUDE.md Abschnitt 4) — die Punkte sind zu prüfende
+Folgen, keine Ergebnisse.
+
+1. **Messbasis der BR-Zugversuche:** Offen ist, ob der Messwert der
+   Gewindestangen-Zugversuche (BR-11/BR-22) nur die Relativverschiebung an
+   der Stange enthält oder auch Holzverformung. Davon hängt ab, ob in
+   c_T neben dem gemessenen Stangengruppenwert die Holzanteile (c_c,90,
+   c_v) getrennt anzusetzen sind — so wie derzeit umgesetzt — oder ob
+   Doppelzählung vorliegt. Bei der Betreuung klären (analog
+   R1-COMMON-OPQ-003, COMMON-COMMON-OPQ-003).
+2. **Lastfenster:** Die Regel der Betreuung (0,1–0,4 · F_est des
+   Prüfprogramms) bestätigt die bestehende K_ser-Auswertung (R2-COMMON-DEC-003).
+3. **Übernommene Auswertedateien prüfen (COMMON-COMMON-DEC-007)**, auch
+   `R2/COMMON/calculations/2026-06_05_Auswertung_Steifigkeiten_Bonded-inRods.xlsx`.

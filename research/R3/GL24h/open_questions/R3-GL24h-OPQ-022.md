@@ -88,3 +88,10 @@ R3-GL24h-DEC-014): direkt 67,0 kN/mm, übertragen auf das Normfenster
 sie aber nicht (n = 1). Offen: welcher Wert in die Zugpfadkette eingeht,
 bzw. ob beide als Bandbreite in die Parameterstudie gehen. Status bleibt
 OPEN.
+
+**Ergänzung (2026-09-25), Empfindlichkeit:** Mit einer Fensterkorrektur aus
+den 1×1-Serien (Verhältnis B/C 0,854 im Lastfenster 10–20 % F_est gegenüber
+0,803 im Normfenster) ergibt sich 74,1 kN/mm je Scherfuge
+(R3-GL24h-CALC-010). Vorgeschlagene Spanne für die Parameterstudie:
+etwa 74–84 kN/mm je Scherfuge (16 Schrauben) bzw. 130–147 kN/mm
+(32 Schrauben). Entscheidung weiterhin offen.

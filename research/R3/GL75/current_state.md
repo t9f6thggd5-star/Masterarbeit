@@ -98,3 +98,26 @@ Klärung von R3-GL75-OPQ-002 (fehlende Steifigkeitsauswertung
 Auswertungsdatei. Ansonsten keine weiteren offenen Schritte zu
 `III-PO-B-SC-44-B`/`-C` — Fmax,SF liegt vor und ist mit den übrigen
 44er-Serien vergleichbar.
+
+## Folgen aus der Betreuungs-Rückmeldung vom 25.09.2026
+
+Die Rückmeldung betraf R1 (siehe R1-COMMON-OPQ-003/004, R1-GL75-OPQ-001,
+R1-GL75-CALC-003, R1/GL24h current_state). Hier stehen die Folgen, die
+sich daraus für diese Verbindung ergeben. Keine direkte Übertragung von
+R1 ohne Bestätigung (CLAUDE.md Abschnitt 4) — die Punkte sind zu prüfende
+Folgen, keine Ergebnisse.
+
+1. **Messbasis der Push-Out-Versuche (offen, COMMON-COMMON-OPQ-003):**
+   Gilt wie bei R1 nur die Relativverschiebung an der Schraubengruppe,
+   enthalten spätere Schraubengruppen-Steifigkeiten für GL75 nur die
+   Schrauben; die Laschenverformung ist dann getrennt anzusetzen (wie bei
+   R3/GL24h, siehe dort).
+2. **c_br,par / c_br,perp:** im Katalog Buchholz2025 ohne Steifigkeit,
+   Vorschlag starr (analog R1-COMMON-OPQ-005).
+3. **Tragfähigkeit:** Sprödversagen als eigene Komponente nachweisen
+   (vgl. R1-GL24h-OPQ-015).
+4. **Lastfenster:** Steifigkeit im Fenster 0,1–0,4 · F_est des
+   Prüfprogramms auswerten. Für die 44er-Serien (III-PO-B-SC-44-B/-C)
+   fehlt die Steifigkeitsauswertung weiterhin (R3-GL75-OPQ-002); die
+   Blätter in der Auswertungsdatei sind leer (F_est = 500 kN eingetragen).
+5. **Übernommene Auswertedatei prüfen (COMMON-COMMON-DEC-007).**

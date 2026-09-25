@@ -328,3 +328,49 @@ Wert in die Zugpfadkette geht, ist offen (OPQ-022). Neu projektweit:
 COMMON-COMMON-DEC-007 (übernommene Auswertedateien vor Verwendung prüfen)
 und COMMON-COMMON-OPQ-003 (Herkunft der Push-Out-Auswertung, Messaufbau
 der Push-Out-Versuche).
+
+**Ergänzung (2026-09-25):** Empfindlichkeit der Rekonstruktion mit
+1×1-Fensterkorrektur: 74,1 kN/mm je Scherfuge (R3-GL24h-CALC-010); Spanne
+Rekonstruktion 74–79 kN/mm, mit Faktorwert 74–84 kN/mm. Gültige
+Rechendatei: R3/GL24h/calculations/R3_44B_Querdruck_und_Steifigkeit_2.xlsx.
+
+## Folgen aus der Betreuungs-Rückmeldung vom 25.09.2026
+
+Die Rückmeldung betraf R1 (siehe R1-COMMON-OPQ-003/004, R1-GL75-OPQ-001,
+R1-GL75-CALC-003, R1/GL24h current_state). Hier stehen die Folgen, die
+sich daraus für diese Verbindung ergeben. Keine direkte Übertragung von
+R1 ohne Bestätigung (CLAUDE.md Abschnitt 4) — die Punkte sind zu prüfende
+Folgen, keine Ergebnisse.
+
+1. **Messbasis der Push-Out-Versuche (offen, COMMON-COMMON-OPQ-003):**
+   Bei R1 enthält der Messwert nur die Relativverschiebung an der
+   Verbindungsmittelgruppe, ohne Holzverformung. Falls das für die
+   R3-Push-Out-Versuche ebenso gilt, enthalten die Schraubengruppen-
+   Steifigkeiten (CALC-007/008, CALC-010) nur die Schrauben. Folge:
+   c_H,Lasche ist im Zugpfad getrennt anzusetzen; das "c_c,0" in der
+   c_t,sleeve-Formel von Buchholz2025 entspricht dann c_H,Lasche und ist
+   keine zusätzliche Feder (betrifft die offene c_c,0-Frage vom
+   2026-09-22, siehe "Nächste Schritte" oben).
+2. **c_br,par und c_br,perp im Zugpfad:** Beide stehen in der
+   c_t,sleeve-Formel von Buchholz2025, haben im Komponentenkatalog
+   (Tab. 1, Nr. 13/14) aber nur eine Tragfähigkeitsregel (FprEN 11.5/11.6),
+   keine Steifigkeit. Vorschlag: als starr ansetzen, analog
+   R1-COMMON-OPQ-005 (dort noch offen). Bei der Neuzusammensetzung von
+   c_t,sleeve entscheiden.
+3. **Tragfähigkeit:** Sprödversagen (br,par, br,perp) als eigene
+   Komponenten nachweisen. Bei R1/GL24h war ein solches Versagen
+   (Blockscheren + Nettoquerschnitt Holz) maßgebend (R1-GL24h-OPQ-015).
+4. **Lastfenster und K_ser:** Die Regel der Betreuung (Auswertung im
+   Fenster 0,1–0,4 · F_est des Prüfprogramms, linear-elastisch, ohne
+   Anfangsschlupf; niedrigere Höchstlast aus anderem Versagensmodus ist
+   für die Steifigkeit unerheblich) bestätigt die bestehende
+   K_ser-Auswertung der Push-Out-Versuche. Umgesetzt für 44-B in
+   R3-GL24h-DEC-014/CALC-010. Sonderfall: SC-11-B-1 wurde mit
+   F_est = 8 kN statt 20 kN geprüft (Fenster 0,8–3,2 kN); prüfen, ob
+   c1,Beam und damit der Faktor 0,8028 (ASS-004) davon beeinflusst werden
+   (bei Auswertung 2–7,5 kN etwa +2 % auf c1,Beam).
+5. **Übernommene Auswertedatei prüfen (COMMON-COMMON-DEC-007):** Grobprüfung
+   der Push-Out-Auswertung am 2026-09-25 ohne gravierenden Fehler; Befunde:
+   SC-11-B-1 mit F_est = 8 kN (s. o.), K_e-Startpunkte F21 teils 4–37 % über
+   0,1 · F_est, F_max im "Überblick" aus dem Maschinenwert (0,5–2,6 % über
+   dem Datenmaximum).
