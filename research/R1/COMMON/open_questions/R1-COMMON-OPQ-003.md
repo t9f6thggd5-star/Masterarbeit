@@ -3,7 +3,7 @@ open_question_id: R1-COMMON-OPQ-003
 scope:
   connection: R1
   material: COMMON
-status: OPEN
+status: RESOLVED
 question: >
   Wo waren die Wegaufnehmer (LVDT) der Zugversuche "I-T-S-SD-28-1/2/3"
   (GL24h) und "I-T-B-SD-28-1/2/3" (GL75) befestigt (Bezugspunkte an
@@ -36,10 +36,25 @@ options_considered: >
   separat ermitteln (Quelle noch offen). Zu klären anhand von Skizze,
   Foto oder Versuchsbericht des Messaufbaus.
 date_opened: "2026-09-21"
-date_resolved:
-resolution:
+date_resolved: "2026-09-25"
+resolution: >
+  Option (b). Laut Betreuung wurde in den Zugversuchen die
+  Relativverschiebung zwischen Schlitzblech und Holz auf Höhe der
+  Schwerachse der Verbindungsmittelgruppe gemessen (beide Bezugspunkte auf
+  derselben Höhe). Die Holzverformung der gesamten Verbindung ist im
+  Messwert nicht enthalten; der Messwert entspricht damit im Wesentlichen
+  c_v,f (Dübelabscheren). Bei den Druckversuchen wurde zusätzlich die
+  Gesamtverformung der Verbindung gemessen. Die Arbeitsannahme (a) vom
+  2026-09-21 ist damit widerlegt. Quelle: Rückmeldung der Betreuung, vom Nutzer im Chat weitergegeben (2026-09-25).
 ---
 
 Aufgenommen auf Wunsch des Nutzers (2026-09-21). Solange die Bezugspunkte
 nicht geklärt sind, gilt die Arbeitsannahme (a); daraus abgeleitete Werte
 sind entsprechend als vorläufig zu kennzeichnen.
+
+**Update (2026-09-25):** RESOLVED. Folgefragen: Wie c_br,par im Modell
+angesetzt wird und ob die Zugverformung des Holzes als eigene Feder
+ergänzt werden muss, steht in R1-COMMON-OPQ-005. Hinweis: Im
+Komponentenkatalog Buchholz2025 (Tab. 1, Nr. 13 "Brittle failure, lateral
+load parallel to grain") ist für br,par nur eine Tragfähigkeitsregel
+(FprEN 11.5) angegeben, keine Steifigkeit.

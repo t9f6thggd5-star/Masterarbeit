@@ -83,3 +83,9 @@ I7·2 = 1244,54 kN, damit M_max aus Versuchen 684,5 kNm (C102). Das R2-Blatt
 "Rahmenecke GL75 SD" (C48, n_0 = 3, a_1 = 85mm, n_ef = 2,31) setzt für GL75
 dagegen die Zeile (6) an (anderer Anschluss, nicht geprüft; Querverweis,
 gehört zu R2).
+
+**Update (2026-09-25), Versagensmodus:** Laut Betreuung sind die
+GL75-Zugversuche I-T-B-SD-28 durch Versagen des Nettoquerschnitts im
+Schlitzblech versagt. Die Höchstlasten 581 / 640 / 646 kN sind damit nur
+eine Untergrenze für die Dübelgruppe; die Übereinstimmung
+F_max/F_est = 0,93–1,03 bestätigt n_ef = 7,31 nicht. Quelle: Rückmeldung der Betreuung, vom Nutzer im Chat weitergegeben (2026-09-25).

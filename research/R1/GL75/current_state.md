@@ -58,3 +58,13 @@ im Wiki abgelegt.
 
 Johansen-Tragfähigkeit und Verformungsabschätzung analog zu R1/GL24h auch
 für GL75 auswerten (Sheet "Rahmenecke GL75 SD" der externen Excel-Datei).
+
+**Update (2026-09-25), Rückmeldung der Betreuung:**
+- Zugversuche I-T-B-SD-28 (GL75): Versagen des Nettoquerschnitts im
+  Schlitzblech; F_max ist nur eine Untergrenze der Dübelgruppe
+  (R1-GL75-CALC-003).
+- R1-GL75-OPQ-001 RESOLVED: ρ_mean = 800 kg/m³; 730 kg/m³ war ein Fehler
+  der Auswertungsdatei (nur Vergleichswerte betroffen).
+- R1-COMMON-OPQ-003/004 RESOLVED: Messwert = c_v,f; Lastfenster mit
+  F_est = 800 kN bleibt, c_t,tot = 727,74 kN/mm unverändert. Offen:
+  R1-COMMON-OPQ-005.

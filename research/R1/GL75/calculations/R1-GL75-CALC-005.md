@@ -38,3 +38,10 @@ superseded_by:
 Messbasis der Wegaufnehmer (R1-COMMON-OPQ-003). Die Drehfedern gehen nicht in
 c_t,tot ein, siehe R1-GL75-CALC-004; die Druckseite (c_c,tot) fehlt, die obere
 Grenze von C_rot,t+c ist z² · c_t,tot = 220.141 kNm/rad mit z = 550 mm (R1-GL24h-OPQ-003).
+
+**Update (2026-09-25):** R1-COMMON-OPQ-004 ist geklärt: Das Lastfenster mit
+F_est = 800 kN ist richtig, die Auswertung mit 627,08 kN entfällt, c_T und
+c_t,tot bleiben unverändert. R1-COMMON-OPQ-003 ist geklärt: Der Messwert
+entspricht c_v,f, die Holzverformung ist nicht enthalten (Begründung in
+`method` überholt, siehe R1-GL24h-CALC-008). Offen bleibt R1-COMMON-OPQ-005
+(c_br,par starr? Zugverformung des Holzes?).

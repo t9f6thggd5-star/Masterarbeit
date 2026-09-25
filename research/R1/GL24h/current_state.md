@@ -63,3 +63,14 @@ FprEN Tab. 11.12; C_rot,v,f = 21.111 kNm/rad je 4×8-Gruppe). Offen dazu: R1-GL2
 Kinematische Herleitung gemäß R1-GL24h-HYP-001 (Schritte 1–5); danach
 Umrechnung von Rahmeneckenrotation auf Aktuatorweg für die
 Versuchsplanung.
+
+**Update (2026-09-25), Rückmeldung der Betreuung:**
+- Zugversuche I-T-S-SD-28 (GL24h): Versagen durch kombiniertes
+  Blockscheren und Nettoquerschnittsversagen im Holz; die tatsächliche
+  Höchstlast wurde erreicht. Maßgebend ist damit ein Sprödversagen des
+  Holzes (Komponente br,par, FprEN 11.5), nicht die Johansen-Tragfähigkeit
+  (R1-GL24h-CALC-003). Rechnerischer Nachweis offen (R1-GL24h-OPQ-015).
+- R1-COMMON-OPQ-003 RESOLVED: Messwert = c_v,f, Holzverformung nicht
+  enthalten; Folgefrage R1-COMMON-OPQ-005.
+- R1-COMMON-OPQ-004 RESOLVED: Lastfenster mit F_est = 480 kN bleibt,
+  c_T = 559,04 kN/mm und c_t,tot = 279,52 kN/mm unverändert.

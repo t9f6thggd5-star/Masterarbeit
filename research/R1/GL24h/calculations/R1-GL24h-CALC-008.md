@@ -47,3 +47,13 @@ festlegt, ob c_br,par im Messwert steckt (R1-COMMON-OPQ-003).
 c_c,0; Versuche liegen nicht vor. Ohne c_c,tot liegt C_rot,t+c zwischen
 42.277 kNm/rad (c_c,tot = c_t,tot) und 84.555 kNm/rad (Druckseite starr) mit
 z = 550 mm (Abstand der resultierenden Zug- und Druckkraft, R1-GL24h-OPQ-003).
+
+**Update (2026-09-25):** Die Offenpunkte oben sind geklärt.
+R1-COMMON-OPQ-004: Das Lastfenster mit F_est = 480 kN ist richtig, c_T und
+c_t,tot bleiben unverändert. R1-COMMON-OPQ-003: Der Messwert enthält die
+Holzverformung nicht und entspricht c_v,f; die Begründung "c_v,f und
+c_br,par zusammengefasst" in `method` ist damit überholt. c_br,par hat im
+Katalog Buchholz2025 keine Steifigkeitsangabe; solange es als starr gilt,
+bleibt der Zahlenwert 279,52 kN/mm unverändert. Ob c_br,par starr
+angesetzt und ob die Zugverformung des Holzes ergänzt wird, ist offen
+(R1-COMMON-OPQ-005). Zahlenwert daher weiterhin vorläufig.

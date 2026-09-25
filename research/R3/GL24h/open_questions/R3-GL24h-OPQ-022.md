@@ -77,3 +77,14 @@ Kraft-Weg-Kurve von PK1 ist unterhalb des Querdruckbeginns
 (≈ 50–64 kN) nahezu linear; eine Rekonstruktion der Beam-seitigen
 4×4-Steifigkeit aus diesem Bereich wird derzeit geprüft (n = 1). Die
 Frage bleibt OPEN.
+
+**Update (2026-09-25), Rekonstruktion:** Aus der Erstbelastung von
+III-PO-S-SC-44-B-1 wurde die Beam-seitige 4×4-Steifigkeit rekonstruiert
+(R3-GL24h-CALC-010, Hauptwert Lastfenster 10–20 % F_est nach
+R3-GL24h-DEC-014): direkt 67,0 kN/mm, übertragen auf das Normfenster
+78,8 kN/mm je Scherfuge, also 6,5 % unter dem Wert aus dem Faktor 0,8028
+(84,3 kN/mm, CALC-008); hochgerechnet auf 32 Schrauben 137,9 statt
+147,5 kN/mm. Die Rekonstruktion stützt die Größenordnung von ASS-004, belegt
+sie aber nicht (n = 1). Offen: welcher Wert in die Zugpfadkette eingeht,
+bzw. ob beide als Bandbreite in die Parameterstudie gehen. Status bleibt
+OPEN.

@@ -3,7 +3,7 @@ open_question_id: R1-COMMON-OPQ-004
 scope:
   connection: R1
   material: COMMON
-status: OPEN
+status: RESOLVED
 question: >
   Welche F_est-Basis legt das Lastfenster (0,1 bis 0,4·F_est) fest, in dem
   K_ser der Zugversuche I-T-S-SD-28 (GL24h) und I-T-B-SD-28 (GL75)
@@ -56,8 +56,18 @@ options_considered: >
   der Last angeben. Zu klären durch den Nutzer; Verwandt:
   R1-COMMON-OPQ-003 (LVDT-Bezugspunkte) für die Zugpfadfeder.
 date_opened: "2026-09-21"
-date_resolved:
-resolution:
+date_resolved: "2026-09-25"
+resolution: >
+  Option (a): Das Lastfenster bleibt 0,1 bis 0,4 · F_est mit dem
+  Planungswert der Auswerteblätter (GL24h 480 kN, GL75 800 kN), K_ser
+  bleibt 279,52 bzw. 727,74 kN/mm je 2×8-Gruppe. Begründung der Betreuung:
+  Die Steifigkeit wird im Bereich der Hystereseschleife ausgewertet, damit
+  K_ser und K_e vergleichbar sind; wichtig ist die Auswertung im
+  linear-elastischen Bereich ohne Anfangsschlupf, was hier passt. Die
+  geringere Höchstlast der Versuche ergibt sich aus einem anderen
+  Versagensmodus und steht nicht in direktem Zusammenhang mit der
+  Steifigkeit der Verbindung. Die Neuauswertungen mit 313,6 kN bzw.
+  471,8/627,08 kN entfallen. Quelle: Rückmeldung der Betreuung, vom Nutzer im Chat weitergegeben (2026-09-25).
 ---
 
 Aufgenommen auf Wunsch des Nutzers (2026-09-21). Bis zur Klärung sind alle
@@ -76,3 +86,8 @@ K_ser wurde für das Fenster 0,1 bis 0,4 · 627,08 kN (63 bis 251 kN) noch
 nicht ausgewertet. Höchstlasten der Versuche laut Excel 581,0 / 640,2 /
 645,7 kN (Mittel 622,3 kN), also 0,93 bis 1,03 · 627,08 kN. Für GL24h
 unverändert (Arbeitsstand F_est = 480 kN). Die Frage bleibt für GL75 OPEN.
+
+**Update (2026-09-25):** RESOLVED. Klarstellung zum Update vom
+2026-09-21: Die dort genannte Verwendung von 627,08 kN als F_est betrifft
+die rechnerische Tragfähigkeitsschätzung (R1-GL75-CALC-003), nicht das
+Lastfenster der Steifigkeitsauswertung.

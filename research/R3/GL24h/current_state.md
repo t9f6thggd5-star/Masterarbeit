@@ -76,7 +76,9 @@ unverändert fort.
   R3-GL24h-DEC-011 (gewählte Last 4×8-ASSY-Schraubengruppe = 329,054 kN,
   aus CALC-006 übernommen); R3-GL24h-DEC-012 (LINKS/RECHTS = zwei
   unabhängige Verbindungen, Poolung n=6/n=4); R3-GL24h-DEC-013
-  (K_ser/K_e-Rohwerte aus der Auswertungsdatei sind um Faktor 2 zu hoch,
+  (K_ser/K_e-Rohwerte aus der Auswertungsdatei sind um Faktor 2 zu hoch
+  [umformuliert 2026-09-25: beziehen sich auf den doppelseitigen
+  Prüfkörper, Halbierung = Umrechnung auf eine Laschenseite],
   analog Fmax,SF=Fmax,ges/2 zu halbieren — RES-003→RES-004-Korrektur);
   siehe auch COMMON-COMMON-DEC-001–006
   (korrigiert 2026-09-22, zuvor stand hier "–004"; tatsächlich 6
@@ -314,3 +316,15 @@ R3-GL24h-OPQ-021 damit RESOLVED. Nächster Schritt: Rekonstruktion
 der Beam-seitigen 4×4-Steifigkeit aus dem linearen Kurvenast von PK1
 (n = 1) als möglicher Ersatz bzw. Prüfstein für R3-GL24h-ASS-004
 (R3-GL24h-OPQ-022 bleibt OPEN).
+
+**Update (2026-09-25, Nachmittag):** R3-GL24h-DEC-013 umformuliert: Die
+Werte der Auswertungsdatei sind nicht "zu hoch", sondern Steifigkeiten des
+doppelseitigen Prüfkörpers; die Halbierung ist die Umrechnung auf eine
+Laschenseite (Zahlen unverändert). Rekonstruktion der Beam-seitigen
+4×4-Steifigkeit aus 44-B-1 abgeschlossen (R3-GL24h-CALC-010, Hauptwert
+Lastfenster 10–20 % F_est nach R3-GL24h-DEC-014): 78,8 kN/mm je Scherfuge
+(übertragen), 6,5 % unter dem Faktorwert 84,3 kN/mm (CALC-008). Welcher
+Wert in die Zugpfadkette geht, ist offen (OPQ-022). Neu projektweit:
+COMMON-COMMON-DEC-007 (übernommene Auswertedateien vor Verwendung prüfen)
+und COMMON-COMMON-OPQ-003 (Herkunft der Push-Out-Auswertung, Messaufbau
+der Push-Out-Versuche).
