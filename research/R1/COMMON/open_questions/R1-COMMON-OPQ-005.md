@@ -37,3 +37,11 @@ resolution:
 
 Entstanden aus der Rückmeldung der Betreuung zu R1-COMMON-OPQ-003
 (2026-09-25).
+
+**Update (2026-09-26), Arbeitsannahme zu (a):** c_br,par wird vorläufig
+als starr angesetzt (Nutzerentscheidung). Die Frage bleibt als offener
+Diskussionspunkt mit der Betreuung bestehen: Der Katalog Buchholz2025 gibt
+für br,par nur eine Tragfähigkeitsregel an, das Federmodell (Gl. 2) führt
+c_br,par aber zweimal in Reihe im Zugpfad. Mit c_br,par starr bleibt
+c_t,tot = 279,52 kN/mm (GL24h) bzw. 727,74 kN/mm (GL75). (b) und (c) sind
+unverändert offen. Siehe auch R1-COMMON-DEC-004.

@@ -52,3 +52,7 @@ Nutzers steht aus. Zum Vergleich: die obere Grenze des Kräftepaar-Glieds
 C_rot,t+c = z² · c_t,tot (Druckseite starr) ist 84.555 kNm/rad mit
 z = 550 mm (Abstand der resultierenden Zug- und Druckkraft, R1-GL24h-OPQ-003;
 Blatt C101); mit c_c,tot = c_t,tot 42.277 kNm/rad.
+
+**Update (2026-09-26):** Die Kombination der vier Drehfedern ist
+entschieden: Buchholz2025 Gl. (5) wie gedruckt, also Summe der vier
+Drehfedern (4 · 21.111 = 84.444 kNm/rad) plus C_rot,t+c (R1-COMMON-DEC-004).

@@ -74,3 +74,13 @@ Versuchsplanung.
   enthalten; Folgefrage R1-COMMON-OPQ-005.
 - R1-COMMON-OPQ-004 RESOLVED: Lastfenster mit F_est = 480 kN bleibt,
   c_T = 559,04 kN/mm und c_t,tot = 279,52 kN/mm unverändert.
+
+**Update (2026-09-26), Modellfestlegungen:**
+- Federmodell nach Buchholz2025 Gl. (1)–(5), Drehfedern nach Gl. (5)
+  summiert (R1-COMMON-DEC-004); Abb. 3 schematisch gelesen, kein
+  Widerspruch zu Gl. (5).
+- Schlitzblech starr (R1-COMMON-DEC-003, löst R1-GL24h-OPQ-009).
+- c_br,par vorläufig starr, offener Diskussionspunkt (R1-COMMON-OPQ-005).
+- Noch offen: Druckzone (c_v,f der Druckgruppe, c_c,0), Zugverformung
+  des Holzes, F_est-Basis für die Übersichtstabelle, K_ser für die
+  Drehfeder (Norm oder Versuch).

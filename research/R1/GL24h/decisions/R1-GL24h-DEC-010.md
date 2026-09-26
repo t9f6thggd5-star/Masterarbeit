@@ -42,3 +42,9 @@ Umsetzung im Blatt "Rahmenecke GL24h SD"
 (2026-09-21) geometrisch identisch mit der Zuggruppe (4×8, a_1 = 80 mm,
 a_2 = 50 mm), sodass alle vier Gruppen dasselbe C_rot,v,f haben. Wovon der
 Normwert selbst abhängt (ρ_mean, Versuchsbelege), steht in R1-GL24h-OPQ-014.
+
+**Update (2026-09-26):** Die Kombination der vier Drehfedern ist mit
+R1-COMMON-DEC-004 entschieden (Buchholz2025 Gl. 5). Ob statt des Normwerts
+der Versuchswert c_T / 32 verwendet wird, hat der Nutzer am 2026-09-26
+erneut aufgeworfen, nachdem die Betreuung bestätigt hat, dass der Messwert
+nur c_v,f enthält (R1-COMMON-OPQ-003); noch nicht entschieden.
