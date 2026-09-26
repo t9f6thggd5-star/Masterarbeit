@@ -92,3 +92,18 @@ Zugseite im Excel in c_v,f und c_br,par getrennt; Kräftepaar mit
 Druckseite starr plus vier Drehfedern nach Buchholz2025 Gl. (5).
 Nächste Schritte: F_est/M_R festlegen, K_ser für die Drehfeder (Norm oder
 Versuch) entscheiden, dann Φ = M_R/C_rot,tot und u_M für die Übersicht.
+
+**Update (2026-09-26), Verdrehung bei Höchstlast (Variante 3):**
+Mittelkurve der 6 Zugversuchsgruppen aufbereitet (R1-GL24h-DEC-011) und
+M-φ der Ecke berechnet (R1-GL24h-CALC-010): Φ bei M_R = 399,49 kNm =
+2,37 mrad ohne / 3,40 mrad mit Anfangsschlupf (Spanne M_R 390,6–412,0 kNm →
+2,33–2,44 bzw. 3,35–3,46 mrad). Linear mit C_rot,tot: 2,36 mrad. Skript,
+CSV und Grafiken unter R1/GL24h/calculations/ im Quellenordner.
+Neue offene Fragen: R1-COMMON-OPQ-007 (Tragfähigkeit vs. Gl. 5,
+Tragreserve Gruppendrehung), R1-COMMON-OPQ-008 (K_ser oder K_e,
+Anfangsschlupf in Φ); beide in der E-Mail an die Betreuung (2026-09-26)
+zusammen mit OPQ-005/006, F_est-Hochrechnung und Hebelarm a.
+**Nächste Schritte:** Antwort der Betreuung einarbeiten; Hebelarm a
+klären (OPQ-010) → u_M; F_est/M_R-Basis endgültig festlegen; danach
+GL75 (Variante 1, Kurve nur mit Vorbehalt Blechfließen) und R2/R3 für die
+Übersichtstabelle.

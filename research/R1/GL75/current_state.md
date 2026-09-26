@@ -81,7 +81,7 @@ für GL75 auswerten (Sheet "Rahmenecke GL75 SD" der externen Excel-Datei).
   des Holzes, F_est-Basis für die Übersichtstabelle, K_ser für die
   Drehfeder (Norm oder Versuch).
 
-**Update (2026-09-26), Anfangsrotationssteifigkeit:** C_rot,tot = 442.125 kNm/rad (R1-GL75-CALC-006; Excel-Zelle N27 verweist noch auf C101 statt z = C91).
+**Update (2026-09-26), Anfangsrotationssteifigkeit:** C_rot,tot = 442.125 kNm/rad (R1-GL75-CALC-006).
 Zugseite im Excel in c_v,f und c_br,par getrennt; Kräftepaar mit
 Druckseite starr plus vier Drehfedern nach Buchholz2025 Gl. (5).
 Nächste Schritte: F_est/M_R festlegen, K_ser für die Drehfeder (Norm oder
