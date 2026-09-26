@@ -107,3 +107,7 @@ zusammen mit OPQ-005/006, F_est-Hochrechnung und Hebelarm a.
 klären (OPQ-010) → u_M; F_est/M_R-Basis endgültig festlegen; danach
 GL75 (Variante 1, Kurve nur mit Vorbehalt Blechfließen) und R2/R3 für die
 Übersichtstabelle.
+**Für die Besprechung am 2026-09-30 (nicht in der E-Mail):**
+R1-COMMON-OPQ-009 (Summe der vier Drehfedern vs. Reihenschaltung
+Träger/Stütze; Φ 2,36 vs. 3,78 mrad). M_R = 399,49 kNm bleibt nach
+Stahlbau-Logik (Kräftepaar), siehe Update in R1-COMMON-OPQ-007.

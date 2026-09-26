@@ -33,3 +33,23 @@ resolution:
 ---
 
 Wird in der E-Mail an die Betreuung vom 2026-09-26 (Punkt 1) gefragt.
+
+**Update (2026-09-26), Diskussion mit dem Nutzer:** Wie in der
+Komponentenmethode des Stahlbaus wird die Momententragfähigkeit über das
+Kräftepaar nachgewiesen (M_R = T_max·z = 399,49 kNm, unabhängig von den
+Steifigkeiten); die Drehfedern gehen nur in die Steifigkeit ein. Die
+abweichende Lastaufteilung (elastisch für die Steifigkeit, plastisch für die
+Tragfähigkeit) ist dort methodisch üblich. Konservative elastische
+Kontrollrechnung (Claude): Moment nach Steifigkeiten verteilt, Dübelkraft
+aus Kräftepaar (T/32) und Gruppendrehung vektoriell addiert, Tragfähigkeit
+je Dübel 22,7 kN (726,35/32), quer zur Faser mit k_90 = 1,53 abgemindert;
+maßgebend der Eckdübel (x = 280, y = 75 mm). Ergebnis: Gl. (5) M ≈ 398 kNm
+(±0 %), Träger/Stütze in Reihe ≈ 364 kNm (−9 %); die Übereinstimmung bei
+Gl. (5) ist geometrieabhängig und nicht verallgemeinerbar. Einwand des
+Nutzers: Die Zugversuche wurden nur zentrisch gefahren, Drehsteifigkeit und
+Tragfähigkeit der Gruppe bei Drehung (Belastung quer zur Faser, Spalten
+br,perp) sind nicht versuchsgestützt. Voraussetzungen für M_R = 399,49 kNm
+bleiben: übrige Komponenten nicht schwächer (Druckseite, Blech, br,perp),
+Hochrechnung 2×8 → 4×8 beim Blockscheren (E-Mail Frage 6). In der E-Mail
+vom 2026-09-26 als Frage 1 ("Tragfähigkeit über Kräftepaar, Drehfedern nur
+Steifigkeit – so gedacht?"). Summe der Drehfedern: R1-COMMON-OPQ-009.
