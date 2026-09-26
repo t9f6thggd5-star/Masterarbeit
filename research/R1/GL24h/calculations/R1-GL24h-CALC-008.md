@@ -57,3 +57,10 @@ Katalog Buchholz2025 keine Steifigkeitsangabe; solange es als starr gilt,
 bleibt der Zahlenwert 279,52 kN/mm unverändert. Ob c_br,par starr
 angesetzt und ob die Zugverformung des Holzes ergänzt wird, ist offen
 (R1-COMMON-OPQ-005). Zahlenwert daher weiterhin vorläufig.
+
+**Update (2026-09-26):** Der Nutzer hat im Excel c_v,f und c_br,par
+getrennt (Blatt neu gegliedert, Zellen jetzt: I15 c_br,par = 1E+99, I18 c_v,f = 559,04 kN/mm (=J7*2), I21 c_t = 1/(1/I15+1/I18), I24 c_t,tot = 1/(1/I21+1/I21) = 279,52 kN/mm). Die frühere
+Zusammenfassung zu einer Feder c_T entfällt; c_T heißt im Blatt jetzt
+c_t (Zugseite je Bauteil). Zahlenwert unverändert, weiter vorläufig
+(c_br,par starr, R1-COMMON-OPQ-005). Weiterverwendet in
+R1-GL24h-CALC-009.

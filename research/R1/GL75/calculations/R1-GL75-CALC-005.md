@@ -45,3 +45,10 @@ c_t,tot bleiben unverändert. R1-COMMON-OPQ-003 ist geklärt: Der Messwert
 entspricht c_v,f, die Holzverformung ist nicht enthalten (Begründung in
 `method` überholt, siehe R1-GL24h-CALC-008). Offen bleibt R1-COMMON-OPQ-005
 (c_br,par starr? Zugverformung des Holzes?).
+
+**Update (2026-09-26):** Der Nutzer hat im Excel c_v,f und c_br,par
+getrennt (Blatt neu gegliedert, Zellen jetzt: I15 c_br,par = 1E+99, I18 c_v,f = 1.455,48 kN/mm (=J7*2), I21 c_t = 1/(1/I15+1/I18), I24 c_t,tot = 1/(1/I21+1/I21) = 727,74 kN/mm). Die frühere
+Zusammenfassung zu einer Feder c_T entfällt; c_T heißt im Blatt jetzt
+c_t (Zugseite je Bauteil). Zahlenwert unverändert, weiter vorläufig
+(c_br,par starr, R1-COMMON-OPQ-005). Weiterverwendet in
+R1-GL75-CALC-006.

@@ -48,3 +48,7 @@ Nutzers steht aus. Die obere Grenze des Kräftepaar-Glieds z² · c_t,tot
 **Update (2026-09-26):** Die Kombination der vier Drehfedern ist
 entschieden: Buchholz2025 Gl. (5) wie gedruckt, also Summe der vier
 Drehfedern (4 · 55.496 = 221.983 kNm/rad) plus C_rot,t+c (R1-COMMON-DEC-004).
+
+**Update (2026-09-26), Zellbezüge:** Nach der Neugliederung des Blattes
+stehen die Werte jetzt in I27 (K_ser = 47,222 kN/mm), I29:I38, I40 (C_rot,v,f = 55.495,8 kNm/rad); der Rotationsblock ist inzwischen angelegt. Zahlenwert unverändert. Weiterverwendet
+in R1-GL75-CALC-006.

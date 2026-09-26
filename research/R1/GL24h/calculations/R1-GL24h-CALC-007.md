@@ -56,3 +56,7 @@ Blatt C101); mit c_c,tot = c_t,tot 42.277 kNm/rad.
 **Update (2026-09-26):** Die Kombination der vier Drehfedern ist
 entschieden: Buchholz2025 Gl. (5) wie gedruckt, also Summe der vier
 Drehfedern (4 · 21.111 = 84.444 kNm/rad) plus C_rot,t+c (R1-COMMON-DEC-004).
+
+**Update (2026-09-26), Zellbezüge:** Nach der Neugliederung des Blattes
+stehen die Werte jetzt in I27 (K_ser), I29:I34 (Koordinaten), I35:I38 (I_p, r_g), I40 (C_rot,v,f, Einheit jetzt korrekt kNm/rad). Zahlenwert unverändert. Weiterverwendet
+in R1-GL24h-CALC-009.

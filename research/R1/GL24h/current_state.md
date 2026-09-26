@@ -81,6 +81,14 @@ Versuchsplanung.
   Widerspruch zu Gl. (5).
 - Schlitzblech starr (R1-COMMON-DEC-003, löst R1-GL24h-OPQ-009).
 - c_br,par vorläufig starr, offener Diskussionspunkt (R1-COMMON-OPQ-005).
-- Noch offen: Druckzone (c_v,f der Druckgruppe, c_c,0), Zugverformung
+- Druckseite vorläufig starr wegen Kontaktpressung (R1-COMMON-ASS-002),
+  z = 550 mm vorerst beibehalten, Klärung in R1-COMMON-OPQ-006.
+- Noch offen: Druckversuche auswerten (ersetzt ASS-002), Zugverformung
   des Holzes, F_est-Basis für die Übersichtstabelle, K_ser für die
   Drehfeder (Norm oder Versuch).
+
+**Update (2026-09-26), Anfangsrotationssteifigkeit:** C_rot,tot = 168.997 kNm/rad (R1-GL24h-CALC-009).
+Zugseite im Excel in c_v,f und c_br,par getrennt; Kräftepaar mit
+Druckseite starr plus vier Drehfedern nach Buchholz2025 Gl. (5).
+Nächste Schritte: F_est/M_R festlegen, K_ser für die Drehfeder (Norm oder
+Versuch) entscheiden, dann Φ = M_R/C_rot,tot und u_M für die Übersicht.
