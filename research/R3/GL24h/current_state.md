@@ -2,7 +2,7 @@
 scope:
   connection: R3
   material: GL24h
-last_updated: "2026-09-16"
+last_updated: "2026-09-28"
 ---
 
 # Bearbeitungsstand: R3 / GL24h
@@ -374,3 +374,31 @@ Folgen, keine Ergebnisse.
    SC-11-B-1 mit F_est = 8 kN (s. o.), K_e-Startpunkte F21 teils 4–37 % über
    0,1 · F_est, F_max im "Überblick" aus dem Maschinenwert (0,5–2,6 % über
    dem Datenmaximum).
+
+## Update 2026-09-28: Zugseite im Federmodell (GL24h vollständig)
+
+- Hebelarm z = 586,7 mm (Resultierende im Drittel der Druckzone,
+  R3-COMMON-DEC-004); Gewindestange nach ISO 898-1: 203 kN (R3-COMMON-DEC-003).
+- c32,Beam = 137,9 kN/mm als Hauptwert, Spanne 130–147 (R3-GL24h-DEC-015).
+- Zugkette nach Buchholz2025 Gl. (11)/(12) mit Komponentenzuordnung
+  R3-COMMON-DEC-005: c_c,ep, c_br,par, c_br,perp = ∞; c_c,0 = c_H,Lasche
+  (298,44 kN/mm, L_eff = 450 mm, Deutung (a)); ASSY seitenspezifisch;
+  zwei Laschen parallel; Schubfeld c_v in Reihe (R3-COMMON-DEC-007).
+- c_t korrigiert auf E·A_s/L_b = 30,99 kN/mm ohne Faktor 1,6
+  (R3-COMMON-DEC-006, R3-GL24h-CALC-011; CALC-004 superseded).
+- Schubfeld c_v = 156,17 kN/mm (R3-GL24h-CALC-012).
+- **c_t,sleeve = 19,36 kN/mm** je Lasche (R3-GL24h-CALC-013, ersetzt
+  CALC-005), **c_t,tot = 31,02 kN/mm** (R3-GL24h-CALC-014).
+- Neue offene Fragen: R3-COMMON-OPQ-002 (Setzen der Ankerplatte),
+  -003 (Doppelzählung 280 mm über Messbasis Push-Out), -004 (Bedeutung
+  c_c,0 bei Buchholz), -005 (Schubfeldmodell), R3-GL24h-OPQ-023
+  (Einzelwert 44-C-2).
+- Excel-Hinweis: "Rahmenecke GL24h SD" I53 ("Mittelwert B" 1×1) rechnet
+  AVERAGE(I50:I52) statt AVERAGE(I49:I51) — enthält den Stützen-Mittelwert,
+  wird aber nirgends weiterverwendet (11,50 statt 11,74 kN).
+
+**Nächste Schritte:** Druckseite c_c,tot aufbauen (Buchholz Gl. (6):
+Kontakt, c_c,90 und c_c,0; Hinweis Buchholz: Teil der Druckkraft evtl. über
+die Laschen der Druckseite), dann S_j,ini, Φ, u_M, F, V, N. Danach
+Vorspannung (Excel-Formel Φ = c_t/(c_t + c_H-ges) berücksichtigt nur die
+Lasche, nicht die ASSY-Gruppen; F_sep ändert sich mit dem neuen c_t).
