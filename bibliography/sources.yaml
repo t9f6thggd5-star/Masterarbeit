@@ -458,3 +458,85 @@ sources:
   date: '2025-08-25'
   pages: 1
   notes: Bearb. J.MM, gepr. L.Buchholz, 25.08.25/26.08.25. Blatt 1/1, Rev.-Spalte im Schriftfeld leer -- V1/V2 bzw. 01-xx/02-xx bezeichnen hier den Materialstrang (GL24h/GL75), keine Revisionsnummer.
+- id: PLAN-Einbau-Konfiguration1
+  type: PLAN
+  authority: project_specific
+  file: R1/COMMON/Skizze_Einbau_Konfiguration1.pdf
+  scope:
+    connection: R1
+    material: COMMON
+  title: Einbausituation Konfiguration 1 (Skizze Rahmeneckversuch R1)
+  pages: 1
+  notes: Vom Nutzer 2026-09-28 abgelegt. Kein Schriftfeld, Verfasser und Datum nicht angegeben. Längen gemischt in m, cm (Querschnitt "80" = 80 cm, Kolbenweg "35" = 35 cm, Nutzerangabe) und mm (Höhenkoten). Neigung α = 36° nicht bemaßt, Nutzerangabe.
+- id: PLAN-Einbau-Konfiguration2-3-R2
+  type: PLAN
+  authority: project_specific
+  file: R2/COMMON/Skizze_Einbau_Konfiguration2-3.pdf
+  scope:
+    connection: R2
+    material: COMMON
+  title: Einbausituation Konfiguration 2/3 (Skizze Rahmeneckversuch R2/R3)
+  pages: 1
+  notes: Vom Nutzer 2026-09-28 abgelegt; laut Nutzer exakt dieselbe Datei wie PLAN-Einbau-Konfiguration2-3-R3 (identische Dateigröße 25234 Byte). Kein Schriftfeld, Verfasser und Datum nicht angegeben. Längen gemischt in m, cm (Querschnitt "80" = 80 cm, Kolbenweg "35" = 35 cm, Nutzerangabe) und mm (Höhenkoten).
+- id: PLAN-Einbau-Konfiguration2-3-R3
+  type: PLAN
+  authority: project_specific
+  file: R3/COMMON/Skizze_Einbau_Konfiguration2-3.pdf
+  scope:
+    connection: R3
+    material: COMMON
+  title: Einbausituation Konfiguration 2/3 (Skizze Rahmeneckversuch R2/R3)
+  pages: 1
+  notes: Vom Nutzer 2026-09-28 abgelegt; laut Nutzer exakt dieselbe Datei wie PLAN-Einbau-Konfiguration2-3-R2. Kein Schriftfeld, Verfasser und Datum nicht angegeben. Längen gemischt in m, cm und mm (siehe dort).
+- id: DIN-EN-1993-1-1-2025
+  type: NORMATIVE
+  authority: normative
+  file: common/norms/DIN EN 1993-1-1_2025-04-00_DE_3334578.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Eurocode 3 – Bemessung und Konstruktion von Stahlbauten – Teil 1-1 Allgemeine Bemessungsregeln und Regeln für den Hochbau; Deutsche Fassung EN 1993-1-1:2022
+  issuing_body: DIN (NABau) / CEN
+  designation: DIN EN 1993-1-1:2025-04
+  date: 2025-04
+  pages: 122
+  notes: Ersatz für DIN EN 1993-1-1:2010-12 und /A1:2014-07; mit DIN CEN/TS 1993-1-101:2025-04. Nationaler Anhang siehe DIN-EN-1993-1-1-NA-2026.
+- id: DIN-EN-1993-1-1-NA-2026
+  type: NORMATIVE
+  authority: normative
+  file: common/norms/DIN EN 1993-1-1-NA_2026-04-00_DE_3674944.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Nationaler Anhang zu DIN EN 1993-1-1:2025-04 – Eurocode 3 – Bemessung und Konstruktion von Stahlbauten – Teil 1-1 Allgemeine Bemessungsregeln und Regeln für den Hochbau
+  issuing_body: DIN (NABau)
+  designation: DIN EN 1993-1-1/NA:2026-04
+  date: 2026-04
+  pages: 19
+  notes: Ersatz für DIN EN 1993-1-1/NA:2022-10.
+- id: DIN-EN-1993-1-8-2025
+  type: NORMATIVE
+  authority: normative
+  file: common/norms/DIN EN 1993-1-8_2025-04-00_DE_3530137.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Eurocode 3 – Bemessung und Konstruktion von Stahlbauten – Teil 1-8 Anschlüsse; Deutsche Fassung EN 1993-1-8:2024
+  issuing_body: DIN (NABau) / CEN
+  designation: DIN EN 1993-1-8:2025-04
+  date: 2025-04
+  pages: 214
+  notes: Ersatz für DIN EN 1993-1-8:2010-12. Nationaler Anhang siehe DIN-EN-1993-1-8-NA-2026.
+- id: DIN-EN-1993-1-8-NA-2026
+  type: NORMATIVE
+  authority: normative
+  file: common/norms/DIN EN 1993-1-8-NA_2026-04-00_DE_3676675.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Nationaler Anhang zu DIN EN 1993-1-8:2025-04 – Eurocode 3 – Bemessung und Konstruktion von Stahlbauten – Teil 1-8 Anschlüsse
+  issuing_body: DIN (NABau)
+  designation: DIN EN 1993-1-8/NA:2026-04
+  date: 2026-04
+  pages: 23
+  notes: Ersatz für DIN EN 1993-1-8/NA:2020-11.
