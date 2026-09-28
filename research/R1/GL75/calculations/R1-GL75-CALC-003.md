@@ -89,3 +89,11 @@ GL75-Zugversuche I-T-B-SD-28 durch Versagen des Nettoquerschnitts im
 Schlitzblech versagt. Die Höchstlasten 581 / 640 / 646 kN sind damit nur
 eine Untergrenze für die Dübelgruppe; die Übereinstimmung
 F_max/F_est = 0,93–1,03 bestätigt n_ef = 7,31 nicht. Quelle: Rückmeldung der Betreuung, vom Nutzer im Chat weitergegeben (2026-09-25).
+
+**Update (2026-09-28), Stand im Excel:** D47/D72 nennen jetzt „Tab. 11.10
+(7)“. Zeile 101 ist entfallen; M_max rechnerisch steht in C100
+(689,79 kNm), aus Versuchen in C102 (684,50 kNm). A96/A97 tragen noch die
+alten Bezeichnungen „nef=5,5“ und „nef=3,93“. Für die Übersicht wird C100
+verwendet (R1-GL75-DEC-002). Hinweis zu Tab. 11.10 (9): Nach dem Normtext
+gilt bei zweischnittigen Verbindungen t = min{2·t_1; t_ms}; das Weglassen von
+t_ms beim Stahlblech ist die Auslegung nach R1-GL75-OPQ-002.

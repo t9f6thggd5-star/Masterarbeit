@@ -71,3 +71,11 @@ Anfangsschlupf.
 358,16 / 375,18 kN (Mittel 363,17), das Versuchsblatt (MAX der Kraftspalte)
 355,08 / 357,62 / 374,52 kN (Mittel 362,41); Herkunft der Differenz ≈ 1 kN
 ungeklärt. K_ser oder K_e: R1-COMMON-OPQ-008.
+
+**Update (2026-09-28):** M_R steht im Blatt jetzt in C110 (bisher C109).
+Der Hebelarm der Prüfmaschine ist a = 2,3476 m (R1-COMMON-ASS-003,
+Excel C115); der obige Abschnitt „Maschinenweg (vorläufig)“ mit a = 3,03 m
+ist überholt (3,03 m entspricht Konfiguration 2/3, R2/R3). Mit a = 2,3476 m:
+u_M = 5,57 mm ohne / 7,97 mm mit Anfangsschlupf. Für die Übersicht wird die
+lineare Variante verwendet (R1-GL24h-CALC-011); die nichtlineare
+Mittelkurve wird erst in Phase 4 weiterverfolgt (Nutzerentscheidung).

@@ -107,3 +107,9 @@ zusammen mit OPQ-005/006, F_est-Hochrechnung und Hebelarm a.
 klären (OPQ-010) → u_M; F_est/M_R-Basis endgültig festlegen; danach
 GL75 (Variante 1, Kurve nur mit Vorbehalt Blechfließen) und R2/R3 für die
 Übersichtstabelle.
+
+**Update (2026-09-28), Übersichtstabelle (linear):** F = 170,2 kN,
+Φ = 2,36 mrad (3,39 mit Anfangsschlupf), u_M = 5,55 mm (7,95 mm)
+(R1-GL24h-CALC-011; Hebelarm a = 2,3476 m nach R1-COMMON-ASS-003).
+Nichtlineare Mittelkurve erst in Phase 4. Noch offen: R1-GL24h-CALC-004 bis
+-006 verweisen auf Zellen C87–C92, die im Blatt nicht mehr vorhanden sind.

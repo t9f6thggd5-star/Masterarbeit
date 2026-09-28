@@ -86,3 +86,9 @@ Zugseite im Excel in c_v,f und c_br,par getrennt; Kräftepaar mit
 Druckseite starr plus vier Drehfedern nach Buchholz2025 Gl. (5).
 Nächste Schritte: F_est/M_R festlegen, K_ser für die Drehfeder (Norm oder
 Versuch) entscheiden, dann Φ = M_R/C_rot,tot und u_M für die Übersicht.
+
+**Update (2026-09-28), Übersichtstabelle (linear):** M_R = 689,79 kNm
+rechnerisch (R1-GL75-DEC-002), F = 293,8 kN, Φ = 1,56 mrad (2,76 mit
+Anfangsschlupf), u_M = 3,66 mm (6,47 mm) (R1-GL75-CALC-007). Neu offen:
+R1-GL75-OPQ-004 (Nettoquerschnittsversagen des Blechs in der Ecke).
+Beschriftungen D47/D72 im Excel erledigt.
