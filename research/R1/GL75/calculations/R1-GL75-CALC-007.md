@@ -57,3 +57,9 @@ Schlupf R1-COMMON-OPQ-008, u_M nur Anschlussanteil). Zusätzlich:
 Nettoquerschnittsversagen des Schlitzblechs in der Rahmenecke
 (R1-GL75-OPQ-004). Im Blatt verweist C109 (V_ed) noch auf C102, C111 auf
 C100.
+
+**Update (2026-09-28), Schnittgrößen am Anschluss:** wie R1-GL24h-CALC-011:
+- Querkraft im Stabquerschnitt: V = F · sin 36° = **172,7 kN** (Excel C109, jetzt mit C100)
+- Normalkraft im Stabquerschnitt: N = F · cos 36° = **237,7 kN (Druck)** (im Excel noch nicht angelegt)
+- in der Gehrungsfuge: N = F = 293,8 kN (Druck), V = 0, M = F · a
+Der obige Hinweis zu C109 ist erledigt (C109 und C111 verweisen beide auf C100).

@@ -63,3 +63,11 @@ Anschlussverdrehung (COMMON-COMMON-OPQ-004). M_R nur Kräftepaar
 **Vergleich nichtlinear:** Die Mittelkurve nach R1-GL24h-CALC-010 ergibt
 2,373 mrad (+0,4 %). Für die Übersicht wird die lineare Variante verwendet,
 die nichtlineare M-φ-Kurve erst in Phase 4 (Nutzerentscheidung 2026-09-28).
+
+**Update (2026-09-28), Schnittgrößen am Anschluss:** Gleichgewicht einer
+Rahmenhälfte, Zylinderkraft F horizontal auf Höhe der Zylinderachse,
+Schnitt im Systempunkt h_m (R1-COMMON-ASS-003):
+- Querkraft im Stabquerschnitt (Riegel bzw. Stütze): V = F · sin 36° = **100,0 kN** (Excel C116 = C110/C115·SIN(36°))
+- Normalkraft im Stabquerschnitt: N = F · cos 36° = **137,7 kN (Druck)** (im Excel noch nicht angelegt)
+- in der Gehrungsfuge (vertikale Symmetrieebene): N = F = 170,2 kN (Druck), V = 0, M = F · a
+Eigengewicht und Lagerreibung vernachlässigt, Theorie I. Ordnung.
