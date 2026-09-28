@@ -19,7 +19,7 @@ reason: >
   (negativer Schlupf ist physikalisch nicht möglich), liegen im Bereich
   der Messauflösung und sind mit eingeklebten Stangen ohne Lochspiel
   plausibel. Nutzerentscheidung (Chat, 2026-09-28). Schlupf aus dem
-  Setzen der Ankerplatte vorerst nicht angesetzt (R2-COMMON-ASS-007,
+  Setzen der Ankerplatte vorerst nicht angesetzt (R2-COMMON-ASS-008,
   R2-COMMON-OPQ-012).
 alternatives_considered: >
   Mittelwerte direkt ansetzen (negativ, physikalisch nicht sinnvoll);

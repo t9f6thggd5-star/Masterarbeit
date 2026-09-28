@@ -11,7 +11,7 @@ question: >
 context: >
   In den Zugversuchen BR-22 gibt es keine Ankerplatte; ein Setzen unter
   Querdruck ist dort nicht erfasst. Vorerst wird kein Schlupf aus der
-  Ankerplatte angesetzt (R2-COMMON-ASS-007, Nutzerentscheidung
+  Ankerplatte angesetzt (R2-COMMON-ASS-008, Nutzerentscheidung
   2026-09-28). Bezug zum Anfangsschlupf allgemein: R1-COMMON-OPQ-008.
 related_sources:
 options_considered:
