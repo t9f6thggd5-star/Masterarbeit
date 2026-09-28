@@ -63,3 +63,15 @@ Grobe Abschätzung (Claude, R1/GL24h, nicht im Excel): c_t,0 ≈ 800–2000 kN/m
 je Bauteil → C_rot,tot −11 % bis −21 %; zusammen mit nachgiebiger
 Druckseite (c_c,tot = 1…5 · c_t,tot) −17 % bis −35 %, Φ bei M_R ≈
 2,65–3,65 mrad statt 2,36 mrad.
+
+**Ergänzung (2026-09-28), Katalogbezug:** Buchholz2025 Tab. 1 führt die
+Komponente Nr. 6 "Timber, tension, angle α" (t,α) mit Tragfähigkeitsregel
+(FprEN 8.1.4), aber ohne Steifigkeitsangabe („–“); im R1-Federmodell Gl. (2)
+ist sie nicht enthalten, während im Druckpfad Gl. (1) c_c,0 (Nr. 3) enthalten
+ist. c_v,f (Nr. 8, K_ser) enthält nur die örtliche Lochleibung am Dübel;
+c_br,par (Nr. 13) hat im Katalog ebenfalls keine Steifigkeitsangabe.
+Mögliche Begründung der Asymmetrie: Abgrenzung Anschluss/Stab (Stabdehnung
+außerhalb der Anschlusszone gehört ggf. zum Stab im globalen Modell).
+**Nutzerentscheidung (2026-09-28):** Vorerst wird am Federmodell nach
+Buchholz2025 Gl. (1)–(5) festgehalten, c_t,0 wird nicht angesetzt; die
+Frage bleibt offen.

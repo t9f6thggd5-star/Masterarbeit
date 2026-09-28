@@ -25,3 +25,10 @@ superseded_by:
 Präzisiert die Formulierung "2 je Zugpfad" in R2-COMMON-ASS-002: gemeint
 sind zwei parallele Stangenpaare derselben Gruppe, nicht zwei Gruppen in
 Reihe.
+
+**Ergänzung (2026-09-28), keine Vorspannung:** Laut Nutzer werden die
+Muttern an der Ankerplatte nur festgedreht, nicht vorgespannt. Eine
+Vorspannung der Stangen wird daher nicht angesetzt. (Buchholz2025, Abschn.
+4.3, beschreibt die Stangen als nur in die Stütze eingeklebt, im Riegel frei
+durch leicht größere Bohrungen geführt und oben mit Muttern gegen eine
+Stahlplatte angezogen.)
