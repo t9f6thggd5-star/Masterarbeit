@@ -540,3 +540,16 @@ sources:
   date: 2026-04
   pages: 23
   notes: Ersatz für DIN EN 1993-1-8/NA:2020-11.
+- id: DIN-EN-ISO-898-1-2013
+  type: NORMATIVE
+  authority: normative
+  file: common/norms/DIN EN ISO 898-1_2013-05-00_DE_1918383.pdf
+  scope:
+    connection: COMMON
+    material: COMMON
+  title: Mechanische Eigenschaften von Verbindungselementen aus Kohlenstoffstahl und legiertem Stahl – Teil 1 Schrauben mit festgelegten Festigkeitsklassen – Regelgewinde und Feingewinde; Deutsche Fassung EN ISO 898-1:2013
+  issuing_body: DIN (Normenausschuss Mechanische Verbindungselemente) / ISO / CEN
+  designation: DIN EN ISO 898-1:2013-05
+  date: 2013-05
+  pages: 66
+  notes: Ersatz für DIN EN ISO 898-1:2009-08. Gilt für Schrauben und Stiftschrauben (frz. Titel nennt ausdrücklich tiges filetées = Gewindestangen), Regelgewinde M1,6 bis M39. Relevante Stellen Tab. 3 (Rm, Rp0,2) und Tab. 4 (Mindestbruchkräfte Fm,min = As,nom · Rm,min), S. 13 und 15.
