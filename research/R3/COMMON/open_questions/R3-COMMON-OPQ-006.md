@@ -30,3 +30,19 @@ date_opened: "2026-09-30"
 date_resolved:
 resolution:
 ---
+
+**Update (2026-09-30), Literaturrecherche:** Keine Quelle mit eigener
+Steifigkeitsfeder für br,par/br,perp gefunden; die Kataloge (Buchholz2025
+Tab. 1, Gauß 2024 Tab. 6.1) führen nur die Tragfähigkeit. Steifigkeitsbasierte
+Tragfähigkeitsmodelle (Zarnani & Quenneville 2014; Mahlknecht & Brandner 2019)
+bilden den Holzblock elastisch als Federsystem ab, nutzen das aber nur zur
+Lastaufteilung. Argument für "starr" (Claude, zu prüfen): Die elastische
+Blockverformung steckt in K_ser der Push-Out-Versuche und in c_H; eine eigene
+Feder würde doppelt zählen. Für die Tragfähigkeit relevant: Scheibmair 2012
+(Block tear-out beim Quick Connect, S. 65–66), Mahlknecht & Brandner 2019 und
+Blaß/Flaig/Meyer 2019 (axial beanspruchte Schraubengruppen), Meyer 2020
+(Buchen-FSH), Jockwer & Dietsch 2018 (quer zur Faser). Zusammenstellung im
+Projektdokument claude/R3-Sproedversagen_br_Literatur.md. Die Quellen sind
+noch nicht in bibliography/sources.yaml eingetragen; mehrere sind nur über den
+Abstract geprüft.
+

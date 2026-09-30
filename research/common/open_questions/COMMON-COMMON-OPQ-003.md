@@ -30,3 +30,10 @@ resolution:
 ---
 
 Entstanden aus der Diskussion der Betreuungs-Rückmeldung (2026-09-25).
+
+**Update (2026-09-30), Teil (2) für die R3-Schrauben-Push-Outs (Nutzer):** Der
+Wegaufnehmer wird mittig zwischen der 3. und 4. Schraubenreihe angebracht und
+misst die Relativverschiebung Lasche gegen Mittelholz innerhalb der Gruppe.
+Die Stauchung von Lasche und Mittelholz über den Gruppenbereich ist damit
+nicht enthalten (Folgerung in R3-COMMON-OPQ-003). Offen bleiben Teil (1),
+die Lage bei den 1×1-Versuchen und die übrigen Serien (Stabdübel, R1, R2).

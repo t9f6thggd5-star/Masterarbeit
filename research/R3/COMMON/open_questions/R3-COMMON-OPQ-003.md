@@ -46,3 +46,34 @@ auch auf der Druckseite gestaucht (70 mm + Gruppenbereich). Drei Ansätze
 Druckseite, Bettung konstant): 10 660 / 10 960 / 11 520 kNm/rad
 (Spanne ≈ 8 %). Entscheidung mit dem Nutzer offen.
 
+
+**Stand (2026-09-30, Nutzer):** Als offene Frage mitgenommen, noch keine
+Entscheidung. Bis dahin rechnet die Excel weiter mit 450 mm (Zug); für die
+Druckseite wird vorerst der gleiche Ansatz (Verschiebung der letzten Reihe,
+350 mm) verwendet.
+
+**Update (2026-09-30), Messaufbau Push-Out (Nutzer):** Bei den Push-Out-Versuchen
+mit Schrauben sitzt der Wegaufnehmer mittig zwischen der 3. und 4.
+Schraubenreihe (4×4-Serien). Er misst also die Relativverschiebung Lasche
+gegen Mittelholz an einem Punkt innerhalb der Gruppe. Folgerung (Claude, zu
+prüfen): K_ser enthält den Schlupf der Schrauben an dieser Stelle, aber nicht
+die Stauchung von Lasche und Mittelholz über den Gruppenbereich. Ansatz 3
+(nur freie Länge) scheidet damit aus; es bleibt die Wahl zwischen Ansatz 1
+(450/350 mm) und Ansatz 2 (345/245 mm). Da die Messstelle nahe einem
+Gruppenende liegt, wo der Schlupf bei nachgiebigen Bauteilen größer ist als
+im Mittel (Volkersen-Effekt), ist das gemessene K_ser eher etwas kleiner als
+eine auf den mittleren Schlupf bezogene Steifigkeit. Zusammen mit der
+Annahme F/8 je Reihe passt Ansatz 2 folgerichtig; Ansatz 1 als weichere
+Grenze. Offen: Lage des Wegaufnehmers bei den 1×1-Versuchen.
+
+**Update (2026-09-30), 1×1-Versuche (Nutzer):** Der Wegaufnehmer saß 70 mm
+unterhalb des Schraubenkopfs. Bei 80 mm Laschendicke und 45° Neigung kreuzt
+die Schraube die Scherfuge etwa 80 mm vom Kopf entfernt (Claude); die
+Messstelle liegt also nahe dem Durchgang der Schraube durch die Fuge und
+misst den örtlichen Schlupf. 1×1 und 4×4 messen damit vergleichbar an der
+Schraube; die Hochrechnung 16 → 32 (R3-GL24h-CALC-007) bleibt davon
+unberührt. Laut Foto III-PO-S-SC-44-C1 (Deutung Claude, vom Nutzer nicht
+bestätigt): Gehäuse mit einer Halterung am Mittelholz befestigt, Taster auf einem Winkel an der
+Lasche; Halterung und Lochblech des Winkels etwa 10 cm höhenversetzt, dadurch geht die
+unterschiedliche Dehnung beider Hölzer auf dieser Strecke mit ein (grob
+5–7 % des Messwerts bei 0,4 · F_est, kleine Stellschraube).
