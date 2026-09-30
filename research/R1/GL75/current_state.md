@@ -92,3 +92,7 @@ rechnerisch (R1-GL75-DEC-002), F = 293,8 kN, Φ = 1,56 mrad (2,76 mit
 Anfangsschlupf), u_M = 3,66 mm (6,47 mm) (R1-GL75-CALC-007). Neu offen:
 R1-GL75-OPQ-004 (Nettoquerschnittsversagen des Blechs in der Ecke).
 Beschriftungen D47/D72 im Excel erledigt.
+
+**Update (2026-09-30):** wie GL24h (M_R über das Kräftepaar, c_br,par, z,
+Anfangsschlupf, COMMON-COMMON-DEC-009); R1-GL75-OPQ-003 verworfen;
+R1-GL75-OPQ-004 (Blech in der Ecke) mit Nutzerantwort ergänzt, weiter offen.

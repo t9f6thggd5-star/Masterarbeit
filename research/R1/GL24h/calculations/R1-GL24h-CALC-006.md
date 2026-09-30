@@ -46,3 +46,8 @@ Rahmeneckenrotation φ gleichzusetzen. Die tatsächliche kinematische
 Herleitung von φ steht noch aus — siehe R1-GL24h-HYP-001 und
 R1-GL24h-OPQ-002/003. Kein Nachfolge-Eintrag (`superseded_by`) existiert
 bislang, da die korrekte Rotationsberechnung noch nicht hergeleitet wurde.
+
+**Status (2026-09-30): historisch.** Abschätzung aus der Vorbemessung (Phase 2),
+wird für das Federmodell nicht mehr verwendet (Nutzerentscheidung). Die im
+Feld source_file genannten Zellen C87–C92 sind im heutigen R1-Excel nicht
+mehr vorhanden; die Verweise werden nicht nachgeführt.

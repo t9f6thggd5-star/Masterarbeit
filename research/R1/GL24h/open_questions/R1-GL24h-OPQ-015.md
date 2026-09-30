@@ -3,7 +3,7 @@ open_question_id: R1-GL24h-OPQ-015
 scope:
   connection: R1
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   Wie groß ist rechnerisch die Tragfähigkeit der R1-Verbindung (GL24h) für
   das in den Zugversuchen beobachtete Versagen (Blockscheren kombiniert mit
@@ -21,8 +21,11 @@ context: >
 related_sources: FprEN-1995-1-1-2024, Buchholz2025
 options_considered:
 date_opened: "2026-09-25"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Nicht rechnerisch bestimmt (Nutzer, 2026-09-30). M_R beruht auf T_max aus den
+  Zugversuchen, die im Blockscheren versagt haben; Komponentenversuch und
+  Rahmenecke lassen sich ohnehin nicht vollständig vergleichen.
 ---
 
 Entstanden aus der Rückmeldung der Betreuung (2026-09-25).

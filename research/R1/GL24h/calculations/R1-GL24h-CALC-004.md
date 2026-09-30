@@ -45,3 +45,8 @@ d = 12 mm.
 Diese Größe ist gemäß R1-GL24h-DEC-006 die erste Verformungseingangsgröße
 für die Phase-2-Verformungsabschätzung — siehe R1-GL24h-CALC-005 für die
 daraus abgeleitete elastische Schlupfgröße.
+
+**Status (2026-09-30): historisch.** Abschätzung aus der Vorbemessung (Phase 2),
+wird für das Federmodell nicht mehr verwendet (Nutzerentscheidung). Die im
+Feld source_file genannten Zellen C87–C92 sind im heutigen R1-Excel nicht
+mehr vorhanden; die Verweise werden nicht nachgeführt.

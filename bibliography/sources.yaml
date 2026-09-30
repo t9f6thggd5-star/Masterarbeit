@@ -351,9 +351,8 @@ sources:
   year: 2014
   publisher: Journal of Structural Engineering (ASCE), Vol. 140, No. 1, Art. 04013022, DOI 10.1061/(ASCE)ST.1943-541X.0000728
   pages: 10
-  notes: Jahr noch offen -- siehe research/common/open_questions/COMMON-COMMON-OPQ-001.md
-    (Dateiname/Ordner nennt 2012, Zeitschriften-Zitation Vol. 140 No. 1 nennt 2014;
-    hier vorlaeufig als 2014 gefuehrt, bis geklaert).
+  notes: Jahr 2014 (Heftjahr) festgelegt am 2026-09-30, online erschienen 10.09.2012
+    (Dateiname nennt 2012); siehe research/common/open_questions/COMMON-COMMON-OPQ-001.md.
 - id: PLAN-2685085-001-V1
   type: PLAN
   authority: project_specific

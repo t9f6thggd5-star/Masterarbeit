@@ -3,7 +3,7 @@ open_question_id: R1-GL24h-OPQ-007
 scope:
   connection: R1
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   Ist die verwendete FprEN-Tabellenklassifikation für GL24h (BSH,
   softwood-artige Abstandsregel für n_ef) korrekt, oder müsste eine andere
@@ -16,6 +16,9 @@ context: >
 related_sources:
 options_considered:
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Geschlossen (Nutzer, 2026-09-30): n_ef geht nur in die rechnerische
+  Johansen-Gruppentragfähigkeit ein, die bei R1 nicht maßgebend ist (M_R aus
+  den Zugversuchen).
 ---

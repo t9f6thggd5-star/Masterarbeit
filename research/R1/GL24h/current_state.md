@@ -113,3 +113,14 @@ GL75 (Variante 1, Kurve nur mit Vorbehalt Blechfließen) und R2/R3 für die
 (R1-GL24h-CALC-011; Hebelarm a = 2,3476 m nach R1-COMMON-ASS-003).
 Nichtlineare Mittelkurve erst in Phase 4. Noch offen: R1-GL24h-CALC-004 bis
 -006 verweisen auf Zellen C87–C92, die im Blatt nicht mehr vorhanden sind.
+
+**Update (2026-09-30), Klärung offener Fragen nach der Besprechung:**
+M_R über das Kräftepaar (R1-COMMON-OPQ-007 RESOLVED); c_br,par = Blockscheren,
+Steifigkeit per Literaturrecherche klären, bis dahin starr (R1-COMMON-OPQ-005);
+z = 550 mm bis zur Auswertung der Druckversuche, danach Sensitivität
+(R1-COMMON-OPQ-006); Anfangsschlupf wird mitgerechnet (R1-COMMON-OPQ-008);
+Druckseite bleibt bis zur Auswertung der Druckversuche starr; Blockscheren nicht
+rechnerisch nachgewiesen (R1-GL24h-OPQ-015 RESOLVED); alte Fragen OPQ-001/002/
+004/005/007/008/010/011/012/014 geschlossen; CALC-004 bis -006 historisch.
+Projektweit: COMMON-COMMON-DEC-009 (Änderungen am Federmodell nur mit
+Begründung/Sensitivitätsprüfung).

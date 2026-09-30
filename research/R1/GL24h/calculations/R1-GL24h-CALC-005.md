@@ -46,3 +46,8 @@ Gemäß R1-GL24h-DEC-007 werden u_0 und u_el,S hier zwar zu u_Gruppe addiert,
 aber weiterhin explizit als getrennte Anteile ausgewiesen — die Summe
 selbst ersetzt nicht die Notwendigkeit, beide Anteile bei Bedarf getrennt
 zu betrachten.
+
+**Status (2026-09-30): historisch.** Abschätzung aus der Vorbemessung (Phase 2),
+wird für das Federmodell nicht mehr verwendet (Nutzerentscheidung). Die im
+Feld source_file genannten Zellen C87–C92 sind im heutigen R1-Excel nicht
+mehr vorhanden; die Verweise werden nicht nachgeführt.

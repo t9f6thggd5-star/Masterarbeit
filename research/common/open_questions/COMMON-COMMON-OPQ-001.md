@@ -3,7 +3,7 @@ open_question_id: COMMON-COMMON-OPQ-001
 scope:
   connection: COMMON
   material: COMMON
-status: OPEN
+status: RESOLVED
 question: >
   Welches Publikationsjahr soll für die Quelle ScheibmairQuenneville
   (bibliography/sources.yaml, scope R3/COMMON) im Literaturverzeichnis
@@ -27,6 +27,8 @@ options_considered:
   - "2012 — Online-First-Datum (entspricht Ordner-/Dateiname im externen Quellenordner)"
   - "2014 — offizielles Druck-/Zitationsjahr laut ASCE Vol. 140 No. 1 (aktuell in sources.yaml/references.bib verwendet)"
 date_opened: 2026-08-31
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  2014 (Heftjahr, J. Struct. Eng. 140(1)); online erschienen am 10.09.2012.
+  Nutzerentscheidung 2026-09-30. Quellen-ID ScheibmairQuenneville2014 bleibt.
 ---
