@@ -75,3 +75,9 @@ außerhalb der Anschlusszone gehört ggf. zum Stab im globalen Modell).
 **Nutzerentscheidung (2026-09-28):** Vorerst wird am Federmodell nach
 Buchholz2025 Gl. (1)–(5) festgehalten, c_t,0 wird nicht angesetzt; die
 Frage bleibt offen.
+
+**Update (2026-09-30), Nutzer zu (a):** c_br,par bildet nicht die
+Holzverformung ab, sondern das Blockscherversagen. Per Literaturrecherche
+ist zu klären, ob es dafür eine relevante Federkomponente gibt oder ob die
+Steifigkeit als unendlich angenommen werden kann. Bis dahin bleibt c_br,par
+starr. (b) und (c) weiterhin offen. Allgemeiner Rahmen: COMMON-COMMON-DEC-009.

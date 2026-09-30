@@ -23,4 +23,12 @@ date_resolved:
 resolution:
 ---
 
-Wird in der E-Mail an die Betreuung vom 2026-09-26 (Punkte 2 und 3) gefragt.
+**Korrektur (2026-09-30):** Nicht Teil der E-Mail an die Betreuung vom
+2026-09-26 (diese enthielt nur die Fragen zu Tragfähigkeit/Gruppendrehung,
+c_br,par und Hebelarm, siehe R1-COMMON-OPQ-005/006/007).
+
+**Update (2026-09-30), Nutzerentscheidung:** Der Anfangsschlupf wird bei Φ
+und u_M mitgerechnet. Ob K_ser oder K_e verwendet wird, wird
+situationsbedingt festgelegt; für die Hüllkurve (monotone Erstbelastung)
+ist die Erstbelastungskurve maßgebend. Status bleibt OPEN für die
+situationsbedingte Wahl K_ser/K_e.

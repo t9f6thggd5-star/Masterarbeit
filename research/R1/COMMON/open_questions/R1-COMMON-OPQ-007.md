@@ -3,7 +3,7 @@ open_question_id: R1-COMMON-OPQ-007
 scope:
   connection: R1
   material: COMMON
-status: OPEN
+status: RESOLVED
 question: >
   Wie wird die Momententragfähigkeit der R1-Rahmenecke konsistent zum
   Federmodell nach Buchholz2025 Gl. (5) nachgewiesen, wenn Kräftepaar und
@@ -28,8 +28,12 @@ options_considered: >
   bzw. der Gruppe unter kombinierter Beanspruchung; (c) Summe der vier
   Drehfedern in Gl. (5) mit der Reihenschaltung Träger/Stütze abgleichen.
 date_opened: "2026-09-26"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  M_R wird über das Kräftepaar nachgewiesen (M_R = T_max · z); die Drehfedern
+  gehen nur in die Steifigkeit ein. In einer späteren Phase, z. B. beim Vergleich
+  der berechneten mit den gemessenen Last-Verschiebungskurven, kann die
+  Umlagerung durch die Gruppendrehung erneut Thema werden. Nutzer, 2026-09-30.
 ---
 
 Wird in der E-Mail an die Betreuung vom 2026-09-26 (Punkt 1) gefragt.

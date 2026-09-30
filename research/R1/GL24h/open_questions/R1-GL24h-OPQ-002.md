@@ -3,7 +3,7 @@ open_question_id: R1-GL24h-OPQ-002
 scope:
   connection: R1
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   Wie genau erzeugen die lokalen Dübelgruppen-Schlupfe (parallel zu den
   jeweiligen Stabachsen) die Rahmeneckenrotation φ?
@@ -18,6 +18,8 @@ context: >
 related_sources:
 options_considered:
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Überholt (Nutzer, 2026-09-30): Kinematik über das Federmodell nach
+  Buchholz2025 Gl. (1)–(5) festgelegt (R1-COMMON-DEC-004).
 ---

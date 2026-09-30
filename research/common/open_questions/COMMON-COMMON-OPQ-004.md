@@ -3,7 +3,7 @@ open_question_id: COMMON-COMMON-OPQ-004
 scope:
   connection: COMMON
   material: COMMON
-status: OPEN
+status: RESOLVED
 question: >
   (1) Welche Verformungsanteile gehören über die Anschlussverdrehung hinaus
   in den Maschinenweg u_M (Biegung und Schub von Riegel und Stütze,
@@ -20,8 +20,11 @@ context: >
 related_sources: PLAN-Einbau-Konfiguration1, PLAN-Einbau-Konfiguration2-3-R2, PLAN-Einbau-Konfiguration2-3-R3
 options_considered:
 date_opened: "2026-09-28"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Vom Nutzer als unerheblich eingestuft (2026-09-30): u_M bleibt vorerst der
+  Anschlussanteil (Φ · a, COMMON-COMMON-DEC-008); die Frage nach Gesamt- oder
+  Resthub wird nicht weiter verfolgt.
 ---
 
 Vom Nutzer als Punkt für die nächste Besprechung vorgemerkt (2026-09-28).

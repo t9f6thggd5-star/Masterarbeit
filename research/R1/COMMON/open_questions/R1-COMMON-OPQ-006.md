@@ -24,3 +24,8 @@ resolution:
 
 Bezug: R1-GL24h-OPQ-003 (Bedeutung von z = 550 mm, RESOLVED als Abstand
 der resultierenden Zug- und Druckkraft ohne Kontaktpfad).
+
+**Update (2026-09-30), Nutzerentscheidung:** z = 550 mm bleibt, solange die
+Druckversuche nicht ausgewertet sind. Weichen die berechneten Kurven später
+von den gemessenen ab, ist z eine Stellschraube, die in der
+Sensitivitätsstudie zu prüfen ist.

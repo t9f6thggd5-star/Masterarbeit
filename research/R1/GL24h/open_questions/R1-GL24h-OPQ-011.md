@@ -3,7 +3,7 @@ open_question_id: R1-GL24h-OPQ-011
 scope:
   connection: R1
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   DIN EN 14080 (Bauholz-/BSH-Eigenschaften, referenziert für GL24h) liegt
   aktuell nicht im externen Quellenordner vor. Wo ist sie zu finden bzw.
@@ -15,6 +15,8 @@ context: >
 related_sources:
 options_considered:
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Erledigt (2026-09-30): DIN EN 14080:2013-09 liegt jetzt im Quellenordner
+  (common/norms/); noch nicht in bibliography/sources.yaml registriert.
 ---

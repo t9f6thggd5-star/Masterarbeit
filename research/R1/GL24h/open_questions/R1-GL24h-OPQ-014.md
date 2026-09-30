@@ -3,7 +3,7 @@ open_question_id: R1-GL24h-OPQ-014
 scope:
   connection: R1
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   Wird K_ser,Dübel für GL24h Ø12 (Stahl-Holz, zweischnittig) nach FprEN
   1995-1-1 Tab. 11.12 nur rechnerisch aus der mittleren Rohdichte ρ_mean
@@ -63,8 +63,10 @@ options_considered: >
   führen; (d) Sensitivität ausweisen (Rohdichte 385 bis 420 kg/m³, Streuung
   der Versuchswerte, Durchmesserexponent). Zu klären durch den Nutzer.
 date_opened: "2026-09-21"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Verworfen (Nutzer, 2026-09-30): wird nicht weiter verfolgt; es bleibt beim
+  Normwert (R1-GL24h-DEC-010).
 ---
 
 Aufgenommen auf Wunsch des Nutzers (2026-09-21). Bis zur Klärung gilt

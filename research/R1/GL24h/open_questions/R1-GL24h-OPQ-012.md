@@ -3,7 +3,7 @@ open_question_id: R1-GL24h-OPQ-012
 scope:
   connection: R1
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   EN 1995-3:202y, Abschnitt 6.4 (Lochdurchmesser-Anforderungen für
   stiftförmige Verbindungsmittel) liegt aktuell nicht im externen
@@ -19,6 +19,7 @@ context: >
 related_sources:
 options_considered:
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Überholt (Nutzer, 2026-09-30): für das Federmodell nicht benötigt.
 ---

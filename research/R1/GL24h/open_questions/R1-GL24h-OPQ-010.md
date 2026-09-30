@@ -3,7 +3,7 @@ open_question_id: R1-GL24h-OPQ-010
 scope:
   connection: R1
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   Welche Testaufbaugeometrie (Auflagerpositionen, Zylinderangriffspunkt,
   Stablängen, Lastrichtung, Messstellen) gilt für die Umrechnung der
@@ -15,6 +15,8 @@ context: >
 related_sources:
 options_considered:
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Überholt (Nutzer, 2026-09-30): Einbauskizze Konfiguration 1 liegt vor,
+  Hebelarm a nach R1-COMMON-ASS-003.
 ---
