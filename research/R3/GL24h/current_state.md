@@ -2,7 +2,7 @@
 scope:
   connection: R3
   material: GL24h
-last_updated: "2026-09-28"
+last_updated: "2026-09-30"
 ---
 
 # Bearbeitungsstand: R3 / GL24h
@@ -402,3 +402,10 @@ Kontakt, c_c,90 und c_c,0; Hinweis Buchholz: Teil der Druckkraft evtl. über
 die Laschen der Druckseite), dann S_j,ini, Φ, u_M, F, V, N. Danach
 Vorspannung (Excel-Formel Φ = c_t/(c_t + c_H-ges) berücksichtigt nur die
 Lasche, nicht die ASSY-Gruppen; F_sep ändert sich mit dem neuen c_t).
+
+## Update 2026-09-30: Sprödversagen br,par / br,perp
+
+Steifigkeit starr, Tragfähigkeit als nicht maßgebend angenommen (Stange
+maßgebend), vorerst ohne rechnerischen Nachweis (R3-COMMON-DEC-008).
+Begründung für die Ausarbeitung offen (R3-COMMON-OPQ-006). Nächster Schritt:
+Steifigkeit der Druckseite c_c,tot.
