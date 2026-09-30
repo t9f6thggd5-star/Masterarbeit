@@ -409,3 +409,9 @@ Steifigkeit starr, Tragfähigkeit als nicht maßgebend angenommen (Stange
 maßgebend), vorerst ohne rechnerischen Nachweis (R3-COMMON-DEC-008).
 Begründung für die Ausarbeitung offen (R3-COMMON-OPQ-006). Nächster Schritt:
 Steifigkeit der Druckseite c_c,tot.
+
+**Ergänzung 2026-09-30, Push-Out 44-C:** Blatt 44-C-2 geprüft, kein Fehler;
+falscher Zeilenverweis v11/F11 in 44-C-1 ohne Einfluss auf die Ergebnisse
+(R3-GL24h-OPQ-024, für die Betreuung). OPQ-023 RESOLVED: C-2 bleibt im
+Hauptwert, Variante ohne C-2 als Empfindlichkeit (R3-GL24h-CALC-015:
+c_t,tot 31,44 statt 31,02 kN/mm, +1,4 %).
