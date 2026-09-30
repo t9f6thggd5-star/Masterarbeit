@@ -20,7 +20,9 @@ decision: >
   Lastausbreitung beidseitig unter 45° parallel zur Faser (Tab. 8.2),
   A_ef = b·(x + 2·h_ef), h_ef = min(0,4·h; 140 mm) nach Gl. (8.11).
   Stütze: c_c,0 = E_0,mean·b·x/l_0 ohne Lastausbreitung (Faser in
-  Kraftrichtung), l_0 = x (analog R2-GL24h-CALC-019), damit c_c,0 = E_0,mean·b.
+  Kraftrichtung), l_0 = x (analog R2-GL24h-CALC-019, Nutzerentscheidung
+  2026-09-30; gestützt durch ScheibmairQuenneville2014), damit
+  c_c,0 = E_0,mean·b.
   Bettung k = c_c,tot/(b·x) (mittlere Bettung), Iteration über x.
 reason: >
   Nutzerentscheidungen (Chat, 2026-09-30): kein Druckkontakt der Laschen,
@@ -52,6 +54,18 @@ Die Vorspannung der zugseitigen Stangen drückt die Fuge außen unter der
 Stangenlinie vor (Kraftfluss Stange → Laschenhälften → ASSY → Riegel/Stütze
 → Kontaktfuge, vom Nutzer bestätigt 2026-09-30); davor ändert sich die
 Kontaktzone mit dem Moment, siehe R3-COMMON-OPQ-007.
+
+**Literaturbezug (SOURCE_CLAIM):** ScheibmairQuenneville2014 modelliert die
+Druckseite des "Quick Connect" (Anschlusstyp von R3) ebenso: Ebenbleiben der
+Querschnitte, dreieckige Druckzone der Länge λ (Gl. 24–26, S. 04013022-5),
+Stauchung bezogen auf λ, σ = E_timber·Δ_C/λ (Gl. 27–30), C = E_timber·Δ_T·λ·b/
+(2(d − λ)) (Gl. 31), Nulllinie aus T = C, geschlossen λ = 2·k_system·g/
+(E_timber·b + 2·k_system) (Gl. 36, S. 04013022-6). Das entspricht l_0 = x.
+Unterschiede: dort ein einziges E_timber ohne Richtung und ohne h_ef; hier
+Aufteilung in c_c,0 (Stütze, wie dort) und c_c,90 (Riegel, FprEN Gl. 9.31);
+Fall Holz auf Holz dort nur mit "both beam and column parts … must be
+accounted for" beschrieben (S. 04013022-6); Versuche dort mit LVL,
+Übertragung auf GL24h nicht belegt.
 
 **Einschränkungen:** Gl. (9.31) setzt gleichmäßige Pressung voraus, hier
 ist sie dreieckig und zur Nulllinie hin null; die Ausbreitung zur

@@ -27,7 +27,7 @@ context: >
   'Rahmenecke GL24h HD'!I78 = 0 (Wert steht im SD-Blatt jetzt in I108),
   daher Φ = 0 und #DIV/0! ab C17/C29; C10 nutzt noch den normativen
   c_ASSY,S = 199,15 kN/mm statt der Versuchswerte (R3-COMMON-DEC-005).
-related_sources: Buchholz2025
+related_sources: Buchholz2025, ScheibmairQuenneville2014, VDI-2230-1-2015
 options_considered: >
   Für die Übersichtstabelle (Besprechung 2026-09-30) vorerst der Zustand nach
   dem Öffnen der Fuge (untere Grenze der Anfangssteifigkeit); danach
@@ -36,3 +36,18 @@ date_opened: "2026-09-30"
 date_resolved:
 resolution:
 ---
+
+**Beobachtung in der Literatur (SOURCE_CLAIM, 2026-09-30):**
+ScheibmairQuenneville2014 (S. 04013022-8) berichten für den Versuch Holz auf
+Holz des Quick Connect (LVL, Querschnitt 105 × 1050 mm) eine erhöhte
+Anfangssteifigkeit bis ≈ 59 kNm, "at which point the tension force in the
+rods has overcome the elastic compression in the sleeves and the tension
+sleeves begin to separate at the beam–column interface"; danach etwa
+linear-elastisch bis zum Versagen (Längsschub im Riegel) bei ≈ 588 kNm und
+0,0987 rad. Die Autoren führen die Steifigkeitswechsel auf ungleichmäßig
+angezogene Stangen und die vorhandene Vorspannung zurück; eine leichte
+Versteifung zwischen ≈ 120 und 220 kNm deuten sie als Setzen auf der
+Druckseite bis zum vollen Kontakt. Stützt den oben beschriebenen Kraftfluss
+(Vorpressung der Fuge Riegel/Stütze, Öffnen an der Zugseite) qualitativ;
+Übertragung auf GL24h/R3-Geometrie nicht belegt, n = 1 Versuch je
+Konfiguration.

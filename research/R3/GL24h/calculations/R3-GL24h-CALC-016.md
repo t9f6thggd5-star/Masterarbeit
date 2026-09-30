@@ -6,7 +6,7 @@ scope:
 type: CALCULATION
 inputs:
   normative_sources: FprEN-1995-1-1-2024
-  literature: Buchholz2025
+  literature: Buchholz2025, ScheibmairQuenneville2014
   experimental_data:
   assumptions: >
     R3-COMMON-DEC-009 (Modell Druckseite, Nulllinie aus Gleichgewicht,
@@ -19,7 +19,8 @@ method: >
   Druckseite nach R3-COMMON-DEC-009: c_c,90 = 2·E_90,mean/(h_ef·(1/A + 1/A_ef))
   (FprEN Gl. 9.31, S. 153) mit A = b·x, A_ef = b·(x + 2·h_ef), h_ef =
   min(0,4·800; 140) = 140 mm (Gl. 8.11, S. 88; 45° nach Tab. 8.2, S. 87);
-  c_c,0 = E_0,mean·b·x/x = E_0,mean·b; c_c,tot = (1/c_c,90 + 1/c_c,0)⁻¹
+  c_c,0 = E_0,mean·b·x/x = E_0,mean·b (l_0 = x wie ScheibmairQuenneville2014
+  Gl. 27–30); c_c,tot = (1/c_c,90 + 1/c_c,0)⁻¹
   (Buchholz2025 Gl. 6); k = c_c,tot/(b·x); x aus c_t,tot·(d − x) = ½·k·b·x²,
   iteriert bis zur Konvergenz; z = d − x/3; S_j,ini = c_t,tot·(d − x)·z.
 equations: >
@@ -38,7 +39,11 @@ result:
 source_file: >
   Gerechnet im Chat 2026-09-30 (Python); Eingangswerte aus
   R3/COMMON/calculations/20260208_Berechnung_Rahmenecke_seitl. Holzlaschen.xlsx
-  (Stand 2026-09-30), noch nicht im Excel umgesetzt.
+  (Stand 2026-09-30). Im Excel umgesetzt 2026-09-30 (Struktur vom Nutzer,
+  vervollständigt von Claude): Sheet "Rahmenecke GL24h SD", Eingänge
+  I160–I165, Iteration G168:N177 (10 Zeilen, Start x = 400 mm), Ergebnisse
+  I179 (x), I182 (c_c,tot), I183 (z), I184 (S_j,ini), Kontrolle I185/I186;
+  per LibreOffice nachgerechnet, Werte identisch.
 certainty: CALCULATED
 superseded_by:
 ---
@@ -55,6 +60,9 @@ superseded_by:
 | l_0 = 400 mm fest statt l_0 = x | ≈ 260 | ≈ 109,5 | ≈ 633 | ≈ 9 030 |
 | zum Vergleich: x = 400 mm fest (bisher), z = 586,7 | 400 | 157,9 | 586,7 | ≈ 8 920 |
 | Druckseite starr | – | ∞ | 720 | – |
+
+**Iteration (Start x = 400 mm):** 400,0 → 266,9 → 257,7 → 256,9 → 256,8 mm
+(c_c,90 172,7 → 123,0 → 119,5 → 119,2 → 119,1 kN/mm).
 
 **Vorbehalte:** gilt nur nach dem Öffnen der Fuge (Vorspannung,
 R3-COMMON-OPQ-007); Gl. (9.31) für gleichmäßige Pressung angewendet auf
