@@ -142,3 +142,9 @@ Steifigkeit der Druckseite c_c,tot.
 **Ergänzung 2026-09-30:** Modell der Druckseite R3-COMMON-DEC-009 gilt auch
 für GL75 (noch nicht gerechnet; Zugseite GL75 unvollständig, R3-GL75-OPQ-002).
 Vorspannung/Lastanteilsfaktor: R3-COMMON-OPQ-007.
+
+## Update 2026-09-30 (Abend): Schubmodul BFU-BU und Plattenaufbau
+
+G_v = 520 N/mm² (COMMON-COMMON-DEC-010), je Seite eine 15-mm-Platte
+(R3-COMMON-DEC-010). Schubfeld c_v = 163,13 kN/mm (R3-GL75-CALC-004, ersetzt
+CALC-003). Übrige Zugkette GL75 weiterhin unvollständig (R3-GL75-OPQ-002).

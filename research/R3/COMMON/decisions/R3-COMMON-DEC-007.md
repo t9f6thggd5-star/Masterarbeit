@@ -20,9 +20,12 @@ reason: >
 alternatives_considered: >
   c_v weglassen bzw. als offene Frage führen — verworfen.
 date: "2026-09-28"
-superseded_by:
+superseded_by: R3-COMMON-DEC-010
 ---
 
 Ergebnisse: R3-GL24h-CALC-012 (156,17 kN/mm), R3-GL75-CALC-003
 (188,17 kN/mm). Modellgrenzen (Platte kürzer als das Holzfeld, reiner
 Schub, G_P als Annahme) in R3-COMMON-OPQ-005.
+
+**Korrektur (2026-09-30):** Laut Nutzer eine 15-mm-Platte je Seite (nicht
+2 × 15 mm); G neu nach COMMON-COMMON-DEC-010. Ersetzt durch R3-COMMON-DEC-010.

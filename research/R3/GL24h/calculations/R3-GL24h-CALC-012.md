@@ -32,8 +32,10 @@ source_file: >
   Gerechnet im Chat 2026-09-28; Umsetzung im Nutzer-Excel R3/COMMON/calculations/20260208_Berechnung_Rahmenecke_seitl. Holzlaschen.xlsx,
   Sheet "Rahmenecke GL24h SD" (Zelle I136 laut Nutzerformel).
 certainty: CALCULATED
-superseded_by:
+superseded_by: R3-GL24h-CALC-017
 ---
 
 Anteil an der Nachgiebigkeit der Zugseite etwa 20 %. Modellgrenzen siehe
 R3-COMMON-OPQ-005.
+
+**Update (2026-09-30):** ersetzt, siehe superseded_by.

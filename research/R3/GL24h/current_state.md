@@ -433,3 +433,21 @@ Blatt "VSP GL24h ohne Druckkontakt" (C9 → 0, #DIV/0!).
 
 **Ergänzung 2026-09-30 (Nachmittag):** Neue offene Frage R3-COMMON-OPQ-008:
 Im Schubfeld c_v eventuell z statt l_v = 800 mm im Nenner (c_t,tot ≈ +6 %).
+
+## Update 2026-09-30 (Abend): Schubmodul BFU-BU und Plattenaufbau
+
+G_v = 520 N/mm² für BFU-BU (DIN EN 12369-2 Tab. 4, 5-%-Wert, sichere Seite;
+COMMON-COMMON-DEC-010). Je Seite **eine** 15-mm-Platte (R3-COMMON-DEC-010,
+ersetzt R3-COMMON-DEC-007; Faktor 2 in Excel I143 vom Nutzer entfernt).
+Neue Werte (Excel "Rahmenecke GL24h SD"):
+
+- Schubfeld c_v = 131,13 kN/mm (R3-GL24h-CALC-017, ersetzt CALC-012)
+- c_t,tot = 29,89 kN/mm (R3-GL24h-CALC-018, ersetzt CALC-014);
+  Empfindlichkeit ohne 44-C-2 ≈ 30,28 kN/mm (CALC-015)
+- Druckseite: x = 252,8 mm, c_c,tot = 110,50 kN/mm, z = 635,7 mm
+- **S_j,ini = 8 878 kNm/rad** (R3-GL24h-CALC-019, ersetzt CALC-016;
+  vorher 9 115, −2,6 %)
+- Verdrehung Φ = 26,83 mrad, u_M = 81,3 mm (M_R = 238,19 kNm)
+
+Offen bleiben R3-COMMON-OPQ-007 (Vorspannung), R3-COMMON-OPQ-008 (z statt
+l_v im Schubfeld) und z für M_R (R3-COMMON-DEC-004).

@@ -65,3 +65,9 @@ Ergänzt (aber ersetzt nicht) die bisherige Herkunftsangabe aus chat-3
 oben; welche konkrete KLH-ETA (Produkt/Ausgabejahr) gemeint ist, ist
 damit noch nicht abschließend dokumentiert — bei Bedarf beim Nutzer
 nachfragen, bevor dies als vollwertige Normquelle zitiert wird.
+
+**Update (2026-09-30):** Der Schubmodul der Platten wird durch COMMON-COMMON-DEC-010
+ersetzt (G_v = 520 N/mm², als Näherung außerhalb des Anwendungsbereichs von
+DIN EN 12369-2). Plattenaufbau laut Nutzer: GL24h 4-lagig, 12 mm je Seite; GL75
+3-lagig, 9 mm je Seite. Im R2-Excel steht noch 500 N/mm² (Holzkennwerte L23);
+Einfluss auf c_v bei GL24h ≈ +0,4 % (116,0 → 116,5 kN/mm).

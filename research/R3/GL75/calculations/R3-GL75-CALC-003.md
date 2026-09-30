@@ -26,8 +26,10 @@ result:
 source_file: >
   Gerechnet im Chat 2026-09-28.
 certainty: CALCULATED
-superseded_by:
+superseded_by: R3-GL75-CALC-004
 ---
 
 c_t,sleeve und c_t,tot für GL75 folgen, sobald c_ax,v,f,α für GL75 vorliegt
 (R3-GL75-OPQ-002).
+
+**Update (2026-09-30):** ersetzt, siehe superseded_by.

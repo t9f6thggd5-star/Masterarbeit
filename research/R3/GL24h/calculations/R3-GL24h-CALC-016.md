@@ -45,7 +45,7 @@ source_file: >
   I179 (x), I182 (c_c,tot), I183 (z), I184 (S_j,ini), Kontrolle I185/I186;
   per LibreOffice nachgerechnet, Werte identisch.
 certainty: CALCULATED
-superseded_by:
+superseded_by: R3-GL24h-CALC-019
 ---
 
 **Zwischenergebnisse:** x = 256,8 mm, c_c,tot = 111,88 kN/mm, z = 634,4 mm.
@@ -61,6 +61,15 @@ superseded_by:
 | zum Vergleich: x = 400 mm fest (bisher), z = 586,7 | 400 | 157,9 | 586,7 | ≈ 8 920 |
 | Druckseite starr | – | ∞ | 720 | – |
 
+**Verhältnis zu Buchholz2025 Gl. (3):** c_c,tot gilt für gleichmäßige Pressung
+auf b·x (Gl. 9.31). Bei dreieckiger Pressung verschiebt sich der Punkt der
+Druckresultierenden (x/3 vom inneren Rand) nur um φ·2x/3; die Ersatzfeder
+dort ist c_c,eq = C/(φ·2x/3) = ¾·k·b·x = ¾·c_c,tot = 83,91 kN/mm. Damit liefert
+Gl. (3) z²/(1/c_t,tot + 1/c_c,eq) = 634,38²/(1/31,023 + 1/83,91) = 9 115 kNm/rad,
+identisch mit der direkten Herleitung. Mit c_c,tot direkt in Gl. (3) ergäben
+sich 9 775 kNm/rad (+7 %, nicht konsistent). Excel: I187 (c_c,eq), I188
+(S_j,ini nach Gl. 3).
+
 **Iteration (Start x = 400 mm):** 400,0 → 266,9 → 257,7 → 256,9 → 256,8 mm
 (c_c,90 172,7 → 123,0 → 119,5 → 119,2 → 119,1 kN/mm).
 
@@ -69,3 +78,5 @@ R3-COMMON-OPQ-007); Gl. (9.31) für gleichmäßige Pressung angewendet auf
 dreieckige Pressung (R3-COMMON-DEC-009); h_ef = 140 mm noch nicht
 ausdrücklich bestätigt; C_v,f,rot nicht angesetzt (R3-COMMON-DEC-005);
 Zugseite mit den Vorbehalten von R3-GL24h-CALC-013/014 (n = 1 Riegelseite).
+
+**Update (2026-09-30):** ersetzt, siehe superseded_by.

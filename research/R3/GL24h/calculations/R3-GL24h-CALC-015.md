@@ -68,3 +68,7 @@ Beitrag zur Parameterstudie laut Aufgabenstellung (Streuung der
 Komponenten-Eingangswerte); zusammen mit der Spanne c32,Beam 130–147 kN/mm
 (R3-GL24h-DEC-015) weiterführen. n = 3 Prüfkörper je Serie; statistisch ist
 C-2 nicht als Ausreißer nachweisbar (CLAUDE.md Abschnitt 15).
+
+**Hinweis (2026-09-30):** Gerechnet mit c_v = 156,17 kN/mm (R3-GL24h-CALC-012,
+inzwischen ersetzt). Mit c_v = 131,13 kN/mm (R3-GL24h-CALC-017): c_t,tot ohne 44-C-2
+≈ 30,28 statt 29,89 kN/mm (+1,3 %); die Aussage (Einfluss von C-2 gering) bleibt.

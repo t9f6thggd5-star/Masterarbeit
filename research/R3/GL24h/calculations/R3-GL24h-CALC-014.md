@@ -26,9 +26,11 @@ result:
 source_file: >
   R3/COMMON/calculations/20260208_Berechnung_Rahmenecke_seitl. Holzlaschen.xlsx, Sheet "Rahmenecke GL24h SD" (Nutzerformel =1/(1/(2*I139)+1/I136)).
 certainty: CALCULATED
-superseded_by:
+superseded_by: R3-GL24h-CALC-018
 ---
 
 Anteile an 1/c_t,tot: Gewindestange 50 %, Schubfeld 20 %, ASSY Riegel 11 %,
 Lasche (2×) 10 %, ASSY Stütze 8 %. Geht in S_j,ini = z²/(1/c_t,tot +
 1/c_c,tot) ein; Druckseite c_c,tot steht noch aus.
+
+**Update (2026-09-30):** ersetzt, siehe superseded_by.

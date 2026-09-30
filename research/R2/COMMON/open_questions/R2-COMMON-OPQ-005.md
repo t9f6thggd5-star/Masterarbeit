@@ -3,7 +3,7 @@ open_question_id: R2-COMMON-OPQ-005
 scope:
   connection: R2
   material: COMMON
-status: OPEN
+status: RESOLVED
 question: >
   Ist `G_r,mean = 500 N/mm²` für die BFU-BU-F50/25-Sperrholzplatten in
   Scheibenbeanspruchung durch eine Produktdeklaration/Norm belegbar, oder
@@ -19,8 +19,11 @@ options_considered: >
   beschaffen, falls ein quellenbasierter Endwert für die Thesis benötigt
   wird.
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  G_v = 520 N/mm² nach DIN EN 12369-2:2011-09, Tab. 4 (Buche, 700 kg/m³),
+  COMMON-COMMON-DEC-010. Für R2 außerhalb des Anwendungsbereichs der Norm
+  (4- bzw. 3-lagig), als Näherung verwendet (Nutzer, 2026-09-30).
 ---
 
 Übernommen aus chat-3, OPEN_QUESTIONS.md Punkt 7. Siehe auch die bereits
