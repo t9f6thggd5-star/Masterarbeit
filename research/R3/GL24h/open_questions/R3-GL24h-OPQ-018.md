@@ -3,7 +3,7 @@ open_question_id: R3-GL24h-OPQ-018
 scope:
   connection: R3
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   Welches Dokument ist die in chat-1 zitierte, nicht näher benannte Quelle
   zur Vorspannung (Diskussion um Seite 30)?
@@ -17,6 +17,8 @@ context: >
 related_sources:
 options_considered:
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Verworfen (Nutzer, 2026-09-30): Quelle nicht identifizierbar, wird nicht
+  weiter verfolgt.
 ---

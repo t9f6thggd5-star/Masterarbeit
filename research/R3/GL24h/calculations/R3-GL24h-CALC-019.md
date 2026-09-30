@@ -32,3 +32,5 @@ superseded_by:
 Ersetzt R3-GL24h-CALC-016 (9 115 kNm/rad, −2,6 %). Vorbehalte wie dort.
 Übersicht linear (M_R = 238,19 kNm nach R3-COMMON-DEC-004, a = 3,0293 m):
 Φ = 238,19/8 878 = 26,83 mrad, u_M = 81,3 mm, F = 78,63 kN.
+
+**Update (2026-09-30), Hebelarm nach R3-COMMON-DEC-013:** Mit z = 635,7 mm auch für M_R: M_R = 2 · 203 · 0,6357 = 258,11 kNm (statt 238,19), Φ = 258,11/8 878 = 29,07 mrad, u_M = 88,1 mm, F = 85,20 kN. Im Excel noch nicht umgestellt (Sheet "Rahmenecke GL24h SD" C80 = I96/3 mit I96 = 400 mm). Die Werte gelten für die Variante ohne Druckkontakt der Laschen, die nach R3-COMMON-DEC-011 überarbeitet wird.

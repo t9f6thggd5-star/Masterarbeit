@@ -9,7 +9,10 @@ question: >
   Zugseite aufgebracht?
 decision: >
   Vorspannung nur auf der Zugseite.
-reason: "Im Ursprungsmaterial (chat-1) nicht dokumentiert."
+reason: >
+  Die Vorspannung soll die Verdrehung der Rahmenecke verringern. Auf der
+  Druckseite würde eine Vorspannung eine zusätzliche Last bedeuten (Nutzer,
+  2026-09-30; bis dahin "Im Ursprungsmaterial (chat-1) nicht dokumentiert").
 alternatives_considered:
 date: "UNKNOWN (chat-1, Abschnitt Vorspannungsdiskussion; kein genaues Datum überliefert)"
 superseded_by:

@@ -14,6 +14,7 @@ decision: >
 reason: "Im Ursprungsmaterial (chat-1) nicht dokumentiert."
 alternatives_considered:
 date: "UNKNOWN (chat-1, Requirements/Functional; kein genaues Datum überliefert)"
+superseded_by: R3-COMMON-DEC-012
 ---
 
 Übernommen aus chat-1, REQUIREMENTS.md ("Functional": "[Fact] Keep
@@ -21,3 +22,5 @@ separate variants with and without preload."). Ergänzt R3-GL24h-DEC-002
 (Vorspannung nur zugseitig) um die Festlegung, dass diese
 Vorspannungsvariante nicht die einzige ist, sondern parallel zu einer
 Variante ganz ohne Vorspannung geführt wird.
+
+**Update (2026-09-30):** Ersetzt durch R3-COMMON-DEC-012 (nur die Variante mit Vorspannung).

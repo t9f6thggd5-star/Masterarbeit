@@ -3,7 +3,7 @@ open_question_id: R3-COMMON-OPQ-002
 scope:
   connection: R3
   material: COMMON
-status: OPEN
+status: RESOLVED
 question: >
   Erzeugt das Einsetzen der Ankerplatte in das Hirnholz der Lasche einen
   Anfangsschlupf, und wie groß ist er?
@@ -19,6 +19,10 @@ related_sources: Buchholz2025
 options_considered: >
   Vorerst starr, kein Schlupf (Nutzerentscheidung 2026-09-28).
 date_opened: "2026-09-28"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Wie bei R2 (R2-COMMON-OPQ-012, Nutzer 2026-09-30): vermutlich kein
+  Anfangsschlupf aus den Ankerplatten; wird nicht angesetzt. Bei der
+  Kurvenanalyse nach den Rahmeneckversuchen als mögliche Stellschraube
+  untersuchen.
 ---

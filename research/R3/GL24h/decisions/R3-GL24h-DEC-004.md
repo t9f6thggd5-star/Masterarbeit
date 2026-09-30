@@ -21,6 +21,7 @@ alternatives_considered: >
   Eine "Guaranteed-Contact"-Variante (garantierter direkter Kontakt) wird
   parallel als Sensitivitätsfall mitgeführt, siehe offene Fragen.
 date: "UNKNOWN (chat-1, nach Rücksprache mit dem Betreuer; kein genaues Datum überliefert)"
+superseded_by: R3-COMMON-DEC-011
 ---
 
 Übernommen aus chat-1, DECISIONS.md Punkt 5, dort als `[Fact]`/„Active
@@ -36,3 +37,5 @@ durchgängig. Dieser Laschenstoß in der Eckfuge ist der konkrete Grund,
 warum ein garantierter Druckkontakt beim Vorspannen nicht sichergestellt
 werden kann (bislang nur allgemein als "reale Passung/Kontakt kann nicht
 sichergestellt werden" dokumentiert, jetzt physisch begründet).
+
+**Update (2026-09-30):** Ersetzt durch R3-COMMON-DEC-011: künftig wird angenommen, dass zwischen den Laschenhälften kein Spalt ist (Kontakt an der Stoßfuge). Diese Entscheidung war nach Rücksprache mit der Betreuung gefallen; die Änderung ist der Betreuung mitzuteilen.

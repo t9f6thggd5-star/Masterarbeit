@@ -3,7 +3,7 @@ open_question_id: R3-GL24h-OPQ-005
 scope:
   connection: R3
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   Auf welcher konkreten Grundlage (welche Ergebnisse/Kriterien) wurde die
   Tragfähigkeits-Vorbemessung als "ausreichend abgeschlossen" bewertet, um
@@ -16,6 +16,8 @@ context: >
 related_sources:
 options_considered:
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Die Vorbemessung ist laut Nutzer noch nicht abgeschlossen (2026-09-30);
+  R3-GL24h-DEC-009 ersetzt durch R3-GL24h-DEC-016.
 ---

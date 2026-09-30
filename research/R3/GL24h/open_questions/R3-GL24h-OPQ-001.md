@@ -3,7 +3,7 @@ open_question_id: R3-GL24h-OPQ-001
 scope:
   connection: R3
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   Warum wurde festgelegt, dass die Vorspannung nur auf der Zugseite der
   Verbindung aufgebracht wird (R3-GL24h-DEC-002)? Welche Überlegung führte
@@ -17,6 +17,9 @@ context: >
 related_sources:
 options_considered:
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Begründung vom Nutzer (2026-09-30): Die Vorspannung soll die Verdrehung
+  verringern; auf der Druckseite würde sie eine zusätzliche Last bedeuten.
+  Eingetragen in R3-COMMON-DEC-001 (Nachfolger von R3-GL24h-DEC-002).
 ---

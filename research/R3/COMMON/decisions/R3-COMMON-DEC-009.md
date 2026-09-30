@@ -73,3 +73,7 @@ Nulllinie hin wirkt real schwächer, "beidseitig" überschätzt c_c,90 etwas
 (untere Grenze: ohne Ausbreitung). Für den Hebelarm z der
 Momententragfähigkeit M_R gilt bis zur Entscheidung des Nutzers weiter
 R3-COMMON-DEC-004 (586,7 mm); mit z aus der Nulllinie wären es ≈ 634 mm.
+
+**Update (2026-09-30):** h_ef = 140 mm nach FprEN Gl. (8.11) vom Nutzer bestätigt. Hebelarm für M_R jetzt ebenfalls aus der Nulllinie (R3-COMMON-DEC-013).
+
+**Achtung (2026-09-30):** Diese Entscheidung beruht auf der Variante ohne Druckkontakt der Laschen. Nach R3-COMMON-DEC-011 (kein Spalt zwischen den Laschenhälften) ist die Druckseite zu überarbeiten (Druck auch über die Laschen der Druckseite). Bis dahin bleibt der Eintrag als Arbeitsstand gültig.

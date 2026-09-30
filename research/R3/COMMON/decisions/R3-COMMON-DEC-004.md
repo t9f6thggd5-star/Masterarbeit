@@ -20,7 +20,7 @@ alternatives_considered: >
   z = 640 mm (vorläufiger Wert aus chat-1, R3-GL24h-DEC-007, Herkunft nicht
   dokumentiert) — ersetzt.
 date: "2026-09-28"
-superseded_by:
+superseded_by: R3-COMMON-DEC-013
 ---
 
 Ersetzt R3-GL24h-DEC-007. Gilt für GL24h und GL75, da die Geometrie im Excel
@@ -34,3 +34,5 @@ der Träger vollständig auf, die Pressung verteilt sich elastisch
 dreieckförmig. Die Druckzonenbreite von 400 mm ist dabei eine Annahme; nach
 Ansicht des Nutzers müsste die Druckzone der Teil auf der Druckseite des
 Rotationspunkts (Nulllinie) sein, siehe R3-COMMON-OPQ-001.
+
+**Update (2026-09-30):** Ersetzt durch R3-COMMON-DEC-013 (z aus der Nulllinie, auch für M_R).

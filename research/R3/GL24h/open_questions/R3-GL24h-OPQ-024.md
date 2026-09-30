@@ -3,7 +3,7 @@ open_question_id: R3-GL24h-OPQ-024
 scope:
   connection: R3
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   Fehler in der übernommenen Push-Out-Auswertung: Im Blatt
   "III-PO-S-SC-44-C-1" zeigt der von Hand eingetragene Zeilenverweis für
@@ -40,6 +40,9 @@ options_considered: >
   Gelegenheit auf dieselbe Art prüfen (Zeilenverweise V12:V17 gegen die
   Messdaten).
 date_opened: "2026-09-30"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Vom Nutzer in der Datei korrigiert (2026-09-30). Geprüft:
+  "III-PO-S-SC-44-C-1" V15 = 880, P15 = F11 = 28,92 kN, v11 links 0,358 mm,
+  rechts 0,3025 mm. Keine Auswirkung auf K_ser/K_e.
 ---

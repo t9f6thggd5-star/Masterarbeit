@@ -14,6 +14,7 @@ decision: >
 reason: "Im Ursprungsmaterial (chat-1) nicht dokumentiert."
 alternatives_considered:
 date: "UNKNOWN (chat-1, letzter Stand des Chats, bis 2026-08-24; kein genaues Datum überliefert)"
+superseded_by: R3-GL24h-DEC-016
 ---
 
 Übernommen aus chat-1, DECISIONS.md Punkt 11, dort als `[Fact]`/„Active"
@@ -22,3 +23,5 @@ Verformungsbetrachtung; siehe `STATE.md`/`TASKS.md` für die daraus
 abgeleiteten nächsten Schritte (dort teilweise noch als `[Proposal]`
 offen, nicht als eigene Einträge übernommen, siehe Rückfrage zu
 TASKS.md).
+
+**Update (2026-09-30):** Laut Nutzer ist die Tragfähigkeits-Vorbemessung noch nicht abgeschlossen; ersetzt durch R3-GL24h-DEC-016.

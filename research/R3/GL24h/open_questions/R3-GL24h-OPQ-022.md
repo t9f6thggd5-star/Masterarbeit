@@ -3,7 +3,7 @@ open_question_id: R3-GL24h-OPQ-022
 scope:
   connection: R3
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   Wie groß ist die tatsächliche Anfangssteifigkeit der Beam-seitigen
   ASSY-Schraubengruppe (c_ax+br,perp) für 4×4 (16 Schrauben) bzw. die
@@ -50,8 +50,11 @@ options_considered: >
   Option 1 und 3, jetzt aber explizit als Vereinfachung markiert statt
   stillschweigend vorausgesetzt.
 date_opened: "2026-09-22"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Geschlossen mit dem Arbeitswert c32,Beam = 137,9 kN/mm, Spanne 130–147 kN/mm
+  für die Parameterstudie (R3-GL24h-DEC-015; Nutzer, 2026-09-30).
+  Einschränkung n = 1 bleibt bestehen.
 ---
 
 Aufgeworfen im Zuge der Hochrechnung der ASSY-Schraubengruppen-

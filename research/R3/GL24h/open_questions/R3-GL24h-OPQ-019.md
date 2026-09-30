@@ -3,7 +3,7 @@ open_question_id: R3-GL24h-OPQ-019
 scope:
   connection: R3
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   Warum werden Varianten mit und ohne Vorspannung parallel geführt statt
   nur eine davon zu untersuchen (R3-GL24h-DEC-010)? Welche Überlegung
@@ -16,6 +16,9 @@ context: >
 related_sources:
 options_considered:
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Nutzer (2026-09-30): "mit Vorspannung." Nur die Variante mit Vorspannung
+  wird untersucht (R3-COMMON-DEC-012, ersetzt R3-GL24h-DEC-010; Deutung noch
+  vom Nutzer zu bestätigen).
 ---

@@ -11,7 +11,10 @@ decision: >
   Kriechen, Schwinden und Vorspannungsverlust werden experimentell über
   geplante Kriechversuche bestimmt. Das initiale analytische Modell trifft
   dazu keine Annahmen/Spekulationen.
-reason: "Im Ursprungsmaterial (chat-1) nicht dokumentiert."
+reason: >
+  Kriechen und Schwinden können theoretisch auch rechnerisch berücksichtigt
+  werden, sind aber nicht Teil der Vorbemessung (Nutzer, 2026-09-30; bis dahin
+  "Im Ursprungsmaterial (chat-1) nicht dokumentiert").
 alternatives_considered:
 date: "UNKNOWN (chat-1, Abschnitt Kriechversuch-Diskussion; kein genaues Datum überliefert)"
 superseded_by:

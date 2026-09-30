@@ -3,7 +3,7 @@ open_question_id: R3-GL24h-OPQ-020
 scope:
   connection: R3
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   Warum ist Prüfkörper 1 der Serie III-PO-S-SD-36 (Push-Out, Stabdübel,
   3×6) in der Auswertungsdatei als "entfällt" markiert, mit Steifigkeit
@@ -25,8 +25,12 @@ options_considered: >
   dann prinzipiell gültig, aber nicht direkt mit PK2/3 vergleichbar. Beide
   Optionen bewusst nicht entschieden (CLAUDE.md Abschnitt 4).
 date_opened: "2026-09-16"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Verworfen (Nutzer, 2026-09-30): Die Stabdübel-Serie geht nicht in die
+  R3-Steifigkeitskette ein; Ursache für "entfällt" bei PK1 wird nicht weiter
+  geklärt. R3-GL24h-III-PO-S-SD-36-RES-001 bleibt unverändert (Mittelwert
+  inkl. PK1), bei späterer Verwendung beachten.
 ---
 
 Aufgefallen beim Einpflegen der Push-Out-Steifigkeitsauswertung ins

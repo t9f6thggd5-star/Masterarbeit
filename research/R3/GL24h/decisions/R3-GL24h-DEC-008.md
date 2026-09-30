@@ -10,7 +10,9 @@ question: >
 decision: >
   Ein zentraler Zylinder, 45°-Anordnung; daraus abgeleiteter senkrechter
   Hebelarm 3,03 m für den diskutierten Prüfstand.
-reason: "Im Ursprungsmaterial (chat-1) nicht dokumentiert."
+reason: >
+  Vom Prüfinstitut vorgegeben (Nutzer, 2026-09-30; bis dahin "Im
+  Ursprungsmaterial (chat-1) nicht dokumentiert").
 alternatives_considered:
 date: "UNKNOWN (chat-1, Prüfmaschinen-Diskussion; kein genaues Datum überliefert)"
 ---
@@ -20,3 +22,5 @@ discussed rig" markiert. Zielmoment daraus ca. 225 kNm (`225,79 kNm`
 einmalig genannt, siehe `KNOWLEDGE.md`). Endgültige Freikörper-Interpretation
 dieses einen zentralen 45°-Zylinders ist laut `OPEN_QUESTIONS.md` Punkt 10
 noch offen.
+
+**Update (2026-09-30):** Freikörperbild vom Nutzer bestätigt: Zylinderkraft F = M/a mit a = 3,0293 m (R3-GL24h-OPQ-015 RESOLVED).

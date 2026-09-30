@@ -451,3 +451,30 @@ Neue Werte (Excel "Rahmenecke GL24h SD"):
 
 Offen bleiben R3-COMMON-OPQ-007 (Vorspannung), R3-COMMON-OPQ-008 (z statt
 l_v im Schubfeld) und z für M_R (R3-COMMON-DEC-004).
+
+## Update 2026-09-30 (Abend): Klärung der offenen R3-Fragen
+
+**Große Änderung:** Künftig wird angenommen, dass zwischen den Laschenhälften
+kein Spalt ist (R3-COMMON-DEC-011, ersetzt R3-GL24h-DEC-004). Druckseite,
+Vorspannung und Zugkette werden darauf umgestellt; der Betreuung mitteilen,
+weil die bisherige Variante mit ihr abgestimmt war.
+
+- Nur die Variante mit Vorspannung (R3-COMMON-DEC-012, ersetzt DEC-010;
+  Deutung noch zu bestätigen).
+- Hebelarm aus der Nulllinie auch für M_R (R3-COMMON-DEC-013, ersetzt
+  R3-COMMON-DEC-004): z = 635,7 mm, M_R = 258,11 kNm, Φ = 29,07 mrad,
+  u_M = 88,1 mm (noch Variante ohne Kontakt). Excel: C80 = I179/3.
+- Vorbemessung nicht abgeschlossen (R3-GL24h-DEC-016, ersetzt DEC-009).
+- h_ef = 140 mm bestätigt; Ankerplatte ohne Schlupf wie R2.
+- Begründungen ergänzt: R3-COMMON-DEC-001/002, R3-GL24h-DEC-008.
+- RESOLVED: R3-COMMON-OPQ-002, R3-GL24h-OPQ-001/002/004/005/009/015/019/022/024;
+  verworfen: OPQ-018/020.
+- Offen: R3-GL24h-OPQ-011 (F/8 je Reihe), R3-COMMON-OPQ-003
+  (Laschenstauchung, nochmals ansehen), -004, -005, -006, -007, -008.
+
+**Ergänzung 2026-09-30:** Neue projektweite Arbeitsweise COMMON-COMMON-DEC-011
+(Vereinfachungen für die Vorbemessung festlegen, beim Versuchsvergleich als
+Stellschrauben prüfen). Danach Schubfeldmodell für die Vorbemessung
+festgelegt (R3-COMMON-OPQ-005 RESOLVED, Alternativen dort, Einfluss auf
+c_t,tot etwa −6 % bis +5 %). Nächster Schritt: Umstellung auf Kontakt der
+Laschenhälften (R3-COMMON-DEC-011).

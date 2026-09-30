@@ -3,7 +3,7 @@ open_question_id: R3-GL24h-OPQ-004
 scope:
   connection: R3
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   Warum wurde für den diskutierten Prüfstand genau die Konfiguration "ein
   zentraler Zylinder, 45°" mit resultierendem Hebelarm 3,03 m gewählt
@@ -19,6 +19,8 @@ context: >
 related_sources:
 options_considered:
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Prüfstandkonfiguration vom Prüfinstitut vorgegeben (Nutzer, 2026-09-30).
+  Eingetragen in R3-GL24h-DEC-008.
 ---

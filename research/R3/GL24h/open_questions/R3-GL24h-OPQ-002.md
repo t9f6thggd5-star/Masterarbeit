@@ -3,7 +3,7 @@ open_question_id: R3-GL24h-OPQ-002
 scope:
   connection: R3
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   Warum wurde entschieden, Kriechen/Schwinden/Vorspannungsverlust
   ausschließlich experimentell (über geplante Kriechversuche) zu bestimmen
@@ -16,6 +16,9 @@ context: >
 related_sources:
 options_considered:
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Begründung vom Nutzer (2026-09-30): Kriechen und Schwinden können
+  theoretisch rechnerisch berücksichtigt werden, sind aber nicht Teil der
+  Vorbemessung. Eingetragen in R3-COMMON-DEC-002.
 ---

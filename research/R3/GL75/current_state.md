@@ -148,3 +148,10 @@ Vorspannung/Lastanteilsfaktor: R3-COMMON-OPQ-007.
 G_v = 520 N/mm² (COMMON-COMMON-DEC-010), je Seite eine 15-mm-Platte
 (R3-COMMON-DEC-010). Schubfeld c_v = 163,13 kN/mm (R3-GL75-CALC-004, ersetzt
 CALC-003). Übrige Zugkette GL75 weiterhin unvollständig (R3-GL75-OPQ-002).
+
+## Update 2026-09-30 (Abend)
+
+Neu für beide Materialien: kein Spalt zwischen den Laschenhälften
+(R3-COMMON-DEC-011), nur Variante mit Vorspannung (R3-COMMON-DEC-012), z aus
+der Nulllinie (R3-COMMON-DEC-013). Die 44er-Push-Out-Versuche GL75 wertet der
+Nutzer selbst aus (R3-GL75-OPQ-002 bleibt OPEN).
