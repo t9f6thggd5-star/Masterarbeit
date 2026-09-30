@@ -51,3 +51,16 @@ Druckseite bis zum vollen Kontakt. Stützt den oben beschriebenen Kraftfluss
 (Vorpressung der Fuge Riegel/Stütze, Öffnen an der Zugseite) qualitativ;
 Übertragung auf GL24h/R3-Geometrie nicht belegt, n = 1 Versuch je
 Konfiguration.
+
+**Update (2026-09-30), Kontakt der Laschenhälften:** Nach R3-COMMON-DEC-011
+schließt sich die Vorspannung über die Stoßfuge der Laschen; nach
+R3-COMMON-DEC-014 teilt sie sich nach Steifigkeit auf diesen Weg und den Weg
+über ASSY und Holzkontakt Riegel/Stütze auf (Nutzer). Der oben beschriebene
+Kraftfluss ohne Kontakt gilt damit nicht mehr als Hauptvariante.
+Überschlag (Claude, ohne Aufteilung, Laschen starr gekoppelt über die
+Stoßfuge, gleiche Reihenlast F/8): Lastanteil der Stange Φ ≈ 0,12, Öffnen der
+Stoßfuge bei T ≈ F_V/(1 − Φ) ≈ 113 kN je Lasche (≈ 227 kN für beide, etwa
+56 % der Stangentragfähigkeit 406 kN); davor ist die Zugseite etwa doppelt
+so steif wie nach dem Öffnen. Die Excel-Blätter "VSP … ohne Druckkontakt"
+sind entsprechend neu aufzubauen.
+

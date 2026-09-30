@@ -29,3 +29,20 @@ resolution:
 Außerdem: Die Lastverteilung "jede Reihe F/8" (R3-GL24h-ASS-002) ist eine
 Vereinfachung eines gekoppelten Problems (Verhältnis Laschen-/Schrauben-
 steifigkeit, ähnlich Volkersen); real tragen die Endreihen mehr.
+
+**Update (2026-09-30), Varianten der Laschenlänge (Claude, zur Besprechung):**
+Geometrie laut Plan: 170 mm (Ankerplatte bis erste Reihe) + 7 × 80 + 70 mm
+(letzte Reihe bis Stoßfuge). Mit Kontakt (R3-COMMON-DEC-011) wird die Lasche
+auch auf der Druckseite gestaucht (70 mm + Gruppenbereich). Drei Ansätze
+(GL24h, E_0·A_netto = 134 300 kN):
+1. Verschiebung der letzten Reihe (bisher): Zug 450 mm (298 kN/mm), Druck
+   350 mm (384 kN/mm).
+2. Mittel der Reihenverschiebungen bei gleicher Reihenlast F/8 (passt
+   energetisch zu R3-GL24h-ASS-002): Zug 345 mm (389 kN/mm), Druck 245 mm
+   (548 kN/mm).
+3. Nur freie Länge (falls die Push-Out-Wegmessung den Gruppenbereich schon
+   enthält): Zug 170 mm (790 kN/mm), Druck 70 mm (1 919 kN/mm).
+Überschlag S_j,ini nach dem Öffnen der Stoßfuge (mit Laschen auf der
+Druckseite, Bettung konstant): 10 660 / 10 960 / 11 520 kNm/rad
+(Spanne ≈ 8 %). Entscheidung mit dem Nutzer offen.
+
