@@ -3,7 +3,7 @@ open_question_id: R2-COMMON-OPQ-010
 scope:
   connection: R2
   material: COMMON
-status: OPEN
+status: RESOLVED
 question: >
   Hat die Querdruckverstärkung (ASSY-Schrauben) einen Einfluss auf die
   Druckzonensteifigkeit (c_c,90), nicht nur auf die
@@ -27,8 +27,10 @@ related_sources:
   - wiki/R2/COMMON/literature/R2-COMMON-CLAIM-014.md
 options_considered:
 date_opened: "2026-09-03"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Ja (Nutzer, 2026-09-30): Die ASSY-Querdruckverstärkung wird in der
+  Steifigkeit c_c,90 berücksichtigt (Bejtka, R2-COMMON-CALC-001).
 ---
 
 Vom Nutzer am 2026-09-03 in Vorbereitung der Besprechung als Ergänzung zu

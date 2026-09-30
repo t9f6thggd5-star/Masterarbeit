@@ -3,7 +3,7 @@ open_question_id: R2-GL24h-OPQ-002
 scope:
   connection: R2
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   Wie groß ist der versteifende Beitrag der 9 ASSY-Verstärkungsschrauben
   zur Querdrucksteifigkeit, und ab welcher Laststufe darf er angesetzt
@@ -30,8 +30,10 @@ options_considered: >
   Axiale Schraubensteifigkeit als parallele Feder ergänzen, mit
   Annahme zur Kontaktaktivierung.
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Nutzer, 2026-09-30: Die verstärkte Querdrucksteifigkeit nach Bejtka
+  (R2-COMMON-CALC-001) wird verwendet, Mittragen der ASSY-Schrauben ab Last null.
 ---
 
 Übernommen aus chat-3, OPEN_QUESTIONS.md Punkt 5 und TASKS.md "P2 —

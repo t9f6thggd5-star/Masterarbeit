@@ -3,7 +3,7 @@ open_question_id: R2-COMMON-OPQ-006
 scope:
   connection: R2
   material: COMMON
-status: OPEN
+status: RESOLVED
 question: >
   Wie werden Zugseiten-Steifigkeit `c_T` und Druckseiten-Steifigkeit
   `c_C` über die richtigen Hebelarme/Federpositionen zu einer
@@ -17,8 +17,14 @@ context: >
 related_sources:
 options_considered:
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  S_j,ini = z²/(1/c_T + 1/c_C) wird so verwendet; z = 560 mm ist der Abstand
+  zwischen Zug- und Druckresultierender und gilt für Steifigkeit und
+  Tragfähigkeit. Wegen der konzentrierten Lasteinleitung über die Stahlplatten
+  kann von diesem Hebelarm ausgegangen werden. Nutzer, 2026-09-30.
+  R2-COMMON-HYP-001 ist weiterhin CLAUDE_DRAFT, reviewed: false; das Feld
+  reviewed setzt nur der Nutzer selbst.
 ---
 
 Übernommen aus chat-3, OPEN_QUESTIONS.md Punkt 9 und STATE.md Abschnitt 9

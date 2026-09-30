@@ -28,3 +28,5 @@ registrierte Quelle `DIN-EN-12369-2-2011` und den dort dokumentierten
 Versions-Vorbehalt (2011-09 vs. von chat-1/R3 zitierter 2025-11-Fassung,
 siehe R3-GL24h-OPQ-016) — die dort enthaltenen Kennwerte wurden für `G_r`
 in Scheibenbeanspruchung nicht direkt übernommen.
+
+**Update (2026-09-30):** Der Nutzer klärt den Wert selbst.

@@ -3,7 +3,7 @@ open_question_id: R2-COMMON-OPQ-011
 scope:
   connection: R2
   material: COMMON
-status: OPEN
+status: RESOLVED
 question: >
   Ist der Modellierungsansatz für c_c,0 (axiale Druck-Steifigkeit des
   Holzes parallel zur Faser in der Druckzone) korrekt — insbesondere
@@ -31,8 +31,12 @@ options_considered: >
   offenen Größe abhängig machen); (3) andere Bezugslänge (z. B.
   Trägerbreite/-tiefe), bisher nicht weiter verfolgt.
 date_opened: "2026-09-17"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Ansatz bestätigt (Nutzer, 2026-09-30): c_c,0 = E_0,mean·A/l mit A =
+  Plattenfläche 160 × 240 mm und l = 240 mm (Länge der Lasteinleitungszone).
+  Gleiches Vorgehen wie bei R3 (R3-COMMON-DEC-009, l_0 = Kontaktlänge x),
+  gestützt durch ScheibmairQuenneville2014 Gl. (27)–(30).
 ---
 
 Übernommen aus der Chat-Diskussion vom 2026-09-17 zur Herleitung von

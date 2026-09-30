@@ -3,7 +3,7 @@ open_question_id: R2-COMMON-OPQ-012
 scope:
   connection: R2
   material: COMMON
-status: OPEN
+status: RESOLVED
 question: >
   Erzeugt das Setzen bzw. Anpressen der Stahl-Ankerplatten (160×240×25 mm)
   auf dem Holz einen Anfangsschlupf, der in der Eckverdrehung und im
@@ -16,6 +16,9 @@ context: >
 related_sources:
 options_considered:
 date_opened: "2026-09-28"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Vermutlich kein Anfangsschlupf aus den Ankerplatten (Nutzer, 2026-09-30); wird
+  nicht angesetzt. Bei der Kurvenanalyse nach den Rahmeneckversuchen kann er als
+  mögliche Stellschraube untersucht werden.
 ---

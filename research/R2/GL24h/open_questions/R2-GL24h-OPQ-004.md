@@ -3,7 +3,7 @@ open_question_id: R2-GL24h-OPQ-004
 scope:
   connection: R2
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   Die Excel-Formel für die "maßgebende Zug/Druckkomponente" (Zelle H111,
   Sheet "Rahmenecke GL24h SD", Basis von M_max) lautet `=MIN(L16;H87)` —
@@ -30,8 +30,11 @@ options_considered: >
   (b) Formel um `L87` zu `=MIN(L16;H87;L87)` ergänzen, für Robustheit
   gegenüber künftigen Eingabeänderungen.
 date_opened: "2026-09-17"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Erledigt (2026-09-30): Die Formel für die maßgebende Zug/Druckkomponente lautet
+  inzwischen =MIN(L16,L87,H87) (Sheet "Rahmenecke GL24h SD", C97, geprüft per
+  openpyxl, Ergebnis 285,77 kN); L87 ist enthalten.
 ---
 
 Eigener Fund (Claude) beim Verifizieren der neu getrennten Zug-/
