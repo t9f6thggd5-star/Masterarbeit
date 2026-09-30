@@ -415,3 +415,18 @@ falscher Zeilenverweis v11/F11 in 44-C-1 ohne Einfluss auf die Ergebnisse
 (R3-GL24h-OPQ-024, für die Betreuung). OPQ-023 RESOLVED: C-2 bleibt im
 Hauptwert, Variante ohne C-2 als Empfindlichkeit (R3-GL24h-CALC-015:
 c_t,tot 31,44 statt 31,02 kN/mm, +1,4 %).
+
+## Update 2026-09-30: Druckseite (Zustand nach dem Öffnen der Fuge)
+
+Modell R3-COMMON-DEC-009: gesamte Druckkraft über Kontakt Riegel/Stütze,
+keine Querdruckverstärkung; Nulllinie aus Gleichgewicht (R3-COMMON-OPQ-001
+RESOLVED); Riegel c_c,90 nach FprEN Gl. (9.31), h_ef = 140 mm, beidseitig 45°;
+Stütze c_c,0 ohne Ausbreitung. Ergebnis R3-GL24h-CALC-016: x = 256,8 mm,
+c_c,tot = 111,9 kN/mm, z = 634,4 mm, **S_j,ini = 9 115 kNm/rad**
+(Spanne 7 590–9 115, untere Grenze ohne Ausbreitung 8 380). z für M_R noch
+offen (bis dahin R3-COMMON-DEC-004, 586,7 mm).
+
+Vorspannung: Die zugseitige Vorspannung drückt die Fuge außen vor; bis zum
+Öffnen ändert sich die Kontaktzone mit dem Moment. Lastanteilsfaktor Φ und
+vorgespannter Bereich offen (R3-COMMON-OPQ-007), dort auch der Excel-Fehler im
+Blatt "VSP GL24h ohne Druckkontakt" (C9 → 0, #DIV/0!).

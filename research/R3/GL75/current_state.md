@@ -138,3 +138,7 @@ Steifigkeit starr, Tragfähigkeit als nicht maßgebend angenommen (Stange
 maßgebend), vorerst ohne rechnerischen Nachweis (R3-COMMON-DEC-008).
 Begründung für die Ausarbeitung offen (R3-COMMON-OPQ-006). Nächster Schritt:
 Steifigkeit der Druckseite c_c,tot.
+
+**Ergänzung 2026-09-30:** Modell der Druckseite R3-COMMON-DEC-009 gilt auch
+für GL75 (noch nicht gerechnet; Zugseite GL75 unvollständig, R3-GL75-OPQ-002).
+Vorspannung/Lastanteilsfaktor: R3-COMMON-OPQ-007.

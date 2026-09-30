@@ -3,7 +3,7 @@ open_question_id: R3-COMMON-OPQ-001
 scope:
   connection: R3
   material: COMMON
-status: OPEN
+status: RESOLVED
 question: >
   Wie groß ist die Druckzone der R3-Rahmenecke tatsächlich? Nach Ansicht des
   Nutzers ist sie der Bereich auf der Druckseite des Rotationspunkts
@@ -24,6 +24,11 @@ options_considered: >
   (a) Druckzonenbreite 400 mm beibehalten (Arbeitsstand); (b) Nulllinie aus
   Gleichgewicht mit Kontaktsteifigkeit bestimmen (Nutzervorschlag).
 date_opened: "2026-09-28"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Option (b): Druckzonenlänge x aus dem Gleichgewicht Zug = Druck mit
+  Bettungssteifigkeit des Kontakts Riegel/Stütze (R3-COMMON-DEC-009); GL24h
+  x = 256,8 mm, z = 634,4 mm (R3-GL24h-CALC-016). Gilt für den Zustand nach
+  dem Öffnen der Fuge; vorgespannter Bereich in R3-COMMON-OPQ-007.
+  Nutzerentscheidung 2026-09-30.
 ---
