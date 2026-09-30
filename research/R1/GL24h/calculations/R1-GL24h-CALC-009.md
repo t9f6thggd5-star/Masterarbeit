@@ -60,3 +60,7 @@ obere Grenze der Steifigkeit), z = 550 mm auch bei Kontaktpressung
 (R1-COMMON-OPQ-006), K_ser für die Drehfeder Normwert oder Versuchswert
 c_v,f/32 = 17,47 kN/mm (offen, R1-GL24h-DEC-010; Σ C_rot,v,f −2,8 %),
 Zugverformung des Holzes nicht enthalten (R1-COMMON-OPQ-005 (b)).
+
+**Update (2026-09-28), Zellbezüge:** Das Blatt wurde umgebaut. C_rot,t+c
+steht jetzt in N38, C_rot,tot in N40 (bisher N27/N29); Werte unverändert.
+Verwendung in der Übersicht: R1-GL24h-CALC-011.

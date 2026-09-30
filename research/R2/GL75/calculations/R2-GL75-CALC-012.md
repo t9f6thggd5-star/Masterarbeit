@@ -48,7 +48,7 @@ source_file: >
   ermittelt; mit der jetzt vorliegenden Excel-Fundstelle wird der
   präzisere, formal referenzierte Wert `15.556,61` übernommen.
 certainty: CALCULATED
-superseded_by:
+superseded_by: R2-GL75-CALC-014
 ---
 
 **Eingangswerte (Excel-exakt):** `c_T = 70,83175 kN/mm` (M84,
@@ -99,3 +99,5 @@ materialunabhängige, noch nicht mit der Betreuerin abgestimmte
 `G_r,mean=500 N/mm²`-Annahme (R2-COMMON-ASS-003, jetzt mit
 Excel-Quellenangabe "KLH ETA Scheibenbeanspruchung"). Als laufende
 Arbeitsthese zu behandeln, nicht als bestätigtes Endergebnis.
+
+**Update (2026-09-28):** Ersetzt durch R2-GL75-CALC-014 (freie Stangendehnung c_t ergänzt, R2-COMMON-ASS-009).

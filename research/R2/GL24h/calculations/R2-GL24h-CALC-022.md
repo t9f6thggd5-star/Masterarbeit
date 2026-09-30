@@ -45,7 +45,7 @@ source_file: >
   SD", Zellen C90/C92, per openpyxl mit data_only=True und
   data_only=False geprüft, Stand 2026-09-17)
 certainty: CALCULATED
-superseded_by:
+superseded_by: R2-GL24h-CALC-025
 ---
 
 **Eingangswerte:** `c_T = 53,300 kN/mm` (R2-GL24h-CALC-021),
@@ -71,3 +71,5 @@ Betreuerin abgestimmt, `c_c,0`-Modellierungsannahme `l=240mm` gemäß
 R2-COMMON-OPQ-011 offen). Als laufende Arbeitsthese zu behandeln, nicht
 als bestätigtes Endergebnis — siehe R2-COMMON-OPQ-006 (Status bleibt
 `OPEN`).
+
+**Update (2026-09-28):** Ersetzt durch R2-GL24h-CALC-025 (freie Stangendehnung c_t ergänzt, R2-COMMON-ASS-009).

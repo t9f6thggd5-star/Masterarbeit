@@ -14,9 +14,12 @@ decision: >
 reason: "Im Ursprungsmaterial (chat-1) nicht dokumentiert."
 alternatives_considered:
 date: "UNKNOWN (chat-1, Hebelarm-Diskussion; kein genaues Datum überliefert)"
+superseded_by: R3-COMMON-DEC-004
 ---
 
 Übernommen aus chat-1, DECISIONS.md Punkt 9, dort als `[Fact]`/„Active
 pending pressure-resultant refinement" markiert. Zusammenhang mit der noch
 offenen Frage nach der korrekten Druckzonen-/Pressungsresultierenden, siehe
 `OPEN_QUESTIONS.md` Punkt 3 bzw. den entsprechenden offenen-Frage-Eintrag.
+
+**Update (2026-09-28):** Ersetzt durch R3-COMMON-DEC-004 (z = 586,7 mm, Druckresultierende im Drittel der Druckzone).

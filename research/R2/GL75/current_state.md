@@ -227,3 +227,9 @@ Folgen, keine Ergebnisse.
    Prüfprogramms) bestätigt die bestehende K_ser-Auswertung (R2-COMMON-DEC-003).
 3. **Übernommene Auswertedateien prüfen (COMMON-COMMON-DEC-007)**, auch
    `R2/COMMON/calculations/2026-06_05_Auswertung_Steifigkeiten_Bonded-inRods.xlsx`.
+
+**Update (2026-09-28), Übersichtstabelle und freie Stangendehnung:** wie
+GL24h: c_T,ges = 50,01 kN/mm (R2-GL75-CALC-013), S_j,ini = 12.045,5 kNm/rad
+(R2-GL75-CALC-014, −23 %), φ_S = 0 (R2-COMMON-DEC-005). Übersicht linear
+(R2-GL75-CALC-015): F = 53,79 kN, V = N = 38,04 kN, Φ = 13,53 mrad,
+u_M = 40,98 mm.

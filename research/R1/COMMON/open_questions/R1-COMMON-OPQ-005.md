@@ -45,3 +45,33 @@ für br,par nur eine Tragfähigkeitsregel an, das Federmodell (Gl. 2) führt
 c_br,par aber zweimal in Reihe im Zugpfad. Mit c_br,par starr bleibt
 c_t,tot = 279,52 kN/mm (GL24h) bzw. 727,74 kN/mm (GL75). (b) und (c) sind
 unverändert offen. Siehe auch R1-COMMON-DEC-004.
+
+**Update (2026-09-28), zu (b) Holzdehnung im Zugpfad:** Vom Nutzer
+erneut als offene Frage aufgenommen: ob und wie die Zugverformung des
+Holzes parallel zur Faser bei R1 zu berücksichtigen ist. Bezeichnung
+vorläufig **c_t,0** (Zug parallel zur Faser, Gegenstück zu c_c,0 im
+Druckpfad; nicht zu verwechseln mit c_t = Zugseite je Bauteil in
+R1-COMMON-DEC-004 und mit c_t = freie Stangendehnung bei R2).
+Ansatz c_t,0 = E_0,mean · A / l_eff je Bauteil, in Reihe mit c_v,f.
+Offen: (i) mitwirkende Fläche A (Holzbreite 2 × 72 mm, mitwirkende Höhe);
+(ii) Länge l_eff ≈ ½ · Gruppenlänge + Abstand letzter Dübel bis Gehrung
+(Plan PLAN-2685085-001-V1/V2); (iii) Doppelzählung: der Messwert c_v,f
+wird im Schwerpunkt der Dübelgruppe erfasst (R1-COMMON-OPQ-003), ein Teil
+der Holzdehnung innerhalb der Gruppe ist ggf. schon enthalten — dann nur
+Gruppenschwerpunkt bis Gehrung ansetzen.
+Grobe Abschätzung (Claude, R1/GL24h, nicht im Excel): c_t,0 ≈ 800–2000 kN/mm
+je Bauteil → C_rot,tot −11 % bis −21 %; zusammen mit nachgiebiger
+Druckseite (c_c,tot = 1…5 · c_t,tot) −17 % bis −35 %, Φ bei M_R ≈
+2,65–3,65 mrad statt 2,36 mrad.
+
+**Ergänzung (2026-09-28), Katalogbezug:** Buchholz2025 Tab. 1 führt die
+Komponente Nr. 6 "Timber, tension, angle α" (t,α) mit Tragfähigkeitsregel
+(FprEN 8.1.4), aber ohne Steifigkeitsangabe („–“); im R1-Federmodell Gl. (2)
+ist sie nicht enthalten, während im Druckpfad Gl. (1) c_c,0 (Nr. 3) enthalten
+ist. c_v,f (Nr. 8, K_ser) enthält nur die örtliche Lochleibung am Dübel;
+c_br,par (Nr. 13) hat im Katalog ebenfalls keine Steifigkeitsangabe.
+Mögliche Begründung der Asymmetrie: Abgrenzung Anschluss/Stab (Stabdehnung
+außerhalb der Anschlusszone gehört ggf. zum Stab im globalen Modell).
+**Nutzerentscheidung (2026-09-28):** Vorerst wird am Federmodell nach
+Buchholz2025 Gl. (1)–(5) festgehalten, c_t,0 wird nicht angesetzt; die
+Frage bleibt offen.

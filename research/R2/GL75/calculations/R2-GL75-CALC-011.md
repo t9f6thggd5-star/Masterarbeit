@@ -52,7 +52,7 @@ source_file: >
   identisch sind (Differenz `<0,001 kN/mm`, <0,002 %) und die
   Handrechnung nachvollziehbar bleibt.
 certainty: CALCULATED
-superseded_by:
+superseded_by: R2-GL75-CALC-013
 ---
 
 **Eingangswerte:**
@@ -100,3 +100,5 @@ siehe R2-GL75-CALC-010). Mit `c_T` und `c_C` (R2-GL75-CALC-008,
 `S_j,ini(GL75)` nach R2-COMMON-HYP-001 berechnet, siehe
 R2-GL75-CALC-012 (inzwischen ebenfalls im R2-Excel nachgebildet,
 Zelle I89).
+
+**Update (2026-09-28):** Ersetzt durch R2-GL75-CALC-013 (freie Stangendehnung c_t ergänzt, R2-COMMON-ASS-009).

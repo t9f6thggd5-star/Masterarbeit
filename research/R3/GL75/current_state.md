@@ -2,7 +2,7 @@
 scope:
   connection: R3
   material: GL75
-last_updated: "2026-09-16"
+last_updated: "2026-09-30"
 ---
 
 # Bearbeitungsstand: R3 / GL75
@@ -121,3 +121,24 @@ Folgen, keine Ergebnisse.
    fehlt die Steifigkeitsauswertung weiterhin (R3-GL75-OPQ-002); die
    Blätter in der Auswertungsdatei sind leer (F_est = 500 kN eingetragen).
 5. **Übernommene Auswertedatei prüfen (COMMON-COMMON-DEC-007).**
+
+## Update 2026-09-28: Zugseite im Federmodell
+
+Komponentenzuordnung wie GL24h (R3-COMMON-DEC-005). Vorhanden:
+c_t = 44,66 kN/mm (M24, ohne Faktor 1,6, R3-GL75-CALC-002),
+c_c,0 = c_H,Lasche = 436,87 kN/mm (Excel "VSP GL75 ohne Druckkontakt" C12),
+Schubfeld c_v = 188,17 kN/mm (R3-GL75-CALC-003). Es fehlen c_ax,v,f,α
+Stütze und Riegel: die 44er-Blätter der Push-Out-Datei sind leer
+(R3-GL75-OPQ-002), Ersatzansatz nötig. Gewindestange nach ISO 898-1:
+293 kN (R3-COMMON-DEC-003).
+
+## Update 2026-09-30: Sprödversagen br,par / br,perp
+
+Steifigkeit starr, Tragfähigkeit als nicht maßgebend angenommen (Stange
+maßgebend), vorerst ohne rechnerischen Nachweis (R3-COMMON-DEC-008).
+Begründung für die Ausarbeitung offen (R3-COMMON-OPQ-006). Nächster Schritt:
+Steifigkeit der Druckseite c_c,tot.
+
+**Ergänzung 2026-09-30:** Modell der Druckseite R3-COMMON-DEC-009 gilt auch
+für GL75 (noch nicht gerechnet; Zugseite GL75 unvollständig, R3-GL75-OPQ-002).
+Vorspannung/Lastanteilsfaktor: R3-COMMON-OPQ-007.

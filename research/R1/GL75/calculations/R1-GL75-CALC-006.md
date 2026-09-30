@@ -46,3 +46,6 @@ C_rot,tot = 220.141,4 + 4 · 55.495,8             = 442.124,6 kNm/rad
 
 Vorbehalte wie R1-GL24h-CALC-009 (K_ser Versuchswert c_v,f/32 =
 45,48 kN/mm statt 47,22 kN/mm: Σ C_rot,v,f −3,7 %).
+
+**Update (2026-09-28), Zellbezüge:** C_rot,t+c jetzt N38, C_rot,tot N40
+(bisher N27/N29); Werte unverändert. Verwendung: R1-GL75-CALC-007.

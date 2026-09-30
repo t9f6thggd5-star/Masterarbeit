@@ -2,7 +2,7 @@
 scope:
   connection: R3
   material: GL24h
-last_updated: "2026-09-16"
+last_updated: "2026-09-30"
 ---
 
 # Bearbeitungsstand: R3 / GL24h
@@ -374,3 +374,59 @@ Folgen, keine Ergebnisse.
    SC-11-B-1 mit F_est = 8 kN (s. o.), K_e-Startpunkte F21 teils 4–37 % über
    0,1 · F_est, F_max im "Überblick" aus dem Maschinenwert (0,5–2,6 % über
    dem Datenmaximum).
+
+## Update 2026-09-28: Zugseite im Federmodell (GL24h vollständig)
+
+- Hebelarm z = 586,7 mm (Resultierende im Drittel der Druckzone,
+  R3-COMMON-DEC-004); Gewindestange nach ISO 898-1: 203 kN (R3-COMMON-DEC-003).
+- c32,Beam = 137,9 kN/mm als Hauptwert, Spanne 130–147 (R3-GL24h-DEC-015).
+- Zugkette nach Buchholz2025 Gl. (11)/(12) mit Komponentenzuordnung
+  R3-COMMON-DEC-005: c_c,ep, c_br,par, c_br,perp = ∞; c_c,0 = c_H,Lasche
+  (298,44 kN/mm, L_eff = 450 mm, Deutung (a)); ASSY seitenspezifisch;
+  zwei Laschen parallel; Schubfeld c_v in Reihe (R3-COMMON-DEC-007).
+- c_t korrigiert auf E·A_s/L_b = 30,99 kN/mm ohne Faktor 1,6
+  (R3-COMMON-DEC-006, R3-GL24h-CALC-011; CALC-004 superseded).
+- Schubfeld c_v = 156,17 kN/mm (R3-GL24h-CALC-012).
+- **c_t,sleeve = 19,36 kN/mm** je Lasche (R3-GL24h-CALC-013, ersetzt
+  CALC-005), **c_t,tot = 31,02 kN/mm** (R3-GL24h-CALC-014).
+- Neue offene Fragen: R3-COMMON-OPQ-002 (Setzen der Ankerplatte),
+  -003 (Doppelzählung 280 mm über Messbasis Push-Out), -004 (Bedeutung
+  c_c,0 bei Buchholz), -005 (Schubfeldmodell), R3-GL24h-OPQ-023
+  (Einzelwert 44-C-2).
+- Excel-Hinweis: "Rahmenecke GL24h SD" I53 ("Mittelwert B" 1×1) rechnet
+  AVERAGE(I50:I52) statt AVERAGE(I49:I51) — enthält den Stützen-Mittelwert,
+  wird aber nirgends weiterverwendet (11,50 statt 11,74 kN).
+
+**Nächste Schritte:** Druckseite c_c,tot aufbauen (Buchholz Gl. (6):
+Kontakt, c_c,90 und c_c,0; Hinweis Buchholz: Teil der Druckkraft evtl. über
+die Laschen der Druckseite), dann S_j,ini, Φ, u_M, F, V, N. Danach
+Vorspannung (Excel-Formel Φ = c_t/(c_t + c_H-ges) berücksichtigt nur die
+Lasche, nicht die ASSY-Gruppen; F_sep ändert sich mit dem neuen c_t).
+
+## Update 2026-09-30: Sprödversagen br,par / br,perp
+
+Steifigkeit starr, Tragfähigkeit als nicht maßgebend angenommen (Stange
+maßgebend), vorerst ohne rechnerischen Nachweis (R3-COMMON-DEC-008).
+Begründung für die Ausarbeitung offen (R3-COMMON-OPQ-006). Nächster Schritt:
+Steifigkeit der Druckseite c_c,tot.
+
+**Ergänzung 2026-09-30, Push-Out 44-C:** Blatt 44-C-2 geprüft, kein Fehler;
+falscher Zeilenverweis v11/F11 in 44-C-1 ohne Einfluss auf die Ergebnisse
+(R3-GL24h-OPQ-024, für die Betreuung). OPQ-023 RESOLVED: C-2 bleibt im
+Hauptwert, Variante ohne C-2 als Empfindlichkeit (R3-GL24h-CALC-015:
+c_t,tot 31,44 statt 31,02 kN/mm, +1,4 %).
+
+## Update 2026-09-30: Druckseite (Zustand nach dem Öffnen der Fuge)
+
+Modell R3-COMMON-DEC-009: gesamte Druckkraft über Kontakt Riegel/Stütze,
+keine Querdruckverstärkung; Nulllinie aus Gleichgewicht (R3-COMMON-OPQ-001
+RESOLVED); Riegel c_c,90 nach FprEN Gl. (9.31), h_ef = 140 mm, beidseitig 45°;
+Stütze c_c,0 ohne Ausbreitung. Ergebnis R3-GL24h-CALC-016: x = 256,8 mm,
+c_c,tot = 111,9 kN/mm, z = 634,4 mm, **S_j,ini = 9 115 kNm/rad**
+(Spanne 7 590–9 115, untere Grenze ohne Ausbreitung 8 380). z für M_R noch
+offen (bis dahin R3-COMMON-DEC-004, 586,7 mm).
+
+Vorspannung: Die zugseitige Vorspannung drückt die Fuge außen vor; bis zum
+Öffnen ändert sich die Kontaktzone mit dem Moment. Lastanteilsfaktor Φ und
+vorgespannter Bereich offen (R3-COMMON-OPQ-007), dort auch der Excel-Fehler im
+Blatt "VSP GL24h ohne Druckkontakt" (C9 → 0, #DIV/0!).

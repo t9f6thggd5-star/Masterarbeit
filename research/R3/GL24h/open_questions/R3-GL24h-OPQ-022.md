@@ -95,3 +95,8 @@ den 1×1-Serien (Verhältnis B/C 0,854 im Lastfenster 10–20 % F_est gegenüber
 (R3-GL24h-CALC-010). Vorgeschlagene Spanne für die Parameterstudie:
 etwa 74–84 kN/mm je Scherfuge (16 Schrauben) bzw. 130–147 kN/mm
 (32 Schrauben). Entscheidung weiterhin offen.
+
+**Update (2026-09-28), Arbeitswert festgelegt:** c32,Beam = 137,9 kN/mm als
+Hauptwert, Spanne 130–147 kN/mm für die Parameterstudie
+(R3-GL24h-DEC-015). Die Frage bleibt OPEN (n = 1). Zum Einfluss des
+Einzelwerts 44-C-2 auf das Verhältnis B/C siehe R3-GL24h-OPQ-023.

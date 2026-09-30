@@ -318,3 +318,14 @@ Folgen, keine Ergebnisse.
    Prüfprogramms) bestätigt die bestehende K_ser-Auswertung (R2-COMMON-DEC-003).
 3. **Übernommene Auswertedateien prüfen (COMMON-COMMON-DEC-007)**, auch
    `R2/COMMON/calculations/2026-06_05_Auswertung_Steifigkeiten_Bonded-inRods.xlsx`.
+
+**Update (2026-09-28), Übersichtstabelle und freie Stangendehnung:**
+Messbasis der BR-Versuche geklärt (R2-COMMON-ASS-009): c_c,90 und c_v nicht
+doppelt gezählt, freie Stangendehnung c_t (l_frei = 770 mm) neu in der Kette →
+c_T,ges = 40,59 kN/mm (R2-GL24h-CALC-024), S_j,ini = 10.154,6 kNm/rad
+(R2-GL24h-CALC-025, −19 %). Anfangsschlupf φ_S = 0 (R2-COMMON-DEC-005), eine
+Stangengruppe aus zwei parallelen Paaren, keine Vorspannung (R2-COMMON-ASS-008).
+Übersicht linear (R2-GL24h-CALC-026): F = 52,83 kN, V = N = 37,35 kN,
+Φ = 15,76 mrad, u_M = 47,74 mm (a = 3,0293 m, R2-COMMON-ASS-007). HD/SD
+unterscheiden sich nur im Material der Schubdübel, nicht in M_max oder
+Steifigkeit (Nutzer). Neu offen: R2-COMMON-OPQ-012 (Setzen der Ankerplatte).

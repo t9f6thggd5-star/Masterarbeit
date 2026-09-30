@@ -31,7 +31,7 @@ source_file: >
   "...SD G1-J30" — in der aktuellen Tabelle nicht mehr unter P160 zu
   finden (Sheet wurde vermutlich seither umstrukturiert/umbenannt).
 certainty: CALCULATED
-superseded_by:
+superseded_by: R3-GL24h-CALC-013
 ---
 
 Übernommen aus chat-1, KNOWLEDGE.md ("c_t,sleeve=27.09 kN/mm").
@@ -44,3 +44,8 @@ VDI-style load-fraction definition for this nonstandard timber/ASSY path"
 ist unresolved, siehe R3-GL24h-OPQ zu diesem Themenkomplex, folgt in der
 nächsten Charge). Als Endergebnis übernommen, nicht eigenständig
 nachgerechnet.
+
+**Update (2026-09-28), ersetzt:** Formel und Glieder jetzt nachvollzogen und
+neu zusammengesetzt nach Buchholz2025 Gl. (11) mit seitenspezifischen
+Versuchswerten der ASSY-Gruppen und c_t ohne Faktor 1,6
+(R3-COMMON-DEC-005/006): c_t,sleeve = 19,36 kN/mm (R3-GL24h-CALC-013).

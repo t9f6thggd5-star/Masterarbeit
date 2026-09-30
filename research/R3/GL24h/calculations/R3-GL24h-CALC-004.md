@@ -45,7 +45,7 @@ source_file: >
   kN/mm — der übernommene Zahlenwert war also stets korrekt, nur die
   dokumentierte Zellreferenz war veraltet.
 certainty: CALCULATED
-superseded_by:
+superseded_by: R3-GL24h-CALC-011
 ---
 
 Übernommen aus chat-1, KNOWLEDGE.md ("c_t=49.59 kN/mm").
@@ -81,3 +81,11 @@ Festlegung. Formel und Eingangswerte sind unverändert, das Ergebnis
 (49,59 kN/mm) bleibt gültig — deshalb reine Korrektur der Quellenangabe,
 kein neuer Eintrag mit `superseded_by`. Der Nutzerhinweis oben ("Tab.
 6.11, k_10") bleibt als historischer Wortlaut stehen.
+
+**Update (2026-09-28), ersetzt:** Der Faktor 1,6 in Gl. (A.40) bezieht sich
+auf eine Schraubenreihe mit zwei Schrauben (2 × 0,8 mit Abstützkräften). Bei
+R3 gibt es eine Stange je Lasche ohne Abstützkräfte, richtig ist
+c_t = E_s·A_s/L_b = 30,99 kN/mm (R3-COMMON-DEC-006, R3-GL24h-CALC-011).
+Der Wert 49,59 kN/mm war um Faktor 1,6 zu steif; die frühere Einschätzung
+"vollständig nachvollziehbar" betraf nur die Formel, nicht ihre
+Anwendbarkeit.

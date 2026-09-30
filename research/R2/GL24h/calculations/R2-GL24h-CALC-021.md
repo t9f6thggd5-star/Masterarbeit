@@ -38,7 +38,7 @@ source_file: >
   (per openpyxl mit data_only=True ausgelesen, Stand der abgelegten
   Datei am 2026-09-17)
 certainty: CALCULATED
-superseded_by:
+superseded_by: R2-GL24h-CALC-024
 ---
 
 **Eingangswerte (Zelle → Wert):** `L94` (c_Stange×4, II-T-S-BR-22,
@@ -93,3 +93,5 @@ beide liegen nach der ASSY-Verstärkung nur noch `≈4 %` auseinander
 `c_T=53,300 kN/mm` selbst ist davon nicht betroffen (die Formel
 verwendet ohnehin alle vier Glieder gemeinsam) — betroffen ist nur diese
 eine erläuternde Nebenaussage. Details siehe R2-GL24h-INT-002.
+
+**Update (2026-09-28):** Ersetzt durch R2-GL24h-CALC-024 (freie Stangendehnung c_t ergänzt, R2-COMMON-ASS-009).

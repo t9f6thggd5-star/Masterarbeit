@@ -39,3 +39,8 @@ unter R1/GL24h/calculations/ (siehe R1-GL24h-CALC-010). Die Schleife bei
 (K_e), die Hüllkurve lässt diese Schleife weg. K_e geht nicht in die Kurve
 ein; der Ast oberhalb F04 stammt aber aus dem bereits einmal
 wiederbelasteten Prüfkörper.
+
+**Korrektur Bezeichnung (2026-09-28):** In Punkt (2) ist mit „K_i“ die
+Sekante zwischen F01 und F04 gemeint (Versuchsblatt M21/S21, = K_ser),
+nicht K_i nach EN 26891 (M19, Sekante vom Ursprung mit Anfangsschlupf).
+Richtig: v0 = v01 − F01/K_ser. Rechenweg und Zahlen unverändert.
