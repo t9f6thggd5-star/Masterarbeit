@@ -3,7 +3,7 @@ open_question_id: R2-COMMON-OPQ-007
 scope:
   connection: R2
   material: COMMON
-status: OPEN
+status: RESOLVED
 question: >
   Wie sollen die theoretischen Komponentensteifigkeiten (Zugseite,
   perspektivisch Druckseite) mit den bereits vorliegenden
@@ -18,8 +18,10 @@ context: >
 related_sources:
 options_considered:
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Erledigt (Nutzer, 2026-09-30): c_T beruht auf den Zugversuchen BR-22
+  (R2-GL24h-CALC-024), die Messbasis ist geklärt (R2-COMMON-ASS-009).
 ---
 
 Übernommen aus chat-3, OPEN_QUESTIONS.md Punkt 10 und TASKS.md "P2 —

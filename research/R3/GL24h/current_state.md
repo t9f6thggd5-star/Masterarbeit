@@ -430,3 +430,6 @@ Vorspannung: Die zugseitige Vorspannung drückt die Fuge außen vor; bis zum
 Öffnen ändert sich die Kontaktzone mit dem Moment. Lastanteilsfaktor Φ und
 vorgespannter Bereich offen (R3-COMMON-OPQ-007), dort auch der Excel-Fehler im
 Blatt "VSP GL24h ohne Druckkontakt" (C9 → 0, #DIV/0!).
+
+**Ergänzung 2026-09-30 (Nachmittag):** Neue offene Frage R3-COMMON-OPQ-008:
+Im Schubfeld c_v eventuell z statt l_v = 800 mm im Nenner (c_t,tot ≈ +6 %).

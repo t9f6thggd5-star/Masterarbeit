@@ -329,3 +329,14 @@ Stangengruppe aus zwei parallelen Paaren, keine Vorspannung (R2-COMMON-ASS-008).
 Φ = 15,76 mrad, u_M = 47,74 mm (a = 3,0293 m, R2-COMMON-ASS-007). HD/SD
 unterscheiden sich nur im Material der Schubdübel, nicht in M_max oder
 Steifigkeit (Nutzer). Neu offen: R2-COMMON-OPQ-012 (Setzen der Ankerplatte).
+
+**Update (2026-09-30), Klärung offener Fragen nach der Besprechung:**
+S_j,ini = z²/(1/c_T + 1/c_C) mit z = 560 mm bestätigt (R2-COMMON-OPQ-006);
+c_c,0 mit l = 240 mm bestätigt (R2-COMMON-OPQ-011); verstärkte
+Querdrucksteifigkeit nach Bejtka ab Last null (R2-COMMON-OPQ-010,
+R2-GL24h-OPQ-002); kein Schlupf aus den Ankerplatten, Stellschraube bei der
+Kurvenanalyse (R2-COMMON-OPQ-012); κ = 1 bleibt (R2-COMMON-OPQ-004); Fragen zu
+nicht maßgebenden Tragfähigkeiten geschlossen (OPQ-002/003/007/008,
+GL24h-OPQ-001/004). Weiter offen: G der Sperrholzplatten (R2-COMMON-OPQ-005,
+klärt der Nutzer) und neu der Hebelarm im Schubfeld (R2-COMMON-OPQ-013:
+z statt l_v, S_j,ini ≈ +9 %).

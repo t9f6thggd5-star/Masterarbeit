@@ -3,7 +3,7 @@ open_question_id: R2-COMMON-OPQ-002
 scope:
   connection: R2
   material: COMMON
-status: OPEN
+status: RESOLVED
 question: >
   Welches Modell soll als primärer Vorbemessungs-Vergleichswert für die
   querdruckverstärkte Widerstandsseite dienen — das FprEN-2024-Modell
@@ -22,8 +22,10 @@ options_considered: >
   aus chat-3); (b) ETA/Würth als primären Wert; (c) beide Modelle
   gleichrangig nebeneinander im Bericht führen.
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Geschlossen (Nutzer, 2026-09-30): für die Tragfähigkeit nicht maßgebend, weil die Gewindestangen (Zugversuchsmittel 285,77 kN) vor
+  Querdruck und Schrauben versagen (Excel C97 = MIN(L16;L87;H87)).
 ---
 
 Übernommen aus chat-3, OPEN_QUESTIONS.md Punkt 2 und DECISIONS.md "Seq

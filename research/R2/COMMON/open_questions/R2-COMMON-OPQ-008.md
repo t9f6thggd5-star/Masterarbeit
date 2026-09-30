@@ -3,7 +3,7 @@ open_question_id: R2-COMMON-OPQ-008
 scope:
   connection: R2
   material: COMMON
-status: OPEN
+status: RESOLVED
 question: >
   Welche Rolle spielen vier Excel-Inhalte, die in chat-3 nicht besprochen
   wurden, im tatsächlichen R2-Versuchs-/Rechenkonzept: (1) der
@@ -51,8 +51,10 @@ options_considered: >
   da Zweck ungeklärt — Gefahr einer erfundenen Interpretation, siehe
   CLAUDE.md Abschnitt 19).
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Geschlossen (Nutzer, 2026-09-30): Die Punkte sind weitgehend geklärt; der Rest
+  hing an c_c,0 mit l = 240 mm, bestätigt in R2-COMMON-OPQ-011.
 ---
 
 Eigener Fund (Claude) beim Cross-Check der R2-Excel-Datei

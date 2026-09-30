@@ -3,7 +3,7 @@ open_question_id: R2-GL24h-OPQ-001
 scope:
   connection: R2
   material: GL24h
-status: OPEN
+status: RESOLVED
 question: >
   Soll das generische FprEN-Ausziehmodell (`k_screw=8,2`, `f_w,k≈5,05
   N/mm²`, `F_w,k≈73,55 kN`) beibehalten werden, oder soll ein
@@ -20,8 +20,10 @@ options_considered: >
   Generisches FprEN-Modell beibehalten (aktuell, da folgenlos) vs.
   produktspezifisches ETA/EN-1382-Modell ableiten.
 date_opened: "2026-09-01"
-date_resolved:
-resolution:
+date_resolved: "2026-09-30"
+resolution: >
+  Geschlossen (Nutzer, 2026-09-30): für die Tragfähigkeit nicht maßgebend, weil die Gewindestangen (Zugversuchsmittel 285,77 kN) vor
+  Querdruck und Schrauben versagen (Excel C97 = MIN(L16;L87;H87)).
 ---
 
 Übernommen aus chat-3, OPEN_QUESTIONS.md Punkt 4.
